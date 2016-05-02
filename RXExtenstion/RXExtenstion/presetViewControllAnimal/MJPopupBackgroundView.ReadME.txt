@@ -1,0 +1,31 @@
+
+
+UIViewController+MJPopupViewController
+
+用法
+1、导入 frameworks
+  1）QuartzCore.framework
+  2) CoreGraphics.framework
+
+2、用
+
+#import "UIViewController+MJPopupViewController.h"
+
+ViewController *detailViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+
+[self presentPopupViewController:detailViewController animationType:0 — 8];
+
+
+0 — - 8 //具体的解释
+typedef enum {
+    MJPopupViewAnimationFade = 0, // fade in
+    MJPopupViewAnimationSlideBottomTop = 1, 
+    MJPopupViewAnimationSlideBottomBottom,
+    MJPopupViewAnimationSlideTopTop, 
+    MJPopupViewAnimationSlideTopBottom,
+    MJPopupViewAnimationSlideLeftLeft,
+    MJPopupViewAnimationSlideLeftRight,
+    MJPopupViewAnimationSlideRightLeft,
+    MJPopupViewAnimationSlideRightRight,
+} MJPopupViewAnimation;
+

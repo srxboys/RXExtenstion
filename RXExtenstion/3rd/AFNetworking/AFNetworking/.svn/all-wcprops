@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking
+END
+AFHTTPSessionManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFHTTPSessionManager.m
+END
+AFURLResponseSerialization.m
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFURLResponseSerialization.m
+END
+AFSecurityPolicy.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFSecurityPolicy.h
+END
+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFNetworking.h
+END
+AFSecurityPolicy.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFSecurityPolicy.m
+END
+AFURLSessionManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFURLSessionManager.h
+END
+AFURLConnectionOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFURLConnectionOperation.h
+END
+AFHTTPRequestOperationManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.h
+END
+AFNetworkReachabilityManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h
+END
+AFURLSessionManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFURLSessionManager.m
+END
+AFURLConnectionOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFURLConnectionOperation.m
+END
+AFURLRequestSerialization.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFURLRequestSerialization.h
+END
+AFHTTPRequestOperationManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFHTTPRequestOperationManager.m
+END
+AFHTTPRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFHTTPRequestOperation.h
+END
+AFNetworkReachabilityManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m
+END
+AFURLRequestSerialization.m
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFURLRequestSerialization.m
+END
+AFHTTPSessionManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFHTTPSessionManager.h
+END
+AFHTTPRequestOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFHTTPRequestOperation.m
+END
+AFURLResponseSerialization.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ghs/!svn/ver/382/ios/trunk/GHS/GHS/ThirdParty/AFNetworking/AFNetworking/AFURLResponseSerialization.h
+END

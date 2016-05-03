@@ -12,7 +12,7 @@
 #import "RXCharacter.h"
 #import "AppDelegate.h"
 
-#define SERVER_URL @""
+#define SERVER_URL @"https://github.com/srxboys"
 #define loadingWidthHeight 0
 
 
@@ -21,6 +21,13 @@
 
 + (NSDictionary *)constructParameters:(NSDictionary *)params
 {
+    /*
+     * 每个接口必传的 字段
+     * 1、用户id  没有就传0 
+     * 2、版本号 从info.plist里获取
+     * 3、设备 是 iOS 、android
+     */
+    
     
     NSMutableDictionary* newParams = [NSMutableDictionary  dictionaryWithDictionary:params];
     
@@ -81,7 +88,7 @@
         i++;
     }
     
-    TTLog(@"请求网址=%@", str);
+    RXLog(@"请求网址=%@", str);
     
     
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
@@ -177,9 +184,9 @@
 + (void)removeRequestWithParams:(NSDictionary *)paramsDict {
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     [manager DELETE:SERVER_URL parameters:paramsDict success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        TTLog(@"移除 请求成功");
+        RXLog(@"移除 请求成功");
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        TTLog(@"移除请求失败");
+        RXLog(@"移除请求失败");
     }];
     
 }
@@ -187,7 +194,7 @@
 @end
 
 
-#pragma mark ---------------------请求回来的数据 处理--------------------
+#pragma mark ---------------------请求回来的JSON数据参数 处理--------------------
 @interface NSDictionary (TextNullReplace)
 - (id)objectForKeyNotNull:(NSString *)key;
 @end
@@ -211,6 +218,35 @@
 
 @implementation Response
 
+/*
+    处理返回数据 格式模型
+    
+    JSON
+ 
+    // 情况1
+    {
+        "data" : {
+            "message" : "请求成功",
+            "status"  : "YES"
+            "returndata" : {
+                NSArray / NSDictionary
+             }
+        },
+        "rsp" : "succ" / "fail" //fail服务器错误
+    }
+ 
+ 
+     // 情况2
+     {
+         "data" : {
+             "message" : "请求失败",
+             "status"  : "NO"
+         },
+         "rsp" : "succ" / "fail"  //fail服务器错误
+     }
+ 
+ */
+
 + (Response*)responseWithDict:(NSDictionary*)dict
 {
     Response* response = [[Response alloc] init];
@@ -218,7 +254,7 @@
     NSDictionary *dataDic = [dict objectForKeyNotNull:@"data"];
     
     if([dict[@"rsp"] isEqualToString:@"fail"]) {
-        TTLog(@"HTTP:error.info=%@", dict[@"res"]);
+        RXLog(@"HTTP:error.info=%@", dict[@"res"]);
     }
     
     if ([[dict objectForKeyNotNull:@"data"] isKindOfClass:[NSArray class]])

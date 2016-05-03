@@ -17,15 +17,15 @@
 #define ALog(format, ...) NSLog((@"%s [L%d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 
 #ifdef DEBUG
-#define TTLog(format, ...) ALog(format, ##__VA_ARGS__)
+#define RXLog(format, ...) ALog(format, ##__VA_ARGS__)
 #else
-#define TTLog(...)
+#define RXLog(...)
 #endif
 
-
-
-
 #define SharedAppDelegate ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+
+///storybaord
+#define RXStroyBoard(_name, _identifier) [[UIStoryboard storyboardWithName:_name bundle:nil] instantiateViewControllerWithIdentifier:_identifier]
 
 /*
  ------ 宽 高 定义 ----
@@ -76,7 +76,7 @@
 // 是否iPad
 #define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 // 是否iPad
-#define someThing (isPad)? ipad: iphone
+#define someThing (isPad) ? ipad : iphone
 
 //判断是真机还是模拟器
 #if TARGET_OS_IPHONE

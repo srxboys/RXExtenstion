@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6C3A2FD11CD3477000533FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD01CD3477000533FFF /* main.m */; };
 		6C3A2FD41CD3477000533FFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD31CD3477000533FFF /* AppDelegate.m */; };
-		6C3A2FD71CD3477000533FFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD61CD3477000533FFF /* ViewController.m */; };
 		6C3A2FDA1CD3477000533FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD81CD3477000533FFF /* Main.storyboard */; };
 		6C3A2FDC1CD3477000533FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3A2FDB1CD3477000533FFF /* Assets.xcassets */; };
 		6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3A2FDD1CD3477000533FFF /* LaunchScreen.storyboard */; };
@@ -65,6 +64,11 @@
 		6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30D91CD36E3700533FFF /* RXMJFooterGif.m */; };
 		6C3A30DD1CD36EC800533FFF /* RXMJHeaderGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */; };
 		6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322451CD71368009BD1B7 /* RXBaseViewController.m */; };
+		6CF3224F1CD86C67009BD1B7 /* RXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3224E1CD86C67009BD1B7 /* RXTabBarController.m */; };
+		6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322511CD87077009BD1B7 /* RXNavBaseController.m */; };
+		6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF3225B1CD879EF009BD1B7 /* Home.storyboard */; };
+		6CF3225F1CD87A27009BD1B7 /* RXHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3225E1CD87A27009BD1B7 /* RXHomeController.m */; };
+		6CF322621CD87B0D009BD1B7 /* RXTableBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322611CD87B0D009BD1B7 /* RXTableBaseController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,8 +76,6 @@
 		6C3A2FD01CD3477000533FFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C3A2FD21CD3477000533FFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C3A2FD31CD3477000533FFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6C3A2FD51CD3477000533FFF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6C3A2FD61CD3477000533FFF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6C3A2FD91CD3477000533FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C3A2FDB1CD3477000533FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C3A2FDE1CD3477000533FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -183,6 +185,15 @@
 		6CF322441CD71368009BD1B7 /* RXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXBaseViewController.h; sourceTree = "<group>"; };
 		6CF322451CD71368009BD1B7 /* RXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXBaseViewController.m; sourceTree = "<group>"; };
 		6CF322471CD7153E009BD1B7 /* RXMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMessage.h; sourceTree = "<group>"; };
+		6CF3224D1CD86C67009BD1B7 /* RXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTabBarController.h; sourceTree = "<group>"; };
+		6CF3224E1CD86C67009BD1B7 /* RXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTabBarController.m; sourceTree = "<group>"; };
+		6CF322501CD87077009BD1B7 /* RXNavBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNavBaseController.h; sourceTree = "<group>"; };
+		6CF322511CD87077009BD1B7 /* RXNavBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNavBaseController.m; sourceTree = "<group>"; };
+		6CF3225B1CD879EF009BD1B7 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		6CF3225D1CD87A27009BD1B7 /* RXHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXHomeController.h; sourceTree = "<group>"; };
+		6CF3225E1CD87A27009BD1B7 /* RXHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXHomeController.m; sourceTree = "<group>"; };
+		6CF322601CD87B0D009BD1B7 /* RXTableBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTableBaseController.h; sourceTree = "<group>"; };
+		6CF322611CD87B0D009BD1B7 /* RXTableBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTableBaseController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,13 +232,14 @@
 			isa = PBXGroup;
 			children = (
 				6C3A302D1CD352AA00533FFF /* 3rd */,
+				6C3A2FE61CD3477E00533FFF /* RXExtenstion */,
+				6CF3224C1CD86BFF009BD1B7 /* ViewController */,
 				6C3A30181CD347A700533FFF /* model */,
 				6C3A30191CD347A700533FFF /* view */,
-				6C3A2FE61CD3477E00533FFF /* RXExtenstion */,
 				6C3A2FD21CD3477000533FFF /* AppDelegate.h */,
 				6C3A2FD31CD3477000533FFF /* AppDelegate.m */,
-				6C3A2FD51CD3477000533FFF /* ViewController.h */,
-				6C3A2FD61CD3477000533FFF /* ViewController.m */,
+				6CF3224D1CD86C67009BD1B7 /* RXTabBarController.h */,
+				6CF3224E1CD86C67009BD1B7 /* RXTabBarController.m */,
 				6C3A2FD81CD3477000533FFF /* Main.storyboard */,
 				6C3A2FDB1CD3477000533FFF /* Assets.xcassets */,
 				6C3A2FDD1CD3477000533FFF /* LaunchScreen.storyboard */,
@@ -539,10 +551,88 @@
 		6CF322431CD71368009BD1B7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6CF322501CD87077009BD1B7 /* RXNavBaseController.h */,
+				6CF322511CD87077009BD1B7 /* RXNavBaseController.m */,
 				6CF322441CD71368009BD1B7 /* RXBaseViewController.h */,
 				6CF322451CD71368009BD1B7 /* RXBaseViewController.m */,
+				6CF322601CD87B0D009BD1B7 /* RXTableBaseController.h */,
+				6CF322611CD87B0D009BD1B7 /* RXTableBaseController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6CF3224C1CD86BFF009BD1B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6CF322531CD879BF009BD1B7 /* Home */,
+				6CF322571CD879BF009BD1B7 /* User */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6CF322531CD879BF009BD1B7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6CF322541CD879BF009BD1B7 /* Controller */,
+				6CF322551CD879BF009BD1B7 /* Model */,
+				6CF322561CD879BF009BD1B7 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6CF322541CD879BF009BD1B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6CF3225B1CD879EF009BD1B7 /* Home.storyboard */,
+				6CF3225D1CD87A27009BD1B7 /* RXHomeController.h */,
+				6CF3225E1CD87A27009BD1B7 /* RXHomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6CF322551CD879BF009BD1B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6CF322561CD879BF009BD1B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6CF322571CD879BF009BD1B7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				6CF322581CD879BF009BD1B7 /* Controller */,
+				6CF322591CD879BF009BD1B7 /* Model */,
+				6CF3225A1CD879BF009BD1B7 /* Views */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		6CF322581CD879BF009BD1B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6CF322591CD879BF009BD1B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6CF3225A1CD879BF009BD1B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,6 +661,7 @@
 		6C3A2FC41CD3477000533FFF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RX;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = srxboys;
 				TargetAttributes = {
@@ -605,6 +696,7 @@
 				6C3A30121CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt in Resources */,
 				6C3A30A91CD3538A00533FFF /* MJRefresh.bundle in Resources */,
 				6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */,
+				6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */,
 				6C3A2FDC1CD3477000533FFF /* Assets.xcassets in Resources */,
 				6C3A2FDA1CD3477000533FFF /* Main.storyboard in Resources */,
 			);
@@ -617,7 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C3A2FD71CD3477000533FFF /* ViewController.m in Sources */,
+				6CF3224F1CD86C67009BD1B7 /* RXTabBarController.m in Sources */,
 				6C3A30A01CD3538A00533FFF /* MJRefreshAutoGifFooter.m in Sources */,
 				6C3A30A21CD3538A00533FFF /* MJRefreshAutoStateFooter.m in Sources */,
 				6C3A305F1CD352AA00533FFF /* AFSecurityPolicy.m in Sources */,
@@ -645,7 +737,9 @@
 				6C3A30631CD352AA00533FFF /* AFAutoPurgingImageCache.m in Sources */,
 				6C3A30621CD352AA00533FFF /* AFURLSessionManager.m in Sources */,
 				6C3A30231CD34E7D00533FFF /* RXRandom.m in Sources */,
+				6CF322621CD87B0D009BD1B7 /* RXTableBaseController.m in Sources */,
 				6C3A30661CD352AA00533FFF /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */,
 				6C3A300A1CD3477E00533FFF /* TTCacheUtil.m in Sources */,
 				6C3A302C1CD3516800533FFF /* RXAFNS.m in Sources */,
 				6C3A30A71CD3538A00533FFF /* MJRefreshNormalHeader.m in Sources */,
@@ -664,6 +758,7 @@
 				6C3A30A31CD3538A00533FFF /* MJRefreshBackGifFooter.m in Sources */,
 				6C3A30291CD3507400533FFF /* RXHexColor.m in Sources */,
 				6C3A30AA1CD3538A00533FFF /* MJRefreshConst.m in Sources */,
+				6CF3225F1CD87A27009BD1B7 /* RXHomeController.m in Sources */,
 				6C3A2FD11CD3477000533FFF /* main.m in Sources */,
 				6C3A305D1CD352AA00533FFF /* AFHTTPSessionManager.m in Sources */,
 				6C3A309C1CD3538A00533FFF /* MJRefreshBackFooter.m in Sources */,
@@ -782,6 +877,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RXExtenstion/model/PrefixHeader.h";
 				INFOPLIST_FILE = RXExtenstion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -790,6 +886,7 @@
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = "https---www.github.com-srxboys.RXExtenstion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -799,6 +896,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RXExtenstion/model/PrefixHeader.h";
 				INFOPLIST_FILE = RXExtenstion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -807,6 +905,7 @@
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = "https---www.github.com-srxboys.RXExtenstion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

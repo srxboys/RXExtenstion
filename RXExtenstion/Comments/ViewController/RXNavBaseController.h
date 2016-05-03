@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  RXNavBaseController.h
 //  RXExtenstion
 //
-//  Created by srx on 16/4/29.
+//  Created by srx on 16/5/3.
 //  Copyright © 2016年 srxboys. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RXNavBaseController : UINavigationController
 
 @end
-

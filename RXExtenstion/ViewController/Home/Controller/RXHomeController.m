@@ -8,7 +8,11 @@
 
 #import "RXHomeController.h"
 
-@interface RXHomeController ()<UITableViewDelegate, UITableViewDataSource>
+@interface RXHomeController ()<UITableViewDataSource, UITableViewDelegate>
+{
+    NSArray * arr;
+}
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -18,23 +22,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self configUI];
+}
+
+- (void)configUI {
+    
+    _tableView.tableFooterView = [[UIView alloc] init];
+    
+    arr = @[@"假数据无需手动",
+            @"缓存操作",
+            @"获取info.plist信息",
+            @"MJ header foother"];
+    [_tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return arr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString * cellIditifier = nil;
-    NSInteger row = indexPath.row;
-    cellIditifier = [NSString stringWithFormat:@"cell%ld", (long)row];
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIditifier forIndexPath:indexPath];
+    NSString * cellIdentifier = @"cellIdentifier";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    cell.textLabel.text = arr[indexPath.row];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    RXLog(@"%ld", (long)indexPath.row);
 }
 
 

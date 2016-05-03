@@ -68,7 +68,6 @@
 		6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322511CD87077009BD1B7 /* RXNavBaseController.m */; };
 		6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF3225B1CD879EF009BD1B7 /* Home.storyboard */; };
 		6CF3225F1CD87A27009BD1B7 /* RXHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3225E1CD87A27009BD1B7 /* RXHomeController.m */; };
-		6CF322621CD87B0D009BD1B7 /* RXTableBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322611CD87B0D009BD1B7 /* RXTableBaseController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,8 +191,6 @@
 		6CF3225B1CD879EF009BD1B7 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		6CF3225D1CD87A27009BD1B7 /* RXHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXHomeController.h; sourceTree = "<group>"; };
 		6CF3225E1CD87A27009BD1B7 /* RXHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXHomeController.m; sourceTree = "<group>"; };
-		6CF322601CD87B0D009BD1B7 /* RXTableBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTableBaseController.h; sourceTree = "<group>"; };
-		6CF322611CD87B0D009BD1B7 /* RXTableBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTableBaseController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -555,8 +552,6 @@
 				6CF322511CD87077009BD1B7 /* RXNavBaseController.m */,
 				6CF322441CD71368009BD1B7 /* RXBaseViewController.h */,
 				6CF322451CD71368009BD1B7 /* RXBaseViewController.m */,
-				6CF322601CD87B0D009BD1B7 /* RXTableBaseController.h */,
-				6CF322611CD87B0D009BD1B7 /* RXTableBaseController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -737,7 +732,6 @@
 				6C3A30631CD352AA00533FFF /* AFAutoPurgingImageCache.m in Sources */,
 				6C3A30621CD352AA00533FFF /* AFURLSessionManager.m in Sources */,
 				6C3A30231CD34E7D00533FFF /* RXRandom.m in Sources */,
-				6CF322621CD87B0D009BD1B7 /* RXTableBaseController.m in Sources */,
 				6C3A30661CD352AA00533FFF /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */,
 				6C3A300A1CD3477E00533FFF /* TTCacheUtil.m in Sources */,

@@ -8,11 +8,7 @@
 
 #import "AppDelegate.h"
 
-#define isShowTab 1 //是展示tabBar 还是 ViewControll
-
 #import "RXTabBarController.h"
-#import "RXNavBaseController.h"
-
 
 @interface AppDelegate ()
 
@@ -25,17 +21,9 @@
     // Override point for customization after application launch.
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
-    
-    if(isShowTab) {
-        RXTabBarController * tabBarController = RXStroyBoard(@"Main", @"RXTabBarController");
-        _window.rootViewController = tabBarController;
-    }
-    else {
-        RXNavBaseController * navController = RXStroyBoard(@"Main", @"RXNavBaseController");
-        navController.title = @"srxboys -> RX";
-        _window.rootViewController = navController;
-    }
-    
+
+    RXTabBarController * tabBarController = RXStroyBoard(@"Main", @"RXTabBarController");
+    _window.rootViewController = tabBarController;
     
     [_window makeKeyAndVisible];
     return YES;

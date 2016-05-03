@@ -6,8 +6,8 @@
 //  Copyright © 2016年 srxboys. All rights reserved.
 //
 
-#import "RXTableBaseController.h"
+#import "RXBaseViewController.h"
 
-@interface RXHomeController : RXTableBaseController
+@interface RXHomeController : RXBaseViewController
 
 @end

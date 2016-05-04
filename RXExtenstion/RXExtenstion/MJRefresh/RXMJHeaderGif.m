@@ -21,21 +21,22 @@
     // 设置控件的高度
     self.mj_h = 60;
     
+    UIImageView * logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loading_img"]];
+    logo.frame = CGRectMake(0, 0, 30, 30);
+    [self addSubview:logo];
+    self.loading = logo;
+    
     //添加label
     UILabel * label = [[UILabel alloc] init];
     label.frame = CGRectMake(0, 0, 30, 30);
     label.backgroundColor = [UIColor clearColor];
     label.text = @"RX";
-    label.textColor = [UIColor whiteColor];
+    label.textColor = [UIColor blueColor];
     label.font = [UIFont systemFontOfSize:8];
     label.textAlignment = NSTextAlignmentCenter;
     [self addSubview:label];
     _label = label;
     
-    UIImageView * logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loading_img"]];
-    logo.frame = CGRectMake(0, 0, 30, 30);
-    [self addSubview:logo];
-    self.loading = logo;
 }
 
 #pragma mark - ~~~~~~~~~~~ 在这里设置自控制的位置和尺寸 ~~~~~~~~~~~~~~~

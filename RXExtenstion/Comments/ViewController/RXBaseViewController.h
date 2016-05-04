@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "RXConstant.h"
+
 ///弱引用
 #define weak(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 /*

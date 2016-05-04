@@ -8,6 +8,8 @@
 
 #import "RXHomeController.h"
 
+#import "RXFalseDataController.h"
+
 @interface RXHomeController ()<UITableViewDataSource, UITableViewDelegate>
 {
     NSArray * arr;
@@ -55,6 +57,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     RXLog(@"%ld", (long)indexPath.row);
+    NSInteger row = indexPath.row;
+    if(row == 0) {
+        RXFalseDataController * vc = RXStroyBoard(@"Home", @"RXFalseDataController");
+        //当前页面 隐藏 TabBar
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 

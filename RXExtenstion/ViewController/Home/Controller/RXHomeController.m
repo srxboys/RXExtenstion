@@ -32,7 +32,9 @@
     arr = @[@"假数据无需手动",
             @"缓存操作",
             @"获取info.plist信息",
-            @"MJ header foother"];
+            @"MJ header foother",
+            @"上传图片/头像",
+            @"AFN 请求接口"];
     [_tableView reloadData];
 }
 

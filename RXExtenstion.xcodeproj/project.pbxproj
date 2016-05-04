@@ -63,6 +63,8 @@
 		6C3A30D71CD36DDC00533FFF /* RXMJHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30D61CD36DDC00533FFF /* RXMJHeader.m */; };
 		6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30D91CD36E3700533FFF /* RXMJFooterGif.m */; };
 		6C3A30DD1CD36EC800533FFF /* RXMJHeaderGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */; };
+		6CA434281CD9C42400641785 /* RXUploadImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA434271CD9C42400641785 /* RXUploadImageController.m */; };
+		6CA4342C1CD9C56800641785 /* IBActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4342B1CD9C56800641785 /* IBActionSheet.m */; };
 		6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322451CD71368009BD1B7 /* RXBaseViewController.m */; };
 		6CF3224F1CD86C67009BD1B7 /* RXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3224E1CD86C67009BD1B7 /* RXTabBarController.m */; };
 		6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322511CD87077009BD1B7 /* RXNavBaseController.m */; };
@@ -183,6 +185,10 @@
 		6C3A30D91CD36E3700533FFF /* RXMJFooterGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMJFooterGif.m; sourceTree = "<group>"; };
 		6C3A30DB1CD36EC800533FFF /* RXMJHeaderGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMJHeaderGif.h; sourceTree = "<group>"; };
 		6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMJHeaderGif.m; sourceTree = "<group>"; };
+		6CA434261CD9C42400641785 /* RXUploadImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUploadImageController.h; sourceTree = "<group>"; };
+		6CA434271CD9C42400641785 /* RXUploadImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUploadImageController.m; sourceTree = "<group>"; };
+		6CA4342A1CD9C56800641785 /* IBActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBActionSheet.h; sourceTree = "<group>"; };
+		6CA4342B1CD9C56800641785 /* IBActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBActionSheet.m; sourceTree = "<group>"; };
 		6CF322441CD71368009BD1B7 /* RXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXBaseViewController.h; sourceTree = "<group>"; };
 		6CF322451CD71368009BD1B7 /* RXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXBaseViewController.m; sourceTree = "<group>"; };
 		6CF322471CD7153E009BD1B7 /* RXMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMessage.h; sourceTree = "<group>"; };
@@ -357,6 +363,7 @@
 		6C3A302D1CD352AA00533FFF /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				6CA434291CD9C56800641785 /* IBActionSheet */,
 				6C3A306E1CD3538A00533FFF /* MJRefresh */,
 				6C3A302E1CD352AA00533FFF /* AFNetworking */,
 			);
@@ -535,6 +542,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6CA434291CD9C56800641785 /* IBActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				6CA4342A1CD9C56800641785 /* IBActionSheet.h */,
+				6CA4342B1CD9C56800641785 /* IBActionSheet.m */,
+			);
+			path = IBActionSheet;
+			sourceTree = "<group>";
+		};
 		6CF322391CD712F6009BD1B7 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,6 +606,8 @@
 				6CF3225E1CD87A27009BD1B7 /* RXHomeController.m */,
 				6CF322631CD89D65009BD1B7 /* RXFalseDataController.h */,
 				6CF322641CD89D65009BD1B7 /* RXFalseDataController.m */,
+				6CA434261CD9C42400641785 /* RXUploadImageController.h */,
+				6CA434271CD9C42400641785 /* RXUploadImageController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -676,7 +694,7 @@
 			attributes = {
 				CLASSPREFIX = RX;
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = srxboys;
+				ORGANIZATIONNAME = "https://github.com/srxboys";
 				TargetAttributes = {
 					6C3A2FCB1CD3477000533FFF = {
 						CreatedOnToolsVersion = 7.3;
@@ -758,6 +776,7 @@
 				6C3A302C1CD3516800533FFF /* RXAFNS.m in Sources */,
 				6C3A30A71CD3538A00533FFF /* MJRefreshNormalHeader.m in Sources */,
 				6C3A30D71CD36DDC00533FFF /* RXMJHeader.m in Sources */,
+				6CA4342C1CD9C56800641785 /* IBActionSheet.m in Sources */,
 				6C3A30A11CD3538A00533FFF /* MJRefreshAutoNormalFooter.m in Sources */,
 				6C3A30AD1CD3538A00533FFF /* UIView+MJExtension.m in Sources */,
 				6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */,
@@ -765,6 +784,7 @@
 				6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */,
 				6C3A306A1CD352AA00533FFF /* UIRefreshControl+AFNetworking.m in Sources */,
 				6C3A309B1CD3538A00533FFF /* MJRefreshAutoFooter.m in Sources */,
+				6CA434281CD9C42400641785 /* RXUploadImageController.m in Sources */,
 				6C3A30681CD352AA00533FFF /* UIImageView+AFNetworking.m in Sources */,
 				6C3A30A51CD3538A00533FFF /* MJRefreshBackStateFooter.m in Sources */,
 				6C3A305E1CD352AA00533FFF /* AFNetworkReachabilityManager.m in Sources */,

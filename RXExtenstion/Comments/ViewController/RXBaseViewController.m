@@ -128,6 +128,39 @@
 
 
 
+
+
+
+
+- (void)showToast:(NSString *)message {
+    [self showToast:message ToastPosit:ToastPositCenter];
+}
+///提示框--文字
+-(void)showToast:(NSString *)message ToastPosit:(ToastPosit)toastPosit{
+    
+    NSString * posit = @"CSToastPositionCenter";
+    if(toastPosit == ToastPositTop) {
+        posit = @"CSToastPositionTop";
+    }
+    else if(toastPosit == ToastPositBottom){
+        posit = @"CSToastPositionBottom";
+    }
+    [self.view makeToast:message duration:2.0 position:posit];
+}
+
+- (void)showToast:(NSString *)message originY:(CGFloat)originY {
+    
+    CGPoint point = CGPointMake(self.view.bounds.size.width / 2, originY);
+    //NSValue
+    NSValue *value = [NSValue valueWithCGPoint:point];
+    
+    [self.view makeToast:message duration:2.0 position:value];
+}
+
+
+
+
+
 -(BOOL)shouldAutorotate
 {
     return NO; //是否旋转屏幕

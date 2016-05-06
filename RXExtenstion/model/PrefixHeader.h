@@ -26,7 +26,7 @@
 
 ///storybaord
 #define RXStroyBoard(_name, _identifier) [[UIStoryboard storyboardWithName:_name bundle:nil] instantiateViewControllerWithIdentifier:_identifier]
-
+#define RXMeStroBoard(_identifier) [self.storyboard instantiateViewControllerWithIdentifier:_identifier]
 /*
  ------ 宽 高 定义 ----
  */

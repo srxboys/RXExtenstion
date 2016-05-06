@@ -81,3 +81,35 @@
 }
 
 @end
+
+
+@implementation NSObject (urlBOOL)
+- (BOOL)urlBOOL {
+    if([self isKindOfClass:[NSNull class]]) {
+        return NO;
+    }
+    else if([self isKindOfClass:[NSString class]] && [(NSString *)self isEqualToString:@""]){
+        return NO;
+    }
+    else if(![self isKindOfClass:[NSString class]]) {
+        return NO;
+    }
+    else if ([(NSString *)self rangeOfString:@"http://"].location != NSNotFound ) {
+        return YES;
+    }
+    else if ([(NSString *)self rangeOfString:@"https://"].location != NSNotFound ) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
+}
+@end
+
+
+
+
+
+
+
+

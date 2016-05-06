@@ -186,7 +186,7 @@
     [manager DELETE:SERVER_URL parameters:paramsDict success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         RXLog(@"移除 请求成功");
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        RXLog(@"移除请求失败");
+        RXLog(@"移除 请求失败");
     }];
     
 }
@@ -195,13 +195,13 @@
 
 
 #pragma mark ---------------------请求回来的JSON数据参数 处理--------------------
-@interface NSDictionary (TextNullReplace)
-- (id)objectForKeyNotNull:(NSString *)key;
+@interface NSDictionary (TextNullReplaceAFNS)
+- (id)objectForKeyNotNullAFNS:(NSString *)key;
 @end
 
-@implementation NSDictionary (TextNullReplace)
+@implementation NSDictionary (TextNullReplaceAFNS)
 
-- (id)objectForKeyNotNull:(NSString *)key
+- (id)objectForKeyNotNullAFNS:(NSString *)key
 {
     id object = [self objectForKey:key];
     if ([object isKindOfClass:[NSNumber class]] ||
@@ -228,9 +228,9 @@
         "data" : {
             "message" : "请求成功",
             "status"  : "YES"
-            "returndata" : {
-                NSArray / NSDictionary
-             }
+            "returndata" :
+               NSString / NSArray / NSDictionary -> NSArray (是字典、字符串也转换成数组)
+ 
         },
         "rsp" : "succ" / "fail" //fail服务器错误
     }
@@ -247,17 +247,16 @@
  
  */
 
-+ (Response*)responseWithDict:(NSDictionary*)dict
-{
++ (Response*)responseWithDict:(NSDictionary*)dict {
     Response* response = [[Response alloc] init];
     
-    NSDictionary *dataDic = [dict objectForKeyNotNull:@"data"];
+    NSDictionary *dataDic = [dict objectForKeyNotNullAFNS:@"data"];
     
     if([dict[@"rsp"] isEqualToString:@"fail"]) {
         RXLog(@"HTTP:error.info=%@", dict[@"res"]);
     }
     
-    if ([[dict objectForKeyNotNull:@"data"] isKindOfClass:[NSArray class]])
+    if ([[dict objectForKeyNotNullAFNS:@"data"] isKindOfClass:[NSArray class]])
     {
         if ([dict[@"rsp"] isEqualToString:@"succ"])
         {
@@ -272,9 +271,9 @@
     if ([[dict objectForKey:@"data"] isKindOfClass:[NSDictionary class]])
     {
         //会把字典变数组
-        response.message = [dataDic objectForKeyNotNull:@"message"];
-        response.status = [[dataDic objectForKeyNotNull:@"status"] boolValue];
-        response.returndata = [[dataDic objectForKeyNotNull:@"returndata"] arrValue];
+        response.message = [dataDic objectForKeyNotNullAFNS:@"message"];
+        response.status = [[dataDic objectForKeyNotNullAFNS:@"status"] boolValue];
+        response.returndata = [[dataDic objectForKeyNotNullAFNS:@"returndata"] arrValue];
         return response;
     }else
     {

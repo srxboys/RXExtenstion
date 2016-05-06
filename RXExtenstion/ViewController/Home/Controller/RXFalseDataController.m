@@ -10,6 +10,8 @@
 #import "RXRandom.h"
 #import "MJRefresh.h"
 #import "RXMJHeaderGif.h"
+#import "RXCharacter.h"
+#import "UIImageView+ProgressView.h"
 
 @interface RXFalseDataController ()<UITableViewDelegate, UITableViewDataSource>
 {
@@ -51,7 +53,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString * cellIdentifier = @"cell";
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    cell.textLabel.text = arr[indexPath.row];
+    NSString * string = arr[indexPath.row];
+    cell.textLabel.text = string;
+    if([string urlBOOL]) {
+        string = [string substringFromIndex:3];
+        UIProgressView * progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+//        weak(weakSelf);
+        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:string]  placeholderImage:[UIImage imageNamed:@"tab_4"]   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            //table 选中
+//            [weakSelf.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+        } usingProgressView:progressView];
+        
+    }
     return cell;
 }
 

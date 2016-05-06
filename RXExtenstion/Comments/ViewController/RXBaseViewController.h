@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "RXConstant.h"
+#import "UIView+Toast.h"
 
 ///弱引用
 #define weak(weakSelf)  __weak __typeof(&*self)weakSelf = self;
@@ -28,6 +29,12 @@ typedef NS_ENUM(NSInteger, NetworkStatused){
     NetworkStatusedPhone
 };
 
+typedef NS_ENUM(NSInteger, ToastPosit){
+    ToastPositTop,
+    ToastPositCenter,
+    ToastPositBottom
+};
+
 @interface RXBaseViewController : UIViewController
 
 /// 显示没有网络状态  默认从顶部64开始
@@ -42,5 +49,13 @@ typedef NS_ENUM(NSInteger, NetworkStatused){
 
 ///网络状态
 @property (nonatomic, assign) NetworkStatused netWorkStatus;
+
+
+/// 显示 toast 【垂直居中显示】
+- (void)showToast:(NSString *)message;
+/// 显示 toast 位置 上 、 中 、下
+- (void)showToast:(NSString *)message ToastPosit:(ToastPosit)toastPosit;
+/// 显示 toast 自定义位置
+- (void)showToast:(NSString *)message originY:(CGFloat)originY;
 
 @end

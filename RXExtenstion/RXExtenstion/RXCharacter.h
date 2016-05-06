@@ -36,3 +36,8 @@
 @interface NSObject (arrValue)
 - (NSArray *)arrValue;
 @end
+
+///判断字符串是否 为 Url
+@interface NSObject (urlBOOL)
+- (BOOL)urlBOOL;
+@end

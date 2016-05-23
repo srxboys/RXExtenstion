@@ -25,8 +25,6 @@
         /*
          * 所有 的 NSNumber 都为字符串
          * 保证了 服务器传回来的数据 不会导致app崩溃
-         *
-         * 
          */
         
         NSNumberFormatter * numberFormatter = [[NSNumberFormatter alloc] init];
@@ -53,7 +51,23 @@
 }
 @end
 
+#pragma mark ----------- [ 轮播图、焦点图 ] ---------
+@implementation RXFouceModel
+- (RXFouceModel *)initWithDict:(NSDictionary *)dict {
+    self = [super init];
+    if(self) {
+        self.fouce_id = [dict objectForKeyNotNull:@"fouce_id"];
+        self.type     = [dict objectForKeyNotNull:@"type"];
+        self.title    = [dict objectForKeyNotNull:@"title"];
+        self.image    = [dict objectForKeyNotNull:@"image"];
+    }
+    return self;
+}
 
++ (RXFouceModel *)fouceModelWithDict:(NSDictionary *)dict {
+    return [[RXFouceModel alloc] initWithDict:dict];
+}
+@end
 
 
 

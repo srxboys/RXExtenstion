@@ -15,7 +15,6 @@
 @interface RXTabBarController ()<UITabBarControllerDelegate>
 {
     RXHomeController * _home;
-    RXHomeController * _srx;
 }
 
 //当前 页面 0 ~

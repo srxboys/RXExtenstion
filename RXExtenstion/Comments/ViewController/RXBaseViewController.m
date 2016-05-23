@@ -26,7 +26,8 @@
 @implementation RXBaseViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     //实时监控网络状态
     [self checkNetworkEnable];
 }

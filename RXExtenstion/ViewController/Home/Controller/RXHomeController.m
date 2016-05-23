@@ -10,6 +10,7 @@
 
 #import "RXFalseDataController.h" //假数据
 #import "RXUploadImageController.h" //上传请求 例子
+#import "RXNewHomeController.h"
 
 @interface RXHomeController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -32,12 +33,14 @@
     
     _tableView.tableFooterView = [[UIView alloc] init];
     
+    
     arr = @[@"假数据无需手动",
             @"缓存操作",
             @"获取info.plist信息",
             @"MJ header foother",
             @"上传图片/头像",
-            @"AFN 请求接口"];
+            @"AFN 请求接口",
+            @"一个完整的界面demo"];
     [_tableView reloadData];
 }
 
@@ -51,6 +54,10 @@
     cell.textLabel.text = arr[indexPath.row];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    if(indexPath.row == 0) {
+////        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        cell.userInteractionEnabled = NO;
+//    }
     return cell;
 }
 
@@ -71,6 +78,12 @@
 //        RXUploadImageController * upController = RXMeStroBoard(@"RXUploadImageController");
         upController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:upController animated:YES];
+    }
+    else if(row == 6) {
+        //完整的界面demo
+        RXNewHomeController * homeControll = [[RXNewHomeController alloc] init];
+        homeControll.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:homeControll animated:YES];
     }
 }
 

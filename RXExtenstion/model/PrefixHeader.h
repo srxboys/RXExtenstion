@@ -37,9 +37,9 @@
 #define NavHeight     64
 #define TabbarHeight  49
 
-//宽高比定义
-#define ActureHeight(_height) (_height*1.0/375.f*ScreenWidth)
-#define ActureHeightV(_height) (_height*1.0/667.f*ScreenHeight)
+//宽高比定义  roundf 四舍五入函数
+#define ActureHeight(_height)  roundf(_height/375.0 * ScreenWidth)
+#define ActureHeightV(_height) roundf(_height/667.0 * ScreenHeight)
 
 /*
  简单的frame获取
@@ -117,7 +117,7 @@
 #define iPhone6 (CGSizeEqualToSize(CGSizeMake(375, 667), [UIScreen mainScreen].bounds.size) ? YES : NO)
 #define iPhone6Plus (CGSizeEqualToSize(CGSizeMake(414, 736), [UIScreen mainScreen].bounds.size) ? YES : NO)
 
-//边框 特殊处理
+//边框 特殊处理--运行看看再有问题该frame
 #define BorderWidth (iPhone6Plus ? 0.35 : 0.5)
 //1.iPhone4分辨率320x480，像素640x960，@2x
 //2.iPhone5分辨率320x568，像素640x1136，@2x

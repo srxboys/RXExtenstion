@@ -18,5 +18,6 @@
 @interface RXNewHomeTableViewCell : UICollectionViewCell
 @property (nonatomic, strong) id<RXNewHomeTableViewCellDelegate>delegate;
 //数据源
-@property (nonatomic, strong) NSMutableArray *dataArr;
+- (void)setCellDataArr:(NSArray *)array andSection:(NSInteger)section;
+
 @end

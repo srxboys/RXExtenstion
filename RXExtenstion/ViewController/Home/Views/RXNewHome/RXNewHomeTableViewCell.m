@@ -15,7 +15,9 @@
 @interface RXNewHomeTableViewCell ()<UITableViewDelegate, UITableViewDataSource>
 {
     UITableView    * _tableView;
-    NSMutableArray * _dataSourceArr;
+    NSArray        * _dataSourceArr;
+    
+    CGFloat          _tempSection;
 }
 @end
 
@@ -30,19 +32,22 @@
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"TableCell"];
         [self.contentView addSubview:_tableView];
         
-        _dataSourceArr = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-- (void)setDataArr:(NSMutableArray *)dataArr {
-    _dataArr = dataArr;
+
+
+- (void)setCellDataArr:(NSArray *)array andSection:(NSInteger)section{
     
-    if(_dataSourceArr == dataArr || ![dataArr arrBOOL]) {
+    _tempSection = section;
+    
+    if(_dataSourceArr == array || ![array arrBOOL]) {
         return;
     }
+
     
-    [_dataSourceArr addObjectsFromArray:dataArr];
+    _dataSourceArr = array;
     
     [_tableView reloadData];
 }
@@ -54,8 +59,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString * cellInditifer = @"TableCell";
+
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellInditifer];
     cell.textLabel.text = _dataSourceArr[indexPath.row];
+    cell.textLabel.textColor = GHS_666_COLOR;
+    cell.textLabel.backgroundColor = [UIColor yellowColor];
     return cell;
 }
 

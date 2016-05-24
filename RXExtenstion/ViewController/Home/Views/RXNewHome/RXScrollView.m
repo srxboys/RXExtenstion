@@ -33,12 +33,13 @@
         
         CGFloat width = frame.size.width;
         CGFloat height = frame.size.height;
+        self.userInteractionEnabled = YES;
         
         _scrollView = [[GBInfiniteScrollView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
         _scrollView.infiniteScrollViewDelegate = self;
         _scrollView.infiniteScrollViewDataSource = self;
         //滚动速度
-        _scrollView.interval = 0.5;
+        _scrollView.interval = 1.5;
         [self addSubview:_scrollView];
         
         _pageControll = [[SMPageControl alloc] initWithFrame:CGRectMake(0, height - 40, width, 30)];
@@ -49,8 +50,8 @@
         //        _pageControll.pageIndicatorImage = [UIImage imageNamed:@""];
         //        _pageControll.currentPageIndicatorImage = [UIImage imageNamed:@""];
         //统一大小的 颜色 分页
-        _pageControll.pageIndicatorTintColor = [UIColor redColor];
-        _pageControll.currentPageIndicatorTintColor = [UIColor whiteColor];
+        _pageControll.pageIndicatorTintColor = [UIColor lightGrayColor];
+        _pageControll.currentPageIndicatorTintColor = [UIColor orangeColor];
         
         [self addSubview:_pageControll];
     }

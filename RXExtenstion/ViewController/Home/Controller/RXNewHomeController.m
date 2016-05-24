@@ -108,7 +108,7 @@
     [_collectionView addSubview:_userInforView];
     [_collectionView addSubview:_segmentView];
     
-    _collectionView.contentInset = UIEdgeInsetsMake(_collectionViewTop, 0, 0, 0);
+    _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, _collectionViewTop);
 
 
 }
@@ -126,8 +126,8 @@
     }
     
     
-    for(NSInteger i = 0; i < 4; i++) {
-        [_collectionViewDataSourceArr addObject:@"2"];
+    for(NSInteger i = 0; i < 10; i++) {
+        [_collectionViewDataSourceArr addObject:[NSString stringWithFormat:@"srxboys_%zd", i]];
     }
     
     [_collectionView reloadData];
@@ -150,7 +150,7 @@
     NSInteger row = indexPath.row;
     //用 cell 里包括 TableView 的
     RXNewHomeTableViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdifier forIndexPath:indexPath];
-    [cell setDataArr:_collectionViewDataSourceArr];
+    [cell setCellDataArr:_collectionViewDataSourceArr andSection:section];
     cell.delegate = self;
     cell.contentView.backgroundColor = [RXRandom randomColor];
     return cell;

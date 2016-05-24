@@ -1119,6 +1119,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yaojin Dou (HK9KZR5X5Z)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RXExtenstion/model/PrefixHeader.h";
 				INFOPLIST_FILE = RXExtenstion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1128,8 +1129,9 @@
 					"$(PROJECT_DIR)/RXExtenstion/3rd/QIYU_iOS_SDK_v1.2.1",
 				);
 				OTHER_LDFLAGS = "-Objc";
-				PRODUCT_BUNDLE_IDENTIFIER = "https---www.github.com-srxboys.RXExtenstion";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ghs.app.RXExtentstion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2a8391eb-a839-4696-a70e-05f83712b0a4";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1147,7 +1149,7 @@
 					"$(PROJECT_DIR)/RXExtenstion/3rd/QIYU_iOS_SDK_v1.2.1",
 				);
 				OTHER_LDFLAGS = "-Objc";
-				PRODUCT_BUNDLE_IDENTIFIER = "https---www.github.com-srxboys.RXExtenstion";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ghs.app.RXExtentstion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

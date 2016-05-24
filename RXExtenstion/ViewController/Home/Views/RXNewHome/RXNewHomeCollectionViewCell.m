@@ -16,13 +16,19 @@
 
 @implementation RXNewHomeCollectionViewCell
 
-- (instancetype)initWithTable:(UICollectionView *)collectionView {
-    self = [super init];
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
     if(self) {
-        //创建
-        _collectionView = nil;
+        //初始化内部
+        
+        UICollectionViewFlowLayout * _flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        
+        _collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:_flowLayout];
         _collectionView.delegate  = self;
         _collectionView.dataSource = self;
+        [self.contentView addSubview:_collectionView];
+
     }
     return self;
 }
@@ -71,16 +77,16 @@
 
 
 #pragma mark - ~~~~~~~~~~~ scrollViewDelegate ~~~~~~~~~~~~~~~
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    //选择菜单
-//    self.topScrollMenu.currentIndex =  scrollView.contentOffset.x/ScreenWidth;
-//    self.currentCate = scrollView.contentOffset.x/ScreenWidth;
-    scrollView.userInteractionEnabled = YES;
-}
-
--(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (decelerate) {
-        scrollView.userInteractionEnabled = NO;
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    //上下滑动，告诉父类，就可以改变了
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if(offsetY < 0) {
+        scrollView.contentOffset = CGPointMake(0, 0);
+    }
+    else {
+        if([self.delegate respondsToSelector:@selector(rxNewHomeCollectionViewCellScrollView:)]) {
+            [self.delegate rxNewHomeCollectionViewCellScrollView:offsetY];
+        }
     }
 }
 @end

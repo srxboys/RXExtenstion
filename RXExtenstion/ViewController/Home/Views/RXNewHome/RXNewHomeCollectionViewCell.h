@@ -9,14 +9,19 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, CollectionViewType) {
-    CollectionViewTypeHome,
-    CollectionViewTypeShare,
-    CollectionViewTypeServer,
-    CollectionViewTypeRequirement
-};
+
+@protocol RXNewHomeCollectionViewCellDelegate <NSObject>
+
+@optional
+- (void)rxNewHomeCollectionViewCellScrollView:(CGFloat)offsetY;
+@end
+
+
+
 
 @interface RXNewHomeCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) id<RXNewHomeCollectionViewCellDelegate>delegate;
 //数据源
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @end

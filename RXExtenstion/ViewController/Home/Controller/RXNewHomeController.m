@@ -14,9 +14,11 @@
 #import "RXScrollView.h"
 #import "RXNewHomeUserInfoView.h"
 #import "RXNewHomeSegmentView.h"
+//下面 两个你用那个都行
 #import "RXNewHomeCollectionViewCell.h" //cell 里包括collectionView
+#import "RXNewHomeTableViewCell.h" //cell 里包括tableView
 
-@interface RXNewHomeController ()<UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface RXNewHomeController ()<UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, RXNewHomeTableViewCellDelegate>
 {
     UIScrollView            * _scrollView;
     
@@ -28,6 +30,8 @@
     CGFloat                   _collectionViewHeigth;
     NSMutableArray          * _dataSouceArr;
     
+    NSMutableArray          * _collectionViewDataSourceArr;
+    
 }
 @end
 
@@ -38,6 +42,8 @@
     // Do any additional setup after loading the view.
     //界面初始化
     [self configUI];
+    // 初始化 变量
+    [self configDataSource];
     //假数据
     [self AddFalseData];
 }
@@ -52,19 +58,19 @@
     //轮番图
     CGFloat scrollViewHeight = ActureHeight(210);
     _fouceView = [[RXScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, scrollViewHeight)];
-    _fouceView.backgroundColor = [UIColor redColor];
+    _fouceView.backgroundColor = [RXRandom randomColor];
     [_scrollView addSubview:_fouceView];
     
     totalHeigth += scrollViewHeight;
     //用户信息
     _userInforView = [[RXNewHomeUserInfoView alloc] initWithFrame:CGRectMake(0, totalHeigth, ScreenWidth, 100)];
-    _userInforView.backgroundColor = [UIColor redColor];
+    _userInforView.backgroundColor = [RXRandom randomColor];
     [_scrollView addSubview:_userInforView];
     
     totalHeigth += 100;
     //分段控制器
     _segmentView = [[RXNewHomeSegmentView alloc] initWithFrame:CGRectMake(0, totalHeigth, ScreenWidth, 50)];
-    _segmentView.backgroundColor = [UIColor redColor];
+    _segmentView.backgroundColor = [RXRandom randomColor];
     [_scrollView addSubview:_segmentView];
     
     totalHeigth += 50;
@@ -88,18 +94,34 @@
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, totalHeigth, ScreenWidth, _collectionViewHeigth) collectionViewLayout:flowLayout];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
-    //注册 cell
-    [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    //注册 cell //用 cell 里包括 TableView 的
+    [_collectionView registerClass:[RXNewHomeTableViewCell class] forCellWithReuseIdentifier:@"cellContentTableView"];
+    
+    //不允许超出范围
+    _collectionView.bounces = NO;
+    //分页
+    _collectionView.pagingEnabled = YES;
+    
     [_scrollView addSubview:_collectionView];
 
 
 }
 
+- (void)configDataSource {
+    _dataSouceArr = [[NSMutableArray alloc] init];
+    _collectionViewDataSourceArr = [[NSMutableArray alloc] init];
+}
+
 - (void)AddFalseData {
     
     //collection 假数据
-    for(NSInteger i = 0; i < arc4random() % 100 + 10; i++) {
+    for(NSInteger i = 0; i < 4; i++) {
         [_dataSouceArr addObject:@"1"];
+    }
+    
+    
+    for(NSInteger i = 0; i < 2; i++) {
+        [_collectionViewDataSourceArr addObject:@"2"];
     }
     
     [_collectionView reloadData];
@@ -112,15 +134,18 @@
     return _dataSouceArr.count;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _dataSouceArr.count;
+    return 1;
 }
 
 #pragma mark - ~~~~~~~~~~~ Collection 分配资源 ~~~~~~~~~~~~~~~
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString * cellIdifier = @"cell";
+    static NSString * cellIdifier = @"cellContentTableView";
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
-    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdifier forIndexPath:indexPath];
+    //用 cell 里包括 TableView 的
+    RXNewHomeTableViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdifier forIndexPath:indexPath];
+    [cell setDataArr:_collectionViewDataSourceArr];
+    cell.delegate = self;
     cell.contentView.backgroundColor = [RXRandom randomColor];
     return cell;
 }
@@ -139,6 +164,30 @@
     UIEdgeInsets edg = UIEdgeInsetsZero;
     edg = UIEdgeInsetsMake(0, 0, 0, 0);
     return edg;
+}
+
+
+
+
+#pragma mark - ~~~~~~~~~~~ 子类滑动改变此页面的 CGPoint ~~~~~~~~~~~~~~~
+- (void)RXNewHomeTableViewCellScrollView:(CGFloat)offsetY {
+    
+    CGFloat totalHeigth = -offsetY;
+    //轮番图
+    CGFloat scrollViewHeight = ActureHeight(210);
+    _fouceView.frame = CGRectMake(0, totalHeigth, ScreenWidth, scrollViewHeight);
+    
+    totalHeigth += scrollViewHeight;
+    //用户信息
+    _userInforView.frame = CGRectMake(0, totalHeigth, ScreenWidth, 100);
+    
+    totalHeigth += 100;
+    //分段控制器
+    _segmentView.frame = CGRectMake(0, totalHeigth, ScreenWidth, 50);
+    
+    totalHeigth += 50;
+    _collectionView.frame = CGRectMake(0, totalHeigth, ScreenWidth, _collectionViewHeigth);
+    
 }
 
 

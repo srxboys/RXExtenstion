@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */; };
 		6C3A2FD11CD3477000533FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD01CD3477000533FFF /* main.m */; };
 		6C3A2FD41CD3477000533FFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD31CD3477000533FFF /* AppDelegate.m */; };
 		6C3A2FDA1CD3477000533FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD81CD3477000533FFF /* Main.storyboard */; };
@@ -103,6 +104,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C32D6A91CF3E7C7003EE112 /* RXNewHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNewHomeTableViewCell.h; sourceTree = "<group>"; };
+		6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNewHomeTableViewCell.m; sourceTree = "<group>"; };
 		6C3A2FCC1CD3477000533FFF /* RXExtenstion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXExtenstion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3A2FD01CD3477000533FFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C3A2FD21CD3477000533FFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -656,6 +659,8 @@
 				6CA160031CF34287009DCE60 /* RXNewHomeSegmentView.m */,
 				6CA160081CF3432D009DCE60 /* RXNewHomeCollectionViewCell.h */,
 				6CA160091CF3432D009DCE60 /* RXNewHomeCollectionViewCell.m */,
+				6C32D6A91CF3E7C7003EE112 /* RXNewHomeTableViewCell.h */,
+				6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */,
 			);
 			path = RXNewHome;
 			sourceTree = "<group>";
@@ -974,6 +979,7 @@
 				6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */,
 				6C3A30611CD352AA00533FFF /* AFURLResponseSerialization.m in Sources */,
 				6CBF82271CDAE45A009AD4FC /* UIImageView+ProgressView.m in Sources */,
+				6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */,
 				6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */,
 				6CA434571CD9E5AF00641785 /* SDWebImageDecoder.m in Sources */,
 				6CA15FFA1CF33FEC009DCE60 /* RXNewHomeController.m in Sources */,

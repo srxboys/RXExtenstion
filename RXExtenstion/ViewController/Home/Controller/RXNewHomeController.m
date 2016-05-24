@@ -18,7 +18,7 @@
 #import "RXNewHomeCollectionViewCell.h" //cell 里包括collectionView
 #import "RXNewHomeTableViewCell.h" //cell 里包括tableView
 
-@interface RXNewHomeController ()<UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, RXNewHomeTableViewCellDelegate>
+@interface RXNewHomeController ()<UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate,RXNewHomeTableViewCellDelegate>
 {
     UIScrollView            * _scrollView;
     
@@ -27,9 +27,9 @@
     RXNewHomeSegmentView    * _segmentView;
     
     UICollectionView        * _collectionView;
+    CGFloat                   _collectionViewTop;
     CGFloat                   _collectionViewHeigth;
     NSMutableArray          * _dataSouceArr;
-    
     NSMutableArray          * _collectionViewDataSourceArr;
     
 }
@@ -49,35 +49,33 @@
 }
 
 - (void)configUI {
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, NavHeight, ScreenWidth, ScreenHeight - NavHeight)];
-    _scrollView.delegate = self;
-    _scrollView.decelerationRate = 0.7;//滑动速度
-    [self.view addSubview:_scrollView];
+
     
     CGFloat totalHeigth = 0;
     //轮番图
     CGFloat scrollViewHeight = ActureHeight(210);
     _fouceView = [[RXScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, scrollViewHeight)];
-    _fouceView.backgroundColor = [RXRandom randomColor];
-    [_scrollView addSubview:_fouceView];
+    _fouceView.backgroundColor = [UIColor redColor];
+    
     
     totalHeigth += scrollViewHeight;
     //用户信息
     _userInforView = [[RXNewHomeUserInfoView alloc] initWithFrame:CGRectMake(0, totalHeigth, ScreenWidth, 100)];
     _userInforView.backgroundColor = [RXRandom randomColor];
-    [_scrollView addSubview:_userInforView];
+    
     
     totalHeigth += 100;
     //分段控制器
     _segmentView = [[RXNewHomeSegmentView alloc] initWithFrame:CGRectMake(0, totalHeigth, ScreenWidth, 50)];
     _segmentView.backgroundColor = [RXRandom randomColor];
-    [_scrollView addSubview:_segmentView];
+    
     
     totalHeigth += 50;
+    _collectionViewTop = totalHeigth;
     
     CGFloat commentHeigth = 50; //聊天的高度
     
-    _collectionViewHeigth = ScreenHeight - totalHeigth - NavHeight - commentHeigth;
+    _collectionViewHeigth = ScreenHeight - NavHeight - commentHeigth;
     UICollectionViewFlowLayout * flowLayout = [[UICollectionViewFlowLayout alloc] init];
     //垂直方向
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
@@ -91,7 +89,7 @@
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     //这个是通配，不需要这个，因为cell高度不一样
     //    flowLayout.itemSize = CGSizeMake(ScreenWidth - 10, 50);
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, totalHeigth, ScreenWidth, _collectionViewHeigth) collectionViewLayout:flowLayout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, NavHeight, ScreenWidth, _collectionViewHeigth) collectionViewLayout:flowLayout];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     //注册 cell //用 cell 里包括 TableView 的
@@ -102,7 +100,15 @@
     //分页
     _collectionView.pagingEnabled = YES;
     
-    [_scrollView addSubview:_collectionView];
+    _collectionView.showsHorizontalScrollIndicator = NO;
+    
+    [self.view addSubview:_collectionView];
+    
+    [_collectionView addSubview:_fouceView];
+    [_collectionView addSubview:_userInforView];
+    [_collectionView addSubview:_segmentView];
+    
+    _collectionView.contentInset = UIEdgeInsetsMake(_collectionViewTop, 0, 0, 0);
 
 
 }
@@ -120,7 +126,7 @@
     }
     
     
-    for(NSInteger i = 0; i < 2; i++) {
+    for(NSInteger i = 0; i < 4; i++) {
         [_collectionViewDataSourceArr addObject:@"2"];
     }
     
@@ -169,27 +175,46 @@
 
 
 
-#pragma mark - ~~~~~~~~~~~ 子类滑动改变此页面的 CGPoint ~~~~~~~~~~~~~~~
+#pragma mark - ~~~~~~~~~~~ 子类竖向滑动改变此页面的 CGPoint ~~~~~~~~~~~~~~~
 - (void)RXNewHomeTableViewCellScrollView:(CGFloat)offsetY {
+    RXLog(@"RXNewHome-offsety=%.2f", offsetY);
     
-    CGFloat totalHeigth = -offsetY;
+    offsetY = -_collectionViewTop - offsetY;
+    CGFloat offsetX = _collectionView.contentOffset.x;
+    //    RXLog(@"offsetY=%.2f===%.2f", offsetY, _collectionViewTop);
+    CGFloat totalHeigth = offsetY;
     //轮番图
     CGFloat scrollViewHeight = ActureHeight(210);
-    _fouceView.frame = CGRectMake(0, totalHeigth, ScreenWidth, scrollViewHeight);
+    _fouceView.frame = CGRectMake(offsetX, totalHeigth, ScreenWidth, scrollViewHeight);
     
     totalHeigth += scrollViewHeight;
-    //用户信息
-    _userInforView.frame = CGRectMake(0, totalHeigth, ScreenWidth, 100);
+    _userInforView.frame = CGRectMake(offsetX, totalHeigth, ScreenWidth, 100);
     
     totalHeigth += 100;
-    //分段控制器
-    _segmentView.frame = CGRectMake(0, totalHeigth, ScreenWidth, 50);
-    
-    totalHeigth += 50;
-    _collectionView.frame = CGRectMake(0, totalHeigth, ScreenWidth, _collectionViewHeigth);
-    
+    _segmentView.frame = CGRectMake(offsetX, totalHeigth, ScreenWidth, 50);
 }
 
+
+
+#pragma mark - ~~~~~~~~~~~ 横向滚动 ~~~~~~~~~~~~~~~
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    //只是横向滚动 赋值 //竖向滚动需要子cell反馈
+    
+    CGFloat offsetY = scrollView.contentOffset.y;
+    CGFloat offsetX = scrollView.contentOffset.x;
+//    RXLog(@"offsetY=%.2f===%.2f", offsetY, _collectionViewTop);
+    CGFloat totalHeigth = offsetY;
+    //轮番图
+    CGFloat scrollViewHeight = ActureHeight(210);
+    _fouceView.frame = CGRectMake(offsetX, totalHeigth, ScreenWidth, scrollViewHeight);
+    
+    totalHeigth += scrollViewHeight;
+    _userInforView.frame = CGRectMake(offsetX, totalHeigth, ScreenWidth, 100);
+    
+    totalHeigth += 100;
+    _segmentView.frame = CGRectMake(offsetX, totalHeigth, ScreenWidth, 50);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

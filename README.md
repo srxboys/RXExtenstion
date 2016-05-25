@@ -62,7 +62,22 @@ iOS 项目基本框架
 }
 @end
 ```
-###3）简单的MJRefresh封装
+-
+###3）灵活利用 【系统 的 标识】详细说明
+ 多人开发 或者 版本迭代 的兼容性
+```objc
+//-------废弃标识--------------
+//属性
+@property (nonatomic, assign) BOOL isUseful __deprecated_msg("已废弃 `删除`");
+//方法
+- (void)rxTest __deprecated_msg("废弃");
+
+//类方法 废弃标识
++ (void)classRxTest __deprecated_msg("废弃");
+```
+![](https://github.com/srxboys/RXExtenstion/blob/master/deprecatedResult.png) 
+-
+###4）简单的MJRefresh封装
 -
 
 我现在的项目 用的这个！！！！！！

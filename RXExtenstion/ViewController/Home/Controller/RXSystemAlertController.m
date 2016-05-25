@@ -8,13 +8,13 @@
 
 /*
  *  灵活利用 【系统 的 标识】，
- *  -- 多人同步 或者 版本迭代 的兼容性
+ *  -- 多人开发 或者 版本迭代 的兼容性
  */
 
 #import "RXSystemAlertController.h"
 
 
-// 在某个版本   过期提醒(这个借鉴于MJRefresh中的定义)
+// 在某个版本 过期提醒
 #define RXDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
 
 
@@ -68,6 +68,26 @@ typedef NS_ENUM(NSInteger, RXType) {
   */
 - (void)rxTextThree RXDeprecated("废弃说明");
 
+//系统版本 可以使用的 方法
+
+// iOS 2_0引入的方法, 7_0是被废弃的方法
+- (void)rxSysTestFor NS_DEPRECATED_IOS(2_0, 7_0);
+
+// OX S 和 iOS
+// NS_AVAILABLE(_mac, _ios)
+- (void)rxSysTestFive NS_AVAILABLE(10_8, 6_0);
+
+
+//NS_DEPRECATED
+/**
+ *  OX S -> mac: 10.0系统中导入的   10.6系统中废弃的
+ *  iOS  -> iOS: 2.0系统中导入的    4.0系统中废弃了
+ */
+- (void)rxSysTestSix NS_DEPRECATED(10_0, 10_6, 2_0, 4_0);
+
+//过期并，添加说明信息
+- (void)rxSysTestSeven NS_DEPRECATED(10_0, 10_6, 2_0, 4_0, "这个方法已过期了`废弃了`");
+
 @end
 
 
@@ -96,6 +116,8 @@ typedef NS_ENUM(NSInteger, RXType) {
     _isBoys;
     
     [self rxTextThree];
+    
+    [self rxSysTestFor];
 }
 
 
@@ -105,14 +127,5 @@ typedef NS_ENUM(NSInteger, RXType) {
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

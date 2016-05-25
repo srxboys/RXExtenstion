@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */; };
+		6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */; };
 		6C3A2FD11CD3477000533FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD01CD3477000533FFF /* main.m */; };
 		6C3A2FD41CD3477000533FFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD31CD3477000533FFF /* AppDelegate.m */; };
 		6C3A2FDA1CD3477000533FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD81CD3477000533FFF /* Main.storyboard */; };
@@ -106,6 +107,8 @@
 /* Begin PBXFileReference section */
 		6C32D6A91CF3E7C7003EE112 /* RXNewHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNewHomeTableViewCell.h; sourceTree = "<group>"; };
 		6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNewHomeTableViewCell.m; sourceTree = "<group>"; };
+		6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSystemAlertController.h; sourceTree = "<group>"; };
+		6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSystemAlertController.m; sourceTree = "<group>"; };
 		6C3A2FCC1CD3477000533FFF /* RXExtenstion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXExtenstion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3A2FD01CD3477000533FFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C3A2FD21CD3477000533FFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -788,6 +791,8 @@
 				6CA434271CD9C42400641785 /* RXUploadImageController.m */,
 				6CA15FF81CF33FEC009DCE60 /* RXNewHomeController.h */,
 				6CA15FF91CF33FEC009DCE60 /* RXNewHomeController.m */,
+				6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */,
+				6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -932,6 +937,7 @@
 				6C3A309E1CD3538A00533FFF /* MJRefreshFooter.m in Sources */,
 				6C3A30261CD34EF100533FFF /* RXNetworkCheck.m in Sources */,
 				6CA1600A1CF3432D009DCE60 /* RXNewHomeCollectionViewCell.m in Sources */,
+				6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */,
 				6CA4345E1CD9E5AF00641785 /* UIImage+MultiFormat.m in Sources */,
 				6C3A30D41CD360DC00533FFF /* RXCharacter.m in Sources */,
 				6C3A2FD41CD3477000533FFF /* AppDelegate.m in Sources */,

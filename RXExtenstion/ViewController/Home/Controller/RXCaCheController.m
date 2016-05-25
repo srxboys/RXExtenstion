@@ -7,6 +7,7 @@
 //
 
 #import "RXCaCheController.h"
+#import "RXAFNS.h"
 
 ///字符处理 、数组、 字典 -> 空处理
 #import "RXCharacter.h"
@@ -32,5 +33,7 @@
     string = @"0"; // or --> string = @"<null>"
     NSString * dictValue = [string strNotEmptyValue];
     RXLog(@"dictValue=%@", dictValue);
+
 }
+
 @end

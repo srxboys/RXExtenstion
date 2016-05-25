@@ -11,6 +11,7 @@
 #import "RXFalseDataController.h" //假数据
 #import "RXUploadImageController.h" //上传请求 例子
 #import "RXNewHomeController.h"
+#import "RXCaCheController.h"
 
 @interface RXHomeController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -71,6 +72,11 @@
         //当前页面 隐藏 TabBar
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if(row == 1) {
+        RXCaCheController * upController = RXStroyBoard(@"Home", @"RXCaCheController");
+        upController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:upController animated:YES];
     }
     else if(row == 4) {
         RXUploadImageController * upController = RXStroyBoard(@"Home", @"RXUploadImageController");

@@ -13,6 +13,8 @@
 #import "AppDelegate.h"
 
 #define SERVER_URL @"https://github.com/srxboys"
+
+
 #define loadingWidthHeight 0
 
 
@@ -32,10 +34,10 @@
     NSMutableDictionary* newParams = [NSMutableDictionary  dictionaryWithDictionary:params];
     
     
-    NSString * user_id = @"app登录后的 用户id";
+//    NSString * user_id = @"app登录后的 用户id";
     
     //iOS
-    [newParams setObject:user_id forKey:@"user_id"];
+//    [newParams setObject:user_id forKey:@"user_id"];
     [newParams setObject:@"iOS" forKey:@"device_type"];
     [newParams setObject:[RXBundle bundleVersion] forKey:@"version"];
 

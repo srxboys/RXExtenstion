@@ -141,7 +141,7 @@
         <!--数据缓存-->
         <scene sceneID="R06-MK-zv6">
             <objects>
-                <viewController title="数据缓存" id="5lc-RL-bqM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RXCaCheController" title="数据缓存" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5lc-RL-bqM" customClass="RXCaCheController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="htJ-xx-PkK"/>
                         <viewControllerLayoutGuide type="bottom" id="VLB-aV-qVk"/>

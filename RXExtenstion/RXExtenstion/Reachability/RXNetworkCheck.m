@@ -2,13 +2,24 @@
 //  RXNetworkCheck.m
 //  RXExtenstion
 //
-//  Created by srx on 16/4/29.
-//  Copyright © 2016年 srxboys. All rights reserved.
+//  Created by srx on 16/5/25.
+//  Copyright © 2016年 https://github.com/srxboys. All rights reserved.
 //
 
 #import "RXNetworkCheck.h"
+
+#import "RXConstant.h"
+
 #import "Reachability.h"
 #import <SystemConfiguration/SCNetworkReachability.h>
+
+
+typedef  NS_ENUM(NSInteger, GetNetworksStatus)
+{
+    GetNetworksStatusNone  = 0,
+    GetNetworksStatusWifi  = 1,
+    GetNetworksStatusPhone = 2
+};
 
 
 
@@ -22,9 +33,7 @@ typedef void(^netCheckBlock)(GetNetworksStatus status);
 @end
 
 
-
 @implementation RXNetworkCheck
-
 + (RXNetworkCheck *)shareNetworkCheck {
     static dispatch_once_t onceToken;
     static RXNetworkCheck * _net = nil;
@@ -51,32 +60,61 @@ typedef void(^netCheckBlock)(GetNetworksStatus status);
     // 2.检测手机是否能上网络(WIFI\3G\2.5G)
     Reachability *conn = [Reachability reachabilityForInternetConnection];
     
+    __weak typeof(self)bself = self;
+       
     // 3.判断网络状态
     if ([wifi currentReachabilityStatus] != NotReachable) {
         // 有wifi
-        _sblock(GetNetworksStatusWifi);
+//        _sblock(GetNetworksStatusWifi);
+        
+        [bself postNotification:GetNetworksStatusWifi];
+        
     } else if ([conn currentReachabilityStatus] != NotReachable) {
         // 没有使用wifi, 使用手机自带网络进行上网
-        _sblock(GetNetworksStatusPhone);
+//        _sblock(GetNetworksStatusPhone);
+        
+        
+        [bself postNotification:GetNetworksStatusPhone];
     } else { // 没有网络
-        _sblock(GetNetworksStatusNone);
+//        _sblock(GetNetworksStatusNone);
+        
+        [bself postNotification:GetNetworksStatusNone];
     }
+}
+
+
+//发送通知
+- (void)postNotification:(GetNetworksStatus)status {
+  
+    
+    if(status == GetNetworksStatusNone) {
+        _statusString = RXNetworksStatusNone;
+    }
+    else if(status == GetNetworksStatusWifi) {
+        _statusString = RXNetworksStatusWifi;
+    }
+    else if(status == GetNetworksStatusPhone){
+        _statusString = RXNetworksStatusPhone;
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:rxGetNetworkStatusNotification object:_statusString];
 }
 
 
 
 
 
-
-
-
 + (void)netWorkcheck:(void (^)(GetNetworksStatus status))finishBlock {
-    
+    //已经不建议用了
     [RXNetworkCheck shareNetworkCheck].sblock = ^ (GetNetworksStatus status) {
         finishBlock(status);
     };
     [[RXNetworkCheck shareNetworkCheck] checkNetworkState];
     
+}
+
++ (void)getNetworkStatus {
+    [[RXNetworkCheck shareNetworkCheck] checkNetworkState];
 }
 
 - (void)dealloc {
@@ -126,5 +164,4 @@ typedef void(^netCheckBlock)(GetNetworksStatus status);
     
     return bEnable;
 }
-
 @end

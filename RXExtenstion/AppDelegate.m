@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "RXTabBarController.h"
+#import "RXNetworkCheck.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,8 @@
 
     RXTabBarController * tabBarController = RXStroyBoard(@"Main", @"RXTabBarController");
     _window.rootViewController = tabBarController;
+    
+    [RXNetworkCheck getNetworkStatus];
     
     [_window makeKeyAndVisible];
     return YES;

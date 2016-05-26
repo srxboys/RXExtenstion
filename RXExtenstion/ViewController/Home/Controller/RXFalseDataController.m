@@ -42,6 +42,9 @@
             [NSString stringWithFormat:@"字母=%@",[RXRandom randomChinas]],
             [NSString stringWithFormat:@"图片=%@",[RXRandom randomImageURL]],
             ];
+    
+//    RXLog(@"arr=%@", arr);
+    
     [_tableView.mj_header endRefreshing];
     [_tableView reloadData];
 }
@@ -71,6 +74,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+
+- (void)networkChange:(NSString *)status {
+    RXLog(@"RXFalseDataController——net_change=%@", status);
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -12,14 +12,13 @@
  */
 
 #import "RXBaseViewController.h"
-
-//检测网络状态
-#import "RXNetworkCheck.h"
+#import "RXGetNetStatus.h"
 
 @interface RXBaseViewController ()
 {
     UIControl      * _noneNetworkView;
     UIButton       * _networkButton;
+    RXGetNetStatus * _netStatusObject;
 }
 @end
 
@@ -28,29 +27,24 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    //实时监控网络状态
+    //网络状态
     [self checkNetworkEnable];
 }
 
 #pragma mark - ~~~~~~~~~~~ 实时检测网络状态 ~~~~~~~~~~~~~~~
-//实时检测网络状态
+//网络状态
 - (void)checkNetworkEnable {
+    _netStatusObject = [[RXGetNetStatus alloc] initRXGetNetStatusTarget:self action:@selector(setNetStatus)];
+    _netWorkStatus = _netStatusObject.netStatus;
+    [self networkChange:_netWorkStatus];
+}
+- (void)setNetStatus {
+    _netWorkStatus = _netStatusObject.netStatus;
+    [self networkChange:_netWorkStatus];
+}
+
+- (void)networkChange:(NSString *)status {
     
-    weak(bself);
-    [RXNetworkCheck netWorkcheck:^(GetNetworksStatus status) {
-        
-        if(status == GetNetworksStatusWifi) {
-            bself.netWorkStatus = NetworkStatusedWIFI;
-        }
-        else if(status == GetNetworksStatusPhone) {
-            bself.netWorkStatus = NetworkStatusedPhone;
-        }
-        else {
-            bself.netWorkStatus = NetworkStatusedNone;
-        }
-        
-        
-    }];
 }
 
 #pragma mark - ~~~~~~~~~~~ 无网络状态页面 ~~~~~~~~~~~~~~~

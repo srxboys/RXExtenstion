@@ -14,6 +14,18 @@
 #import <UIKit/UIKit.h>
 #import "RXMessage.h"
 
+//------------
+//对于汉字打印处理
+#import "NSArray+RXArrLog.h"
+#import "NSDictionary+RXDictLog.h"
+//------------
+
+//实时监听的网络状态
+#define RXNetworksStatusNone  @"RXNetworksStatusNone"
+#define RXNetworksStatusWifi  @"RXNetworksStatusWifi"
+#define RXNetworksStatusPhone @"RXNetworksStatusPhone"
+
+
 #define ALog(format, ...) NSLog((@"%s [L%d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 
 #ifdef DEBUG
@@ -145,13 +157,13 @@
 
 //#pragma mark ---- 去除 performSelector警告 --------
 //去除"-(id)performSelector:(SEL)aSelector withObject:(id)object;"的警告
-//#define SuppressPerformSelectorLeakWarning(Stuff) /
-//do { /
-//    _Pragma("clang diagnostic push") /
-//    _Pragma("clang diagnostic ignored /"-Warc-performSelector-leaks/"") /
-//    Stuff; /
-//    _Pragma("clang diagnostic pop") /
-//} while (0)
+#define SuppressPerformSelectorLeakWarning(Stuff) \
+do { \
+    _Pragma("clang diagnostic push") \
+    _Pragma("clang diagnostic ignored /"-Warc-performSelector-leaks/"") \
+    Stuff; \
+    _Pragma("clang diagnostic pop") \
+} while (0)
 
 #pragma mark ---- GCD --------
 /*
@@ -165,19 +177,19 @@
 /*
    ----- 单例 -------
  */
-//#define DEFINE_SINGLETON_FOR_HEADER(className)
-//+(className* )shared##className;
-//#define DEFINE_SINGLETON_FOR_CLASS(className)
-//+ (className *)shared##className {
-//    static className *shared##className = nil;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        @synchronized(self){
-//            shared##className = [[self alloc] init];
-//        }
-//    }); 
-//    return shared##className; 
-//}
+#define DEFINE_SINGLETON_FOR_HEADER(className)\
++(className* )shared##className;
+#define DEFINE_SINGLETON_FOR_CLASS(className)\
++ (className *)shared##className {\
+    static className *shared##className = nil;\
+    static dispatch_once_t onceToken;\
+    dispatch_once(&onceToken, ^{\
+        @synchronized(self){\
+            shared##className = [[self alloc] init];\
+        }\
+    }); \
+    return shared##className; \
+}
 
 
 /**
@@ -185,7 +197,7 @@
  *
  *  这里只是number转String
  *
- *********想要详细的.请到GHSCharacterProcessing.h里看
+ *********想要详细的.请到RXCharacter.h里看
  **** 1、判断字符串是否为空
  **** 2、对于控制符、nil、<nil>的字符处理
  **** 3、返回【判断后的数组】

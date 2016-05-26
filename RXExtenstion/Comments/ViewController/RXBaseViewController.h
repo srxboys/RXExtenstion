@@ -22,12 +22,6 @@
  }];
  */
 
-//网络状态，区分 WIFI 和非 WIFI
-typedef NS_ENUM(NSInteger, NetworkStatused){
-    NetworkStatusedNone,
-    NetworkStatusedWIFI,
-    NetworkStatusedPhone
-};
 
 typedef NS_ENUM(NSInteger, ToastPosit){
     ToastPositTop,
@@ -48,7 +42,8 @@ typedef NS_ENUM(NSInteger, ToastPosit){
 - (void)networkReloadDataButtonClick;
 
 ///网络状态
-@property (nonatomic, assign) NetworkStatused netWorkStatus;
+@property (nonatomic, assign, readonly) NSString * netWorkStatus;
+- (void)networkChange:(NSString *)status;
 
 
 /// 显示 toast 【垂直居中显示】

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C11FD161CF6B7CB00BE323D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C11FD111CF6B7CB00BE323D /* Reachability.m */; };
+		6C11FD171CF6B7CB00BE323D /* RXGetNetStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C11FD131CF6B7CB00BE323D /* RXGetNetStatus.m */; };
+		6C11FD181CF6B7CB00BE323D /* RXNetworkCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C11FD151CF6B7CB00BE323D /* RXNetworkCheck.m */; };
 		6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */; };
 		6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */; };
 		6C3A2FD11CD3477000533FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD01CD3477000533FFF /* main.m */; };
@@ -18,10 +21,8 @@
 		6C3A30111CD3477E00533FFF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FFB1CD3477E00533FFF /* MJPopupBackgroundView.m */; };
 		6C3A30121CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C3A2FFC1CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt */; };
 		6C3A30131CD3477E00533FFF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FFE1CD3477E00533FFF /* UIViewController+MJPopupViewController.m */; };
-		6C3A30161CD3477E00533FFF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30061CD3477E00533FFF /* Reachability.m */; };
 		6C3A30201CD34E2B00533FFF /* RXBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A301F1CD34E2B00533FFF /* RXBundle.m */; };
 		6C3A30231CD34E7D00533FFF /* RXRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30221CD34E7D00533FFF /* RXRandom.m */; };
-		6C3A30261CD34EF100533FFF /* RXNetworkCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30251CD34EF100533FFF /* RXNetworkCheck.m */; };
 		6C3A30291CD3507400533FFF /* RXHexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30281CD3507400533FFF /* RXHexColor.m */; };
 		6C3A302C1CD3516800533FFF /* RXAFNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A302B1CD3516800533FFF /* RXAFNS.m */; };
 		6C3A305D1CD352AA00533FFF /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30311CD352AA00533FFF /* AFHTTPSessionManager.m */; };
@@ -66,6 +67,9 @@
 		6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30D91CD36E3700533FFF /* RXMJFooterGif.m */; };
 		6C3A30DD1CD36EC800533FFF /* RXMJHeaderGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */; };
 		6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BFCD61CDC9F94006476FB /* RXDataModel.m */; };
+		6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */; };
+		6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */; };
+		6C84802C1CF6F9D10052C3BF /* NSDateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C84802B1CF6F9D10052C3BF /* NSDateUtilities.m */; };
 		6CA15FED1CF339B5009DCE60 /* GBInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA15FEA1CF339B5009DCE60 /* GBInfiniteScrollView.m */; };
 		6CA15FEE1CF339B5009DCE60 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA15FEC1CF339B5009DCE60 /* SMPageControl.m */; };
 		6CA15FF41CF33CC7009DCE60 /* UIImageView+fadeInFadeOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA15FF21CF33CC7009DCE60 /* UIImageView+fadeInFadeOut.m */; };
@@ -105,6 +109,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C11FD101CF6B7CB00BE323D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		6C11FD111CF6B7CB00BE323D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		6C11FD121CF6B7CB00BE323D /* RXGetNetStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXGetNetStatus.h; sourceTree = "<group>"; };
+		6C11FD131CF6B7CB00BE323D /* RXGetNetStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXGetNetStatus.m; sourceTree = "<group>"; };
+		6C11FD141CF6B7CB00BE323D /* RXNetworkCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNetworkCheck.h; sourceTree = "<group>"; };
+		6C11FD151CF6B7CB00BE323D /* RXNetworkCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNetworkCheck.m; sourceTree = "<group>"; };
 		6C32D6A91CF3E7C7003EE112 /* RXNewHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNewHomeTableViewCell.h; sourceTree = "<group>"; };
 		6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNewHomeTableViewCell.m; sourceTree = "<group>"; };
 		6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSystemAlertController.h; sourceTree = "<group>"; };
@@ -124,15 +134,11 @@
 		6C3A2FFC1CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MJPopupBackgroundView.ReadME.txt; sourceTree = "<group>"; };
 		6C3A2FFD1CD3477E00533FFF /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		6C3A2FFE1CD3477E00533FFF /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
-		6C3A30051CD3477E00533FFF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		6C3A30061CD3477E00533FFF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		6C3A301A1CD347E200533FFF /* PrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
 		6C3A301E1CD34E2B00533FFF /* RXBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXBundle.h; sourceTree = "<group>"; };
 		6C3A301F1CD34E2B00533FFF /* RXBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXBundle.m; sourceTree = "<group>"; };
 		6C3A30211CD34E7D00533FFF /* RXRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRandom.h; sourceTree = "<group>"; };
 		6C3A30221CD34E7D00533FFF /* RXRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRandom.m; sourceTree = "<group>"; };
-		6C3A30241CD34EF100533FFF /* RXNetworkCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNetworkCheck.h; sourceTree = "<group>"; };
-		6C3A30251CD34EF100533FFF /* RXNetworkCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNetworkCheck.m; sourceTree = "<group>"; };
 		6C3A30271CD3507400533FFF /* RXHexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXHexColor.h; sourceTree = "<group>"; };
 		6C3A30281CD3507400533FFF /* RXHexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXHexColor.m; sourceTree = "<group>"; };
 		6C3A302A1CD3516800533FFF /* RXAFNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAFNS.h; sourceTree = "<group>"; };
@@ -221,6 +227,12 @@
 		6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMJHeaderGif.m; sourceTree = "<group>"; };
 		6C4BFCD51CDC9F94006476FB /* RXDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDataModel.h; sourceTree = "<group>"; };
 		6C4BFCD61CDC9F94006476FB /* RXDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDataModel.m; sourceTree = "<group>"; };
+		6C8480241CF6F9310052C3BF /* NSArray+RXArrLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXArrLog.h"; sourceTree = "<group>"; };
+		6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RXArrLog.m"; sourceTree = "<group>"; };
+		6C8480271CF6F93F0052C3BF /* NSDictionary+RXDictLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RXDictLog.h"; sourceTree = "<group>"; };
+		6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RXDictLog.m"; sourceTree = "<group>"; };
+		6C84802A1CF6F9D10052C3BF /* NSDateUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateUtilities.h; sourceTree = "<group>"; };
+		6C84802B1CF6F9D10052C3BF /* NSDateUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateUtilities.m; sourceTree = "<group>"; };
 		6CA15FE91CF339B5009DCE60 /* GBInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBInfiniteScrollView.h; sourceTree = "<group>"; };
 		6CA15FEA1CF339B5009DCE60 /* GBInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBInfiniteScrollView.m; sourceTree = "<group>"; };
 		6CA15FEB1CF339B5009DCE60 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
@@ -311,6 +323,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C11FD191CF6B7F200BE323D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6C84801D1CF6F8DE0052C3BF /* RXLog */,
+				6C84802A1CF6F9D10052C3BF /* NSDateUtilities.h */,
+				6C84802B1CF6F9D10052C3BF /* NSDateUtilities.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		6C3A2FC31CD3477000533FFF = {
 			isa = PBXGroup;
 			children = (
@@ -417,10 +439,12 @@
 		6C3A30021CD3477E00533FFF /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				6C3A30241CD34EF100533FFF /* RXNetworkCheck.h */,
-				6C3A30251CD34EF100533FFF /* RXNetworkCheck.m */,
-				6C3A30051CD3477E00533FFF /* Reachability.h */,
-				6C3A30061CD3477E00533FFF /* Reachability.m */,
+				6C11FD101CF6B7CB00BE323D /* Reachability.h */,
+				6C11FD111CF6B7CB00BE323D /* Reachability.m */,
+				6C11FD141CF6B7CB00BE323D /* RXNetworkCheck.h */,
+				6C11FD151CF6B7CB00BE323D /* RXNetworkCheck.m */,
+				6C11FD121CF6B7CB00BE323D /* RXGetNetStatus.h */,
+				6C11FD131CF6B7CB00BE323D /* RXGetNetStatus.m */,
 			);
 			path = Reachability;
 			sourceTree = "<group>";
@@ -640,6 +664,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6C84801D1CF6F8DE0052C3BF /* RXLog */ = {
+			isa = PBXGroup;
+			children = (
+				6C8480241CF6F9310052C3BF /* NSArray+RXArrLog.h */,
+				6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */,
+				6C8480271CF6F93F0052C3BF /* NSDictionary+RXDictLog.h */,
+				6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */,
+			);
+			path = RXLog;
+			sourceTree = "<group>";
+		};
 		6CA15FE81CF339B5009DCE60 /* GBInfiniteScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,18 +768,11 @@
 		6CF322391CD712F6009BD1B7 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
-				6CF322421CD71368009BD1B7 /* View */,
+				6C11FD191CF6B7F200BE323D /* Utilities */,
 				6CF322431CD71368009BD1B7 /* ViewController */,
 			);
 			name = Comments;
 			path = RXExtenstion/Comments;
-			sourceTree = "<group>";
-		};
-		6CF322421CD71368009BD1B7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		6CF322431CD71368009BD1B7 /* ViewController */ = {
@@ -935,7 +963,6 @@
 				6C3A305F1CD352AA00533FFF /* AFSecurityPolicy.m in Sources */,
 				6C3A309D1CD3538A00533FFF /* MJRefreshComponent.m in Sources */,
 				6C3A309E1CD3538A00533FFF /* MJRefreshFooter.m in Sources */,
-				6C3A30261CD34EF100533FFF /* RXNetworkCheck.m in Sources */,
 				6CA1600A1CF3432D009DCE60 /* RXNewHomeCollectionViewCell.m in Sources */,
 				6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */,
 				6CA4345E1CD9E5AF00641785 /* UIImage+MultiFormat.m in Sources */,
@@ -943,9 +970,10 @@
 				6C3A2FD41CD3477000533FFF /* AppDelegate.m in Sources */,
 				6C3A30691CD352AA00533FFF /* UIProgressView+AFNetworking.m in Sources */,
 				6CBF822A1CDAEDCC009AD4FC /* RXCaCheController.m in Sources */,
-				6C3A30161CD3477E00533FFF /* Reachability.m in Sources */,
 				6C3A30651CD352AA00533FFF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				6C3A30131CD3477E00533FFF /* UIViewController+MJPopupViewController.m in Sources */,
+				6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */,
+				6C84802C1CF6F9D10052C3BF /* NSDateUtilities.m in Sources */,
 				6CA4345D1CD9E5AF00641785 /* UIImage+GIF.m in Sources */,
 				6C3A30AC1CD3538A00533FFF /* UIScrollView+MJRefresh.m in Sources */,
 				6C3A30AB1CD3538A00533FFF /* UIScrollView+MJExtension.m in Sources */,
@@ -958,6 +986,7 @@
 				6C3A30111CD3477E00533FFF /* MJPopupBackgroundView.m in Sources */,
 				6C3A30A41CD3538A00533FFF /* MJRefreshBackNormalFooter.m in Sources */,
 				6C3A30641CD352AA00533FFF /* AFImageDownloader.m in Sources */,
+				6C11FD171CF6B7CB00BE323D /* RXGetNetStatus.m in Sources */,
 				6C3A306B1CD352AA00533FFF /* UIWebView+AFNetworking.m in Sources */,
 				6CA4345C1CD9E5AF00641785 /* UIButton+WebCache.m in Sources */,
 				6C3A30601CD352AA00533FFF /* AFURLRequestSerialization.m in Sources */,
@@ -984,6 +1013,7 @@
 				6C3A30AD1CD3538A00533FFF /* UIView+MJExtension.m in Sources */,
 				6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */,
 				6C3A30611CD352AA00533FFF /* AFURLResponseSerialization.m in Sources */,
+				6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */,
 				6CBF82271CDAE45A009AD4FC /* UIImageView+ProgressView.m in Sources */,
 				6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */,
 				6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */,
@@ -994,6 +1024,7 @@
 				6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */,
 				6CA15FF41CF33CC7009DCE60 /* UIImageView+fadeInFadeOut.m in Sources */,
 				6C3A309B1CD3538A00533FFF /* MJRefreshAutoFooter.m in Sources */,
+				6C11FD181CF6B7CB00BE323D /* RXNetworkCheck.m in Sources */,
 				6CA434281CD9C42400641785 /* RXUploadImageController.m in Sources */,
 				6C3A30681CD352AA00533FFF /* UIImageView+AFNetworking.m in Sources */,
 				6C3A30A51CD3538A00533FFF /* MJRefreshBackStateFooter.m in Sources */,
@@ -1012,6 +1043,7 @@
 				6CA434541CD9E5AF00641785 /* NSData+ImageContentType.m in Sources */,
 				6CA434601CD9E5AF00641785 /* UIImageView+HighlightedWebCache.m in Sources */,
 				6C3A309C1CD3538A00533FFF /* MJRefreshBackFooter.m in Sources */,
+				6C11FD161CF6B7CB00BE323D /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1130,10 +1162,7 @@
 				INFOPLIST_FILE = RXExtenstion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/RXExtenstion/3rd/QIYU_iOS_SDK_v1.2.1",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ghs.app.RXExtentstion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1150,10 +1179,7 @@
 				INFOPLIST_FILE = RXExtenstion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/RXExtenstion/3rd/QIYU_iOS_SDK_v1.2.1",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ghs.app.RXExtentstion;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -14,8 +14,10 @@
 
 #pragma mark ----------- [ RXUser ] ---------
 @interface RXUser : NSObject
-@property (nonatomic, assign) long long user_id; //用户id
+@property (nonatomic, copy) NSString * user_id; //用户id
 @property (nonatomic, copy) NSString * user_avater; //用户头像
+@property (nonatomic, copy) NSString * user_backImg;//背景图片
+@property (nonatomic, copy) NSString * user_desc;
 
 + (RXUser *)userWithDict:(NSDictionary *)dict;
 @end

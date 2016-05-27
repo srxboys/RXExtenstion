@@ -9,12 +9,15 @@
 #import "RXTabBarController.h"
 #import "RXNavBaseController.h"
 #import "RXBaseViewController.h"
+#import "RXCharacter.h"
 
 #import "RXHomeController.h"
+#import "RXMineViewController.h"
 
 @interface RXTabBarController ()<UITabBarControllerDelegate>
 {
-    RXHomeController * _home;
+    RXHomeController     * _home;
+    RXMineViewController * _mine;
 }
 
 //当前 页面 0 ~
@@ -55,8 +58,8 @@
     _home = RXStroyBoard(@"Home", @"RXHomeController");
     [self setNavRootViewControll:_home titleStr:@"srxboys -> RX" imagePath:@"tab_0" selectedImagePath:@"tab_0_h"];
     
-//    _srx = RXStroyBoard(@"Main", @"ViewController");
-//    [self setNavRootViewControll:_home titleStr:@"基本框架" imagePath:@"tab_1" selectedImagePath:@"tab_1_h"];
+    _mine = RXStroyBoard(@"Mine", @"RXMineViewController");
+    [self setNavRootViewControll:_mine titleStr:@"我" imagePath:@"tab_4" selectedImagePath:@"tab_4_h"];
 
 }
 
@@ -115,11 +118,13 @@
 -(void)setSelectedIndex:(NSUInteger)selectedIndex{
     [super setSelectedIndex:selectedIndex];
     self.tempIndex = selectedIndex;
+    RXLog(@"tabBar.selectedIndex=%zd", selectedIndex);
 }
 
 //点击tabBar上的ViewController时调用，为了以后
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     RXNavBaseController * navVC = (RXNavBaseController *)viewController;
+    
     RXLog(@"tabBar didSelect class=%@", NSStringFromClass([navVC.viewControllers[0] class]));
 }
 

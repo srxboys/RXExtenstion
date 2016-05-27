@@ -29,6 +29,9 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     //网络状态
     [self checkNetworkEnable];
+    
+    //无网络、请求接口失败
+    [self networkStatusEqualNoneCreateButton];
 }
 
 #pragma mark - ~~~~~~~~~~~ 实时检测网络状态 ~~~~~~~~~~~~~~~

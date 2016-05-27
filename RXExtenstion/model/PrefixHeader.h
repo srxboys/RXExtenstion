@@ -207,8 +207,8 @@ do { \
  */
 #pragma mark ---- num转NSString 定义 --------
 //number转String
-#define IntTranslateStr(int_str) [NSString stringWithFormat:@"%d",int_str];
-#define FloatTranslateStr(float_str) [NSString stringWithFormat:@"%.2f",float_str];
+#define IntTranslateStr(int_str) [NSString stringWithFormat:@"%zd",int_str]
+#define FloatTranslateStr(float_str) [NSString stringWithFormat:@"%.2f",float_str]
 
 
 #pragma mark ---- notifacation 通知定义 --------

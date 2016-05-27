@@ -40,8 +40,10 @@
 - (instancetype)initWithDict:(NSDictionary *)dict {
     self = [super init];
     if(self) {
-        self.user_id = [[dict objectForKeyNotNull:@"user_id"] longLongValue];
-        self.user_avater = [dict objectForKeyNotNull:@"user_avater"];
+        self.user_id      = [dict objectForKeyNotNull:@"user_id"     ];
+        self.user_avater  = [dict objectForKeyNotNull:@"user_avater" ];
+        self.user_backImg = [dict objectForKeyNotNull:@"user_backImg"];
+        self.user_desc    = [dict objectForKeyNotNull:@"user_desc"   ];
     }
     return self;
 }
@@ -57,9 +59,9 @@
     self = [super init];
     if(self) {
         self.fouce_id = [dict objectForKeyNotNull:@"fouce_id"];
-        self.type     = [dict objectForKeyNotNull:@"type"];
-        self.title    = [dict objectForKeyNotNull:@"title"];
-        self.image    = [dict objectForKeyNotNull:@"image"];
+        self.type     = [dict objectForKeyNotNull:@"type"    ];
+        self.title    = [dict objectForKeyNotNull:@"title"   ];
+        self.image    = [dict objectForKeyNotNull:@"image"   ];
     }
     return self;
 }

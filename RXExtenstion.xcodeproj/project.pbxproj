@@ -67,6 +67,7 @@
 		6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30D91CD36E3700533FFF /* RXMJFooterGif.m */; };
 		6C3A30DD1CD36EC800533FFF /* RXMJHeaderGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */; };
 		6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BFCD61CDC9F94006476FB /* RXDataModel.m */; };
+		6C816C1F1CF83D6F00823507 /* RXMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C816C1E1CF83D6F00823507 /* RXMineHeader.m */; };
 		6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */; };
 		6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */; };
 		6C84802C1CF6F9D10052C3BF /* NSDateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C84802B1CF6F9D10052C3BF /* NSDateUtilities.m */; };
@@ -99,6 +100,8 @@
 		6CBF82271CDAE45A009AD4FC /* UIImageView+ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBF82261CDAE45A009AD4FC /* UIImageView+ProgressView.m */; };
 		6CBF822A1CDAEDCC009AD4FC /* RXCaCheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBF82291CDAEDCC009AD4FC /* RXCaCheController.m */; };
 		6CBF822E1CDAEE98009AD4FC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBF822D1CDAEE98009AD4FC /* UIView+Toast.m */; };
+		6CD828B51CF831A500AF575E /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD828B41CF831A500AF575E /* Mine.storyboard */; };
+		6CD828B81CF831BB00AF575E /* RXMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD828B71CF831BB00AF575E /* RXMineViewController.m */; };
 		6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322451CD71368009BD1B7 /* RXBaseViewController.m */; };
 		6CF3224F1CD86C67009BD1B7 /* RXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3224E1CD86C67009BD1B7 /* RXTabBarController.m */; };
 		6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322511CD87077009BD1B7 /* RXNavBaseController.m */; };
@@ -227,6 +230,8 @@
 		6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMJHeaderGif.m; sourceTree = "<group>"; };
 		6C4BFCD51CDC9F94006476FB /* RXDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDataModel.h; sourceTree = "<group>"; };
 		6C4BFCD61CDC9F94006476FB /* RXDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDataModel.m; sourceTree = "<group>"; };
+		6C816C1D1CF83D6F00823507 /* RXMineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineHeader.h; sourceTree = "<group>"; };
+		6C816C1E1CF83D6F00823507 /* RXMineHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineHeader.m; sourceTree = "<group>"; };
 		6C8480241CF6F9310052C3BF /* NSArray+RXArrLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXArrLog.h"; sourceTree = "<group>"; };
 		6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RXArrLog.m"; sourceTree = "<group>"; };
 		6C8480271CF6F93F0052C3BF /* NSDictionary+RXDictLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RXDictLog.h"; sourceTree = "<group>"; };
@@ -293,6 +298,9 @@
 		6CBF82291CDAEDCC009AD4FC /* RXCaCheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCaCheController.m; sourceTree = "<group>"; };
 		6CBF822C1CDAEE98009AD4FC /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		6CBF822D1CDAEE98009AD4FC /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		6CD828B41CF831A500AF575E /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		6CD828B61CF831BB00AF575E /* RXMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineViewController.h; sourceTree = "<group>"; };
+		6CD828B71CF831BB00AF575E /* RXMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineViewController.m; sourceTree = "<group>"; };
 		6CF322441CD71368009BD1B7 /* RXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXBaseViewController.h; sourceTree = "<group>"; };
 		6CF322451CD71368009BD1B7 /* RXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXBaseViewController.m; sourceTree = "<group>"; };
 		6CF322471CD7153E009BD1B7 /* RXMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMessage.h; sourceTree = "<group>"; };
@@ -853,6 +861,9 @@
 		6CF322581CD879BF009BD1B7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6CD828B41CF831A500AF575E /* Mine.storyboard */,
+				6CD828B61CF831BB00AF575E /* RXMineViewController.h */,
+				6CD828B71CF831BB00AF575E /* RXMineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -867,6 +878,8 @@
 		6CF3225A1CD879BF009BD1B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6C816C1D1CF83D6F00823507 /* RXMineHeader.h */,
+				6C816C1E1CF83D6F00823507 /* RXMineHeader.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -942,6 +955,7 @@
 				6C3A30A91CD3538A00533FFF /* MJRefresh.bundle in Resources */,
 				6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */,
 				6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */,
+				6CD828B51CF831A500AF575E /* Mine.storyboard in Resources */,
 				6C3A2FDC1CD3477000533FFF /* Assets.xcassets in Resources */,
 				6C3A2FDA1CD3477000533FFF /* Main.storyboard in Resources */,
 			);
@@ -971,9 +985,11 @@
 				6C3A30691CD352AA00533FFF /* UIProgressView+AFNetworking.m in Sources */,
 				6CBF822A1CDAEDCC009AD4FC /* RXCaCheController.m in Sources */,
 				6C3A30651CD352AA00533FFF /* AFNetworkActivityIndicatorManager.m in Sources */,
+				6CD828B81CF831BB00AF575E /* RXMineViewController.m in Sources */,
 				6C3A30131CD3477E00533FFF /* UIViewController+MJPopupViewController.m in Sources */,
 				6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */,
 				6C84802C1CF6F9D10052C3BF /* NSDateUtilities.m in Sources */,
+				6C816C1F1CF83D6F00823507 /* RXMineHeader.m in Sources */,
 				6CA4345D1CD9E5AF00641785 /* UIImage+GIF.m in Sources */,
 				6C3A30AC1CD3538A00533FFF /* UIScrollView+MJRefresh.m in Sources */,
 				6C3A30AB1CD3538A00533FFF /* UIScrollView+MJExtension.m in Sources */,

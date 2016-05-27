@@ -83,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vdj-qC-pdw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="I3z-B0-OHf">
@@ -103,19 +103,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vdj-qC-pdw" firstAttribute="top" secondItem="sHF-gF-rUc" secondAttribute="top" id="b4Z-L4-pID"/>
+                            <constraint firstItem="vdj-qC-pdw" firstAttribute="top" secondItem="sHF-gF-rUc" secondAttribute="top" constant="64" id="b4Z-L4-pID"/>
                             <constraint firstAttribute="bottom" secondItem="vdj-qC-pdw" secondAttribute="bottom" id="epf-kX-GJB"/>
                             <constraint firstAttribute="trailing" secondItem="vdj-qC-pdw" secondAttribute="trailing" id="tiM-GP-f8S"/>
                             <constraint firstItem="vdj-qC-pdw" firstAttribute="leading" secondItem="sHF-gF-rUc" secondAttribute="leading" id="uiW-aD-lft"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="RX-&gt;假数据" id="ZTT-qR-kSU"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="vdj-qC-pdw" id="50S-lP-HJF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRs-cg-gWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationItem title="RX-&gt;假数据" id="ZTT-qR-kSU"/>
             </objects>
             <point key="canvasLocation" x="-775.5" y="-2324.5"/>
         </scene>

@@ -12,7 +12,7 @@
 @implementation NSDictionary (RXDictLog)
 -(NSString *)descriptionWithLocale:(id)locale {
     NSArray *allKeys = [self allKeys];
-    NSMutableString *str = [[NSMutableString alloc] initWithFormat:@"{\t\n "];
+    NSMutableString *str = [[NSMutableString alloc] initWithFormat:@"%lu {\t\n ", allKeys.count];
      for (NSString *key in allKeys) {
              id value= self[key];
              [str appendFormat:@"\t \"%@\" = %@,\n",key, value];

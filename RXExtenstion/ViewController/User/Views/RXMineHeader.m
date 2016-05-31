@@ -33,11 +33,11 @@
 }
 
 - (void)setFrame:(CGRect)frame {
-     RXLog(@"header_%s==%@", __FUNCTION__, NSStringFromCGRect(frame));
+     RXLog(@"header_%s", __FUNCTION__);
     CGFloat width = frame.size.width;
     CGFloat height = frame.size.height;
     
-    _backImgView.frame = self.contentView.bounds;
+    _backImgView.frame = CGRectMake(0, 0, width, height);
     
     CGFloat avasterLeft = (width - AvasterWidthHeight)/2.0;
     CGFloat top  = 30;
@@ -67,6 +67,8 @@
         _descLabel.textColor = [UIColor grayColor];
         _descLabel.font = [UIFont systemFontOfSize:14];
         _descLabel.textAlignment = NSTextAlignmentCenter;
+        _descLabel.shadowOffset = CGSizeMake(0.5, 0.5);
+        _descLabel.shadowColor = [UIColor blueColor];
         [self.contentView addSubview:_descLabel];
     }
     return self;
@@ -79,7 +81,6 @@
     [_avasterImgView sd_setImageFIFOWithURL:[NSURL URLWithString:userModel.user_avater] placeholderImage:nil];
     
     _descLabel.text = userModel.user_desc;
-    
 }
 
 - (void)changeHeaderFrame:(CGRect)frame {

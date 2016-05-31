@@ -126,27 +126,12 @@
 }
 
 //随机 给出 图片网址
-+ (NSString *) randomImageURL {
-    NSString * head_0 = @"http://img2.3lian.com/2014/f3/9/d/98.jpg";
-    NSString * head_1 = @"http://img2.3lian.com/2014/f3/9/d/100.jpg";
-    NSString * head_2 = @"http://img2.3lian.com/2014/f3/9/d/104.jpg";
-    NSString * head_3 = @"http://img2.3lian.com/2014/f3/9/d/10.jpg";
-    NSString * head_4 = @"http://img2.3lian.com/2014/f3/9/d/5.jpg";
-    NSString * head_5 = @"http://img15.3lian.com/2016/h1/98/20.jpg";
-    NSString * head_6 = @"http://img15.3lian.com/2016/w4/89/42.jpg";
-    NSString * head_7 = @"http://img15.3lian.com/2016/w4/89/47.jpg";
-    NSString * head_8 = @"http://img15.3lian.com/2016/h1/94/167.jpg";
++ (NSString *) randomImageURL {    
+    NSString * string = @"https://raw.githubusercontent.com/srxboys/RXExtenstion/master/RXExtenstion/images";
+    NSInteger randomInt = arc4random() % 5;
+    NSString * imageUrl = [NSString stringWithFormat:@"%@/psb_%zd.jpeg", string,randomInt];
     
-    NSArray * imgArr = @[head_0, head_1, head_2, head_3, head_4, head_5, head_6, head_7, head_8];
-    /*
-     //这么写是最合理的
-     NSArray * imgArr = @[
-     @"http://img2.3lian.com/2014/f3/9/d/98.jpg",
-     @"http://img2.3lian.com/2014/f3/9/d/98.jpg"
-     ];
-     */
-    
-    return imgArr[arc4random() % imgArr.count];
+    return imageUrl;
 }
 
 //随机颜色

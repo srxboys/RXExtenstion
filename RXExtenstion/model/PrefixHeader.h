@@ -159,10 +159,10 @@
 //去除"-(id)performSelector:(SEL)aSelector withObject:(id)object;"的警告
 #define SuppressPerformSelectorLeakWarning(Stuff) \
 do { \
-    _Pragma("clang diagnostic push") \
-    _Pragma("clang diagnostic ignored /"-Warc-performSelector-leaks/"") \
-    Stuff; \
-    _Pragma("clang diagnostic pop") \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+Stuff; \
+_Pragma("clang diagnostic pop") \
 } while (0)
 
 #pragma mark ---- GCD --------

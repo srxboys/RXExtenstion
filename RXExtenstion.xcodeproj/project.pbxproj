@@ -10,8 +10,8 @@
 		6C11FD161CF6B7CB00BE323D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C11FD111CF6B7CB00BE323D /* Reachability.m */; };
 		6C11FD171CF6B7CB00BE323D /* RXGetNetStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C11FD131CF6B7CB00BE323D /* RXGetNetStatus.m */; };
 		6C11FD181CF6B7CB00BE323D /* RXNetworkCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C11FD151CF6B7CB00BE323D /* RXNetworkCheck.m */; };
-		6C25DA541CFEAE6000E65A38 /* RXMineWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA531CFEAE6000E65A38 /* RXMineWebViewController.m */; };
-		6C25DA571CFEBC6F00E65A38 /* RXMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA561CFEBC6F00E65A38 /* RXMineInfoViewController.m */; };
+		6C25DA5C1CFEBDA900E65A38 /* RXMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA591CFEBDA900E65A38 /* RXMineInfoViewController.m */; };
+		6C25DA5D1CFEBDA900E65A38 /* RXMineWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */; };
 		6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */; };
 		6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */; };
 		6C3A2FD11CD3477000533FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD01CD3477000533FFF /* main.m */; };
@@ -120,10 +120,10 @@
 		6C11FD131CF6B7CB00BE323D /* RXGetNetStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXGetNetStatus.m; sourceTree = "<group>"; };
 		6C11FD141CF6B7CB00BE323D /* RXNetworkCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNetworkCheck.h; sourceTree = "<group>"; };
 		6C11FD151CF6B7CB00BE323D /* RXNetworkCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNetworkCheck.m; sourceTree = "<group>"; };
-		6C25DA521CFEAE6000E65A38 /* RXMineWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineWebViewController.h; sourceTree = "<group>"; };
-		6C25DA531CFEAE6000E65A38 /* RXMineWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineWebViewController.m; sourceTree = "<group>"; };
-		6C25DA551CFEBC6F00E65A38 /* RXMineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineInfoViewController.h; sourceTree = "<group>"; };
-		6C25DA561CFEBC6F00E65A38 /* RXMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineInfoViewController.m; sourceTree = "<group>"; };
+		6C25DA581CFEBDA900E65A38 /* RXMineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineInfoViewController.h; sourceTree = "<group>"; };
+		6C25DA591CFEBDA900E65A38 /* RXMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineInfoViewController.m; sourceTree = "<group>"; };
+		6C25DA5A1CFEBDA900E65A38 /* RXMineWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineWebViewController.h; sourceTree = "<group>"; };
+		6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineWebViewController.m; sourceTree = "<group>"; };
 		6C32D6A91CF3E7C7003EE112 /* RXNewHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNewHomeTableViewCell.h; sourceTree = "<group>"; };
 		6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNewHomeTableViewCell.m; sourceTree = "<group>"; };
 		6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSystemAlertController.h; sourceTree = "<group>"; };
@@ -870,6 +870,10 @@
 				6CD828B41CF831A500AF575E /* Mine.storyboard */,
 				6CD828B61CF831BB00AF575E /* RXMineViewController.h */,
 				6CD828B71CF831BB00AF575E /* RXMineViewController.m */,
+				6C25DA581CFEBDA900E65A38 /* RXMineInfoViewController.h */,
+				6C25DA591CFEBDA900E65A38 /* RXMineInfoViewController.m */,
+				6C25DA5A1CFEBDA900E65A38 /* RXMineWebViewController.h */,
+				6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -886,10 +890,6 @@
 			children = (
 				6C816C1D1CF83D6F00823507 /* RXMineHeader.h */,
 				6C816C1E1CF83D6F00823507 /* RXMineHeader.m */,
-				6C25DA551CFEBC6F00E65A38 /* RXMineInfoViewController.h */,
-				6C25DA561CFEBC6F00E65A38 /* RXMineInfoViewController.m */,
-				6C25DA521CFEAE6000E65A38 /* RXMineWebViewController.h */,
-				6C25DA531CFEAE6000E65A38 /* RXMineWebViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -990,7 +990,6 @@
 				6CA1600A1CF3432D009DCE60 /* RXNewHomeCollectionViewCell.m in Sources */,
 				6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */,
 				6CA4345E1CD9E5AF00641785 /* UIImage+MultiFormat.m in Sources */,
-				6C25DA541CFEAE6000E65A38 /* RXMineWebViewController.m in Sources */,
 				6C3A30D41CD360DC00533FFF /* RXCharacter.m in Sources */,
 				6C3A2FD41CD3477000533FFF /* AppDelegate.m in Sources */,
 				6C3A30691CD352AA00533FFF /* UIProgressView+AFNetworking.m in Sources */,
@@ -1011,6 +1010,7 @@
 				6CF322691CD89DA8009BD1B7 /* RXDate.m in Sources */,
 				6C3A30A81CD3538A00533FFF /* MJRefreshStateHeader.m in Sources */,
 				6C3A30111CD3477E00533FFF /* MJPopupBackgroundView.m in Sources */,
+				6C25DA5C1CFEBDA900E65A38 /* RXMineInfoViewController.m in Sources */,
 				6C3A30A41CD3538A00533FFF /* MJRefreshBackNormalFooter.m in Sources */,
 				6C3A30641CD352AA00533FFF /* AFImageDownloader.m in Sources */,
 				6C11FD171CF6B7CB00BE323D /* RXGetNetStatus.m in Sources */,
@@ -1029,7 +1029,6 @@
 				6CA160011CF3405C009DCE60 /* RXNewHomeUserInfoView.m in Sources */,
 				6C3A30231CD34E7D00533FFF /* RXRandom.m in Sources */,
 				6C3A30661CD352AA00533FFF /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				6C25DA571CFEBC6F00E65A38 /* RXMineInfoViewController.m in Sources */,
 				6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */,
 				6C3A300A1CD3477E00533FFF /* TTCacheUtil.m in Sources */,
 				6C3A302C1CD3516800533FFF /* RXAFNS.m in Sources */,
@@ -1049,6 +1048,7 @@
 				6CA15FFA1CF33FEC009DCE60 /* RXNewHomeController.m in Sources */,
 				6CA434621CD9E5AF00641785 /* UIView+WebCacheOperation.m in Sources */,
 				6C3A306A1CD352AA00533FFF /* UIRefreshControl+AFNetworking.m in Sources */,
+				6C25DA5D1CFEBDA900E65A38 /* RXMineWebViewController.m in Sources */,
 				6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */,
 				6CA15FF41CF33CC7009DCE60 /* UIImageView+fadeInFadeOut.m in Sources */,
 				6C3A309B1CD3538A00533FFF /* MJRefreshAutoFooter.m in Sources */,

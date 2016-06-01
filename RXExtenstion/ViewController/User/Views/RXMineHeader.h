@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class RXUser;
-@interface RXMineHeader : UITableViewHeaderFooterView
+@interface RXMineHeader : UIView
 - (void)setHeaderData:(RXUser *)userModel;
-- (void)changeHeaderFrame:(CGRect)frame;
 @end

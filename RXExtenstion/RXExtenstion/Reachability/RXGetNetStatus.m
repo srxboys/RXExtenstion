@@ -44,7 +44,7 @@
     [self getNetworkStatus];
     
     if([self.rxGetNetTarget respondsToSelector:self.rxGetNetAction]) {
-        //1 -- 可以用 -- 来源MJRefresh而来的
+        //1 -- 可以用 -- 来源MJRefresh而来的    
         RXMsgSend(RXMsgTarget(self.rxGetNetTarget), self.rxGetNetAction);
         
         //2 因为performSelector的选择器未知可能会引起泄漏），为什么在ARC模式下会出现这个警告？

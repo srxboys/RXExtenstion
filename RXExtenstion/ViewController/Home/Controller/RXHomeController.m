@@ -41,7 +41,7 @@
             @"MJ header foother",
             @"上传图片/头像",
             @"AFN 请求接口",
-            @"一个完整的界面demo"];
+            @"一个完整的界面demo-coding"];
     [_tableView reloadData];
 }
 

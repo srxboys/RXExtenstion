@@ -128,7 +128,7 @@
 //随机 给出 图片网址
 + (NSString *) randomImageURL {    
     NSString * string = @"https://raw.githubusercontent.com/srxboys/RXExtenstion/master/RXExtenstion/images";
-    NSInteger randomInt = arc4random() % 5;
+    NSInteger randomInt = arc4random() % 6;
     NSString * imageUrl = [NSString stringWithFormat:@"%@/psb_%zd.jpeg", string,randomInt];
     
     return imageUrl;

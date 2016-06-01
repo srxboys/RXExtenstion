@@ -32,3 +32,14 @@
 
 + (RXFouceModel *)fouceModelWithDict:(NSDictionary *)dict;
 @end
+
+#pragma mark ----------- [ 我的 ] ---------
+@interface RXMineModel : NSObject
+@property (nonatomic, copy) NSString * title;
+@property (nonatomic, copy) NSString * webUrl;
+@property (nonatomic, copy) NSString * image;
+
++ (RXMineModel *)mineModelWithDict:(NSDictionary *)dict;
+@end
+
+

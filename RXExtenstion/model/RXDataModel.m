@@ -71,6 +71,25 @@
 }
 @end
 
+#pragma mark ----------- [ 我的 ] ---------
+@implementation RXMineModel
+
+- (instancetype)initWithDict:(NSDictionary *)dict {
+    if(self = [super init]) {
+        self.title  = [dict objectForKeyNotNull:@"title"];
+        self.webUrl = [dict objectForKeyNotNull:@"webUrl"];
+        self.image  = [dict objectForKeyNotNull:@"image"];
+    }
+    return self;
+}
+
++ (RXMineModel *)mineModelWithDict:(NSDictionary *)dict {
+    return [[RXMineModel alloc] initWithDict:dict];
+}
+
+@end
+
+
 
 
 

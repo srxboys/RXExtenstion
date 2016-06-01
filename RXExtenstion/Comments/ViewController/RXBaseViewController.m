@@ -28,7 +28,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     //网络状态
-    [self checkNetworkEnable];
+    [self AddCheckNetworkEnable];
     
     //无网络、请求接口失败
     [self networkStatusEqualNoneCreateButton];
@@ -36,11 +36,16 @@
 
 #pragma mark - ~~~~~~~~~~~ 实时检测网络状态 ~~~~~~~~~~~~~~~
 //网络状态
-- (void)checkNetworkEnable {
+- (void)AddCheckNetworkEnable {
     _netStatusObject = [[RXGetNetStatus alloc] initRXGetNetStatusTarget:self action:@selector(setNetStatus)];
     _netWorkStatus = _netStatusObject.netStatus;
     [self networkChange:_netWorkStatus];
 }
+
+- (void)checkNetworkEnable {
+    [self setNetStatus];
+}
+
 - (void)setNetStatus {
     _netWorkStatus = _netStatusObject.netStatus;
     [self networkChange:_netWorkStatus];

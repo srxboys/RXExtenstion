@@ -78,7 +78,7 @@
         RXMineModel * model = [[RXMineModel alloc] init];
         if(i == 0) {
             model.title = @"我的github.com";
-            model.webUrl = @"https://github.com/srxboys/";
+            model.webUrl = @"https://github.com/srxboys";
         }
         else if(i == 1) {
             model.title = @"我的新浪微博";
@@ -138,6 +138,7 @@
         left = - left;
     }
     else {
+        //向上滑动
         top = - ceilf(fabs(offsetY)) + ceilf(fabs(offsetY) - _headerHeight);
     }
 
@@ -156,6 +157,7 @@
     RXMineModel * model = _dataSouceArr[row];
     RXMineWebViewController * webController= [[RXMineWebViewController alloc] init];
     webController.model = model;
+    //隐藏 tabBar
     webController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:webController animated:YES];
 }

@@ -12,6 +12,7 @@
 		6C11FD181CF6B7CB00BE323D /* RXNetworkCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C11FD151CF6B7CB00BE323D /* RXNetworkCheck.m */; };
 		6C25DA5C1CFEBDA900E65A38 /* RXMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA591CFEBDA900E65A38 /* RXMineInfoViewController.m */; };
 		6C25DA5D1CFEBDA900E65A38 /* RXMineWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */; };
+		6C25DA611CFEBF8300E65A38 /* RXDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA601CFEBF8300E65A38 /* RXDate.m */; };
 		6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */; };
 		6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */; };
 		6C3A2FD11CD3477000533FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FD01CD3477000533FFF /* main.m */; };
@@ -110,7 +111,6 @@
 		6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF3225B1CD879EF009BD1B7 /* Home.storyboard */; };
 		6CF3225F1CD87A27009BD1B7 /* RXHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3225E1CD87A27009BD1B7 /* RXHomeController.m */; };
 		6CF322651CD89D65009BD1B7 /* RXFalseDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322641CD89D65009BD1B7 /* RXFalseDataController.m */; };
-		6CF322691CD89DA8009BD1B7 /* RXDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322681CD89DA8009BD1B7 /* RXDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +124,8 @@
 		6C25DA591CFEBDA900E65A38 /* RXMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineInfoViewController.m; sourceTree = "<group>"; };
 		6C25DA5A1CFEBDA900E65A38 /* RXMineWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineWebViewController.h; sourceTree = "<group>"; };
 		6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineWebViewController.m; sourceTree = "<group>"; };
+		6C25DA5F1CFEBF8300E65A38 /* RXDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDate.h; sourceTree = "<group>"; };
+		6C25DA601CFEBF8300E65A38 /* RXDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDate.m; sourceTree = "<group>"; };
 		6C32D6A91CF3E7C7003EE112 /* RXNewHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNewHomeTableViewCell.h; sourceTree = "<group>"; };
 		6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNewHomeTableViewCell.m; sourceTree = "<group>"; };
 		6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSystemAlertController.h; sourceTree = "<group>"; };
@@ -319,8 +321,6 @@
 		6CF3225E1CD87A27009BD1B7 /* RXHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXHomeController.m; sourceTree = "<group>"; };
 		6CF322631CD89D65009BD1B7 /* RXFalseDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXFalseDataController.h; sourceTree = "<group>"; };
 		6CF322641CD89D65009BD1B7 /* RXFalseDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXFalseDataController.m; sourceTree = "<group>"; };
-		6CF322671CD89DA8009BD1B7 /* RXDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDate.h; sourceTree = "<group>"; };
-		6CF322681CD89DA8009BD1B7 /* RXDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +345,15 @@
 				6C84802B1CF6F9D10052C3BF /* NSDateUtilities.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6C25DA5E1CFEBF8300E65A38 /* RXdate */ = {
+			isa = PBXGroup;
+			children = (
+				6C25DA5F1CFEBF8300E65A38 /* RXDate.h */,
+				6C25DA601CFEBF8300E65A38 /* RXDate.m */,
+			);
+			path = RXdate;
 			sourceTree = "<group>";
 		};
 		6C3A2FC31CD3477000533FFF = {
@@ -406,7 +415,7 @@
 				6C3A30071CD3477E00533FFF /* UIColor */,
 				6C3A30D21CD360DC00533FFF /* RXCharacter.h */,
 				6C3A30D31CD360DC00533FFF /* RXCharacter.m */,
-				6CF322661CD89D90009BD1B7 /* RXdate */,
+				6C25DA5E1CFEBF8300E65A38 /* RXdate */,
 			);
 			path = RXExtenstion;
 			sourceTree = "<group>";
@@ -894,15 +903,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		6CF322661CD89D90009BD1B7 /* RXdate */ = {
-			isa = PBXGroup;
-			children = (
-				6CF322671CD89DA8009BD1B7 /* RXDate.h */,
-				6CF322681CD89DA8009BD1B7 /* RXDate.m */,
-			);
-			path = RXdate;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1003,11 +1003,11 @@
 				6CA4345D1CD9E5AF00641785 /* UIImage+GIF.m in Sources */,
 				6C3A30AC1CD3538A00533FFF /* UIScrollView+MJRefresh.m in Sources */,
 				6C3A30AB1CD3538A00533FFF /* UIScrollView+MJExtension.m in Sources */,
+				6C25DA611CFEBF8300E65A38 /* RXDate.m in Sources */,
 				6CA4345B1CD9E5AF00641785 /* SDWebImagePrefetcher.m in Sources */,
 				6C3A30A61CD3538A00533FFF /* MJRefreshGifHeader.m in Sources */,
 				6C3A30671CD352AA00533FFF /* UIButton+AFNetworking.m in Sources */,
 				6CA160041CF34287009DCE60 /* RXNewHomeSegmentView.m in Sources */,
-				6CF322691CD89DA8009BD1B7 /* RXDate.m in Sources */,
 				6C3A30A81CD3538A00533FFF /* MJRefreshStateHeader.m in Sources */,
 				6C3A30111CD3477E00533FFF /* MJPopupBackgroundView.m in Sources */,
 				6C25DA5C1CFEBDA900E65A38 /* RXMineInfoViewController.m in Sources */,

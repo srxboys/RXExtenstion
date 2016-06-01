@@ -42,6 +42,7 @@ typedef NS_ENUM(NSInteger, ToastPosit){
 - (void)networkReloadDataButtonClick;
 
 ///网络状态
+- (void)checkNetworkEnable;
 @property (nonatomic, assign, readonly) NSString * netWorkStatus;
 - (void)networkChange:(NSString *)status;
 

@@ -52,9 +52,6 @@
     //table 内部向下移动
     _tableView.contentInset = UIEdgeInsetsMake(_headerHeight, 0, 0, 0);
     
-    //table 第一次，从顶部显示
-    _tableView.contentOffset = CGPointMake(0, -_headerHeight);
-    
     _dataSouceArr = [[NSMutableArray alloc] init];
     [self AddFalseData];
 }
@@ -94,6 +91,12 @@
     
     
 //    [_tableView reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //table 第一次，从顶部显示
+    _tableView.contentOffset = CGPointMake(0, -_headerHeight);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -14,6 +14,8 @@
 {
     UIWebView  * _webView;
     RXMJHeader * _loadingView;
+    
+    UIButton   * _safariButton;
 }
 @end
 
@@ -35,12 +37,20 @@
     [self.view addSubview:_webView];
     
     CGFloat height = 40;
-    CGFloat top = (ScreenHeight - NavHeight - TabbarHeight - height)/2.0;
+    CGFloat top = (ScreenHeight - NavHeight - height)/2.0;
     _loadingView = [[RXMJHeader alloc] initWithFrame:CGRectMake(0, top, ScreenWidth, height)];
     _loadingView.hidden = NO;
     [self.view addSubview:_loadingView];
     [_loadingView animationStart];
     
+    _safariButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _safariButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    _safariButton.frame = CGRectMake(0, 0, 100, 40);
+    [_safariButton addTarget:self action:@selector(navRightItemClick) forControlEvents:UIControlEventTouchUpInside];
+    [_safariButton setTitle:@"浏览器中打开" forState:UIControlStateNormal];
+    [_safariButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:_safariButton];
+    self.navigationItem.rightBarButtonItem = item;
     
     if(_model != nil) {
         //标题
@@ -55,6 +65,9 @@
     }
 }
 
+- (void)navRightItemClick {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_model.webUrl]];
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];

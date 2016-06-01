@@ -8,10 +8,12 @@
 
 #import "RXMineWebViewController.h"
 #import "RXDataModel.h"
+#import "RXMJHeader.h"
 
 @interface RXMineWebViewController ()<UIWebViewDelegate>
 {
-    UIWebView * _webView;
+    UIWebView  * _webView;
+    RXMJHeader * _loadingView;
 }
 @end
 
@@ -31,6 +33,14 @@
     _webView.opaque = NO;
     _webView.delegate = self;
     [self.view addSubview:_webView];
+    
+    CGFloat height = 40;
+    CGFloat top = (ScreenHeight - NavHeight - TabbarHeight - height)/2.0;
+    _loadingView = [[RXMJHeader alloc] initWithFrame:CGRectMake(0, top, ScreenWidth, height)];
+    _loadingView.hidden = NO;
+    [self.view addSubview:_loadingView];
+    [_loadingView animationStart];
+    
     
     if(_model != nil) {
         //标题
@@ -81,13 +91,19 @@
 //一般下面的，我们会用一个view遮挡界面标识请求、界面错误、界面加载动画
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     RXLog(@"正在加载");
+    [_loadingView animationStart];
+    _loadingView.hidden = NO;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     RXLog(@"加载完毕");
+    [_loadingView animationStop];
+    _loadingView.hidden = YES;
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     RXLog(@"错误的网络地址");
+    [_loadingView animationStop];
+    _loadingView.hidden = YES;
 }
 
 

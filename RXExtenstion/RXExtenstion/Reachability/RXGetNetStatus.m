@@ -51,7 +51,7 @@
         //PerformSelector may cause a leak because its selector is unkown;
         //        [self.rxGetNetTarget performSelector:self.rxGetNetAction withObject:self];
         
-        //3 -- 可以用 感觉还是第一个好
+        //3 -- 可以用 感觉还是第一个好（指针函数方法）
         //        IMP imp = [self.rxGetNetTarget methodForSelector:self.rxGetNetAction];
         //        void (*func)(id, SEL) = (void *)imp;
         //        func(self.rxGetNetTarget, self.rxGetNetAction);

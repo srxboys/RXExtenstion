@@ -78,7 +78,7 @@
     return YES;
 }
 
-//一般下面的，我们会用一个view遮挡界面标识请求、界面错误
+//一般下面的，我们会用一个view遮挡界面标识请求、界面错误、界面加载动画
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     RXLog(@"正在加载");
 }

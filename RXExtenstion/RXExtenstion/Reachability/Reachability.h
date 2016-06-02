@@ -7,7 +7,7 @@
  */
 
 /*
-    reachability 5.0 2016-05-06
+    reachability 5.0 2016-05-05
  */
 
 #import <Foundation/Foundation.h>

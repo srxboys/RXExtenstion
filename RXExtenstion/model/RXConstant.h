@@ -42,8 +42,7 @@
 #endif
 
 #pragma mark ---通知定义---
-/// 实时监听网络 带参数的通知
-#define rxGetNetworkStatusNotification @"rxGetNetworkStatusNotification"
+
 
 
 #pragma mark --- 接口定义 ---

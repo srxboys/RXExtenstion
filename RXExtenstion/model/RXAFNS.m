@@ -193,6 +193,42 @@
     
 }
 
+
+
+
+
+
+
+//监听网络状态 -- 为以后用
++ (void)startMonitoring
+{
+    // 1.获得网络监控的管理者
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    // 2.设置网络状态改变后的处理
+    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        // 当网络状态改变了, 就会调用这个block
+        switch (status)
+        {
+            case AFNetworkReachabilityStatusUnknown: // 未知网络
+                //"未知网络"
+//                _httpAPIClient.networkError = NO;
+                break;
+            case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
+//                _httpAPIClient.networkError = YES;
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
+                //手机自带网络"//
+//                _httpAPIClient.networkError = NO;
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
+                //"WIFI"
+//                _httpAPIClient.networkError = NO;
+                break;
+        }
+    }];
+    [mgr startMonitoring];
+}
+
 @end
 
 

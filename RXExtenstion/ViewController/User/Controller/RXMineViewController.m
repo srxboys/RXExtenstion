@@ -16,7 +16,7 @@
 
 #import "RXMineWebViewController.h"
 
-@interface RXMineViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface RXMineViewController ()<UITableViewDelegate, UITableViewDataSource, RXMineHeaderDelegate>
 {
 
     UITableView    * _tableView;
@@ -48,6 +48,7 @@
     _headerHeight = 150;
     _header = [[RXMineHeader alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, _headerHeight)];
 //    _header.backgroundColor = [UIColor redColor];
+    _header.delegate = self;
     [_tableView addSubview:_header];
     //table 内部向下移动
     _tableView.contentInset = UIEdgeInsetsMake(_headerHeight, 0, 0, 0);
@@ -88,8 +89,6 @@
         
         [_dataSouceArr addObject:model];
     }
-    
-    
 //    [_tableView reloadData];
 }
 
@@ -158,6 +157,18 @@
     NSInteger row = indexPath.row;
     
     RXMineModel * model = _dataSouceArr[row];
+    RXMineWebViewController * webController= [[RXMineWebViewController alloc] init];
+    webController.model = model;
+    //隐藏 tabBar
+    webController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:webController animated:YES];
+}
+
+- (void)mineHeaderClick {    
+    
+    RXMineModel * model = [[RXMineModel alloc] init];
+    model.webUrl = @"http://blog.csdn.net/srxboys/article/details/50586827";
+    model.title = @"我的个人说明";
     RXMineWebViewController * webController= [[RXMineWebViewController alloc] init];
     webController.model = model;
     //隐藏 tabBar

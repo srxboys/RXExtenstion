@@ -1,18 +1,18 @@
 //
-//  RXNetworkCheck.h
-//  RXExtenstion
+//  RXCheckNetwork.h
+//  test_reachability_2016_6_2
 //
-//  Created by srx on 16/5/25.
-//  Copyright © 2016年 https://github.com/srxboys. All rights reserved.
+//  Created by srx on 16/6/2.
+//  Copyright © 2016年 srxboys. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface RXNetworkCheck : NSObject
 
-@property (nonatomic, copy, readonly) NSString * statusString;
-
 + (RXNetworkCheck *)shareNetworkCheck;
+
+@property (nonatomic, copy, readonly) NSString * statusString;
 
 /**
  * 以单例模型 实时监听网络 --- 发送全局通知
@@ -21,7 +21,4 @@
  */
 + (void)getNetworkStatus;
 
-
-///不是实时更新网络 只是判断当前状态【有无网络】
-+ (BOOL)isAppleNetworkEnable;
 @end

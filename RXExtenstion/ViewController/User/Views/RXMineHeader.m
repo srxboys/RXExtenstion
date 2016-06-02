@@ -19,6 +19,8 @@
     UIImageView * _backImgView;
     UIImageView * _avasterImgView;
     UILabel     * _descLabel;
+    
+    UIControl   * _control;
 }
 @end
 
@@ -49,6 +51,10 @@
     _descLabel.shadowOffset = CGSizeMake(0.5, 0.5);
     _descLabel.shadowColor = [UIColor blueColor];
     [self addSubview:_descLabel];
+    
+    _control = [[UIControl alloc] init];
+    [_control addTarget:self action:@selector(controllClick) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:_control];
 }
 
 - (void)setFrame:(CGRect)frame {
@@ -66,6 +72,8 @@
     
     top += AvasterWidthHeight + 10;
     _descLabel.frame = CGRectMake(0, top, width, 21);
+    
+    _control.frame = CGRectMake(0, 0, width, height);
 }
 
 
@@ -77,6 +85,12 @@
     _descLabel.text = userModel.user_desc;
 }
 
+
+- (void)controllClick {
+    if([self.delegate respondsToSelector:@selector(mineHeaderClick)]) {
+        [self.delegate mineHeaderClick];
+    }
+}
 
 
 @end

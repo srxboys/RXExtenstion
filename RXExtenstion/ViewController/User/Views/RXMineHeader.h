@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 @class RXUser;
+
+@protocol RXMineHeaderDelegate <NSObject>
+
+@optional
+- (void)mineHeaderClick;
+@end
+
+
 @interface RXMineHeader : UIView
+@property (nonatomic, strong) id<RXMineHeaderDelegate>delegate;
 - (void)setHeaderData:(RXUser *)userModel;
 @end

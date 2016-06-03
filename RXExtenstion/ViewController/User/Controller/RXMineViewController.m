@@ -13,6 +13,7 @@
 
 #import "RXMineHeader.h"
 #define imageString @"https://avatars3.githubusercontent.com/u/16399242?v=3&amp.png"
+#import "RXMineCell.h"
 
 #import "RXMineWebViewController.h"
 
@@ -42,7 +43,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.tableFooterView = [[UIView alloc] init];
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [_tableView registerNib:[UINib nibWithNibName:@"RXMineCell" bundle:nil] forCellReuseIdentifier:@"RXMineCell"];
     [self.view addSubview:_tableView];
 
     _headerHeight = 150;
@@ -72,24 +73,32 @@
     
     
     //cell 假数据
-    for(NSInteger i = 0; i < 3; i ++) {
+    for(NSInteger i = 0; i < 4; i ++) {
         RXMineModel * model = [[RXMineModel alloc] init];
         if(i == 0) {
-            model.title = @"我的github.com";
+            model.title = @"我的github";
             model.webUrl = @"https://github.com/srxboys";
+            model.image = @"Mine_github";
         }
         else if(i == 1) {
             model.title = @"我的新浪微博";
             model.webUrl = @"https://weibo.com/srxboys";
+            model.image = @"Mine_weibo";
         }
         else if(i == 2) {
             model.title = @"我的百度网盘";
             model.webUrl = @"http://pan.baidu.com/s/1hqH9ZNI";
+            model.image = @"Mine_BaiduYun";
+        }
+        else if(i == 3) {
+            model.title = @"我的简书";
+            model.webUrl = @"http://www.jianshu.com/users/43c74380397c/timeline";
+            model.image = @"Mine_JianShu";
         }
         
         [_dataSouceArr addObject:model];
     }
-//    [_tableView reloadData];
+    [_tableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -103,12 +112,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString * identifier = @"cell";
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    static NSString * identifier = @"RXMineCell";
+    RXMineCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     RXMineModel * model = _dataSouceArr[indexPath.row];
-    cell.textLabel.text = model.title;
-    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    [cell setCellData:model];
     return cell;
 }
 
@@ -117,7 +125,7 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 40;
+    return 60;
 }
 
 

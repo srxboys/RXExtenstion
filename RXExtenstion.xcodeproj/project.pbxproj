@@ -117,6 +117,8 @@
 		6CF4AC9B1D01A89400CD17CB /* RXExpansionContractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4AC9A1D01A89400CD17CB /* RXExpansionContractionController.m */; };
 		6CF4AC9E1D01A91800CD17CB /* RXExpanCCellHeightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4AC9D1D01A91800CD17CB /* RXExpanCCellHeightModel.m */; };
 		6CF4ACA21D01A9F100CD17CB /* RXExpansionContractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4ACA11D01A9F100CD17CB /* RXExpansionContractionCell.m */; };
+		6CF4ACA61D01BB1400CD17CB /* RXMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4ACA41D01BB1400CD17CB /* RXMineCell.m */; };
+		6CF4ACA71D01BB1400CD17CB /* RXMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF4ACA51D01BB1400CD17CB /* RXMineCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -339,6 +341,9 @@
 		6CF4AC9D1D01A91800CD17CB /* RXExpanCCellHeightModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXExpanCCellHeightModel.m; sourceTree = "<group>"; };
 		6CF4ACA01D01A9F100CD17CB /* RXExpansionContractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXExpansionContractionCell.h; sourceTree = "<group>"; };
 		6CF4ACA11D01A9F100CD17CB /* RXExpansionContractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXExpansionContractionCell.m; sourceTree = "<group>"; };
+		6CF4ACA31D01BB1400CD17CB /* RXMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineCell.h; sourceTree = "<group>"; };
+		6CF4ACA41D01BB1400CD17CB /* RXMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineCell.m; sourceTree = "<group>"; };
+		6CF4ACA51D01BB1400CD17CB /* RXMineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXMineCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -936,6 +941,9 @@
 			children = (
 				6C816C1D1CF83D6F00823507 /* RXMineHeader.h */,
 				6C816C1E1CF83D6F00823507 /* RXMineHeader.m */,
+				6CF4ACA31D01BB1400CD17CB /* RXMineCell.h */,
+				6CF4ACA41D01BB1400CD17CB /* RXMineCell.m */,
+				6CF4ACA51D01BB1400CD17CB /* RXMineCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1009,6 +1017,7 @@
 			files = (
 				6C3A30121CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt in Resources */,
 				6C3A30A91CD3538A00533FFF /* MJRefresh.bundle in Resources */,
+				6CF4ACA71D01BB1400CD17CB /* RXMineCell.xib in Resources */,
 				6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */,
 				6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */,
 				6CD828B51CF831A500AF575E /* Mine.storyboard in Resources */,
@@ -1049,6 +1058,7 @@
 				6CF4AC9B1D01A89400CD17CB /* RXExpansionContractionController.m in Sources */,
 				6C816C1F1CF83D6F00823507 /* RXMineHeader.m in Sources */,
 				6C25DA641CFED20200E65A38 /* RXLoLInfoViewController.m in Sources */,
+				6CF4ACA61D01BB1400CD17CB /* RXMineCell.m in Sources */,
 				6CA4345D1CD9E5AF00641785 /* UIImage+GIF.m in Sources */,
 				6CF4ACA21D01A9F100CD17CB /* RXExpansionContractionCell.m in Sources */,
 				6C3A30AC1CD3538A00533FFF /* UIScrollView+MJRefresh.m in Sources */,

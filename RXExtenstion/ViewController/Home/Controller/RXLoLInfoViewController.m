@@ -6,6 +6,13 @@
 //  Copyright © 2016年 https://github.com/srxboys. All rights reserved.
 //
 
+//  coding ~~~~
+
+/*
+    掌上联盟 我 页面的展示效果
+ */
+
+
 #import "RXLoLInfoViewController.h"
 
 @interface RXLoLInfoViewController ()<UIScrollViewDelegate>

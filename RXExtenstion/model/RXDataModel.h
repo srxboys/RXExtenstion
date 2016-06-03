@@ -43,3 +43,13 @@
 @end
 
 
+#pragma mark ----------- [ 展开和收缩 ] ---------
+@interface RXExpansionContractionModel : NSObject
+@property (nonatomic, copy) NSString * title;
+@property (nonatomic, copy) NSString * text;
+@end
+
+
+
+
+

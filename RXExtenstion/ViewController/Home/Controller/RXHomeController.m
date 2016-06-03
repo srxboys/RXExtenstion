@@ -12,6 +12,8 @@
 #import "RXUploadImageController.h" //上传请求 例子
 #import "RXNewHomeController.h"
 #import "RXCaCheController.h"
+#import "RXExpansionContractionController.h"
+#import "RXSystemServerController.h"
 
 @interface RXHomeController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -41,6 +43,8 @@
             @"MJ header foother",
             @"上传图片/头像",
             @"AFN 请求接口",
+            @"tableViewCell 展开收缩",
+            @"系统中的功能",
             @"一个完整的界面demo-coding"];
     [_tableView reloadData];
 }
@@ -86,6 +90,18 @@
         [self.navigationController pushViewController:upController animated:YES];
     }
     else if(row == 6) {
+        //存代码
+        RXExpansionContractionController * ecController = [[RXExpansionContractionController alloc] init];
+        ecController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:ecController animated:YES];
+    }
+    else if(row == 7) {
+        //storyboard 写的
+        RXSystemServerController * systemSeverController = RXStroyBoard(@"Home", @"RXSystemServerController");
+        systemSeverController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:systemSeverController animated:YES];
+    }
+    else if(row == 8) {
         //完整的界面demo
         RXNewHomeController * homeControll = [[RXNewHomeController alloc] init];
         homeControll.hidesBottomBarWhenPushed = YES;

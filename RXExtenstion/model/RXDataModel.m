@@ -90,6 +90,22 @@
 @end
 
 
+#pragma mark ----------- [ 展开和收缩 ] ---------
+@implementation RXExpansionContractionModel
+- (instancetype)initWithDict:(NSDictionary *)dict {
+    if(self = [super init]) {
+        self.title = [dict objectForKeyNotNull:@"title"];
+        self.text  = [dict objectForKeyNotNull:@"text"];
+    }
+    return self;
+}
+
++ (RXExpansionContractionModel *)mineModelWithDict:(NSDictionary *)dict {
+    return [[RXExpansionContractionModel alloc] initWithDict:dict];
+}
+@end
+
+
 
 
 

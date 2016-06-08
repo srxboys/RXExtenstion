@@ -80,7 +80,7 @@
 - (void)setHeaderData:(RXUser *)userModel {
     [_backImgView sd_setImageFIFOWithURL:[NSURL URLWithString:userModel.user_backImg] placeholderImage:nil];
     
-    [_avasterImgView sd_setImageFIFOWithURL:[NSURL URLWithString:userModel.user_avater] placeholderImage:nil];
+    _avasterImgView.image = [UIImage imageNamed:userModel.user_avater];
     
     _descLabel.text = userModel.user_desc;
 }

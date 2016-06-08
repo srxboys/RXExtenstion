@@ -72,6 +72,9 @@
 		6C3A30D71CD36DDC00533FFF /* RXMJHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30D61CD36DDC00533FFF /* RXMJHeader.m */; };
 		6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30D91CD36E3700533FFF /* RXMJFooterGif.m */; };
 		6C3A30DD1CD36EC800533FFF /* RXMJHeaderGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */; };
+		6C3F7BAE1D07DFF10046C29C /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3F7BAD1D07DFF10046C29C /* Location.storyboard */; };
+		6C3F7BB11D07E02B0046C29C /* RXLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F7BB01D07E02B0046C29C /* RXLocationController.m */; };
+		6C3F7BB31D07E1360046C29C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3F7BB21D07E1360046C29C /* CoreLocation.framework */; };
 		6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BFCD61CDC9F94006476FB /* RXDataModel.m */; };
 		6C816C1F1CF83D6F00823507 /* RXMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C816C1E1CF83D6F00823507 /* RXMineHeader.m */; };
 		6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */; };
@@ -250,6 +253,10 @@
 		6C3A30D91CD36E3700533FFF /* RXMJFooterGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMJFooterGif.m; sourceTree = "<group>"; };
 		6C3A30DB1CD36EC800533FFF /* RXMJHeaderGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMJHeaderGif.h; sourceTree = "<group>"; };
 		6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMJHeaderGif.m; sourceTree = "<group>"; };
+		6C3F7BAD1D07DFF10046C29C /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		6C3F7BAF1D07E02B0046C29C /* RXLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLocationController.h; sourceTree = "<group>"; };
+		6C3F7BB01D07E02B0046C29C /* RXLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLocationController.m; sourceTree = "<group>"; };
+		6C3F7BB21D07E1360046C29C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6C4BFCD51CDC9F94006476FB /* RXDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDataModel.h; sourceTree = "<group>"; };
 		6C4BFCD61CDC9F94006476FB /* RXDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDataModel.m; sourceTree = "<group>"; };
 		6C816C1D1CF83D6F00823507 /* RXMineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineHeader.h; sourceTree = "<group>"; };
@@ -351,6 +358,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C3F7BB31D07E1360046C29C /* CoreLocation.framework in Frameworks */,
 				6C3A30D11CD35D1000533FFF /* CoreFoundation.framework in Frameworks */,
 				6C3A30CF1CD35CE000533FFF /* QuartzCore.framework in Frameworks */,
 				6C3A30BD1CD35ACA00533FFF /* SystemConfiguration.framework in Frameworks */,
@@ -713,11 +721,22 @@
 		6C3A30BB1CD35A5E00533FFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C3F7BB21D07E1360046C29C /* CoreLocation.framework */,
 				6C3A30D01CD35D1000533FFF /* CoreFoundation.framework */,
 				6C3A30CE1CD35CE000533FFF /* QuartzCore.framework */,
 				6C3A30BC1CD35ACA00533FFF /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C3F7BAC1D07DFD80046C29C /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				6C3F7BAD1D07DFF10046C29C /* Location.storyboard */,
+				6C3F7BAF1D07E02B0046C29C /* RXLocationController.h */,
+				6C3F7BB01D07E02B0046C29C /* RXLocationController.m */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		6C84801D1CF6F8DE0052C3BF /* RXLog */ = {
@@ -845,6 +864,7 @@
 		6CF3224C1CD86BFF009BD1B7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6C3F7BAC1D07DFD80046C29C /* Location */,
 				6CF322531CD879BF009BD1B7 /* Home */,
 				6CF322571CD879BF009BD1B7 /* User */,
 			);
@@ -1018,6 +1038,7 @@
 				6C3A30121CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt in Resources */,
 				6C3A30A91CD3538A00533FFF /* MJRefresh.bundle in Resources */,
 				6CF4ACA71D01BB1400CD17CB /* RXMineCell.xib in Resources */,
+				6C3F7BAE1D07DFF10046C29C /* Location.storyboard in Resources */,
 				6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */,
 				6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */,
 				6CD828B51CF831A500AF575E /* Mine.storyboard in Resources */,
@@ -1041,6 +1062,7 @@
 				6C3A30A21CD3538A00533FFF /* MJRefreshAutoStateFooter.m in Sources */,
 				6C3A305F1CD352AA00533FFF /* AFSecurityPolicy.m in Sources */,
 				6C3A309D1CD3538A00533FFF /* MJRefreshComponent.m in Sources */,
+				6C3F7BB11D07E02B0046C29C /* RXLocationController.m in Sources */,
 				6C3A309E1CD3538A00533FFF /* MJRefreshFooter.m in Sources */,
 				6CA1600A1CF3432D009DCE60 /* RXNewHomeCollectionViewCell.m in Sources */,
 				6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */,

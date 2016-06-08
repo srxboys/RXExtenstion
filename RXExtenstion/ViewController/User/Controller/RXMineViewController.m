@@ -12,7 +12,6 @@
 #import "RXRandom.h"
 
 #import "RXMineHeader.h"
-#define imageString @"https://avatars3.githubusercontent.com/u/16399242?v=3&amp.png"
 #import "RXMineCell.h"
 
 #import "RXMineWebViewController.h"
@@ -64,7 +63,7 @@
     //header
     NSDictionary * userDic = @{
                                @"user_id"      : IntTranslateStr(1881142),
-                               @"user_avater"  : imageString,
+                               @"user_avater"  : @"Mine_avaster",
                                @"user_backImg" : [RXRandom randomImageURL],
                                @"user_desc"    : @"懂得太少，表现太多；才华太少，锋芒太多"
                                };

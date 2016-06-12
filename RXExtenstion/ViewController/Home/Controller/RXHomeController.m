@@ -14,6 +14,7 @@
 #import "RXCaCheController.h"
 #import "RXExpansionContractionController.h"
 #import "RXSystemServerController.h"
+#import "RXMenuController.h"
 
 @interface RXHomeController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -45,6 +46,7 @@
             @"AFN 请求接口",
             @"tableViewCell 展开收缩",
             @"系统中的功能",
+            @"自定义点餐菜单框架",
             @"一个完整的界面demo-coding"];
     [_tableView reloadData];
 }
@@ -102,6 +104,11 @@
         [self.navigationController pushViewController:systemSeverController animated:YES];
     }
     else if(row == 8) {
+        RXMenuController * menuController = [[RXMenuController alloc] init];
+        menuController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:menuController animated:YES];
+    }
+    else if(row == 9) {
         //完整的界面demo
         RXNewHomeController * homeControll = [[RXNewHomeController alloc] init];
         homeControll.hidesBottomBarWhenPushed = YES;

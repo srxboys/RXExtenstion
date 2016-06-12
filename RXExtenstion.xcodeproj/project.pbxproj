@@ -76,6 +76,11 @@
 		6C3F7BB11D07E02B0046C29C /* RXLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F7BB01D07E02B0046C29C /* RXLocationController.m */; };
 		6C3F7BB31D07E1360046C29C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3F7BB21D07E1360046C29C /* CoreLocation.framework */; };
 		6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BFCD61CDC9F94006476FB /* RXDataModel.m */; };
+		6C7B91411D0D7FCD00496C4F /* RXMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B913A1D0D7FCD00496C4F /* RXMenu.m */; };
+		6C7B91421D0D7FCD00496C4F /* RXSegmentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B913C1D0D7FCD00496C4F /* RXSegmentButton.m */; };
+		6C7B91431D0D7FCD00496C4F /* RXSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B913E1D0D7FCD00496C4F /* RXSegmentView.m */; };
+		6C7B91441D0D7FCD00496C4F /* RXSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B91401D0D7FCD00496C4F /* RXSelectView.m */; };
+		6C7B91471D0D809000496C4F /* RXMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B91461D0D809000496C4F /* RXMenuController.m */; };
 		6C816C1F1CF83D6F00823507 /* RXMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C816C1E1CF83D6F00823507 /* RXMineHeader.m */; };
 		6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */; };
 		6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */; };
@@ -259,6 +264,16 @@
 		6C3F7BB21D07E1360046C29C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6C4BFCD51CDC9F94006476FB /* RXDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDataModel.h; sourceTree = "<group>"; };
 		6C4BFCD61CDC9F94006476FB /* RXDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDataModel.m; sourceTree = "<group>"; };
+		6C7B91391D0D7FCD00496C4F /* RXMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenu.h; sourceTree = "<group>"; };
+		6C7B913A1D0D7FCD00496C4F /* RXMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenu.m; sourceTree = "<group>"; };
+		6C7B913B1D0D7FCD00496C4F /* RXSegmentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSegmentButton.h; sourceTree = "<group>"; };
+		6C7B913C1D0D7FCD00496C4F /* RXSegmentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSegmentButton.m; sourceTree = "<group>"; };
+		6C7B913D1D0D7FCD00496C4F /* RXSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSegmentView.h; sourceTree = "<group>"; };
+		6C7B913E1D0D7FCD00496C4F /* RXSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSegmentView.m; sourceTree = "<group>"; };
+		6C7B913F1D0D7FCD00496C4F /* RXSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSelectView.h; sourceTree = "<group>"; };
+		6C7B91401D0D7FCD00496C4F /* RXSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSelectView.m; sourceTree = "<group>"; };
+		6C7B91451D0D809000496C4F /* RXMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuController.h; sourceTree = "<group>"; };
+		6C7B91461D0D809000496C4F /* RXMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenuController.m; sourceTree = "<group>"; };
 		6C816C1D1CF83D6F00823507 /* RXMineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineHeader.h; sourceTree = "<group>"; };
 		6C816C1E1CF83D6F00823507 /* RXMineHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineHeader.m; sourceTree = "<group>"; };
 		6C8480241CF6F9310052C3BF /* NSArray+RXArrLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXArrLog.h"; sourceTree = "<group>"; };
@@ -417,6 +432,7 @@
 		6C3A2FCE1CD3477000533FFF /* RXExtenstion */ = {
 			isa = PBXGroup;
 			children = (
+				6C7B91381D0D7FCD00496C4F /* RXMenu */,
 				6C3A302D1CD352AA00533FFF /* 3rd */,
 				6C3A2FE61CD3477E00533FFF /* RXExtenstion */,
 				6CF3224C1CD86BFF009BD1B7 /* ViewController */,
@@ -739,6 +755,22 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		6C7B91381D0D7FCD00496C4F /* RXMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6C7B91391D0D7FCD00496C4F /* RXMenu.h */,
+				6C7B913A1D0D7FCD00496C4F /* RXMenu.m */,
+				6C7B913F1D0D7FCD00496C4F /* RXSelectView.h */,
+				6C7B91401D0D7FCD00496C4F /* RXSelectView.m */,
+				6C7B913D1D0D7FCD00496C4F /* RXSegmentView.h */,
+				6C7B913E1D0D7FCD00496C4F /* RXSegmentView.m */,
+				6C7B913B1D0D7FCD00496C4F /* RXSegmentButton.h */,
+				6C7B913C1D0D7FCD00496C4F /* RXSegmentButton.m */,
+			);
+			name = RXMenu;
+			path = RXExtenstion/RXMenu;
+			sourceTree = "<group>";
+		};
 		6C84801D1CF6F8DE0052C3BF /* RXLog */ = {
 			isa = PBXGroup;
 			children = (
@@ -895,6 +927,8 @@
 				6CA434271CD9C42400641785 /* RXUploadImageController.m */,
 				6CA15FF81CF33FEC009DCE60 /* RXNewHomeController.h */,
 				6CA15FF91CF33FEC009DCE60 /* RXNewHomeController.m */,
+				6C7B91451D0D809000496C4F /* RXMenuController.h */,
+				6C7B91461D0D809000496C4F /* RXMenuController.m */,
 				6C25DA621CFED20200E65A38 /* RXLoLInfoViewController.h */,
 				6C25DA631CFED20200E65A38 /* RXLoLInfoViewController.m */,
 				6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */,
@@ -1009,6 +1043,11 @@
 				TargetAttributes = {
 					6C3A2FCB1CD3477000533FFF = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1068,6 +1107,7 @@
 				6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */,
 				6CA4345E1CD9E5AF00641785 /* UIImage+MultiFormat.m in Sources */,
 				6C3A30D41CD360DC00533FFF /* RXCharacter.m in Sources */,
+				6C7B91441D0D7FCD00496C4F /* RXSelectView.m in Sources */,
 				6C3A2FD41CD3477000533FFF /* AppDelegate.m in Sources */,
 				6C3A30691CD352AA00533FFF /* UIProgressView+AFNetworking.m in Sources */,
 				6CBF822A1CDAEDCC009AD4FC /* RXCaCheController.m in Sources */,
@@ -1092,6 +1132,7 @@
 				6CA160041CF34287009DCE60 /* RXNewHomeSegmentView.m in Sources */,
 				6C3A30A81CD3538A00533FFF /* MJRefreshStateHeader.m in Sources */,
 				6C3A30111CD3477E00533FFF /* MJPopupBackgroundView.m in Sources */,
+				6C7B91471D0D809000496C4F /* RXMenuController.m in Sources */,
 				6C25DA5C1CFEBDA900E65A38 /* RXMineInfoViewController.m in Sources */,
 				6C3A30A41CD3538A00533FFF /* MJRefreshBackNormalFooter.m in Sources */,
 				6C3A30641CD352AA00533FFF /* AFImageDownloader.m in Sources */,
@@ -1099,7 +1140,9 @@
 				6C3A306B1CD352AA00533FFF /* UIWebView+AFNetworking.m in Sources */,
 				6CA4345C1CD9E5AF00641785 /* UIButton+WebCache.m in Sources */,
 				6C3A30601CD352AA00533FFF /* AFURLRequestSerialization.m in Sources */,
+				6C7B91421D0D7FCD00496C4F /* RXSegmentButton.m in Sources */,
 				6CA434611CD9E5AF00641785 /* UIImageView+WebCache.m in Sources */,
+				6C7B91431D0D7FCD00496C4F /* RXSegmentView.m in Sources */,
 				6C3A30DD1CD36EC800533FFF /* RXMJHeaderGif.m in Sources */,
 				6C3A30201CD34E2B00533FFF /* RXBundle.m in Sources */,
 				6CA434581CD9E5AF00641785 /* SDWebImageDownloader.m in Sources */,
@@ -1124,6 +1167,7 @@
 				6C3A30611CD352AA00533FFF /* AFURLResponseSerialization.m in Sources */,
 				6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */,
 				6CBF82271CDAE45A009AD4FC /* UIImageView+ProgressView.m in Sources */,
+				6C7B91411D0D7FCD00496C4F /* RXMenu.m in Sources */,
 				6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */,
 				6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */,
 				6CA434571CD9E5AF00641785 /* SDWebImageDecoder.m in Sources */,

@@ -49,7 +49,23 @@
 @property (nonatomic, copy) NSString * text;
 @end
 
+@interface RXMenuCitydistanceModel: NSObject
+@property (nonatomic, copy)   NSArray  * array;
+@property (nonatomic, assign) BOOL       distanceSelected;
+@end
 
+
+@interface RXMenuCityModel: NSObject
+@property (nonatomic, copy)   NSString                 * cityName;
+@property (nonatomic, copy)   RXMenuCitydistanceModel  * citydistanceModel;
+@property (nonatomic, assign) BOOL                       citySelected;//无用
+@end
+
+
+@interface RXMenuTypeModel: NSObject
+@property (nonatomic, copy)   NSString  * typeName;
+@property (nonatomic, assign) BOOL        typeSelected;//无用
+@end
 
 
 

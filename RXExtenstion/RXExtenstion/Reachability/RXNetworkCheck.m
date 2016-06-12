@@ -37,7 +37,12 @@
 //检测网络
 - (void) reachabilityChanged:(NSNotification *)note {
     Reachability* curReach = [note object];
+    // 断言 判断条件--然后抛出异常，告诉我们
     NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    
+//    关于断言，还需要注意的一点是在Xcode 4.2以后，在release版本中断言是默认关闭的，这是由宏NS_BLOCK_ASSERTIONS来处理的。也就是说，当编译release版本时，所有的断言调用都是无效的。
+    
+    
     [self updateInterfaceWithReachability:curReach];
 }
 

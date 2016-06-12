@@ -106,7 +106,19 @@
 @end
 
 
+@implementation RXMenuCitydistanceModel
 
+@end
+
+
+@implementation RXMenuCityModel
+
+@end
+
+
+@implementation RXMenuTypeModel
+
+@end
 
 
 

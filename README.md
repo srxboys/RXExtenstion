@@ -13,9 +13,11 @@
 
 ### [4、封装假数据](https://github.com/srxboys/RXExtenstion/tree/master/srxboys/falseData/falseData.md)
 
-### [5、我的demo 百度网盘](http://pan.baidu.com/s/1hqH9ZNI) 
+### [5、字符处理 、数组、 字典 -> 空处理](https://github.com/srxboys/RXExtenstion/tree/master/srxboys/character/character.md)
 
-### [6、不是技术的技术博客](https://weibo.com/srxboys)
+### [6、我的demo 百度网盘](http://pan.baidu.com/s/1hqH9ZNI) 
+
+### [7、不是技术的技术博客](https://weibo.com/srxboys)
 -
 ###更新日志
 2016-05-25  

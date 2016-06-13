@@ -58,6 +58,10 @@
        _typeTableView   = [self configTableDataAlloc:_typeTableView frame:frame];
        _filterTableView = [self configTableDataAlloc:_filterTableView frame:frame];
         
+        //背景设置
+        _typeTableView.backgroundColor = [UIColor lightGrayColor];
+        _filterTableView.backgroundColor = [UIColor blueColor];
+        
         //tableView数据源初始化
         _typeArray   = [[NSMutableArray alloc] init];
         _filterArray = [[NSMutableArray alloc] init];
@@ -79,7 +83,7 @@
 
 - (void)configCityView:(CGRect)frame {
     CGFloat width = frame.size.width;
-    CGFloat height = frame.size.height;
+    CGFloat height = frame.size.height - SegmentHeight;
     _cityView = [[RXSelectView alloc] initWithFrame:CGRectMake(0, SegmentHeight, width, height)];
     [self addSubview:_cityView];
 
@@ -131,7 +135,7 @@
 - (UITableView *)configTableDataAlloc:(UITableView *)tableView frame:(CGRect)frame {
     
     CGFloat width = frame.size.width;
-    CGFloat height = frame.size.height;
+    CGFloat height = frame.size.height - SegmentHeight;
     
     tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, SegmentHeight, width, height) style:UITableViewStylePlain];
     tableView.delegate = self;
@@ -139,7 +143,6 @@
     tableView.tableFooterView = [[UIView alloc] init];
     [self addSubview:tableView];
     
-    //为了看效果
     tableView.hidden = YES;
     return tableView;
 }

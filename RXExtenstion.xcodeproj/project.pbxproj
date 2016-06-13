@@ -432,7 +432,6 @@
 		6C3A2FCE1CD3477000533FFF /* RXExtenstion */ = {
 			isa = PBXGroup;
 			children = (
-				6C7B91381D0D7FCD00496C4F /* RXMenu */,
 				6C3A302D1CD352AA00533FFF /* 3rd */,
 				6C3A2FE61CD3477E00533FFF /* RXExtenstion */,
 				6CF3224C1CD86BFF009BD1B7 /* ViewController */,
@@ -462,6 +461,7 @@
 		6C3A2FE61CD3477E00533FFF /* RXExtenstion */ = {
 			isa = PBXGroup;
 			children = (
+				6C7B91381D0D7FCD00496C4F /* RXMenu */,
 				6C3A30AE1CD3542100533FFF /* MJRefresh */,
 				6C3A2FE71CD3477E00533FFF /* cacheDict */,
 				6C3A2FF61CD3477E00533FFF /* NSBundle */,
@@ -767,8 +767,7 @@
 				6C7B913B1D0D7FCD00496C4F /* RXSegmentButton.h */,
 				6C7B913C1D0D7FCD00496C4F /* RXSegmentButton.m */,
 			);
-			name = RXMenu;
-			path = RXExtenstion/RXMenu;
+			path = RXMenu;
 			sourceTree = "<group>";
 		};
 		6C84801D1CF6F8DE0052C3BF /* RXLog */ = {

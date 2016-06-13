@@ -139,4 +139,4 @@
 ~ ~ ~  coding ~ ~ ~ 
 
 此项目主要是以框架为主，方法为辅。方便开发。 
-如果你有想说的可以`issues I`。
+如果你有想说的可以[issues I](https://github.com/srxboys/RXExtenstion/issues)。

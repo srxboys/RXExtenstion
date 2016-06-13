@@ -1,6 +1,6 @@
 # RXExtenstion
 # iOS 项目基本框架
-## `UILabel自适应高度的3种方法`
+### `UILabel自适应高度的3种方法`
 ```objc
 
  //label高度
@@ -22,6 +22,6 @@
  _textHeight = [label boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: label.font} context:nil].size.height;
 ```
 ###看看效果
-![srxboys](https://github.com/srxboys/RXLabel/blob/master/RXLabel.gif)
-![srxboys](https://github.com/srxboys/RXLabel/blob/master/RXLabel.gif)
-![srxboys](https://github.com/srxboys/RXLabel/blob/master/RXLabel.gif)
+![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/label/srxboys_UILabel1.gif)
+![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/label/srxboys_UILabel2.gif)
+![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/label/srxboys_UILabel3.gif)

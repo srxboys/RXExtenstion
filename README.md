@@ -5,7 +5,7 @@
 ######3、避免常见的bug。
 -
 ### 带有效果展示
-### `UILabel自适应高度的3种方法`
+### 1、`UILabel自适应高度的3种方法`
 ```objc
 
     //label高度
@@ -26,20 +26,20 @@
     CGFloat width = 200;//当宽度是已知的。
     _textHeight = [label boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: label.font} context:nil].size.height;
 ```
-###看看效果
+### 1、看看效果
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/label/srxboys_UILabel1.gif)
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/label/srxboys_UILabel2.gif)
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/label/srxboys_UILabel3.gif)
 
 ### [2、](http://weibo.com/1759864273/Dxsiixb4M?from=page_1005051759864273_profile&wvr=6&mod=weibotime&type=comment#_rnd1465802552136)[封装AFNetworking](http://blog.csdn.net/srxboys/article/details/50774553)
 
-## `自定义点餐的菜单功能`
+### 3、`自定义点餐的菜单功能`
 ###只是简简单单的框架
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/Menu/srxboys_Menu.gif)
--
+
 这里我只是做了个框架，具体的界面美化和数据等等根据需求自己完善。而这个框架主要提供思路。
 
-### `封装假数据`
+### 4、`封装假数据`
 上面的超链接，我不知道你点击了没有，不知道你观察了没有，很多文字、日期 + 时间、数字、图片等等 都是来自于 自动生成假数据 的类。下面介绍下:
 ```objc
     @interface RXRandom : NSObject
@@ -70,7 +70,7 @@
 ```
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/falseData/srxboys_falseData.gif)
 
-### `字符处理 、数组、 字典 -> 空处理`
+### 5、`字符处理 、数组、 字典 -> 空处理`
 ```objc
     #import "RXCharacter.h"
     @implementation RXCaCheController

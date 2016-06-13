@@ -38,8 +38,8 @@
 - (void)changeTableSourceArr {
     arr = @[[NSString stringWithFormat:@"日期=%@",[RXRandom randomDateString]],
             [NSString stringWithFormat:@"汉字=%@",[RXRandom randomChinas]],
-            [NSString stringWithFormat:@"字符串=%@",[RXRandom randomChinas]],
-            [NSString stringWithFormat:@"字母=%@",[RXRandom randomChinas]],
+            [NSString stringWithFormat:@"字符串=%@",[RXRandom randomString]],
+            [NSString stringWithFormat:@"字母=%@",[RXRandom randomLetter]],
             [NSString stringWithFormat:@"图片=%@",[RXRandom randomImageURL]],
             ];
     

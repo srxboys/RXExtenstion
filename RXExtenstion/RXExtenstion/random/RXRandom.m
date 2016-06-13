@@ -71,7 +71,7 @@
 + (NSString*)randomString {
     NSString* string = [[NSString alloc] init];
     //                                      + 1 确保有数据
-    for (int i = 0; i < arc4random() % 32 + 1; i++) {
+    for (int i = 0; i < arc4random() % 100 + 5; i++) {
         int number = arc4random() % 36;
         
         if (number < 10) {

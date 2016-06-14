@@ -101,7 +101,7 @@
 
 ### [6、我的demo 百度网盘](http://pan.baidu.com/s/1hqH9ZNI) 
 
-### [7、不是技术的技术博客](https://weibo.com/srxboys)
+### [7、不是技术的技术博客](http://weibo.com/srxboys)
 -
 ### 接口必传字段处理
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/AFNS.png)

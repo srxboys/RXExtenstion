@@ -12,8 +12,10 @@
 #import "RXCharacter.h"
 #import "AppDelegate.h"
 
-#define SERVER_URL @"https://github.com/srxboys"
+#import "RXPrisonBreak.h"
 
+#define SERVER_URL @"https://github.com/srxboys"
+#define CharString(__iPhone) [NSString stringWithFormat:@"iPhone%@", __iPhone]
 
 #define loadingWidthHeight 0
 
@@ -36,10 +38,22 @@
     
 //    NSString * user_id = @"app登录后的 用户id";
     
-    //iOS
+    //APP 机型 iOS
 //    [newParams setObject:user_id forKey:@"user_id"];
     [newParams setObject:@"iOS" forKey:@"device_type"];
+    
+    // APP版本号
     [newParams setObject:[RXBundle bundleVersion] forKey:@"version"];
+    
+    //型号
+    NSString * device = [RXBundle bundlePhoneModel];
+    
+    //系统版本
+    NSString * system = SYSTEMVERSION; //iOS 几
+    
+    //是否越狱
+    NSString * prisonBreak = [[UserDefaults objectForKey:prisonBreakDefault] boolValue]? @"越狱" : @"非越狱";
+    
 
     //假数据 --- 随机 user_id
     //    NSString *idsss = IntTranslateStr(arc4random() % 10000 + 10);

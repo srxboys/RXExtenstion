@@ -10,6 +10,7 @@
 
 #import "RXTabBarController.h"
 #import "RXNetworkCheck.h"
+#import "RXPrisonBreak.h"
 
 @interface AppDelegate ()
 
@@ -26,7 +27,11 @@
     RXTabBarController * tabBarController = RXStroyBoard(@"Main", @"RXTabBarController");
     _window.rootViewController = tabBarController;
     
+    //监听网络
     [RXNetworkCheck getNetworkStatus];
+    
+    //判断是否越狱
+    [RXPrisonBreak prisonBreakCheck];
     
     [_window makeKeyAndVisible];
     return YES;

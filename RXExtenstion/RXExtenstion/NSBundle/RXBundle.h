@@ -22,6 +22,7 @@
 //应用版本号
 + (NSString *)bundleVersion;
 
-//读取文件内容，返回对象。支持plist和json，通过文件名后缀判断文件类型
-+ (id)objectFromFile:(NSString *)fileName;
+//设备型号 iPhone 4、4s、5、5s...
++ (NSString *)bundlePhoneModel;
+
 @end

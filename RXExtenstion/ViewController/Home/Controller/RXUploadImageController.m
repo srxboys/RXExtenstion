@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configUI];
 }
 
 - (void)configUI {
@@ -31,6 +32,8 @@
     /*
         _imgArr 数组 里面 是 UIImage 的二进制
      */
+    
+    [self uploadImage];
 }
 
 - (void)uploadImage {

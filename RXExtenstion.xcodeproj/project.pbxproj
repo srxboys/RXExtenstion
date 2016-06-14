@@ -72,6 +72,7 @@
 		6C3A30D71CD36DDC00533FFF /* RXMJHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30D61CD36DDC00533FFF /* RXMJHeader.m */; };
 		6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30D91CD36E3700533FFF /* RXMJFooterGif.m */; };
 		6C3A30DD1CD36EC800533FFF /* RXMJHeaderGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */; };
+		6C3B8C8A1D0FC4DA0033F691 /* RXPrisonBreak.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3B8C891D0FC4DA0033F691 /* RXPrisonBreak.m */; };
 		6C3F7BAE1D07DFF10046C29C /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3F7BAD1D07DFF10046C29C /* Location.storyboard */; };
 		6C3F7BB11D07E02B0046C29C /* RXLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F7BB01D07E02B0046C29C /* RXLocationController.m */; };
 		6C3F7BB31D07E1360046C29C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3F7BB21D07E1360046C29C /* CoreLocation.framework */; };
@@ -258,6 +259,8 @@
 		6C3A30D91CD36E3700533FFF /* RXMJFooterGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMJFooterGif.m; sourceTree = "<group>"; };
 		6C3A30DB1CD36EC800533FFF /* RXMJHeaderGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMJHeaderGif.h; sourceTree = "<group>"; };
 		6C3A30DC1CD36EC800533FFF /* RXMJHeaderGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMJHeaderGif.m; sourceTree = "<group>"; };
+		6C3B8C881D0FC4DA0033F691 /* RXPrisonBreak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXPrisonBreak.h; sourceTree = "<group>"; };
+		6C3B8C891D0FC4DA0033F691 /* RXPrisonBreak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXPrisonBreak.m; sourceTree = "<group>"; };
 		6C3F7BAD1D07DFF10046C29C /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		6C3F7BAF1D07E02B0046C29C /* RXLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLocationController.h; sourceTree = "<group>"; };
 		6C3F7BB01D07E02B0046C29C /* RXLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLocationController.m; sourceTree = "<group>"; };
@@ -461,6 +464,7 @@
 		6C3A2FE61CD3477E00533FFF /* RXExtenstion */ = {
 			isa = PBXGroup;
 			children = (
+				6C3B8C871D0FC4C90033F691 /* RXPrisonBreak */,
 				6C7B91381D0D7FCD00496C4F /* RXMenu */,
 				6C3A30AE1CD3542100533FFF /* MJRefresh */,
 				6C3A2FE71CD3477E00533FFF /* cacheDict */,
@@ -743,6 +747,15 @@
 				6C3A30BC1CD35ACA00533FFF /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C3B8C871D0FC4C90033F691 /* RXPrisonBreak */ = {
+			isa = PBXGroup;
+			children = (
+				6C3B8C881D0FC4DA0033F691 /* RXPrisonBreak.h */,
+				6C3B8C891D0FC4DA0033F691 /* RXPrisonBreak.m */,
+			);
+			path = RXPrisonBreak;
 			sourceTree = "<group>";
 		};
 		6C3F7BAC1D07DFD80046C29C /* Location */ = {
@@ -1100,6 +1113,7 @@
 				6C3A30A21CD3538A00533FFF /* MJRefreshAutoStateFooter.m in Sources */,
 				6C3A305F1CD352AA00533FFF /* AFSecurityPolicy.m in Sources */,
 				6C3A309D1CD3538A00533FFF /* MJRefreshComponent.m in Sources */,
+				6C3B8C8A1D0FC4DA0033F691 /* RXPrisonBreak.m in Sources */,
 				6C3F7BB11D07E02B0046C29C /* RXLocationController.m in Sources */,
 				6C3A309E1CD3538A00533FFF /* MJRefreshFooter.m in Sources */,
 				6CA1600A1CF3432D009DCE60 /* RXNewHomeCollectionViewCell.m in Sources */,

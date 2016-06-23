@@ -56,7 +56,7 @@
     return platform;
 }
 
-+ (NSString *)bundlePhoneModel {
++ (NSString *)correspondVersion {
     
     NSString *correspondVersion = [self getDeviceVersionInfo];
     
@@ -107,4 +107,31 @@
     //返回  iPhone iPod iPad
     return correspondVersion;
 }
+
++ (void)bundlePhoneVersionCheck {
+    
+    [UserDefaults setObject:[self correspondVersion] forKey:bundlePhoneCorrespondVersion];
+    [UserDefaults synchronize];
+}
+
+
++ (BOOL)boundPhone6sLater {
+    NSString * phoneVision = [UserDefaults objectForKey:bundlePhoneCorrespondVersion];
+    if(phoneVision.length <= 0) {
+        return NO;
+    }
+    
+    NSArray * array = [phoneVision componentsSeparatedByString:@" "];
+    if(array.count <= 1) {
+        return NO;
+    }
+    
+    NSString * currentPhone = array[1];
+    if([currentPhone compare:@"6s" options:NSNumericSearch] == NSOrderedDescending) {
+        //为了 7 7s 7plus 准备
+        return YES;
+    }
+    return NO;
+}
+
 @end

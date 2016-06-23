@@ -30,7 +30,7 @@
 
 
 #pragma mark----------------- -【- GeTui Notification id -】- ------------------------
-//推送
+//个推推送
 #if VERSION == 0 //正式
     #define kGeTuiAppId       @""
     #define kGeTuiAppKey      @""
@@ -43,8 +43,12 @@
 
 #pragma mark ---通知定义---
 
-
+#pragma mark --- 缓存定义 ---
+///本地 3D touch 数据缓存
+#define RXShortcutItemLocalArray  @"shortcutItemLocalArray.json"
 
 #pragma mark --- 接口定义 ---
+
+
 
 #endif /* RXConstant_h */

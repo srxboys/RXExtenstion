@@ -86,6 +86,8 @@
 		6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */; };
 		6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */; };
 		6C84802C1CF6F9D10052C3BF /* NSDateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C84802B1CF6F9D10052C3BF /* NSDateUtilities.m */; };
+		6C9A9AC41D12A3EE004C02B0 /* RX3DTouchSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9A9AC31D12A3EE004C02B0 /* RX3DTouchSettingController.m */; };
+		6CA008801D112DBE00D7B04E /* RXShortcutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0087F1D112DBE00D7B04E /* RXShortcutItem.m */; };
 		6CA15FED1CF339B5009DCE60 /* GBInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA15FEA1CF339B5009DCE60 /* GBInfiniteScrollView.m */; };
 		6CA15FEE1CF339B5009DCE60 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA15FEC1CF339B5009DCE60 /* SMPageControl.m */; };
 		6CA15FF41CF33CC7009DCE60 /* UIImageView+fadeInFadeOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA15FF21CF33CC7009DCE60 /* UIImageView+fadeInFadeOut.m */; };
@@ -285,6 +287,10 @@
 		6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RXDictLog.m"; sourceTree = "<group>"; };
 		6C84802A1CF6F9D10052C3BF /* NSDateUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateUtilities.h; sourceTree = "<group>"; };
 		6C84802B1CF6F9D10052C3BF /* NSDateUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateUtilities.m; sourceTree = "<group>"; };
+		6C9A9AC21D12A3EE004C02B0 /* RX3DTouchSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RX3DTouchSettingController.h; sourceTree = "<group>"; };
+		6C9A9AC31D12A3EE004C02B0 /* RX3DTouchSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RX3DTouchSettingController.m; sourceTree = "<group>"; };
+		6CA0087E1D112DBE00D7B04E /* RXShortcutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXShortcutItem.h; sourceTree = "<group>"; };
+		6CA0087F1D112DBE00D7B04E /* RXShortcutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXShortcutItem.m; sourceTree = "<group>"; };
 		6CA15FE91CF339B5009DCE60 /* GBInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBInfiniteScrollView.h; sourceTree = "<group>"; };
 		6CA15FEA1CF339B5009DCE60 /* GBInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBInfiniteScrollView.m; sourceTree = "<group>"; };
 		6CA15FEB1CF339B5009DCE60 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
@@ -547,6 +553,8 @@
 			children = (
 				6C4BFCD51CDC9F94006476FB /* RXDataModel.h */,
 				6C4BFCD61CDC9F94006476FB /* RXDataModel.m */,
+				6CA0087E1D112DBE00D7B04E /* RXShortcutItem.h */,
+				6CA0087F1D112DBE00D7B04E /* RXShortcutItem.m */,
 				6CF322471CD7153E009BD1B7 /* RXMessage.h */,
 				6CA434301CD9E3A200641785 /* RXConstant.h */,
 				6C3A301A1CD347E200533FFF /* PrefixHeader.h */,
@@ -991,6 +999,8 @@
 				6C25DA591CFEBDA900E65A38 /* RXMineInfoViewController.m */,
 				6C25DA5A1CFEBDA900E65A38 /* RXMineWebViewController.h */,
 				6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */,
+				6C9A9AC21D12A3EE004C02B0 /* RX3DTouchSettingController.h */,
+				6C9A9AC31D12A3EE004C02B0 /* RX3DTouchSettingController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1160,6 +1170,7 @@
 				6C3A30201CD34E2B00533FFF /* RXBundle.m in Sources */,
 				6CA434581CD9E5AF00641785 /* SDWebImageDownloader.m in Sources */,
 				6CA15FEE1CF339B5009DCE60 /* SMPageControl.m in Sources */,
+				6CA008801D112DBE00D7B04E /* RXShortcutItem.m in Sources */,
 				6C3A30631CD352AA00533FFF /* AFAutoPurgingImageCache.m in Sources */,
 				6C3A30621CD352AA00533FFF /* AFURLSessionManager.m in Sources */,
 				6CA4345F1CD9E5AF00641785 /* UIImage+WebP.m in Sources */,
@@ -1197,6 +1208,7 @@
 				6C3A30681CD352AA00533FFF /* UIImageView+AFNetworking.m in Sources */,
 				6C3A30A51CD3538A00533FFF /* MJRefreshBackStateFooter.m in Sources */,
 				6C3A305E1CD352AA00533FFF /* AFNetworkReachabilityManager.m in Sources */,
+				6C9A9AC41D12A3EE004C02B0 /* RX3DTouchSettingController.m in Sources */,
 				6C3A309F1CD3538A00533FFF /* MJRefreshHeader.m in Sources */,
 				6C3A30A31CD3538A00533FFF /* MJRefreshBackGifFooter.m in Sources */,
 				6C3A30291CD3507400533FFF /* RXHexColor.m in Sources */,

@@ -20,6 +20,7 @@
 #import "NSDictionary+RXDictLog.h"
 //------------
 
+
 /// 实时监听网络 带参数的通知--- 只有baseController和自定义的View会用
 #define rxGetNetworkStatusNotification @"rxGetNetworkStatusNotification"
 //实时监听的网络状态

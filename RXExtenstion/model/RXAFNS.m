@@ -46,7 +46,7 @@
     [newParams setObject:[RXBundle bundleVersion] forKey:@"version"];
     
     //型号
-    NSString * device = [RXBundle bundlePhoneModel];
+    NSString * device = [UserDefaults objectForKey:bundlePhoneCorrespondVersion];
     
     //系统版本
     NSString * system = SYSTEMVERSION; //iOS 几

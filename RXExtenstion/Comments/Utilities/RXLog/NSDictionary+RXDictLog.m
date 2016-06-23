@@ -12,13 +12,26 @@
 @implementation NSDictionary (RXDictLog)
 -(NSString *)descriptionWithLocale:(id)locale {
     NSArray *allKeys = [self allKeys];
-    NSMutableString *str = [[NSMutableString alloc] initWithFormat:@"%lu {\t\n ", allKeys.count];
-     for (NSString *key in allKeys) {
-             id value= self[key];
-             [str appendFormat:@"\t \"%@\" = %@,\n",key, value];
-         }
-     [str appendString:@"}"];
-
+    NSMutableString *str = [[NSMutableString alloc] initWithFormat:@"{\t\n "];
+    for (NSString *key in allKeys) {
+        id value= self[key];
+        id valueType = [self pringIdTypeString:value];
+        [str appendFormat:@"\t \"%@\" = %@,\n",key, valueType];
+    }
+    [str appendString:@"}"];
+    
     return str;
 }
+
+//判断是否为 1、字符串类型 ""  2、数值类型
+- (NSString *)pringIdTypeString:(id)string {
+    if([string isKindOfClass:[NSNumber class]]) {
+        return string;
+    }
+    else if([string isKindOfClass:[NSString class]]) {
+        return [NSString stringWithFormat:@"\"%@\"", string];
+    }
+    return string;
+}
+
 @end

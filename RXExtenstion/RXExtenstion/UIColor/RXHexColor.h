@@ -16,4 +16,7 @@
 + (UIColor *) colorWithHexString: (NSString *)color;
 ///16进制颜色必须长度为6
 + (UIColor *) colorWithHexString: (NSString *)color alpha:(float)opacity;
+
+/// 把颜色转换成图片
++ (UIImage *) colorBecomeImage:(UIColor *)color;
 @end

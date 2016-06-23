@@ -112,7 +112,6 @@
     //默认颜色
     [UITabBarItem.appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColorRGB(0, 0, 0), NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
     
-    
     //选中颜色
     [UITabBarItem.appearance setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColorRGB(127, 16, 133), NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
     

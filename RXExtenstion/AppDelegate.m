@@ -16,6 +16,8 @@
 #import "RXShortcutItem.h"
 #import "TTCacheUtil.h"
 
+#import "RXUUID.h"
+
 @interface AppDelegate ()
 
 @end
@@ -42,6 +44,10 @@
     
     //判断是否越狱
     [RXPrisonBreak prisonBreakCheck];
+    
+    //uuid
+    [UserDefaults setObject:[RXUUID getUMSUDID] forKey:App_deviceUDID];
+    [UserDefaults synchronize];
     
     [_window makeKeyAndVisible];
     return [self applicationClick3DTouch:launchOptions];

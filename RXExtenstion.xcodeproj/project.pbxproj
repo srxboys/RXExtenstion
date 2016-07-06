@@ -117,6 +117,10 @@
 		6CBF82271CDAE45A009AD4FC /* UIImageView+ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBF82261CDAE45A009AD4FC /* UIImageView+ProgressView.m */; };
 		6CBF822A1CDAEDCC009AD4FC /* RXCaCheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBF82291CDAEDCC009AD4FC /* RXCaCheController.m */; };
 		6CBF822E1CDAEE98009AD4FC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBF822D1CDAEE98009AD4FC /* UIView+Toast.m */; };
+		6CD0EB9C1D21159900692886 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0EB991D21159900692886 /* OpenUDID.m */; };
+		6CD0EB9D1D21159900692886 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0EB9B1D21159900692886 /* SFHFKeychainUtils.m */; };
+		6CD0EBA01D2115BE00692886 /* RXUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0EB9F1D2115BE00692886 /* RXUUID.m */; };
+		6CD0EBBB1D211F4F00692886 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD0EBBA1D211F4F00692886 /* Security.framework */; };
 		6CD828B51CF831A500AF575E /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD828B41CF831A500AF575E /* Mine.storyboard */; };
 		6CD828B81CF831BB00AF575E /* RXMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD828B71CF831BB00AF575E /* RXMineViewController.m */; };
 		6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322451CD71368009BD1B7 /* RXBaseViewController.m */; };
@@ -351,6 +355,13 @@
 		6CBF82291CDAEDCC009AD4FC /* RXCaCheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCaCheController.m; sourceTree = "<group>"; };
 		6CBF822C1CDAEE98009AD4FC /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		6CBF822D1CDAEE98009AD4FC /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		6CD0EB981D21159900692886 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		6CD0EB991D21159900692886 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		6CD0EB9A1D21159900692886 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		6CD0EB9B1D21159900692886 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		6CD0EB9E1D2115BE00692886 /* RXUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUUID.h; sourceTree = "<group>"; };
+		6CD0EB9F1D2115BE00692886 /* RXUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUUID.m; sourceTree = "<group>"; };
+		6CD0EBBA1D211F4F00692886 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6CD828B41CF831A500AF575E /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		6CD828B61CF831BB00AF575E /* RXMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineViewController.h; sourceTree = "<group>"; };
 		6CD828B71CF831BB00AF575E /* RXMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineViewController.m; sourceTree = "<group>"; };
@@ -382,6 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD0EBBB1D211F4F00692886 /* Security.framework in Frameworks */,
 				6C3F7BB31D07E1360046C29C /* CoreLocation.framework in Frameworks */,
 				6C3A30D11CD35D1000533FFF /* CoreFoundation.framework in Frameworks */,
 				6C3A30CF1CD35CE000533FFF /* QuartzCore.framework in Frameworks */,
@@ -481,6 +493,7 @@
 				6C3A30071CD3477E00533FFF /* UIColor */,
 				6C3A30D21CD360DC00533FFF /* RXCharacter.h */,
 				6C3A30D31CD360DC00533FFF /* RXCharacter.m */,
+				6CD0EB961D21159900692886 /* RXUUID */,
 				6C381A1B1D01192200D4F68D /* SystemServer */,
 				6C25DA5E1CFEBF8300E65A38 /* RXdate */,
 			);
@@ -749,6 +762,7 @@
 		6C3A30BB1CD35A5E00533FFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CD0EBBA1D211F4F00692886 /* Security.framework */,
 				6C3F7BB21D07E1360046C29C /* CoreLocation.framework */,
 				6C3A30D01CD35D1000533FFF /* CoreFoundation.framework */,
 				6C3A30CE1CD35CE000533FFF /* QuartzCore.framework */,
@@ -890,6 +904,27 @@
 				6CBF822D1CDAEE98009AD4FC /* UIView+Toast.m */,
 			);
 			path = Toast;
+			sourceTree = "<group>";
+		};
+		6CD0EB961D21159900692886 /* RXUUID */ = {
+			isa = PBXGroup;
+			children = (
+				6CD0EB971D21159900692886 /* security */,
+				6CD0EB9E1D2115BE00692886 /* RXUUID.h */,
+				6CD0EB9F1D2115BE00692886 /* RXUUID.m */,
+			);
+			path = RXUUID;
+			sourceTree = "<group>";
+		};
+		6CD0EB971D21159900692886 /* security */ = {
+			isa = PBXGroup;
+			children = (
+				6CD0EB981D21159900692886 /* OpenUDID.h */,
+				6CD0EB991D21159900692886 /* OpenUDID.m */,
+				6CD0EB9A1D21159900692886 /* SFHFKeychainUtils.h */,
+				6CD0EB9B1D21159900692886 /* SFHFKeychainUtils.m */,
+			);
+			path = security;
 			sourceTree = "<group>";
 		};
 		6CF322391CD712F6009BD1B7 /* Comments */ = {
@@ -1153,6 +1188,7 @@
 				6C3A30A61CD3538A00533FFF /* MJRefreshGifHeader.m in Sources */,
 				6C3A30671CD352AA00533FFF /* UIButton+AFNetworking.m in Sources */,
 				6CA160041CF34287009DCE60 /* RXNewHomeSegmentView.m in Sources */,
+				6CD0EBA01D2115BE00692886 /* RXUUID.m in Sources */,
 				6C3A30A81CD3538A00533FFF /* MJRefreshStateHeader.m in Sources */,
 				6C3A30111CD3477E00533FFF /* MJPopupBackgroundView.m in Sources */,
 				6C7B91471D0D809000496C4F /* RXMenuController.m in Sources */,
@@ -1181,6 +1217,7 @@
 				6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */,
 				6C3A300A1CD3477E00533FFF /* TTCacheUtil.m in Sources */,
 				6C3A302C1CD3516800533FFF /* RXAFNS.m in Sources */,
+				6CD0EB9D1D21159900692886 /* SFHFKeychainUtils.m in Sources */,
 				6C3A30A71CD3538A00533FFF /* MJRefreshNormalHeader.m in Sources */,
 				6C3A30D71CD36DDC00533FFF /* RXMJHeader.m in Sources */,
 				6CA4342C1CD9C56800641785 /* IBActionSheet.m in Sources */,
@@ -1202,6 +1239,7 @@
 				6C25DA5D1CFEBDA900E65A38 /* RXMineWebViewController.m in Sources */,
 				6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */,
 				6CA15FF41CF33CC7009DCE60 /* UIImageView+fadeInFadeOut.m in Sources */,
+				6CD0EB9C1D21159900692886 /* OpenUDID.m in Sources */,
 				6C3A309B1CD3538A00533FFF /* MJRefreshAutoFooter.m in Sources */,
 				6C11FD181CF6B7CB00BE323D /* RXNetworkCheck.m in Sources */,
 				6CA434281CD9C42400641785 /* RXUploadImageController.m in Sources */,

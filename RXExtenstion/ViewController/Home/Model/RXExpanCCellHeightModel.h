@@ -8,7 +8,7 @@
 
 //计算cell的高度以及需要改变的高度
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #define TextFontSize 14 //字体大小
 #define Text_lineHight 5 //行间距
 

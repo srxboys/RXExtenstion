@@ -11,7 +11,7 @@
 #import "RXBundle.h"
 #import "RXCharacter.h"
 #import "AppDelegate.h"
-
+#import "RXConstant.h"
 #import "RXPrisonBreak.h"
 
 #define SERVER_URL @"https://github.com/srxboys"
@@ -45,7 +45,7 @@
     // APP版本号
     [newParams setObject:[RXBundle bundleVersion] forKey:@"version"];
     
-    //型号
+    //硬件型号
     NSString * device = [UserDefaults objectForKey:bundlePhoneCorrespondVersion];
     
     //系统版本
@@ -53,6 +53,9 @@
     
     //是否越狱
     NSString * prisonBreak = [[UserDefaults objectForKey:prisonBreakDefault] boolValue]? @"越狱" : @"非越狱";
+    
+    //  >iOS6
+    NSString * uuid = [UserDefaults objectForKey:App_deviceUDID];
     
 
     //假数据 --- 随机 user_id

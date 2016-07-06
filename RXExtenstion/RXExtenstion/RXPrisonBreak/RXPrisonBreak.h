@@ -30,4 +30,8 @@
  4. 使用stat方法来判定cydia是否存在
  
  5. 读取环境变量
+ 
+ 6. 新增路径
+     /private/var/lib/apt/
+ 
  */

@@ -14,6 +14,8 @@
 		6C25DA5D1CFEBDA900E65A38 /* RXMineWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */; };
 		6C25DA611CFEBF8300E65A38 /* RXDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA601CFEBF8300E65A38 /* RXDate.m */; };
 		6C25DA641CFED20200E65A38 /* RXLoLInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA631CFED20200E65A38 /* RXLoLInfoViewController.m */; };
+		6C2A726A1D2CF6DA000F1550 /* RXLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A72691D2CF6DA000F1550 /* RXLoadingHUD.m */; };
+		6C2A726D1D2CF765000F1550 /* UIView+RXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A726C1D2CF765000F1550 /* UIView+RXToast.m */; };
 		6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */; };
 		6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */; };
 		6C381A1E1D01195000D4F68D /* RXSystemServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C381A1D1D01195000D4F68D /* RXSystemServer.m */; };
@@ -151,6 +153,10 @@
 		6C25DA601CFEBF8300E65A38 /* RXDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDate.m; sourceTree = "<group>"; };
 		6C25DA621CFED20200E65A38 /* RXLoLInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLoLInfoViewController.h; sourceTree = "<group>"; };
 		6C25DA631CFED20200E65A38 /* RXLoLInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLoLInfoViewController.m; sourceTree = "<group>"; };
+		6C2A72681D2CF6DA000F1550 /* RXLoadingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLoadingHUD.h; sourceTree = "<group>"; };
+		6C2A72691D2CF6DA000F1550 /* RXLoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLoadingHUD.m; sourceTree = "<group>"; };
+		6C2A726B1D2CF765000F1550 /* UIView+RXToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RXToast.h"; sourceTree = "<group>"; };
+		6C2A726C1D2CF765000F1550 /* UIView+RXToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RXToast.m"; sourceTree = "<group>"; };
 		6C32D6A91CF3E7C7003EE112 /* RXNewHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNewHomeTableViewCell.h; sourceTree = "<group>"; };
 		6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNewHomeTableViewCell.m; sourceTree = "<group>"; };
 		6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSystemAlertController.h; sourceTree = "<group>"; };
@@ -423,6 +429,17 @@
 			path = RXdate;
 			sourceTree = "<group>";
 		};
+		6C2A72671D2CF6B9000F1550 /* RXToast */ = {
+			isa = PBXGroup;
+			children = (
+				6C2A72681D2CF6DA000F1550 /* RXLoadingHUD.h */,
+				6C2A72691D2CF6DA000F1550 /* RXLoadingHUD.m */,
+				6C2A726B1D2CF765000F1550 /* UIView+RXToast.h */,
+				6C2A726C1D2CF765000F1550 /* UIView+RXToast.m */,
+			);
+			path = RXToast;
+			sourceTree = "<group>";
+		};
 		6C381A1B1D01192200D4F68D /* SystemServer */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +499,7 @@
 		6C3A2FE61CD3477E00533FFF /* RXExtenstion */ = {
 			isa = PBXGroup;
 			children = (
+				6C2A72671D2CF6B9000F1550 /* RXToast */,
 				6C3B8C871D0FC4C90033F691 /* RXPrisonBreak */,
 				6C7B91381D0D7FCD00496C4F /* RXMenu */,
 				6C3A30AE1CD3542100533FFF /* MJRefresh */,
@@ -1170,6 +1188,7 @@
 				6C3A30691CD352AA00533FFF /* UIProgressView+AFNetworking.m in Sources */,
 				6CBF822A1CDAEDCC009AD4FC /* RXCaCheController.m in Sources */,
 				6C3A30651CD352AA00533FFF /* AFNetworkActivityIndicatorManager.m in Sources */,
+				6C2A726A1D2CF6DA000F1550 /* RXLoadingHUD.m in Sources */,
 				6C381A1E1D01195000D4F68D /* RXSystemServer.m in Sources */,
 				6CD828B81CF831BB00AF575E /* RXMineViewController.m in Sources */,
 				6C3A30131CD3477E00533FFF /* UIViewController+MJPopupViewController.m in Sources */,
@@ -1263,6 +1282,7 @@
 				6CA434601CD9E5AF00641785 /* UIImageView+HighlightedWebCache.m in Sources */,
 				6C3A309C1CD3538A00533FFF /* MJRefreshBackFooter.m in Sources */,
 				6C11FD161CF6B7CB00BE323D /* Reachability.m in Sources */,
+				6C2A726D1D2CF765000F1550 /* UIView+RXToast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

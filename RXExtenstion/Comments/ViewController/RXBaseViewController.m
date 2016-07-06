@@ -14,6 +14,7 @@
 #import "RXBaseViewController.h"
 #import "RXGetNetStatus.h"
 
+
 @interface RXBaseViewController ()
 {
     UIControl      * _noneNetworkView;

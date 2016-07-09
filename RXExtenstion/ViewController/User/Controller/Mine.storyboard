@@ -58,10 +58,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eUA-SG-gxO" firstAttribute="top" secondItem="JZN-kj-p9K" secondAttribute="top" constant="64" id="CcK-xT-jzI"/>
+                            <constraint firstAttribute="trailing" secondItem="eUA-SG-gxO" secondAttribute="trailing" id="Hpf-lo-so2"/>
                             <constraint firstAttribute="bottom" secondItem="eUA-SG-gxO" secondAttribute="bottom" id="I0a-iZ-j6q"/>
+                            <constraint firstItem="eUA-SG-gxO" firstAttribute="leading" secondItem="JZN-kj-p9K" secondAttribute="leading" id="LHP-ud-3bC"/>
                             <constraint firstItem="eUA-SG-gxO" firstAttribute="leading" secondItem="JZN-kj-p9K" secondAttribute="leading" id="Ycb-23-rKo"/>
                             <constraint firstAttribute="trailing" secondItem="eUA-SG-gxO" secondAttribute="trailing" id="gjL-vJ-30d"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ycb-23-rKo"/>
+                                <exclude reference="gjL-vJ-30d"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>

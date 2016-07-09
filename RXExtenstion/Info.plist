@@ -26,6 +26,7 @@
 	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>sinaweibo</string>
 		<string>jianshu</string>
 		<string>github</string>
 		<string>weixin</string>

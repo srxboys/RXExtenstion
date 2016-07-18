@@ -7,6 +7,9 @@
 //
 
 #import "RXTodayCell.h"
+#import "RXTodayModel.h"
+#import "RXResponse.h"
+#import "UIImageView+OnlineImage.h"
 
 @interface RXTodayCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
@@ -27,6 +30,26 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if(self) {
+        
+    }
+    return self;
+}
+
+- (void)setCellData:(RXTodayModel *)model {
+//    NSData *data = [NSData dataWithContentsOfURL:url];
+//    UIImage *image = [[UIImage alloc] initWithData:data];
+//    _imgView.image = image;
+    
+    [_imgView setOnlineImage:[model.image strNotEmptyValue]];
+    
+    
+    _titleLabel.text = model.time;
+    _priceLabel.text = model.comment_count;
 }
 
 @end

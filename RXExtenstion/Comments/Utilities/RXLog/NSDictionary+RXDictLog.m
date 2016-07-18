@@ -13,10 +13,10 @@
 -(NSString *)descriptionWithLocale:(id)locale {
     NSArray *allKeys = [self allKeys];
     NSMutableString *str = [[NSMutableString alloc] initWithFormat:@"{\t\n "];
-    for (NSString *key in allKeys) {
+    for (id key in allKeys) {
         id value= self[key];
         id valueType = [self pringIdTypeString:value];
-        [str appendFormat:@"\t \"%@\" = %@,\n",key, valueType];
+        [str appendFormat:@"\t %@ = %@,\n",[self pringIdTypeString:key], valueType];
     }
     [str appendString:@"}"];
     

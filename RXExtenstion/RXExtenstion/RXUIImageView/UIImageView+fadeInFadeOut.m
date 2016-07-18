@@ -21,7 +21,7 @@
 
 - (void)sd_setImageFIFOWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options animateWithDuration:(CGFloat)duration {
     
-    [self sd_setImageWithURL:url  placeholderImage:placeholder options:options completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)  {
+    [self sd_setImageWithURL:url  placeholderImage:nil options:options completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)  {
         
          if (image && cacheType == SDImageCacheTypeNone)  {
              CATransition *fadeIn = [CATransition animation];
@@ -29,6 +29,9 @@
              fadeIn.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
              fadeIn.subtype = kCATransitionFade;
              [self.layer addAnimation:fadeIn forKey:@"fadeIn"];
+         }
+         else if(image == nil && cacheType == SDImageCacheTypeNone && error) {
+             self.image = placeholder;
          }
         
      }];

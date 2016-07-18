@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hRy-qH-oWz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="508"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RXTodayCell" rowHeight="94" id="23e-gb-Mf7" customClass="RXTodayCell">
@@ -79,9 +79,9 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g87-rS-Bej">
-                                <rect key="frame" x="10" y="250" width="300" height="40"/>
+                                <rect key="frame" x="60" y="518" width="200" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="EEO-IR-IIE"/>
+                                    <constraint firstAttribute="width" constant="200" id="EEO-IR-IIE"/>
                                     <constraint firstAttribute="height" constant="40" id="bm9-la-Iew"/>
                                 </constraints>
                                 <state key="normal" title="去看看">
@@ -103,9 +103,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="300"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="tableView" destination="hRy-qH-oWz" id="QoV-NW-DEa"/>
+                        <outlet property="tableView" destination="hRy-qH-oWz" id="kBo-n1-pNU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>

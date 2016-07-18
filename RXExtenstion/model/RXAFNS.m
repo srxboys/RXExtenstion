@@ -42,6 +42,7 @@
 //    [newParams setObject:user_id forKey:@"user_id"];
     [newParams setObject:@"iOS" forKey:@"device_type"];
     
+    /*
     // APP版本号
     [newParams setObject:[RXBundle bundleVersion] forKey:@"version"];
     
@@ -56,7 +57,7 @@
     
     //  >iOS6
     NSString * uuid = [UserDefaults objectForKey:App_deviceUDID];
-    
+    */
 
     //假数据 --- 随机 user_id
     //    NSString *idsss = IntTranslateStr(arc4random() % 10000 + 10);

@@ -30,6 +30,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tabBarItem.title = @"首页";
+    
+    
+//    NSDictionary * dit = @{@1:@""};
+//    NSLog(@"dict%@", dit);
+//    NSLog(@"dict_value=%@", [dit objectForKey:[NSNumber numberWithUnsignedInteger:1]]);
+//    NSLog(@"dict_2222=%@", dit[@"1"]);
+    
+    
     [self configUI];
 }
 

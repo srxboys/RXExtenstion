@@ -41,7 +41,15 @@
     NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
     
 //    关于断言，还需要注意的一点是在Xcode 4.2以后，在release版本中断言是默认关闭的，这是由宏NS_BLOCK_ASSERTIONS来处理的。也就是说，当编译release版本时，所有的断言调用都是无效的。
+    //这个是监测 判断条件为假，抛出异常
+    //    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
     
+    if(![curReach isKindOfClass:[Reachability class]]) {
+        _statusString = RXNetworksStatusNone;
+        [[NSNotificationCenter defaultCenter] postNotificationName:rxGetNetworkStatusNotification object:nil];
+        RXLog(@"network=%@=%s", [self class],__FUNCTION__);
+        return;
+    }
     
     [self updateInterfaceWithReachability:curReach];
 }

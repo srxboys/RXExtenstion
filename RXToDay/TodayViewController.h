@@ -11,3 +11,13 @@
 @interface TodayViewController : UIViewController
 
 @end
+
+
+/*
+    info.plist
+ 
+    NSExtensionMainStoryboard   写storyboard名
+                拖拽
+    NSExtensionPrincipalClass   写UIViewController名
+                代码(建议)
+ */

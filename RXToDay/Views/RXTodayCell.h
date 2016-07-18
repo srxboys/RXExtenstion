@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class RXTodayModel;
 @interface RXTodayCell : UITableViewCell
-
+- (void)setCellData:(RXTodayModel *)model;
 @end

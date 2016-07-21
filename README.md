@@ -113,7 +113,7 @@
 
 2016-7-18
 增加:
-* 添加 today extension
+* 添加 today extension ~ ~ ~ coding ~ ~ ~
 
 2016-6-14    
 增加:
@@ -142,7 +142,7 @@
 //解决block回调的网络状态只能给最后一个调用的，改用通知，就可以全部界面接受到了  
 * prefixHeader.h 全局定义文件的 修改
 增加:
-* xcode控制台打印[数组、字典]包括汉字的，汉字可以打印。重新打印方法。 位置Comments->Utilties->RXLog
+* xcode控制台打印[数组、字典]包括汉字的，汉字可以打印。重写打印方法。 位置Comments->Utilties->RXLog
 * 增加 第三方NSDate的扩展(NSDateUtilities)  可以实现各种转换
 
 2016-05-25  
@@ -154,5 +154,5 @@
 ~ ~ ~  coding ~ ~ ~ 
 
 此项目主要是以框架为主，方法为辅。方便开发。 
-如果你有想说的可以 [issues I](https://github.com/srxboys/RXExtenstion/issues) 。
+如果你有想说的可以 [issues I](https://github.com/srxboys/RXExtenstion/issues/new) 。
 :sweat_smile::sweat_smile::sweat_smile::sweat_smile::sweat_smile:

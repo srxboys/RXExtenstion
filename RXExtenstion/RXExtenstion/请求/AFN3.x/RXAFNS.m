@@ -14,7 +14,6 @@
 #import "RXConstant.h"
 #import "RXPrisonBreak.h"
 
-#define SERVER_URL @"https://github.com/srxboys"
 #define CharString(__iPhone) [NSString stringWithFormat:@"iPhone%@", __iPhone]
 
 #define loadingWidthHeight 0

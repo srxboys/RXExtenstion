@@ -20,8 +20,7 @@
 
 #if VERSION == 0
     //正式服务器
-//    #define SERVER_URL  @"https://github.com/srxboys"
-#define SERVER_URL  @"http://app.ghs.net/index.php/api"
+    #define SERVER_URL  @"https://github.com/srxboys"
 
 #elif VERSION == 1
     //测试服务器

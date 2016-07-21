@@ -68,5 +68,7 @@
         
     }];
     
+    
+    [_downloadTask resume];
 }
 @end

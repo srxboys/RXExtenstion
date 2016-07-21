@@ -8,6 +8,12 @@
 
 #import "RXSessionDownload.h"
 
+@interface RXSessionDownload ()
+{
+
+}
+@end
+
 @implementation RXSessionDownload
 
 @end

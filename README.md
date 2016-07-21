@@ -107,6 +107,14 @@
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/AFNS.png)
 
 ###更新日志
+2016-7-21
+增加:
+* 添加 多种最新请求 ~ ~ ~ coding ~ ~ ~
+
+2016-7-18
+增加:
+* 添加 today extension
+
 2016-6-14    
 增加:
 * 机型判断、越狱判断、系统判断、设备唯一标识

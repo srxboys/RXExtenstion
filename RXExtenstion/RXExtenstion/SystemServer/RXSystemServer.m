@@ -52,15 +52,16 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
     {
         MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
         picker.mailComposeDelegate = self;
-        [picker setSubject:subject];
-        [picker setToRecipients:emailAddresses];
+        [picker setSubject:subject];//邮件主题
+        [picker setToRecipients:emailAddresses];//设置发送给谁，参数是NSarray
+//        picker setCcRecipients:<#(nullable NSArray<NSString *> *)#> //可以添加抄送
         
         // Attach an image to the email
         //        NSString *path = [[NSBundle mainBundle] pathForResource:@"rainy" ofType:@"jpg"];
         //        NSData *myData = [NSData dataWithContentsOfFile:path];
         //        [picker addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"rainy"];
         
-        [picker setMessageBody:emailBody isHTML:NO];
+        [picker setMessageBody:emailBody isHTML:NO];//设置邮件正文内容
         
         [SharedAppDelegate.window.rootViewController presentViewController:picker animated:YES completion:NULL];
     }

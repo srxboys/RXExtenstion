@@ -64,6 +64,8 @@
 
     _sourceArr = sourceArr;
     [_tableView reloadData];
+    
+//    self.extensionContext 
 //    [self performSelector:@selector(widgetPerformUpdateWithCompletionHandler:) withObject:nil];
 }
 

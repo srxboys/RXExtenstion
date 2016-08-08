@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -79,6 +79,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqg-nV-u9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564.5" y="388.5"/>
+        </scene>
+        <!--Mine Info View Controller-->
+        <scene sceneID="7RE-FN-Q4B">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="hB7-tr-TCk" customClass="RXMineInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Qx-kb-GR8"/>
+                        <viewControllerLayoutGuide type="bottom" id="BnJ-Fv-hhq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6pD-gO-LOi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Fq-MY-BkS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mineInfoVC" id="zHN-DR-rEj">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zHN-DR-rEj" id="T4d-f7-mxF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hB7-tr-TCk" id="7aG-C1-Wbo"/>
+                                    <outlet property="delegate" destination="hB7-tr-TCk" id="OIM-1g-VHM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Fq-MY-BkS" firstAttribute="leading" secondItem="6pD-gO-LOi" secondAttribute="leading" id="2fk-jv-k09"/>
+                            <constraint firstAttribute="trailing" secondItem="2Fq-MY-BkS" secondAttribute="trailing" id="8UK-hw-hCt"/>
+                            <constraint firstItem="2Fq-MY-BkS" firstAttribute="top" secondItem="6pD-gO-LOi" secondAttribute="top" constant="64" id="xMR-l1-1lo"/>
+                            <constraint firstAttribute="bottom" secondItem="2Fq-MY-BkS" secondAttribute="bottom" id="xOy-DY-aVA"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="2Fq-MY-BkS" id="NyW-0v-jls"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSd-OY-xSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977.5" y="388.5"/>
+        </scene>
+        <!--Mine Create Address Controller-->
+        <scene sceneID="ZAG-Zg-lT5">
+            <objects>
+                <viewController storyboardIdentifier="RXMineCreateAddressController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KLg-et-Bum" customClass="RXMineCreateAddressController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S8K-HB-9kf"/>
+                        <viewControllerLayoutGuide type="bottom" id="rq4-2l-f1K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="poc-kX-1Wl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0G-6w-tn3">
+                                <rect key="frame" x="20" y="229" width="85" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brx-Ze-mBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400.5" y="393.5"/>
         </scene>
     </scenes>
 </document>

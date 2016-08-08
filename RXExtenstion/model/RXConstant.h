@@ -102,6 +102,9 @@
 ///本地 3D touch 数据缓存
 #define RXShortcutItemLocalArray  @"shortcutItemLocalArray.json"
 
+#define AddressLocalJson          @"AdressLocalJson.json" //网络请求地址 --缓存
+#define AddressVodeDefaults       @"AddressVodeDefaults" //网络地址 验证码 --缓存 沙盒
+
 #pragma mark --- 接口定义 ---
 
 

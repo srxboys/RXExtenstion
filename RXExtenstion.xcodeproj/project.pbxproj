@@ -91,6 +91,7 @@
 		6C40E11D1D388220002A451E /* RXTodayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40E11C1D388220002A451E /* RXTodayModel.m */; };
 		6C40E1251D38AA9E002A451E /* RXResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40E1241D38AA9E002A451E /* RXResponse.m */; };
 		6C40E1281D38AB3D002A451E /* GHSMd5hexDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40E1271D38AB3D002A451E /* GHSMd5hexDigest.m */; };
+		6C483D291D58860C00A3A202 /* RXMineCreateAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */; };
 		6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BFCD61CDC9F94006476FB /* RXDataModel.m */; };
 		6C7B91411D0D7FCD00496C4F /* RXMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B913A1D0D7FCD00496C4F /* RXMenu.m */; };
 		6C7B91421D0D7FCD00496C4F /* RXSegmentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B913C1D0D7FCD00496C4F /* RXSegmentButton.m */; };
@@ -101,6 +102,14 @@
 		6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */; };
 		6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */; };
 		6C84802C1CF6F9D10052C3BF /* NSDateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C84802B1CF6F9D10052C3BF /* NSDateUtilities.m */; };
+		6C862FBA1D5876C500EEB818 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C862FA81D5876C500EEB818 /* city.json */; };
+		6C862FBB1D5876C500EEB818 /* RXGetNetAddressJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C862FAA1D5876C500EEB818 /* RXGetNetAddressJSON.m */; };
+		6C862FBC1D5876C500EEB818 /* RXGetArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C862FAC1D5876C500EEB818 /* RXGetArea.m */; };
+		6C862FBE1D5876C500EEB818 /* RXJDAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C862FB11D5876C500EEB818 /* RXJDAddressPickerView.m */; };
+		6C862FBF1D5876C500EEB818 /* RXJDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C862FB31D5876C500EEB818 /* RXJDButton.m */; };
+		6C862FC01D5876C500EEB818 /* RXJDTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C862FB51D5876C500EEB818 /* RXJDTableCell.m */; };
+		6C862FC11D5876C500EEB818 /* RXOneLinkageTreeAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C862FB71D5876C500EEB818 /* RXOneLinkageTreeAddress.m */; };
+		6C862FC21D5876C500EEB818 /* RXThreeLinkageAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C862FB91D5876C500EEB818 /* RXThreeLinkageAddress.m */; };
 		6C9A9AC41D12A3EE004C02B0 /* RX3DTouchSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9A9AC31D12A3EE004C02B0 /* RX3DTouchSettingController.m */; };
 		6CA008801D112DBE00D7B04E /* RXShortcutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0087F1D112DBE00D7B04E /* RXShortcutItem.m */; };
 		6CA15FED1CF339B5009DCE60 /* GBInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA15FEA1CF339B5009DCE60 /* GBInfiniteScrollView.m */; };
@@ -352,6 +361,8 @@
 		6C40E1241D38AA9E002A451E /* RXResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXResponse.m; sourceTree = "<group>"; };
 		6C40E1261D38AB3D002A451E /* GHSMd5hexDigest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHSMd5hexDigest.h; sourceTree = "<group>"; };
 		6C40E1271D38AB3D002A451E /* GHSMd5hexDigest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHSMd5hexDigest.m; sourceTree = "<group>"; };
+		6C483D271D58860C00A3A202 /* RXMineCreateAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineCreateAddressController.h; sourceTree = "<group>"; };
+		6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineCreateAddressController.m; sourceTree = "<group>"; };
 		6C4BFCD51CDC9F94006476FB /* RXDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDataModel.h; sourceTree = "<group>"; };
 		6C4BFCD61CDC9F94006476FB /* RXDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDataModel.m; sourceTree = "<group>"; };
 		6C7B91391D0D7FCD00496C4F /* RXMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenu.h; sourceTree = "<group>"; };
@@ -372,6 +383,21 @@
 		6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RXDictLog.m"; sourceTree = "<group>"; };
 		6C84802A1CF6F9D10052C3BF /* NSDateUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateUtilities.h; sourceTree = "<group>"; };
 		6C84802B1CF6F9D10052C3BF /* NSDateUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateUtilities.m; sourceTree = "<group>"; };
+		6C862FA81D5876C500EEB818 /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		6C862FA91D5876C500EEB818 /* RXGetNetAddressJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXGetNetAddressJSON.h; sourceTree = "<group>"; };
+		6C862FAA1D5876C500EEB818 /* RXGetNetAddressJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXGetNetAddressJSON.m; sourceTree = "<group>"; };
+		6C862FAB1D5876C500EEB818 /* RXGetArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXGetArea.h; sourceTree = "<group>"; };
+		6C862FAC1D5876C500EEB818 /* RXGetArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXGetArea.m; sourceTree = "<group>"; };
+		6C862FB01D5876C500EEB818 /* RXJDAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXJDAddressPickerView.h; sourceTree = "<group>"; };
+		6C862FB11D5876C500EEB818 /* RXJDAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXJDAddressPickerView.m; sourceTree = "<group>"; };
+		6C862FB21D5876C500EEB818 /* RXJDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXJDButton.h; sourceTree = "<group>"; };
+		6C862FB31D5876C500EEB818 /* RXJDButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXJDButton.m; sourceTree = "<group>"; };
+		6C862FB41D5876C500EEB818 /* RXJDTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXJDTableCell.h; sourceTree = "<group>"; };
+		6C862FB51D5876C500EEB818 /* RXJDTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXJDTableCell.m; sourceTree = "<group>"; };
+		6C862FB61D5876C500EEB818 /* RXOneLinkageTreeAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXOneLinkageTreeAddress.h; sourceTree = "<group>"; };
+		6C862FB71D5876C500EEB818 /* RXOneLinkageTreeAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXOneLinkageTreeAddress.m; sourceTree = "<group>"; };
+		6C862FB81D5876C500EEB818 /* RXThreeLinkageAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXThreeLinkageAddress.h; sourceTree = "<group>"; };
+		6C862FB91D5876C500EEB818 /* RXThreeLinkageAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXThreeLinkageAddress.m; sourceTree = "<group>"; };
 		6C9A9AC21D12A3EE004C02B0 /* RX3DTouchSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RX3DTouchSettingController.h; sourceTree = "<group>"; };
 		6C9A9AC31D12A3EE004C02B0 /* RX3DTouchSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RX3DTouchSettingController.m; sourceTree = "<group>"; };
 		6CA0087E1D112DBE00D7B04E /* RXShortcutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXShortcutItem.h; sourceTree = "<group>"; };
@@ -767,10 +793,11 @@
 				6C3A30021CD3477E00533FFF /* Reachability */,
 				6C3A30071CD3477E00533FFF /* UIColor */,
 				6C00AFF11D4054FD00EA7221 /* 请求 */,
-				6C3A30D21CD360DC00533FFF /* RXCharacter.h */,
-				6C3A30D31CD360DC00533FFF /* RXCharacter.m */,
+				6C862F941D58737500EEB818 /* 地址管理 */,
 				6C00B0031D4057E100EA7221 /* NSDictionary+NSStringUTF8.h */,
 				6C00B0041D4057E100EA7221 /* NSDictionary+NSStringUTF8.m */,
+				6C3A30D21CD360DC00533FFF /* RXCharacter.h */,
+				6C3A30D31CD360DC00533FFF /* RXCharacter.m */,
 				6C00B0051D4057E100EA7221 /* NSError+RXString.h */,
 				6C00B0061D4057E100EA7221 /* NSError+RXString.m */,
 				6CD0EB961D21159900692886 /* RXUUID */,
@@ -1095,6 +1122,60 @@
 			path = RXLog;
 			sourceTree = "<group>";
 		};
+		6C862F941D58737500EEB818 /* 地址管理 */ = {
+			isa = PBXGroup;
+			children = (
+				6C862FA61D5876C500EEB818 /* Model */,
+				6C862FAE1D5876C500EEB818 /* Views */,
+			);
+			path = "地址管理";
+			sourceTree = "<group>";
+		};
+		6C862FA61D5876C500EEB818 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C862FA71D5876C500EEB818 /* LocalJson */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C862FA71D5876C500EEB818 /* LocalJson */ = {
+			isa = PBXGroup;
+			children = (
+				6C862FA81D5876C500EEB818 /* city.json */,
+				6C862FA91D5876C500EEB818 /* RXGetNetAddressJSON.h */,
+				6C862FAA1D5876C500EEB818 /* RXGetNetAddressJSON.m */,
+				6C862FAB1D5876C500EEB818 /* RXGetArea.h */,
+				6C862FAC1D5876C500EEB818 /* RXGetArea.m */,
+			);
+			path = LocalJson;
+			sourceTree = "<group>";
+		};
+		6C862FAE1D5876C500EEB818 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C862FAF1D5876C500EEB818 /* GHSJDAddressPicker */,
+				6C862FB61D5876C500EEB818 /* RXOneLinkageTreeAddress.h */,
+				6C862FB71D5876C500EEB818 /* RXOneLinkageTreeAddress.m */,
+				6C862FB81D5876C500EEB818 /* RXThreeLinkageAddress.h */,
+				6C862FB91D5876C500EEB818 /* RXThreeLinkageAddress.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C862FAF1D5876C500EEB818 /* GHSJDAddressPicker */ = {
+			isa = PBXGroup;
+			children = (
+				6C862FB01D5876C500EEB818 /* RXJDAddressPickerView.h */,
+				6C862FB11D5876C500EEB818 /* RXJDAddressPickerView.m */,
+				6C862FB21D5876C500EEB818 /* RXJDButton.h */,
+				6C862FB31D5876C500EEB818 /* RXJDButton.m */,
+				6C862FB41D5876C500EEB818 /* RXJDTableCell.h */,
+				6C862FB51D5876C500EEB818 /* RXJDTableCell.m */,
+			);
+			path = GHSJDAddressPicker;
+			sourceTree = "<group>";
+		};
 		6CA15FE81CF339B5009DCE60 /* GBInfiniteScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1343,6 +1424,8 @@
 				6CD828B71CF831BB00AF575E /* RXMineViewController.m */,
 				6C25DA581CFEBDA900E65A38 /* RXMineInfoViewController.h */,
 				6C25DA591CFEBDA900E65A38 /* RXMineInfoViewController.m */,
+				6C483D271D58860C00A3A202 /* RXMineCreateAddressController.h */,
+				6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */,
 				6C25DA5A1CFEBDA900E65A38 /* RXMineWebViewController.h */,
 				6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */,
 				6C9A9AC21D12A3EE004C02B0 /* RX3DTouchSettingController.h */,
@@ -1489,6 +1572,7 @@
 				6C3F7BAE1D07DFF10046C29C /* Location.storyboard in Resources */,
 				6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */,
 				6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */,
+				6C862FBA1D5876C500EEB818 /* city.json in Resources */,
 				6CD828B51CF831A500AF575E /* Mine.storyboard in Resources */,
 				6C3A2FDC1CD3477000533FFF /* Assets.xcassets in Resources */,
 				6C3A2FDA1CD3477000533FFF /* Main.storyboard in Resources */,
@@ -1530,6 +1614,7 @@
 				6C3A305F1CD352AA00533FFF /* AFSecurityPolicy.m in Sources */,
 				6C3A309D1CD3538A00533FFF /* MJRefreshComponent.m in Sources */,
 				6C3B8C8A1D0FC4DA0033F691 /* RXPrisonBreak.m in Sources */,
+				6C862FC21D5876C500EEB818 /* RXThreeLinkageAddress.m in Sources */,
 				6C3F7BB11D07E02B0046C29C /* RXLocationController.m in Sources */,
 				6CA608581D37991F00A6C088 /* UIImageView+fadeInFadeOut.m in Sources */,
 				6C3A309E1CD3538A00533FFF /* MJRefreshFooter.m in Sources */,
@@ -1537,10 +1622,12 @@
 				6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */,
 				6CA4345E1CD9E5AF00641785 /* UIImage+MultiFormat.m in Sources */,
 				6CA608561D37991F00A6C088 /* UIImage+ImageEffects.m in Sources */,
+				6C862FC11D5876C500EEB818 /* RXOneLinkageTreeAddress.m in Sources */,
 				6C3A30D41CD360DC00533FFF /* RXCharacter.m in Sources */,
 				6C7B91441D0D7FCD00496C4F /* RXSelectView.m in Sources */,
 				6C3A2FD41CD3477000533FFF /* AppDelegate.m in Sources */,
 				6CA6085B1D37991F00A6C088 /* UIImageView_说明.md in Sources */,
+				6C483D291D58860C00A3A202 /* RXMineCreateAddressController.m in Sources */,
 				6C3A30691CD352AA00533FFF /* UIProgressView+AFNetworking.m in Sources */,
 				6CBF822A1CDAEDCC009AD4FC /* RXCaCheController.m in Sources */,
 				6C3A30651CD352AA00533FFF /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1554,6 +1641,7 @@
 				6C816C1F1CF83D6F00823507 /* RXMineHeader.m in Sources */,
 				6C25DA641CFED20200E65A38 /* RXLoLInfoViewController.m in Sources */,
 				6CF4ACA61D01BB1400CD17CB /* RXMineCell.m in Sources */,
+				6C862FBC1D5876C500EEB818 /* RXGetArea.m in Sources */,
 				6CA4345D1CD9E5AF00641785 /* UIImage+GIF.m in Sources */,
 				6CF4ACA21D01A9F100CD17CB /* RXExpansionContractionCell.m in Sources */,
 				6C3A30AC1CD3538A00533FFF /* UIScrollView+MJRefresh.m in Sources */,
@@ -1562,6 +1650,7 @@
 				6CA4345B1CD9E5AF00641785 /* SDWebImagePrefetcher.m in Sources */,
 				6C3A30A61CD3538A00533FFF /* MJRefreshGifHeader.m in Sources */,
 				6C3A30671CD352AA00533FFF /* UIButton+AFNetworking.m in Sources */,
+				6C862FBB1D5876C500EEB818 /* RXGetNetAddressJSON.m in Sources */,
 				6CA160041CF34287009DCE60 /* RXNewHomeSegmentView.m in Sources */,
 				6CD0EBA01D2115BE00692886 /* RXUUID.m in Sources */,
 				6C00B0111D4063CF00EA7221 /* RXUpload.m in Sources */,
@@ -1585,6 +1674,7 @@
 				6CA434581CD9E5AF00641785 /* SDWebImageDownloader.m in Sources */,
 				6CA15FEE1CF339B5009DCE60 /* SMPageControl.m in Sources */,
 				6CA008801D112DBE00D7B04E /* RXShortcutItem.m in Sources */,
+				6C862FBE1D5876C500EEB818 /* RXJDAddressPickerView.m in Sources */,
 				6C3A30631CD352AA00533FFF /* AFAutoPurgingImageCache.m in Sources */,
 				6C3A30621CD352AA00533FFF /* AFURLSessionManager.m in Sources */,
 				6CA4345F1CD9E5AF00641785 /* UIImage+WebP.m in Sources */,
@@ -1607,6 +1697,7 @@
 				6C3A30611CD352AA00533FFF /* AFURLResponseSerialization.m in Sources */,
 				6CA608571D37991F00A6C088 /* UIImageView+CornerRadius.m in Sources */,
 				6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */,
+				6C862FC01D5876C500EEB818 /* RXJDTableCell.m in Sources */,
 				6C7B91411D0D7FCD00496C4F /* RXMenu.m in Sources */,
 				6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */,
 				6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */,
@@ -1623,6 +1714,7 @@
 				6C3A309B1CD3538A00533FFF /* MJRefreshAutoFooter.m in Sources */,
 				6C11FD181CF6B7CB00BE323D /* RXNetworkCheck.m in Sources */,
 				6CA434281CD9C42400641785 /* RXUploadImageController.m in Sources */,
+				6C862FBF1D5876C500EEB818 /* RXJDButton.m in Sources */,
 				6C3A30681CD352AA00533FFF /* UIImageView+AFNetworking.m in Sources */,
 				6C3A30A51CD3538A00533FFF /* MJRefreshBackStateFooter.m in Sources */,
 				6C3A305E1CD352AA00533FFF /* AFNetworkReachabilityManager.m in Sources */,

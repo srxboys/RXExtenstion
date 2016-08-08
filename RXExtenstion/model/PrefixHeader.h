@@ -274,6 +274,12 @@ _Pragma("clang diagnostic pop") \
 //清除背景色
 #define CLEARCOLOR [UIColor clearColor]
 
+#pragma mark ---- 颜色定义 --------
+#import "RXHexColor.h"
+
+#define UIColorHexStr(_color) [RXHexColor colorWithHexString:_color]
+#define UIColorHexStrAlpha(_color,__alpha) [RXHexColor colorWithHexString:_color alpha:__alpha]
+
 #define UIColorHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #define UIColorHexAlpha(rgbValue,__alpha) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(__alpha)]

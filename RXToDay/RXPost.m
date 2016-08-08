@@ -13,7 +13,6 @@
 //#import "RXCharacter.h"
 #import "RXConstant.h"
 #import "RXTodayModel.h"
-#import "GHSMd5hexDigest.h"
 
 //afn 请求用到的
 //#import "RXAFNS.h"

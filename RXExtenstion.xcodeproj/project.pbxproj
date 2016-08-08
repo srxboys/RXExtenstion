@@ -90,7 +90,6 @@
 		6C3F7BB31D07E1360046C29C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3F7BB21D07E1360046C29C /* CoreLocation.framework */; };
 		6C40E11D1D388220002A451E /* RXTodayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40E11C1D388220002A451E /* RXTodayModel.m */; };
 		6C40E1251D38AA9E002A451E /* RXResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40E1241D38AA9E002A451E /* RXResponse.m */; };
-		6C40E1281D38AB3D002A451E /* GHSMd5hexDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40E1271D38AB3D002A451E /* GHSMd5hexDigest.m */; };
 		6C483D291D58860C00A3A202 /* RXMineCreateAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */; };
 		6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BFCD61CDC9F94006476FB /* RXDataModel.m */; };
 		6C7B91411D0D7FCD00496C4F /* RXMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B913A1D0D7FCD00496C4F /* RXMenu.m */; };
@@ -359,8 +358,6 @@
 		6C40E11C1D388220002A451E /* RXTodayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTodayModel.m; sourceTree = "<group>"; };
 		6C40E1231D38AA9E002A451E /* RXResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXResponse.h; sourceTree = "<group>"; };
 		6C40E1241D38AA9E002A451E /* RXResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXResponse.m; sourceTree = "<group>"; };
-		6C40E1261D38AB3D002A451E /* GHSMd5hexDigest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHSMd5hexDigest.h; sourceTree = "<group>"; };
-		6C40E1271D38AB3D002A451E /* GHSMd5hexDigest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHSMd5hexDigest.m; sourceTree = "<group>"; };
 		6C483D271D58860C00A3A202 /* RXMineCreateAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineCreateAddressController.h; sourceTree = "<group>"; };
 		6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineCreateAddressController.m; sourceTree = "<group>"; };
 		6C4BFCD51CDC9F94006476FB /* RXDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDataModel.h; sourceTree = "<group>"; };
@@ -569,8 +566,6 @@
 			children = (
 				6C40E11B1D388220002A451E /* RXTodayModel.h */,
 				6C40E11C1D388220002A451E /* RXTodayModel.m */,
-				6C40E1261D38AB3D002A451E /* GHSMd5hexDigest.h */,
-				6C40E1271D38AB3D002A451E /* GHSMd5hexDigest.m */,
 				6C40E1231D38AA9E002A451E /* RXResponse.h */,
 				6C40E1241D38AA9E002A451E /* RXResponse.m */,
 			);
@@ -1586,7 +1581,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C40E1281D38AB3D002A451E /* GHSMd5hexDigest.m in Sources */,
 				6C40E1251D38AA9E002A451E /* RXResponse.m in Sources */,
 				6C0047EB1D2FA5B100EBE004 /* TodayViewController.m in Sources */,
 				6CE825F01D3CA7BA006EE76F /* UIImageView+OnlineImage.m in Sources */,

@@ -31,7 +31,7 @@
     
     
     NSInteger provinceLine, cityLine, areaLine;
-    NSArray* allCities;
+    NSArray * allCities;
     NSString * addressCode;
     
     BOOL isFist;

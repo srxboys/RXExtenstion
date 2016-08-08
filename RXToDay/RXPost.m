@@ -214,7 +214,7 @@ typedef void(^httpCompletion)(NSArray * array, BOOL isError);
     
     NSDictionary * paramsDict = @{@"method"   : Method,
                                   @"page_no"  : @1};
-    //app.ghs.net/index.php/api?version=2.0.2&page_no=1&sign=226993C3C541A89BB72B2D312022A9AE&member_id=56874&umeng_channel=真机测试&device_type=827384&method=talent.talent2.get_coup_list&hardware=iPhone3,2&software=7.1.2&uuid=6f0f20968e7ccd8f377532eba1d1091855caf683
+    
     
     
     NSMutableDictionary* newParams = [NSMutableDictionary  dictionaryWithDictionary:paramsDict];

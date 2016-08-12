@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configUI];
 }
 
 - (void)configUI {
@@ -45,10 +46,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     NSInteger row = indexPath.row;
+    
     if(row == 0) {
-        RXMineCreateAddressController * createAddressController = RXStroyBoard(@"RXMineCreateAddressController", @"RXMineCreateAddressController");
+        RXMineCreateAddressController * createAddressController = RXMeStroBoard(@"RXMineCreateAddressController");
         [self.navigationController pushViewController:createAddressController animated:YES];
     }
 }

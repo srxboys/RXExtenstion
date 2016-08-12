@@ -51,6 +51,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if(self) {
+        self.hidden = YES;
         [self configTableCity];
     }
     return self;
@@ -59,7 +60,7 @@
 
 - (void)configTableCity {
     _lightView = [[UIView alloc] initWithFrame:self.bounds];
-    _lightView.hidden = YES;
+    _lightView.hidden = NO;
     _lightView.backgroundColor = [UIColor lightGrayColor];
     _lightView.alpha = 0.4f;
     UISwipeGestureRecognizer * swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(backSuperView:)];
@@ -202,12 +203,16 @@
         _tableSelectItemLabel.text = [NSString stringWithFormat:@"%@ %@ %@", _provinceStr, _cityStr, _areaStr];
         
         _tableIndex = 0;
+        NSString * addressString = [NSString stringWithFormat:@"%@ %@ %@", _provinceStr, _cityStr, _areaStr];
+        self.isShow(true,  addressString, _areaId);
         [self hideAddressView];
     }
     
     _tableIndex ++;
     
 }
+
+
 
 - (NSArray *)getArrWithIndex:(NSInteger)index{
     NSArray * arr = nil;

@@ -22,10 +22,12 @@
 #define SelectLabelTop 19 //请选择label y
 #define SelectLineWidth 42 //请选择label 下面紫色线 的 宽度
 
+#define tableToTop 8
+
 @interface RXJDAddressPickerView ()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 {
-    CGRect          _viewHiddenFrame;
-    CGRect          _viewShowFrame;
+    CGRect           _viewHiddenFrame;
+    CGRect           _viewShowFrame;
     
     UIControl      * _blackControl;
     UIView         * _showView;
@@ -220,7 +222,7 @@
     table.tableFooterView = [[UIView alloc] init];
     table.separatorStyle = UITableViewCellSeparatorStyleNone;
     table.backgroundColor = [UIColor clearColor];
-    table.contentInset = UIEdgeInsetsMake(8, 0, 0, 0);
+    table.contentInset = UIEdgeInsetsMake(tableToTop, 0, 0, 0);
     return table;
 }
 
@@ -389,7 +391,7 @@
         [self changeScrollViewWithCount:2];
         
         RXJDTableCell * cell = tableView.visibleCells[0];
-        _provineceVisible = ViewY(cell);
+        _provineceVisible = ViewY(cell) - tableToTop;
         
     }
     else if(tableView == _cityTableView) {
@@ -407,7 +409,7 @@
         [self changeScrollViewWithCount:3];
         
         RXJDTableCell * cell = tableView.visibleCells[0];
-        _cityVisible = ViewY(cell);
+        _cityVisible = ViewY(cell) - tableToTop;
     }
     else if(tableView == _areaTableView) {
         _selfSelectCount = 3;
@@ -419,7 +421,7 @@
         [_areaTableView reloadData];
         
         RXJDTableCell * cell = tableView.visibleCells[0];
-        _areaVisible = ViewY(cell);
+        _areaVisible = ViewY(cell) - tableToTop;
     }
     
     [self createButtonsWithTitle:name andIndex:_selfSelectCount];

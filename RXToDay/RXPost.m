@@ -226,10 +226,6 @@ typedef void(^httpCompletion)(NSArray * array, BOOL isError);
     // APP版本号
     [newParams setObject:@"2.0.2" forKey:@"version"];
     
-    
-    
-    
-    
     [newParams setValue:@"226993C3C541A89BB72B2D312022A9AE" forKey:@"sign"];
     
     //用系统请求方法

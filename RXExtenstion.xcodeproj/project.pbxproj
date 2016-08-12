@@ -158,6 +158,8 @@
 		6CE825EE1D3CA7BA006EE76F /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825E81D3CA7BA006EE76F /* NSString+MD5.m */; };
 		6CE825EF1D3CA7BA006EE76F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825E91D3CA7BA006EE76F /* README.md */; };
 		6CE825F01D3CA7BA006EE76F /* UIImageView+OnlineImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825EB1D3CA7BA006EE76F /* UIImageView+OnlineImage.m */; };
+		6CEB36A71D5ABEA600283562 /* RXMineInfoMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB36A51D5ABEA600283562 /* RXMineInfoMessageCell.m */; };
+		6CEB36A81D5ABEA600283562 /* RXMineInfoMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB36A61D5ABEA600283562 /* RXMineInfoMessageCell.xib */; };
 		6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322451CD71368009BD1B7 /* RXBaseViewController.m */; };
 		6CF3224F1CD86C67009BD1B7 /* RXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3224E1CD86C67009BD1B7 /* RXTabBarController.m */; };
 		6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322511CD87077009BD1B7 /* RXNavBaseController.m */; };
@@ -489,6 +491,9 @@
 		6CE825E91D3CA7BA006EE76F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6CE825EA1D3CA7BA006EE76F /* UIImageView+OnlineImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+OnlineImage.h"; sourceTree = "<group>"; };
 		6CE825EB1D3CA7BA006EE76F /* UIImageView+OnlineImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+OnlineImage.m"; sourceTree = "<group>"; };
+		6CEB36A41D5ABEA600283562 /* RXMineInfoMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineInfoMessageCell.h; sourceTree = "<group>"; };
+		6CEB36A51D5ABEA600283562 /* RXMineInfoMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineInfoMessageCell.m; sourceTree = "<group>"; };
+		6CEB36A61D5ABEA600283562 /* RXMineInfoMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXMineInfoMessageCell.xib; sourceTree = "<group>"; };
 		6CF322441CD71368009BD1B7 /* RXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXBaseViewController.h; sourceTree = "<group>"; };
 		6CF322451CD71368009BD1B7 /* RXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXBaseViewController.m; sourceTree = "<group>"; };
 		6CF322471CD7153E009BD1B7 /* RXMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMessage.h; sourceTree = "<group>"; };
@@ -789,6 +794,7 @@
 				6C3A30071CD3477E00533FFF /* UIColor */,
 				6C00AFF11D4054FD00EA7221 /* 请求 */,
 				6C862F941D58737500EEB818 /* 地址管理 */,
+				6CEB36A31D5ABE0400283562 /* 1个xib里面多个cell */,
 				6C00B0031D4057E100EA7221 /* NSDictionary+NSStringUTF8.h */,
 				6C00B0041D4057E100EA7221 /* NSDictionary+NSStringUTF8.m */,
 				6C3A30D21CD360DC00533FFF /* RXCharacter.h */,
@@ -1314,6 +1320,16 @@
 			path = OnlineImageView;
 			sourceTree = "<group>";
 		};
+		6CEB36A31D5ABE0400283562 /* 1个xib里面多个cell */ = {
+			isa = PBXGroup;
+			children = (
+				6CEB36A41D5ABEA600283562 /* RXMineInfoMessageCell.h */,
+				6CEB36A51D5ABEA600283562 /* RXMineInfoMessageCell.m */,
+				6CEB36A61D5ABEA600283562 /* RXMineInfoMessageCell.xib */,
+			);
+			path = "1个xib里面多个cell";
+			sourceTree = "<group>";
+		};
 		6CF322391CD712F6009BD1B7 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
@@ -1564,6 +1580,7 @@
 				6C3A30121CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt in Resources */,
 				6C3A30A91CD3538A00533FFF /* MJRefresh.bundle in Resources */,
 				6CF4ACA71D01BB1400CD17CB /* RXMineCell.xib in Resources */,
+				6CEB36A81D5ABEA600283562 /* RXMineInfoMessageCell.xib in Resources */,
 				6C3F7BAE1D07DFF10046C29C /* Location.storyboard in Resources */,
 				6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */,
 				6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */,
@@ -1692,6 +1709,7 @@
 				6CA608571D37991F00A6C088 /* UIImageView+CornerRadius.m in Sources */,
 				6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */,
 				6C862FC01D5876C500EEB818 /* RXJDTableCell.m in Sources */,
+				6CEB36A71D5ABEA600283562 /* RXMineInfoMessageCell.m in Sources */,
 				6C7B91411D0D7FCD00496C4F /* RXMenu.m in Sources */,
 				6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */,
 				6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */,

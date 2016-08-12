@@ -121,5 +121,26 @@
 @end
 
 
+#pragma mark ----------- [ 1个xib里多个cell ] ---------
+@implementation RXXibModel
+- (void)setContent:(RXXibModel *)content {
+    _content = content;
+    self.object = content.object;
+    self.selecter = content.selecter;
+    self.modelTag = content.modelTag;
+    self.cellIditifier = content.cellIditifier;
+    self.modelSection = content.modelSection;
+    
+    self.cellHeight = content.cellHeight;
+    
+}
+@end
+
+@implementation OneXibModel
+@end
+
+@implementation TwoXibModel
+@end
+
 
 

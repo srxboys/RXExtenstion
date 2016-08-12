@@ -68,4 +68,29 @@
 @end
 
 
+#pragma mark ----------- [ 1个xib里多个cell ] ---------
+@interface RXXibModel : NSObject
+@property (nonatomic, weak)   id object;
+@property (nonatomic, assign) SEL selecter;
+@property (nonatomic, assign) NSInteger modelSection;
+@property (nonatomic, copy) NSString * cellIditifier;
+
+@property (nonatomic, assign) NSInteger modelTag;// == tag
+@property (nonatomic, assign) CGFloat   cellHeight;
+
+@property (nonatomic, copy, getter=DataModelInfo) RXXibModel * content;
+@end
+
+/** 个人信息 */
+@interface OneXibModel : RXXibModel
+@property (nonatomic, copy) NSString * name;
+@property (nonatomic, assign) NSInteger sex;
+@property (nonatomic, copy) NSString * avaster;//头像
+@end
+
+/** 职业 */
+@interface TwoXibModel : RXXibModel
+@property (nonatomic, copy) NSString * profession; //职业
+@property (nonatomic, assign) CGFloat seniority; //工龄
+@end
 

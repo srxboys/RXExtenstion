@@ -15,6 +15,7 @@
 #import "RXMineCell.h"
 
 #import "RXMineWebViewController.h"
+#import "RXMineInfoViewController.h"
 
 @interface RXMineViewController ()<UITableViewDelegate, UITableViewDataSource, RXMineHeaderDelegate>
 {
@@ -55,6 +56,28 @@
     
     _dataSouceArr = [[NSMutableArray alloc] init];
     [self AddFalseData];
+    
+
+
+    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 70, 20);
+    [btn setTitle:@"设置" forState:UIControlStateNormal];
+    [btn setTitleColor:UIColorHexStr(@"333333") forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(navRightButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    btn.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
+//    btn.backgroundColor = [UIColor redColor];
+    
+    UIBarButtonItem * rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:btn];
+
+    self.navigationItem.rightBarButtonItem = rightBarButton;
+
+}
+
+- (void)navRightButtonClick {
+    RXMineInfoViewController * mineInfoController = RXMeStroBoard(@"RXMineInfoViewController");
+    [self.navigationController pushViewController:mineInfoController animated:YES];
 }
 
 - (void)AddFalseData {

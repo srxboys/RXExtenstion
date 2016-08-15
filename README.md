@@ -117,7 +117,6 @@
     };
 
 
-
     _twoPicker = [[RXThreeLinkageAddress alloc] init];
     _twoPicker.isShow = ^ (BOOL isShow, NSString *address, NSString * addressCode){
     RXLog(@"_twoPicker\nisShow=%@, address=%@, addressCode=%@\n\n", isShow ? @"是" : @"否", address, addressCode);
@@ -134,7 +133,7 @@
     weakSelf.addressLabel.text = [NSString stringWithFormat:@"_threePicker , address=%@, addressCode=%@", address, addressCode];
     };
 
-    // -- 我的项目 是把 这些 添加 appDelegate.windows --
+    // -- 我的项目 是把 这些 添加 appDelegate.window 上 --
 
 
 //调用 收货地址 选择 省/市/区 显示控件

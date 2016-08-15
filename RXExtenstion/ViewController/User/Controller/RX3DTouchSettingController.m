@@ -8,7 +8,10 @@
 
 #import "RX3DTouchSettingController.h"
 
-@interface RX3DTouchSettingController ()
+@interface RX3DTouchSettingController ()<UITableViewDelegate, UITableViewDataSource>
+{
+    NSMutableArray * _souceArray;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -18,10 +21,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configUI];
 }
 
 - (void)configUI {
     _tableView.tableFooterView = [[UIView alloc] init];
+    _souceArray = [[NSMutableArray alloc] init];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _souceArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 40;
 }
 
 - (void)didReceiveMemoryWarning {

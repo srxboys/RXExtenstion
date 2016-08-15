@@ -27,7 +27,7 @@
         <!--Touch Setting Controller-->
         <scene sceneID="Opv-MS-WLZ">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C6p-FQ-5Yl" customClass="RX3DTouchSettingController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RX3DTouchSettingController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C6p-FQ-5Yl" customClass="RX3DTouchSettingController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GNi-HC-v9Q"/>
                         <viewControllerLayoutGuide type="bottom" id="3tf-0t-rta"/>

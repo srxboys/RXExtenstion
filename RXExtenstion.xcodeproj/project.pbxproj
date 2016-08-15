@@ -145,6 +145,8 @@
 		6CA608591D37991F00A6C088 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA608511D37991F00A6C088 /* UIImageView+LBBlurredImage.m */; };
 		6CA6085A1D37991F00A6C088 /* UIImageView+ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA608531D37991F00A6C088 /* UIImageView+ProgressView.m */; };
 		6CA6085B1D37991F00A6C088 /* UIImageView_说明.md in Sources */ = {isa = PBXBuildFile; fileRef = 6CA608541D37991F00A6C088 /* UIImageView_说明.md */; };
+		6CBE24601D5DD93E006AAB11 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CBE245F1D5DD93E006AAB11 /* WebKit.framework */; };
+		6CBE24631D5DD984006AAB11 /* RXWebKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBE24621D5DD984006AAB11 /* RXWebKitViewController.m */; };
 		6CBF822A1CDAEDCC009AD4FC /* RXCaCheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBF82291CDAEDCC009AD4FC /* RXCaCheController.m */; };
 		6CBF822E1CDAEE98009AD4FC /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBF822D1CDAEE98009AD4FC /* UIView+Toast.m */; };
 		6CD0EB9C1D21159900692886 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0EB991D21159900692886 /* OpenUDID.m */; };
@@ -468,6 +470,9 @@
 		6CA608521D37991F00A6C088 /* UIImageView+ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ProgressView.h"; sourceTree = "<group>"; };
 		6CA608531D37991F00A6C088 /* UIImageView+ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ProgressView.m"; sourceTree = "<group>"; };
 		6CA608541D37991F00A6C088 /* UIImageView_说明.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "UIImageView_说明.md"; sourceTree = "<group>"; };
+		6CBE245F1D5DD93E006AAB11 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		6CBE24611D5DD984006AAB11 /* RXWebKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXWebKitViewController.h; sourceTree = "<group>"; };
+		6CBE24621D5DD984006AAB11 /* RXWebKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXWebKitViewController.m; sourceTree = "<group>"; };
 		6CBF82281CDAEDCC009AD4FC /* RXCaCheController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCaCheController.h; sourceTree = "<group>"; };
 		6CBF82291CDAEDCC009AD4FC /* RXCaCheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCaCheController.m; sourceTree = "<group>"; };
 		6CBF822C1CDAEE98009AD4FC /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
@@ -530,6 +535,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CBE24601D5DD93E006AAB11 /* WebKit.framework in Frameworks */,
 				6CD0EBBB1D211F4F00692886 /* Security.framework in Frameworks */,
 				6C3F7BB31D07E1360046C29C /* CoreLocation.framework in Frameworks */,
 				6C3A30D11CD35D1000533FFF /* CoreFoundation.framework in Frameworks */,
@@ -1068,6 +1074,7 @@
 		6C3A30BB1CD35A5E00533FFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CBE245F1D5DD93E006AAB11 /* WebKit.framework */,
 				6CD0EBBA1D211F4F00692886 /* Security.framework */,
 				6C3F7BB21D07E1360046C29C /* CoreLocation.framework */,
 				6C3A30D01CD35D1000533FFF /* CoreFoundation.framework */,
@@ -1441,6 +1448,8 @@
 				6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */,
 				6C9A9AC21D12A3EE004C02B0 /* RX3DTouchSettingController.h */,
 				6C9A9AC31D12A3EE004C02B0 /* RX3DTouchSettingController.m */,
+				6CBE24611D5DD984006AAB11 /* RXWebKitViewController.h */,
+				6CBE24621D5DD984006AAB11 /* RXWebKitViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1649,6 +1658,7 @@
 				6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */,
 				6C84802C1CF6F9D10052C3BF /* NSDateUtilities.m in Sources */,
 				6CF4AC9B1D01A89400CD17CB /* RXExpansionContractionController.m in Sources */,
+				6CBE24631D5DD984006AAB11 /* RXWebKitViewController.m in Sources */,
 				6C816C1F1CF83D6F00823507 /* RXMineHeader.m in Sources */,
 				6C25DA641CFED20200E65A38 /* RXLoLInfoViewController.m in Sources */,
 				6CF4ACA61D01BB1400CD17CB /* RXMineCell.m in Sources */,

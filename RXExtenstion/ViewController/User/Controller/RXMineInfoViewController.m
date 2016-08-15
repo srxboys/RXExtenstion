@@ -8,6 +8,7 @@
 
 #import "RXMineInfoViewController.h"
 #import "RXMineCreateAddressController.h"
+#import "RX3DTouchSettingController.h"
 
 @interface RXMineInfoViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -29,7 +30,8 @@
     _tableView.tableFooterView = [[UIView alloc] init];
     
     NSString * title = @"新建地址时 选择地区 样式";
-    _dataSouceArray = @[title];
+    
+    _dataSouceArray = @[title, @"3D Touch定制"];
     
 }
 
@@ -54,6 +56,10 @@
     if(row == 0) {
         RXMineCreateAddressController * createAddressController = RXMeStroBoard(@"RXMineCreateAddressController");
         [self.navigationController pushViewController:createAddressController animated:YES];
+    }
+    else if(row == 1) {
+        RX3DTouchSettingController * DTouchController = RXMeStroBoard(@"RX3DTouchSettingController");
+        [self.navigationController pushViewController:DTouchController animated:YES];
     }
 }
 

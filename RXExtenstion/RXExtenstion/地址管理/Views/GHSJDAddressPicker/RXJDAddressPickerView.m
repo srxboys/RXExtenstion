@@ -284,15 +284,7 @@
                 lineLeft = btn.left;
                 lineWidth = btn.width;
                 
-                if(pageNum == 0) {
-                    _provinceTableView.contentOffset = CGPointMake(0, _provineceVisible);
-                }
-                else if(pageNum == 1) {
-                    _cityTableView.contentOffset = CGPointMake(0, _cityVisible);
-                }
-                else if(pageNum == 2) {
-                    _areaTableView.contentOffset = CGPointMake(0, _areaVisible);
-                }
+                //[self setTableViewCellOfCentenWith:pageNum];
             }
             
             [UIView animateWithDuration:ViewAnimal animations:^{
@@ -303,6 +295,29 @@
         }
         
     }
+}
+
+#pragma mark - ~~~~~~~~~~~ tableView选择后，垂直居中 ~~~~~~~~~~~~~~~
+- (void)setTableViewCellOfCentenWith:(NSInteger)pageNum {
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSIndexPath * indexPath = nil;
+        if(pageNum == 0) {
+            indexPath = [NSIndexPath indexPathForRow:_provineceVisible inSection:0];
+            [_provinceTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+        }
+        else if(pageNum == 1) {
+            indexPath = [NSIndexPath indexPathForRow:_cityVisible inSection:0];
+            [_cityTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+        }
+        else if(pageNum == 2) {
+            
+            indexPath = [NSIndexPath indexPathForRow:_areaVisible inSection:0];
+            [_areaTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+        }
+        
+    });
 }
 
 #pragma mark - ~~~~~~~~~~~ tableView Data Delegate ~~~~~~~~~~~~~~~
@@ -390,8 +405,7 @@
         
         [self changeScrollViewWithCount:2];
         
-        RXJDTableCell * cell = tableView.visibleCells[0];
-        _provineceVisible = ViewY(cell) - tableToTop;
+        _provineceVisible = row;
         
     }
     else if(tableView == _cityTableView) {
@@ -408,8 +422,7 @@
         [_areaTableView reloadData];
         [self changeScrollViewWithCount:3];
         
-        RXJDTableCell * cell = tableView.visibleCells[0];
-        _cityVisible = ViewY(cell) - tableToTop;
+        _cityVisible = row;
     }
     else if(tableView == _areaTableView) {
         _selfSelectCount = 3;
@@ -420,8 +433,7 @@
         name = [[_areaArray objectAtIndex:row] objectForKey:@"name"];
         [_areaTableView reloadData];
         
-        RXJDTableCell * cell = tableView.visibleCells[0];
-        _areaVisible = ViewY(cell) - tableToTop;
+        _areaVisible = row;
     }
     
     [self createButtonsWithTitle:name andIndex:_selfSelectCount];
@@ -518,6 +530,8 @@
    
     [self changeSelectScrollContentSizeWithSelectLeft:_buttonsLasterLeft + SelectLineWidth];
     
+    [self setTableViewCellOfCentenWith:index - 1];
+
     //算scrollView;
     self.userInteractionEnabled = YES;
 }
@@ -547,6 +561,7 @@
         _selectButton.frame = CGRectMake(_buttonsLasterLeft, SelectLabelTop, 100, SelectLabelHeight);
         _selectLineView.frame = CGRectMake(lineLeft, _selectScrollViewHeight - 2, lineWidth, 2);
     } completion:^(BOOL finished) {
+        //判断 是否为最后一级 || 是否点击tableCell最后一级
         if(level == _selfLevel_isHidden && _selfSelectCount == _selfLevel_isHidden && _selfNotFirstShow) {
             [self completionAddress];
         }

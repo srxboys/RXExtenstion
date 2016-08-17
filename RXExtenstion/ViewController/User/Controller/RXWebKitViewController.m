@@ -10,7 +10,7 @@
 
 #import <WebKit/WebKit.h>
 
-@interface RXWebKitViewController ()
+@interface RXWebKitViewController ()<WKNavigationDelegate, WKUIDelegate>
 {
     WKWebView * _webView;
 }
@@ -21,7 +21,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = @"WXWebView";
+    
+    // self.navigationController.toolbarHidden = NO;
+    
+//    self.view.backgroundColor = [UIColorredColor];
+    
+    
+
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

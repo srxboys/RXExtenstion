@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+#pragma mark - ~~~~~~~~~~~ 3D-Touch ~~~~~~~~~~~~~~~
+- (void)checkShortcutItem;
 @end
 

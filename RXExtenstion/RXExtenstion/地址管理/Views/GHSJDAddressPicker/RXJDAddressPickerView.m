@@ -284,7 +284,7 @@
                 lineLeft = btn.left;
                 lineWidth = btn.width;
                 
-                //[self setTableViewCellOfCentenWith:pageNum];
+                [self setTableViewCellOfCentenWith:pageNum is_delayed:NO];
             }
             
             [UIView animateWithDuration:ViewAnimal animations:^{
@@ -298,9 +298,9 @@
 }
 
 #pragma mark - ~~~~~~~~~~~ tableView选择后，垂直居中 ~~~~~~~~~~~~~~~
-- (void)setTableViewCellOfCentenWith:(NSInteger)pageNum {
+- (void)setTableViewCellOfCentenWith:(NSInteger)pageNum is_delayed:(BOOL)is_delayed{
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(is_delayed * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         NSIndexPath * indexPath = nil;
         if(pageNum == 0) {
@@ -530,7 +530,7 @@
    
     [self changeSelectScrollContentSizeWithSelectLeft:_buttonsLasterLeft + SelectLineWidth];
     
-    [self setTableViewCellOfCentenWith:index - 1];
+    [self setTableViewCellOfCentenWith:index - 1 is_delayed:YES];
 
     //算scrollView;
     self.userInteractionEnabled = YES;

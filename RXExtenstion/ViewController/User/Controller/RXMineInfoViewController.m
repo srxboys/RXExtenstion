@@ -9,6 +9,7 @@
 #import "RXMineInfoViewController.h"
 #import "RXMineCreateAddressController.h"
 #import "RX3DTouchSettingController.h"
+#import "RXWebKitViewController.h"
 
 @interface RXMineInfoViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -23,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"设置";
     [self configUI];
 }
 
@@ -31,7 +33,7 @@
     
     NSString * title = @"新建地址时 选择地区 样式";
     
-    _dataSouceArray = @[title, @"3D Touch定制"];
+    _dataSouceArray = @[title, @"3D Touch定制", @"WKWebKit"];
     
 }
 
@@ -60,6 +62,10 @@
     else if(row == 1) {
         RX3DTouchSettingController * DTouchController = RXMeStroBoard(@"RX3DTouchSettingController");
         [self.navigationController pushViewController:DTouchController animated:YES];
+    }
+    else if (row == 2) {
+        RXWebKitViewController * wxWebKit = [[RXWebKitViewController alloc] init];
+        [self.navigationController pushViewController:wxWebKit animated:YES];
     }
 }
 

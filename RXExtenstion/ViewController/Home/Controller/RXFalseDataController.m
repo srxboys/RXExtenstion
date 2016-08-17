@@ -28,6 +28,8 @@
     // Do any additional setup after loading the view.
     self.title = @"下拉刷新、假数据";
     [self configUI];
+    
+    [self addNavBarButton];
 }
 
 - (void)configUI {
@@ -58,6 +60,7 @@
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSString * string = arr[indexPath.row];
     cell.textLabel.text = string;
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;
     if([string urlBOOL]) {
         string = [string substringFromIndex:3];
         UIProgressView * progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
@@ -81,6 +84,35 @@
 }
 
 
+
+
+- (void)addNavBarButton {
+    UIBarButtonItem * oneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(barButtonItemClick:)];
+    oneItem.tag = 1;
+    
+    UIBarButtonItem * twoItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:@selector(barButtonItemClick:)];
+    twoItem.tag = 2;
+    
+    UIBarButtonItem * threeItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self  action:@selector(barButtonItemClick:)];
+    threeItem.tag = 3;
+    
+    self.toolbarItems = @[oneItem, twoItem, threeItem];
+}
+
+- (void)barButtonItemClick:(UIBarButtonItem *)item {
+    RXLog(@"barButton.tag=%zd", item.tag);
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.toolbarHidden = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.toolbarHidden = YES;
+}
 
 
 - (void)didReceiveMemoryWarning {

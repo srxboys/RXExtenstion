@@ -139,6 +139,13 @@
 //3.iPhone6分辨率375x667，像素750x1334，@2x
 //4.iPhone6 Plus分辨率414x736，像素1242x2208，@3x
 
+//通用字体设置大小
+#ifdef iPhone6Plus
+    #define GHSFont(_fontSize) _fontSize * 1.5
+#else
+    #define GHSFont(_fontSize) _fontSize
+#endif
+
 
 #pragma mark ---- 内存 --------
 //----------------------内存----------------------------

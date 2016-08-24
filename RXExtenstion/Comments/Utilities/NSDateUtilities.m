@@ -296,10 +296,15 @@
 	NSDateComponents *components2 = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:aDate];
 	
 	// Must be same week. 12/31 and 1/1 will both be week "1" if they are in the same week
-	if (components1.week != components2.week) return NO;
+    NSInteger week1 = components1.weekday;
+    NSInteger week2 = components2.weekday;
+    //iOS < iOS7
+//	if (components1.week != components2.week) return NO;
+    //iOS > iOS7  -- srxboys
+    if (week1 != week2) return NO;
 	
 	// Must have a time interval under 1 week. Thanks @aclark
-	return (abs([self timeIntervalSinceDate:aDate]) < D_WEEK);
+	return (fabs([self timeIntervalSinceDate:aDate]) < D_WEEK);
 }
 
 - (BOOL) isThisWeek
@@ -543,7 +548,14 @@
 - (NSInteger) week
 {
 	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
-	return components.week;
+//    NSLog(@"weak=%d---weekOfYear=%d--weekOfMonth=%d", components.week, components.weekOfYear, components.weekOfMonth);
+//    NSLog(@"\nyearForWeekOfYear=%d----weekday=%d", components.yearForWeekOfYear, components.weekday);
+    
+    //iOS < iOS7
+//	return components.week;
+    
+    //iOS > iOS7 -- srxboys
+    return components.weekday - 1;
 }
 
 - (NSInteger) weekday

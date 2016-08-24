@@ -12,6 +12,7 @@
 #import "RXMJHeaderGif.h"
 #import "RXCharacter.h"
 #import "UIImageView+ProgressView.h"
+#import "NSDateUtilities.h"
 
 @interface RXFalseDataController ()<UITableViewDelegate, UITableViewDataSource>
 {
@@ -38,11 +39,17 @@
     [self changeTableSourceArr];
 }
 - (void)changeTableSourceArr {
+    
+    NSDate * date = [NSDate dateWithTimeIntervalSinceNow:[[RXRandom randomDateStringWithinCount:10] doubleValue]];
+    RXLog(@"day=%d", date.day);
+    
+    
     arr = @[[NSString stringWithFormat:@"日期=%@",[RXRandom randomDateString]],
             [NSString stringWithFormat:@"汉字=%@",[RXRandom randomChinas]],
             [NSString stringWithFormat:@"字符串=%@",[RXRandom randomString]],
             [NSString stringWithFormat:@"字母=%@",[RXRandom randomLetter]],
             [NSString stringWithFormat:@"图片=%@",[RXRandom randomImageURL]],
+            [NSString stringWithFormat:@"随机日期=%d-%02d-%02d", date.year, date.month,date.week]
             ];
     
 //    RXLog(@"arr=%@", arr);

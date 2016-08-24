@@ -272,7 +272,7 @@
         CGFloat page = offsetX / ScreenWidth * 1.0;
         //floor 取整函数
         CGFloat page_point = (page - floor(page));
-//        TTLog(@"offsetX=%f==page=%f==page_point=%f", offsetX, page, page_point);
+//        RXLog(@"offsetX=%f==page=%f==page_point=%f", offsetX, page, page_point);
         //lroundf 四舍五入，取最接近的整数
         if(lroundf(page_point * 1000) == 0) {
             
@@ -436,7 +436,23 @@
         _areaVisible = row;
     }
     
+    //选择地址后，下一个tableView.y == 0
+    [self tableSelectScrollToTop:_selfSelectCount];
+    
+    //选择地址后，滚动到下个TableView界面并改变标签
     [self createButtonsWithTitle:name andIndex:_selfSelectCount];
+}
+
+#pragma mark - ~~~~~~~~~~~ 重新选择地址。其余的TableView y ToTop ~~~~~~~~~~~~~~~
+- (void)tableSelectScrollToTop:(NSInteger)index {
+    if(_selfLevel_isHidden <= index) return;
+    if(index < _selfLevel_isHidden) {
+        _areaTableView.contentOffset = CGPointMake(0, -tableToTop);
+        
+        if(index < 2) {
+            _cityTableView.contentOffset = CGPointMake(0, -tableToTop);
+        }
+    }
 }
 
 #pragma mark - ~~~~~~~~~~~ 切换 scrollView ~~~~~~~~~~~~~~~

@@ -67,11 +67,11 @@
     
     for(int i=0; i< tool_pathes.count; i++) {
         if ([[NSFileManager defaultManager] fileExistsAtPath:tool_pathes[i]]) {
-//            NSLog(@"The device is jail broken!");
+//             RXLog(@"The device is jail broken!");
             return YES;
         }
     }
-//    NSLog(@"The device is NOT jail broken!");
+//     RXLog(@"The device is NOT jail broken!");
     return NO;
 }
 
@@ -79,10 +79,10 @@
 
 + (BOOL)isJailBreakTwo {
     if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"cydia://"]]) {
-//        NSLog(@"The device is jail broken!");
+//         RXLog(@"The device is jail broken!");
         return YES;
     }
-//    NSLog(@"The device is NOT jail broken!");
+//     RXLog(@"The device is NOT jail broken!");
     return NO;
 }
 
@@ -90,12 +90,12 @@
 #pragma mark - ~~~~~~~~~~~ 3. 读取系统所有应用的名称 ~~~~~~~~~~~~~~~
 + (BOOL)isJailBreakThree {
     if([[NSFileManager defaultManager] fileExistsAtPath:USER_APP_PATH]) {
-//        NSLog(@"The device is jail broken!");
+//         RXLog(@"The device is jail broken!");
         NSArray *applist = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:USER_APP_PATH error:nil];
-//        NSLog(@"applist = %@", applist);
+//         RXLog(@"applist = %@", applist);
         return YES;
     }
-    NSLog(@"The device is NOT jail broken!");
+     RXLog(@"The device is NOT jail broken!");
     return NO;
 }
 
@@ -132,10 +132,10 @@
 //+ (BOOL)isJailBreakFour
 //{
 //    if (checkCydia()) {
-////        NSLog(@"The device is jail broken!");
+////         RXLog(@"The device is jail broken!");
 //        return YES;
 //    }
-////    NSLog(@"The device is NOT jail broken!");
+////     RXLog(@"The device is NOT jail broken!");
 //    return NO;
 //}
 
@@ -144,17 +144,17 @@
 //char* printEnv(void)
 //{
 //    charchar *env = getenv("DYLD_INSERT_LIBRARIES");
-//    NSLog(@"%s", env);
+//     RXLog(@"%s", env);
 //    return env;
 //}
 //
 //+ (BOOL)isJailBreakFive
 //{
 //    if (printEnv()) {
-////        NSLog(@"The device is jail broken!");
+////         RXLog(@"The device is jail broken!");
 //        return YES;
 //    }
-////    NSLog(@"The device is NOT jail broken!");
+////     RXLog(@"The device is NOT jail broken!");
 //    return NO;
 //}
 

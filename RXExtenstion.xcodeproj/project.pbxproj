@@ -547,6 +547,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C0017201D66A466002654F2 /* C */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
 		6C0047E81D2FA5B100EBE004 /* RXToDay */ = {
 			isa = PBXGroup;
 			children = (
@@ -763,6 +770,7 @@
 				6CF3224C1CD86BFF009BD1B7 /* ViewController */,
 				6C3A30181CD347A700533FFF /* model */,
 				6C3A30191CD347A700533FFF /* view */,
+				6C0017201D66A466002654F2 /* C */,
 				6C3A2FD21CD3477000533FFF /* AppDelegate.h */,
 				6C3A2FD31CD3477000533FFF /* AppDelegate.m */,
 				6CF3224D1CD86C67009BD1B7 /* RXTabBarController.h */,
@@ -1542,7 +1550,6 @@
 					};
 					6C3A2FCB1CD3477000533FFF = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = MLKY76PU29;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -1920,7 +1927,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yaojin Dou (HK9KZR5X5Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yaojin Dou (HK9KZR5X5Z)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RXExtenstion/model/PrefixHeader.h";
 				INFOPLIST_FILE = RXExtenstion/Info.plist;

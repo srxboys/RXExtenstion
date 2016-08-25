@@ -202,7 +202,7 @@
         
         _tableSelectItemLabel.text = [NSString stringWithFormat:@"%@ %@ %@", _provinceStr, _cityStr, _areaStr];
         
-        _tableIndex = 0;
+        _tableIndex = -1;
         NSString * addressString = [NSString stringWithFormat:@"%@ %@ %@", _provinceStr, _cityStr, _areaStr];
         self.isShow(true,  addressString, _areaId);
         [self hideAddressView];

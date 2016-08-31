@@ -7,6 +7,7 @@
 //
 
 #import "RXMineCreateDateController.h"
+#import "NSDateUtilities.h"
 
 #import "RXNomalDatePicker.h"
 
@@ -59,18 +60,25 @@
     
     _nomalDatePicker  = [[RXNomalDatePicker alloc] init];
     _nomalDatePicker.isShow = ^(BOOL isShow, NSDate * date) {
+        //这个时间不是中国的
         RXLog(@"%d %@", isShow, date);
-        weakSelf.resultLabel.text = [NSString stringWithFormat:@"%@", date];
+        
+        //下面处理时间差
+        weakSelf.resultLabel.text = [NSString stringWithFormat:@"%zd-%zd-%zd %2zd %2zd", date.year, date.month, date.day, date.hour, date.minute];
     };
     
     _datePicker = [[RXDatePicker alloc] init];
     _datePicker.isShow = ^(BOOL isShow, NSDate * date) {
+        //这个时间不是中国的
         RXLog(@"%d %@", isShow, date);
-        weakSelf.resultLabel.text = [NSString stringWithFormat:@"%@", date];
+        
+        //下面处理时间差
+        weakSelf.resultLabel.text = [NSString stringWithFormat:@"%zd-%zd-%zd %2zd %2zd", date.year, date.month, date.day, date.hour, date.minute];
     };
     
     _dateTimePicker = [[RXDateTimePicker alloc] init];
     _dateTimePicker.pickerComple = ^(BOOL isShow, NSString * dateString) {
+        //这个返回的   是中国地区的
         RXLog(@"%d %@", isShow, dateString);
         weakSelf.resultLabel.text = dateString;
     };
@@ -127,11 +135,11 @@
 
 
 - (IBAction)sysPickerShowButtonClick:(id)sender {
-    [_nomalDatePicker show:NO];
+    [_nomalDatePicker show];
 }
 
 - (IBAction)sysCustomPickerShowButtonClick:(id)sender {
-    [_datePicker show:NO];
+    [_datePicker show];
 }
 
 - (IBAction)CustomDTPickerShowButtonClick:(id)sender {

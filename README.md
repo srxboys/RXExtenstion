@@ -147,8 +147,42 @@
     [_threePicker showAddress];
 
 ```
-
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/address/address.gif)
+
+### 7、`日期、时间 选择样式`
+```objc
+    _nomalDatePicker  = [[RXNomalDatePicker alloc] init];
+    _nomalDatePicker.isShow = ^(BOOL isShow, NSDate * date) {
+        RXLog(@"%d %@", isShow, date);
+        weakSelf.resultLabel.text = [NSString stringWithFormat:@"%@", date];
+    };
+
+    _datePicker = [[RXDatePicker alloc] init];
+    _datePicker.isShow = ^(BOOL isShow, NSDate * date) {
+        RXLog(@"%d %@", isShow, date);
+        weakSelf.resultLabel.text = [NSString stringWithFormat:@"%@", date];
+    };
+
+    _dateTimePicker = [[RXDateTimePicker alloc] init];
+    _dateTimePicker.pickerComple = ^(BOOL isShow, NSString * dateString) {
+        RXLog(@"%d %@", isShow, dateString);
+        weakSelf.resultLabel.text = dateString;
+    };
+
+
+    [self.view addSubview:_nomalDatePicker];
+    [self.view addSubview:_datePicker];
+    [self.view addSubview:_dateTimePicker];
+
+//调用 日期、时间 选择样式 显示控件
+    [_nomalDatePicker show];
+    [_datePicker show];
+    [_dateTimePicker showDatePickerView];
+
+```
+![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/datePicker/datePicker.gif)
+
+
 
 ### [我的demo 百度网盘](http://pan.baidu.com/s/1hqH9ZNI) 
 
@@ -158,6 +192,14 @@
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/AFNS.png)
 
 ###更新日志
+2016-8-31
+增加:
+* 添加 收货地址 3中样式
+
+2016-8-25
+增加:
+* 添加 日期、时间 选择样式（封装UIDatePicker）
+
 2016-7-21
 增加:
 * 添加 多种最新请求 ~ ~ ~ coding ~ ~ ~

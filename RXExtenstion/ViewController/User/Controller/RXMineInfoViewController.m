@@ -8,6 +8,7 @@
 
 #import "RXMineInfoViewController.h"
 #import "RXMineCreateAddressController.h"
+#import "RXMineCreateDateController.h"
 #import "RX3DTouchSettingController.h"
 #import "RXWebKitViewController.h"
 
@@ -31,9 +32,7 @@
 - (void)configUI {
     _tableView.tableFooterView = [[UIView alloc] init];
     
-    NSString * title = @"新建地址时 选择地区 样式";
-    
-    _dataSouceArray = @[title, @"3D Touch定制", @"WKWebKit"];
+    _dataSouceArray = @[@"新建地址时 选择地区 样式", @"日期、时间 选择 样式",@"3D Touch定制",@"WKWebKit"];
     
 }
 
@@ -60,10 +59,14 @@
         [self.navigationController pushViewController:createAddressController animated:YES];
     }
     else if(row == 1) {
+        RXMineCreateDateController * dateController = RXMeStroBoard(@"RXMineCreateDateController");
+        [self.navigationController pushViewController:dateController animated:YES];
+    }
+    else if(row == 2) {
         RX3DTouchSettingController * DTouchController = RXMeStroBoard(@"RX3DTouchSettingController");
         [self.navigationController pushViewController:DTouchController animated:YES];
     }
-    else if (row == 2) {
+    else if (row == 3) {
         RXWebKitViewController * wxWebKit = [[RXWebKitViewController alloc] init];
         [self.navigationController pushViewController:wxWebKit animated:YES];
     }

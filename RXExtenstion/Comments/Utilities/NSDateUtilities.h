@@ -90,6 +90,8 @@ typedef NS_ENUM(NSInteger, MBExecuteType) {
 + (NSDate *) tomorrow;
 + (NSDate *) yesterday;
 
++ (NSDate *) dateWithDaysFromNow: (NSInteger) days;
+
 //Roles
 - (BOOL) isTypicallyWeekend;
 - (BOOL) isTypicallyWorkday;

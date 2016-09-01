@@ -12,9 +12,14 @@
 #import "RXMenu.h"
 #import "RXDataModel.h"
 
-@interface RXMenuController ()
+
+#import "RXTableView.h"
+
+@interface RXMenuController ()<RXTableViewDelegate>
 {
     RXMenu         * _menu;
+    
+    RXTableView    * _tableView;
 }
 @end
 
@@ -24,6 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self configUI];
+    [self configTable];
 }
 
 //所有控件初始化
@@ -69,6 +75,31 @@
     
 }
 
+
+
+- (void)configTable {
+    _tableView = [[RXTableView alloc] initWithFrame:CGRectMake(0, 300, ScreenWidth, 350) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.scrollDirection = RXTableViewScrollDirectionHorizontal;
+    [self.view addSubview:_tableView];
+}
+- (NSInteger)RXTableView:(RXTableView *)RXTableView numberOfRowsInSection:(NSInteger)section {
+    return 100;
+}
+
+- (UITableViewCell *)RXTableView:(RXTableView *)RXTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * cellInditifier = @"cell";
+    UITableViewCell * cell = [RXTableView dequeueReusableCellWithIdentifier:cellInditifier];
+    if(!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellInditifier];
+    }
+    cell.contentView.backgroundColor = [RXRandom randomColor];
+    return cell;
+}
+
+- (CGFloat)RXTableView:(RXTableView *)RXTableView heightOrWidthForCellAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

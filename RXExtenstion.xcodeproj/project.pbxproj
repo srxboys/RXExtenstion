@@ -92,6 +92,7 @@
 		6C40E1251D38AA9E002A451E /* RXResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40E1241D38AA9E002A451E /* RXResponse.m */; };
 		6C483D291D58860C00A3A202 /* RXMineCreateAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */; };
 		6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BFCD61CDC9F94006476FB /* RXDataModel.m */; };
+		6C52B18D1D77CE86004D8BCA /* RXTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C52B18C1D77CE86004D8BCA /* RXTableView.m */; };
 		6C5B54701D76806100A7577F /* RXNomalDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B546F1D76806100A7577F /* RXNomalDatePicker.m */; };
 		6C5B54741D76814E00A7577F /* RXDateTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B54731D76814E00A7577F /* RXDateTimePicker.m */; };
 		6C5B54771D76825700A7577F /* RXMineCreateDateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B54761D76825700A7577F /* RXMineCreateDateController.m */; };
@@ -370,6 +371,8 @@
 		6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineCreateAddressController.m; sourceTree = "<group>"; };
 		6C4BFCD51CDC9F94006476FB /* RXDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDataModel.h; sourceTree = "<group>"; };
 		6C4BFCD61CDC9F94006476FB /* RXDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDataModel.m; sourceTree = "<group>"; };
+		6C52B18B1D77CE86004D8BCA /* RXTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTableView.h; sourceTree = "<group>"; };
+		6C52B18C1D77CE86004D8BCA /* RXTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTableView.m; sourceTree = "<group>"; };
 		6C5B546E1D76806100A7577F /* RXNomalDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNomalDatePicker.h; sourceTree = "<group>"; };
 		6C5B546F1D76806100A7577F /* RXNomalDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNomalDatePicker.m; sourceTree = "<group>"; };
 		6C5B54721D76814E00A7577F /* RXDateTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDateTimePicker.h; sourceTree = "<group>"; };
@@ -836,10 +839,11 @@
 				6C862F941D58737500EEB818 /* 地址管理 */,
 				6CEB36A31D5ABE0400283562 /* 1个xib里面多个cell */,
 				6C0591F51D75539400A9DCF4 /* RXDatePicker */,
-				6C00B0031D4057E100EA7221 /* NSDictionary+NSStringUTF8.h */,
-				6C00B0041D4057E100EA7221 /* NSDictionary+NSStringUTF8.m */,
+				6C52B18A1D77CE86004D8BCA /* 横竖TableView */,
 				6C3A30D21CD360DC00533FFF /* RXCharacter.h */,
 				6C3A30D31CD360DC00533FFF /* RXCharacter.m */,
+				6C00B0031D4057E100EA7221 /* NSDictionary+NSStringUTF8.h */,
+				6C00B0041D4057E100EA7221 /* NSDictionary+NSStringUTF8.m */,
 				6C00B0051D4057E100EA7221 /* NSError+RXString.h */,
 				6C00B0061D4057E100EA7221 /* NSError+RXString.m */,
 				6CD0EB961D21159900692886 /* RXUUID */,
@@ -1137,6 +1141,15 @@
 				6C3F7BB01D07E02B0046C29C /* RXLocationController.m */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		6C52B18A1D77CE86004D8BCA /* 横竖TableView */ = {
+			isa = PBXGroup;
+			children = (
+				6C52B18B1D77CE86004D8BCA /* RXTableView.h */,
+				6C52B18C1D77CE86004D8BCA /* RXTableView.m */,
+			);
+			path = "横竖TableView";
 			sourceTree = "<group>";
 		};
 		6C7B91381D0D7FCD00496C4F /* RXMenu */ = {
@@ -1721,6 +1734,7 @@
 				6CA160041CF34287009DCE60 /* RXNewHomeSegmentView.m in Sources */,
 				6CD0EBA01D2115BE00692886 /* RXUUID.m in Sources */,
 				6C00B0111D4063CF00EA7221 /* RXUpload.m in Sources */,
+				6C52B18D1D77CE86004D8BCA /* RXTableView.m in Sources */,
 				6C3A30A81CD3538A00533FFF /* MJRefreshStateHeader.m in Sources */,
 				6C3A30111CD3477E00533FFF /* MJPopupBackgroundView.m in Sources */,
 				6C7B91471D0D809000496C4F /* RXMenuController.m in Sources */,

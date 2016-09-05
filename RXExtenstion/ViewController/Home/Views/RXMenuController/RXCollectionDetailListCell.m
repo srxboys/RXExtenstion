@@ -46,13 +46,15 @@
     }
 }
 - (void)isCreateView {
-    CGFloat left = 40;
-    CGFloat top = 40;
+    CGFloat left = ActureHeight(20);
+    CGFloat top = ActureHeight(20);
+    
+    
     
     CGFloat width = self.bounds.size.width - (left * 2);
     CGFloat height = self.bounds.size.height - (top * 2);
     _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(left, top, width, height)];
-    _imgView.backgroundColor = [UIColor redColor];
+    _imgView.backgroundColor = [UIColor purpleColor];
     [self.contentView addSubview:_imgView];
 }
 

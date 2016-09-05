@@ -93,7 +93,7 @@
         _statusLabel.text = TIMENOARRIVED;
     }
     
-    self.contentView.backgroundColor = [UIColor blueColor];
+    self.contentView.backgroundColor = UIColorRGB(238, 238, 238);
     if(animal) {
         self.contentView.backgroundColor = [UIColor whiteColor];
         [self selectedCellAnimal];

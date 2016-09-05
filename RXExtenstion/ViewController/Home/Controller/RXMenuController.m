@@ -92,13 +92,13 @@
 
 #pragma mark - ~~~~~~~~~~~ 横向菜单 TableView ~~~~~~~~~~~~~~~
 - (void)configTable {
-    _tableView = [[RXTableView alloc] initWithFrame:CGRectMake(0, 300, ScreenWidth, 80) style:UITableViewStylePlain];
+    _tableView = [[RXTableView alloc] initWithFrame:CGRectMake(0, 300, ScreenWidth, 60) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.scrollDirection = RXTableViewScrollDirectionHorizontal;
     [self.view addSubview:_tableView];
 }
 - (NSInteger)RXTableView:(RXTableView *)RXTableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return 100;//宽度
 }
 
 - (UITableViewCell *)RXTableView:(RXTableView *)RXTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -110,6 +110,7 @@
     cell.contentView.backgroundColor = [RXRandom randomColor];
     cell.textLabel.text = @"tableView";
     cell.textLabel.adjustsFontSizeToFitWidth = YES;
+    cell.textLabel.textColor = [UIColor blackColor];
     return cell;
 }
 
@@ -122,11 +123,11 @@
     //1
 //    _menuView = [[RXMenuView alloc] init];
     //2
-    _menuView = [[RXMenuView alloc] initWithFrame:CGRectMake(0, 400, ScreenWidth, 50)];
+    _menuView = [[RXMenuView alloc] initWithFrame:CGRectMake(0, 370, ScreenWidth, 50)];
     [_menuView addTarget:self action:@selector(menuAction:)];
     [self.view addSubview:_menuView];
     
-    CGFloat top = 400 + 50;
+    CGFloat top = 370 + 50;
     CGFloat height = ScreenHeight - top;
     
     

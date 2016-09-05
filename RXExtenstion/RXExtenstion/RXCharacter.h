@@ -41,3 +41,8 @@
 @interface NSObject (urlBOOL)
 - (BOOL)urlBOOL;
 @end
+
+@interface NSObject (fromatValue)
+- (NSString *)formatMonery;
+@end
+

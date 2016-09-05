@@ -107,7 +107,35 @@
 @end
 
 
+@implementation NSObject (fromatValue)
 
+- (NSString *)formatMonery {
+    
+    NSRange range = [((NSString *)self) rangeOfString:@"-"];
+    if (range.location != NSNotFound) {
+        return @"0.00";
+    }
+    
+    if ([((NSString *)self) isEqualToString:@"0"]) {
+        return @"0.00";
+    }
+    NSString * value = [NSString stringWithFormat:@"%f",
+                        [((NSString *)self) doubleValue]];
+    
+    if ([((NSString *)self) doubleValue]>0) {
+        
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
+        [formatter setCurrencySymbol:@""];
+        
+        NSMutableString *string = [NSMutableString stringWithString:[value componentsSeparatedByString:@"."][1]];
+        return [NSString stringWithFormat:@"%@.%@",[value componentsSeparatedByString:@"."][0],[string substringToIndex:2]];
+    }
+    return ((NSString *)self);
+}
+
+@end
 
 
 

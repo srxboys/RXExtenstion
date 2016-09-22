@@ -13,6 +13,9 @@
 
 #import <objc/message.h>
 
+
+#define DEFAULT_CellWidth 100
+
 // 运行时objc_msgSend -- 根据MJRefresh而来
 #define RXMsgSend(...) ((void (*)(void *, SEL, RXMenuView*))objc_msgSend)(__VA_ARGS__)
 #define RXMsgTarget(target) (__bridge void *)(target)
@@ -21,6 +24,8 @@
 {
     UICollectionViewFlowLayout * _flowLayout;
     UICollectionView * _collectionView;
+    
+    CGFloat _cellWidth;
 }
 
 @property (nonatomic, weak)   id  menuTarget;
@@ -55,13 +60,25 @@
         [_collectionView registerClass:[RXMenuViewCollectionCell class] forCellWithReuseIdentifier:@"RXMenuViewCollectionCell"];
         [self addSubview:_collectionView];
         _pageNumber = 0;
+        
+        _cellWidth = DEFAULT_CellWidth;
     }
     return self;
 }
 
 - (void)setMenuListArray:(NSArray *)menuListArray {
     _menuListArray = menuListArray;
-    [_collectionView reloadData];
+    NSInteger count = menuListArray.count;
+    if(count > 0) {
+        self.hidden = NO;
+        if(count < 5) {
+            _cellWidth = roundf(ScreenWidth / count * 1.0);
+        }
+        [_collectionView reloadData];
+    }
+    else {
+        self.hidden = YES;
+    }
 } 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -78,7 +95,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     //0 / count -->特殊处理
     
-    return CGSizeMake(100, self.bounds.size.height);
+    return CGSizeMake(_cellWidth, self.bounds.size.height);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {

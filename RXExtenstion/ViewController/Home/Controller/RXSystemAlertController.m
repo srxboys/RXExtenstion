@@ -26,6 +26,19 @@ typedef NS_ENUM(NSInteger, RXType) {
 
 
 
+NSString * const sds __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_7_0);
+/*
+ __OSX_AVAILABLE_STARTING 是什么意思呢？
+ 我们知道 Mac OS X and iOS有不同的版本号，__OSX_AVAILABLE_STARTING 宏允许你同时指定Mac OS X and iOS的版本号。
+ __OSX_AVAILABLE_STARTING(__MAC_10_5,__IPHONE_2_0)它表示从 mac os x10.5 和ios 2.0 才开始使用的，两种平台都支持。
+ 
+ 有时候我们只想支持一种平台，怎么办呢？
+ __OSX_AVAILABLE_STARTING(__MAC_10_5,__IPHONE_NA)
+ 它表示 只支持mac os x  不支持ios平台，最后的NA 表示not  applicable ，是这两个单词的缩写
+ */
+
+
+
 @interface RXSystemAlertController ()
 {
     BOOL _isSrxboys __deprecated_msg("废弃");
@@ -84,6 +97,7 @@ typedef NS_ENUM(NSInteger, RXType) {
 //过期并，添加说明信息
 - (void)rxSysTestSeven NS_DEPRECATED(10_0, 10_6, 2_0, 4_0, "这个方法已过期了`废弃了`");
 
+
 @end
 
 
@@ -114,6 +128,9 @@ typedef NS_ENUM(NSInteger, RXType) {
     [self rxTextThree];
     
     [self rxSysTestFor];
+    
+    
+   
 }
 
 

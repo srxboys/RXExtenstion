@@ -63,6 +63,24 @@
     if([self.netWorkStatus isEqualToString:RXNetworksStatusNone]) {
         //没有链接网络
     }
+    
+//    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+//    for (NSHTTPCookie *cookie in [cookieJar cookies]) {
+//        NSLog(@"cookie=%@", cookie);
+//    }
+//    
+//    //清楚cookie
+//    NSHTTPCookieStorage *cookieJar2 = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+//    NSArray *_tmpArray = [NSArray arrayWithArray:[cookieJar2 cookies]];
+//    for (id obj in _tmpArray) {
+//        [cookieJar deleteCookie:obj];
+//    }
+//    
+//    NSHTTPCookieStorage *cookieJar3 = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+//    for (NSHTTPCookie *cookie in [cookieJar3 cookies]) {
+//        NSLog(@"cookie=%@", cookie);
+//    }
+    
 }
 
 - (void)navRightItemClick {

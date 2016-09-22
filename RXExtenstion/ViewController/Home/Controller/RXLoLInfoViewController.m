@@ -15,17 +15,11 @@
 
 #import "RXLoLInfoViewController.h"
 
-@interface RXLoLInfoViewController ()<UIScrollViewDelegate>
+@interface RXLoLInfoViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 {
-    UIScrollView * _scrollView;
-    UIView       * _mineInfoView;
-    UIScrollView * _segmengScrollView;
-    
-    CGFloat        _commentHeigth;
-    CGFloat        _mineInfoViewHeight;
-    
-    UITableView  * _tableViewOne;
-    UITableView  * _tableViewTwo;
+    UICollectionViewFlowLayout * _flowLayout;
+    UICollectionView * _collectionView;
+    CGFloat top;
 }
 @end
 
@@ -38,22 +32,31 @@
 }
 
 - (void)configUI {
-    _commentHeigth = 50;
+    _flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    _flowLayout.sectionInset = UIEdgeInsetsZero;
+    _flowLayout.minimumLineSpacing = 0;
+    _flowLayout.minimumInteritemSpacing = 0;
     
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, NavHeight, ScreenWidth, ScreenHeight - NavHeight - _commentHeigth)];
-    //允许滑动的方向
-    _scrollView.alwaysBounceVertical = YES;
-    //滑动的速度
-    _scrollView.decelerationRate = 0.5;
-    [self.view addSubview:_scrollView];
+    _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:_flowLayout];
+    _collectionView.dataSource = self;
+    _collectionView.delegate = self;
+    [self.view addSubview:_collectionView];
     
-    _mineInfoViewHeight = ActureHeight(210);
-    _mineInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, _mineInfoViewHeight)];
-    _mineInfoView.backgroundColor = [UIColor redColor];
-    [_scrollView addSubview:_mineInfoView];
+    //注册cell
     
     
 }
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"" forIndexPath:indexPath];
+    return cell;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

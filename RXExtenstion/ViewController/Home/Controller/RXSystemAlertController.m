@@ -97,6 +97,8 @@ NSString * const sds __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_7_0);
 //过期并，添加说明信息
 - (void)rxSysTestSeven NS_DEPRECATED(10_0, 10_6, 2_0, 4_0, "这个方法已过期了`废弃了`");
 
+// >= iOS8 可用
+- (void)dd NS_AVAILABLE_IOS(8_0);
 
 @end
 

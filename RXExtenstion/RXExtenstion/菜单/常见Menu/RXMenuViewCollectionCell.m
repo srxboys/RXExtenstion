@@ -73,24 +73,33 @@
 - (void)setSeckillMenuCellData:(RXSeckillMenuMode *)model isShowAnimal:(BOOL)animal{
     
     NSDate * nowDate = [NSDate date];
+    long long nowTime = [nowDate timeIntervalSince1970];
     
     NSDate * startDate = [NSDate dateWithTimeIntervalSince1970:model.starttime];
     NSDate * endDate = [NSDate dateWithTimeIntervalSince1970:model.endtime];
-    NSString * timeStr = [NSString stringWithFormat:@"%zd:%zd", startDate.hour, startDate.minute];
+    NSString * timeStr = [NSString stringWithFormat:@"%02zd:%02zd", startDate.hour, startDate.minute];
     
+#if DEBUG
+    NSString * nowStr = [NSString stringWithFormat:@"nowStr=%zd-%zd-%zd %02zd:%02zd", nowDate.year, nowDate.month, nowDate.day , nowDate.hour, nowDate.minute];
+    NSString * startStr = [NSString stringWithFormat:@"startDate=%zd-%zd-%zd %02zd:%02zd", startDate.year, startDate.month, startDate.day , startDate.hour, startDate.minute];
+    NSString * endStr = [NSString stringWithFormat:@"endDate=%zd-%zd-%zd %02zd:%02zd", endDate.year, endDate.month, endDate.day , endDate.hour, endDate.minute];
+    RXLog(@"\n\n%@\n%@\n%@\n\n", nowStr, startStr, endStr);
+    
+#endif
     _timeLabel.text = timeStr;
     
     _timeLabel.textColor = UIColorRGB(51 , 51 , 51 );
     _statusLabel.textColor = UIColorRGB(51 , 51 , 51 );
     
-    if(startDate > nowDate) {
+    
+    if(model.endtime < nowTime) {
         _statusLabel.text = TIMEOVER;
     }
-    else if(startDate <= nowDate && nowDate <= endDate) {
-        _statusLabel.text = TIMENOW;
+    else if(model.starttime > nowTime) {
+        _statusLabel.text = TIMENOARRIVED;
     }
     else {
-        _statusLabel.text = TIMENOARRIVED;
+        _statusLabel.text = TIMENOW;
     }
     
     self.contentView.backgroundColor = UIColorRGB(238, 238, 238);
@@ -110,10 +119,11 @@
     animation.duration = animalDuration;
     
     NSMutableArray *values = [NSMutableArray array];
-    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1, 0.1, 1.0)]];
-    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.5, 1.5, 1.0)]];
+    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5, 0.5, 1.0)]];
+    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.3, 1.3, 1.0)]];
     [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.9, 0.9, 1.0)]];
     [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
+    animation.values = values;
     animation.values = values;
     [_timeLabel.layer addAnimation:animation forKey:nil];
     [_statusLabel.layer addAnimation:animation forKey:nil];

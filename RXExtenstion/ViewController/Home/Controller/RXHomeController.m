@@ -15,6 +15,7 @@
 #import "RXExpansionContractionController.h"
 #import "RXSystemServerController.h"
 #import "RXMenuController.h"
+#import "RXSearchViewController.h"
 
 @interface RXHomeController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -55,6 +56,7 @@
             @"tableViewCell 展开收缩",
             @"系统中的功能",
             @"自定义点餐菜单框架",
+            @"搜索",
             @"一个完整的界面demo-coding"];
     [_tableView reloadData];
 }
@@ -117,6 +119,11 @@
         [self.navigationController pushViewController:menuController animated:YES];
     }
     else if(row == 9) {
+        RXSearchViewController * searchController = [[RXSearchViewController alloc] init];
+        searchController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:searchController animated:YES];
+    }
+    else if(row == 10) {
         //完整的界面demo
         RXNewHomeController * homeControll = [[RXNewHomeController alloc] init];
         homeControll.hidesBottomBarWhenPushed = YES;

@@ -165,6 +165,16 @@
 		6CD0EBBB1D211F4F00692886 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD0EBBA1D211F4F00692886 /* Security.framework */; };
 		6CD828B51CF831A500AF575E /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD828B41CF831A500AF575E /* Mine.storyboard */; };
 		6CD828B81CF831BB00AF575E /* RXMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD828B71CF831BB00AF575E /* RXMineViewController.m */; };
+		6CDB2CBC1D9E0CAD00B07530 /* RXSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB2CBB1D9E0CAD00B07530 /* RXSearchViewController.m */; };
+		6CDB2CCD1D9E0DA800B07530 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB2CC01D9E0DA800B07530 /* CollectionViewCell.m */; };
+		6CDB2CCE1D9E0DA800B07530 /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB2CC21D9E0DA800B07530 /* UICollectionViewLeftAlignedLayout.m */; };
+		6CDB2CCF1D9E0DA800B07530 /* CollectionReusableViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB2CC51D9E0DA800B07530 /* CollectionReusableViewClass.m */; };
+		6CDB2CD01D9E0DA800B07530 /* CollectionReusableViewClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CDB2CC61D9E0DA800B07530 /* CollectionReusableViewClass.xib */; };
+		6CDB2CD11D9E0DA800B07530 /* CollectionReusableViewHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB2CC81D9E0DA800B07530 /* CollectionReusableViewHistory.m */; };
+		6CDB2CD21D9E0DA800B07530 /* CollectionReusableViewHistory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CDB2CC91D9E0DA800B07530 /* CollectionReusableViewHistory.xib */; };
+		6CDB2CD31D9E0DA800B07530 /* CollectionReusableViewHot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB2CCB1D9E0DA800B07530 /* CollectionReusableViewHot.m */; };
+		6CDB2CD41D9E0DA800B07530 /* CollectionReusableViewHot.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CDB2CCC1D9E0DA800B07530 /* CollectionReusableViewHot.xib */; };
+		6CDB2CD71D9E0E3400B07530 /* RXSearchButtonWidthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB2CD61D9E0E3400B07530 /* RXSearchButtonWidthModel.m */; };
 		6CE825EC1D3CA7BA006EE76F /* AsyncImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825E41D3CA7BA006EE76F /* AsyncImageDownloader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6CE825ED1D3CA7BA006EE76F /* ImageCacheQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825E61D3CA7BA006EE76F /* ImageCacheQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6CE825EE1D3CA7BA006EE76F /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825E81D3CA7BA006EE76F /* NSString+MD5.m */; };
@@ -517,6 +527,23 @@
 		6CD828B41CF831A500AF575E /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		6CD828B61CF831BB00AF575E /* RXMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineViewController.h; sourceTree = "<group>"; };
 		6CD828B71CF831BB00AF575E /* RXMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineViewController.m; sourceTree = "<group>"; };
+		6CDB2CBA1D9E0CAD00B07530 /* RXSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSearchViewController.h; sourceTree = "<group>"; };
+		6CDB2CBB1D9E0CAD00B07530 /* RXSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSearchViewController.m; sourceTree = "<group>"; };
+		6CDB2CBF1D9E0DA800B07530 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		6CDB2CC01D9E0DA800B07530 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		6CDB2CC11D9E0DA800B07530 /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
+		6CDB2CC21D9E0DA800B07530 /* UICollectionViewLeftAlignedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewLeftAlignedLayout.m; sourceTree = "<group>"; };
+		6CDB2CC41D9E0DA800B07530 /* CollectionReusableViewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionReusableViewClass.h; sourceTree = "<group>"; };
+		6CDB2CC51D9E0DA800B07530 /* CollectionReusableViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableViewClass.m; sourceTree = "<group>"; };
+		6CDB2CC61D9E0DA800B07530 /* CollectionReusableViewClass.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionReusableViewClass.xib; sourceTree = "<group>"; };
+		6CDB2CC71D9E0DA800B07530 /* CollectionReusableViewHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionReusableViewHistory.h; sourceTree = "<group>"; };
+		6CDB2CC81D9E0DA800B07530 /* CollectionReusableViewHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableViewHistory.m; sourceTree = "<group>"; };
+		6CDB2CC91D9E0DA800B07530 /* CollectionReusableViewHistory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionReusableViewHistory.xib; sourceTree = "<group>"; };
+		6CDB2CCA1D9E0DA800B07530 /* CollectionReusableViewHot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionReusableViewHot.h; sourceTree = "<group>"; };
+		6CDB2CCB1D9E0DA800B07530 /* CollectionReusableViewHot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableViewHot.m; sourceTree = "<group>"; };
+		6CDB2CCC1D9E0DA800B07530 /* CollectionReusableViewHot.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionReusableViewHot.xib; sourceTree = "<group>"; };
+		6CDB2CD51D9E0E3400B07530 /* RXSearchButtonWidthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSearchButtonWidthModel.h; sourceTree = "<group>"; };
+		6CDB2CD61D9E0E3400B07530 /* RXSearchButtonWidthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSearchButtonWidthModel.m; sourceTree = "<group>"; };
 		6CE825E31D3CA7BA006EE76F /* AsyncImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageDownloader.h; sourceTree = "<group>"; };
 		6CE825E41D3CA7BA006EE76F /* AsyncImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageDownloader.m; sourceTree = "<group>"; };
 		6CE825E51D3CA7BA006EE76F /* ImageCacheQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCacheQueue.h; sourceTree = "<group>"; };
@@ -1414,6 +1441,42 @@
 			path = security;
 			sourceTree = "<group>";
 		};
+		6CDB2CBD1D9E0DA800B07530 /* RXSearch */ = {
+			isa = PBXGroup;
+			children = (
+				6CDB2CBE1D9E0DA800B07530 /* cell */,
+				6CDB2CC31D9E0DA800B07530 /* header */,
+			);
+			path = RXSearch;
+			sourceTree = "<group>";
+		};
+		6CDB2CBE1D9E0DA800B07530 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				6CDB2CBF1D9E0DA800B07530 /* CollectionViewCell.h */,
+				6CDB2CC01D9E0DA800B07530 /* CollectionViewCell.m */,
+				6CDB2CC11D9E0DA800B07530 /* UICollectionViewLeftAlignedLayout.h */,
+				6CDB2CC21D9E0DA800B07530 /* UICollectionViewLeftAlignedLayout.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		6CDB2CC31D9E0DA800B07530 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				6CDB2CC41D9E0DA800B07530 /* CollectionReusableViewClass.h */,
+				6CDB2CC51D9E0DA800B07530 /* CollectionReusableViewClass.m */,
+				6CDB2CC61D9E0DA800B07530 /* CollectionReusableViewClass.xib */,
+				6CDB2CC71D9E0DA800B07530 /* CollectionReusableViewHistory.h */,
+				6CDB2CC81D9E0DA800B07530 /* CollectionReusableViewHistory.m */,
+				6CDB2CC91D9E0DA800B07530 /* CollectionReusableViewHistory.xib */,
+				6CDB2CCA1D9E0DA800B07530 /* CollectionReusableViewHot.h */,
+				6CDB2CCB1D9E0DA800B07530 /* CollectionReusableViewHot.m */,
+				6CDB2CCC1D9E0DA800B07530 /* CollectionReusableViewHot.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
 		6CE825E21D3CA7BA006EE76F /* OnlineImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1495,16 +1558,18 @@
 				6CA434271CD9C42400641785 /* RXUploadImageController.m */,
 				6CA15FF81CF33FEC009DCE60 /* RXNewHomeController.h */,
 				6CA15FF91CF33FEC009DCE60 /* RXNewHomeController.m */,
+				6CF4AC991D01A89400CD17CB /* RXExpansionContractionController.h */,
+				6CF4AC9A1D01A89400CD17CB /* RXExpansionContractionController.m */,
+				6C381A1F1D01203300D4F68D /* RXSystemServerController.h */,
+				6C381A201D01203300D4F68D /* RXSystemServerController.m */,
 				6C7B91451D0D809000496C4F /* RXMenuController.h */,
 				6C7B91461D0D809000496C4F /* RXMenuController.m */,
+				6CDB2CBA1D9E0CAD00B07530 /* RXSearchViewController.h */,
+				6CDB2CBB1D9E0CAD00B07530 /* RXSearchViewController.m */,
 				6C25DA621CFED20200E65A38 /* RXLoLInfoViewController.h */,
 				6C25DA631CFED20200E65A38 /* RXLoLInfoViewController.m */,
 				6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */,
 				6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */,
-				6C381A1F1D01203300D4F68D /* RXSystemServerController.h */,
-				6C381A201D01203300D4F68D /* RXSystemServerController.m */,
-				6CF4AC991D01A89400CD17CB /* RXExpansionContractionController.h */,
-				6CF4AC9A1D01A89400CD17CB /* RXExpansionContractionController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1514,6 +1579,8 @@
 			children = (
 				6CF4AC9C1D01A91800CD17CB /* RXExpanCCellHeightModel.h */,
 				6CF4AC9D1D01A91800CD17CB /* RXExpanCCellHeightModel.m */,
+				6CDB2CD51D9E0E3400B07530 /* RXSearchButtonWidthModel.h */,
+				6CDB2CD61D9E0E3400B07530 /* RXSearchButtonWidthModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1521,6 +1588,7 @@
 		6CF322561CD879BF009BD1B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6CDB2CBD1D9E0DA800B07530 /* RXSearch */,
 				6C9D125A1D7D5C1F00694C52 /* RXMenuController */,
 				6CF4AC9F1D01A9D800CD17CB /* RXExpansionContraction */,
 				6CA15FFB1CF34042009DCE60 /* RXNewHome */,
@@ -1695,13 +1763,16 @@
 				6C3A30A91CD3538A00533FFF /* MJRefresh.bundle in Resources */,
 				6C3E08721D6E9190006D4EB5 /* Assets.xcassets in Resources */,
 				6CF4ACA71D01BB1400CD17CB /* RXMineCell.xib in Resources */,
+				6CDB2CD21D9E0DA800B07530 /* CollectionReusableViewHistory.xib in Resources */,
 				6CEB36A81D5ABEA600283562 /* RXMineInfoMessageCell.xib in Resources */,
 				6C5B547E1D76942E00A7577F /* UIImageView_说明.txt in Resources */,
 				6C3F7BAE1D07DFF10046C29C /* Location.storyboard in Resources */,
 				6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */,
+				6CDB2CD01D9E0DA800B07530 /* CollectionReusableViewClass.xib in Resources */,
 				6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */,
 				6C862FBA1D5876C500EEB818 /* city.json in Resources */,
 				6CD828B51CF831A500AF575E /* Mine.storyboard in Resources */,
+				6CDB2CD41D9E0DA800B07530 /* CollectionReusableViewHot.xib in Resources */,
 				6C3A2FDA1CD3477000533FFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1742,14 +1813,18 @@
 				6C3A309D1CD3538A00533FFF /* MJRefreshComponent.m in Sources */,
 				6C3B8C8A1D0FC4DA0033F691 /* RXPrisonBreak.m in Sources */,
 				6C862FC21D5876C500EEB818 /* RXThreeLinkageAddress.m in Sources */,
+				6CDB2CCD1D9E0DA800B07530 /* CollectionViewCell.m in Sources */,
 				6C3F7BB11D07E02B0046C29C /* RXLocationController.m in Sources */,
 				6CA608581D37991F00A6C088 /* UIImageView+fadeInFadeOut.m in Sources */,
 				6C3A309E1CD3538A00533FFF /* MJRefreshFooter.m in Sources */,
 				6CA1600A1CF3432D009DCE60 /* RXNewHomeCollectionViewCell.m in Sources */,
 				6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */,
+				6CDB2CD71D9E0E3400B07530 /* RXSearchButtonWidthModel.m in Sources */,
 				6CA4345E1CD9E5AF00641785 /* UIImage+MultiFormat.m in Sources */,
 				6CA608561D37991F00A6C088 /* UIImage+ImageEffects.m in Sources */,
+				6CDB2CCE1D9E0DA800B07530 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				6C862FC11D5876C500EEB818 /* RXOneLinkageTreeAddress.m in Sources */,
+				6CDB2CBC1D9E0CAD00B07530 /* RXSearchViewController.m in Sources */,
 				6C3A30D41CD360DC00533FFF /* RXCharacter.m in Sources */,
 				6C9D12551D7D407000694C52 /* RXMenuViewCollectionCell.m in Sources */,
 				6C3A2FD41CD3477000533FFF /* AppDelegate.m in Sources */,
@@ -1769,6 +1844,7 @@
 				6C816C1F1CF83D6F00823507 /* RXMineHeader.m in Sources */,
 				6C5B54741D76814E00A7577F /* RXDateTimePicker.m in Sources */,
 				6C5B54771D76825700A7577F /* RXMineCreateDateController.m in Sources */,
+				6CDB2CD11D9E0DA800B07530 /* CollectionReusableViewHistory.m in Sources */,
 				6C25DA641CFED20200E65A38 /* RXLoLInfoViewController.m in Sources */,
 				6CF4ACA61D01BB1400CD17CB /* RXMineCell.m in Sources */,
 				6C862FBC1D5876C500EEB818 /* RXGetArea.m in Sources */,
@@ -1808,6 +1884,7 @@
 				6CA008801D112DBE00D7B04E /* RXShortcutItem.m in Sources */,
 				6C862FBE1D5876C500EEB818 /* RXJDAddressPickerView.m in Sources */,
 				6C3A30631CD352AA00533FFF /* AFAutoPurgingImageCache.m in Sources */,
+				6CDB2CD31D9E0DA800B07530 /* CollectionReusableViewHot.m in Sources */,
 				6C3A30621CD352AA00533FFF /* AFURLSessionManager.m in Sources */,
 				6CA4345F1CD9E5AF00641785 /* UIImage+WebP.m in Sources */,
 				6CF322651CD89D65009BD1B7 /* RXFalseDataController.m in Sources */,
@@ -1847,6 +1924,7 @@
 				6C00AFF61D4054FD00EA7221 /* RXAFNS.m in Sources */,
 				6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */,
 				6CD0EB9C1D21159900692886 /* OpenUDID.m in Sources */,
+				6CDB2CCF1D9E0DA800B07530 /* CollectionReusableViewClass.m in Sources */,
 				6C3A309B1CD3538A00533FFF /* MJRefreshAutoFooter.m in Sources */,
 				6C11FD181CF6B7CB00BE323D /* RXNetworkCheck.m in Sources */,
 				6CA434281CD9C42400641785 /* RXUploadImageController.m in Sources */,

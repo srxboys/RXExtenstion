@@ -146,7 +146,7 @@
 
 /// 返回当前日期时间
 + (double)randomNowDate {
-    double timeNow = ceil([[NSDate date] timeIntervalSinceNow]);
+    double timeNow = ceil([[NSDate date] timeIntervalSince1970]);
     return timeNow;
 }
 

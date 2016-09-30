@@ -29,7 +29,7 @@
 #define RXNetworksStatusPhone @"RXNetworksStatusPhone"
 
 
-#define ALog(format, ...) NSLog((@"%s [L%d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define ALog(format, ...) NSLog((@"\n  **srxboys**-->> %s [L%d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 
 #ifdef DEBUG
 #define RXLog(format, ...) ALog(format, ##__VA_ARGS__)

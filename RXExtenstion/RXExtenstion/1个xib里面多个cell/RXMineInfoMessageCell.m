@@ -71,7 +71,7 @@
     NSString * sexStr = [NSString stringWithFormat:@"%zd", model.sex];
     _sexLabel.text = sexStr.length <= 0 ? @"默认" : sexStr;
     if(_sexLabel == nil) {
-        NSLog(@"%s all cell.content=nil -- 0", __FUNCTION__);
+        RXLog(@"%s all cell.content=nil -- 0", __FUNCTION__);
     }
 }
 
@@ -87,7 +87,7 @@
     _sexLabel.text = seniorityStr.length <= 0 ? @"不知道" : seniorityStr;
     
     if(_sexLabel == nil) {
-        NSLog(@"%s all cell.content=nil -- 0", __FUNCTION__);
+        RXLog(@"%s all cell.content=nil -- 0", __FUNCTION__);
     }
 }
 

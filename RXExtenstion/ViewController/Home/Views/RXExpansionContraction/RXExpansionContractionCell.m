@@ -33,7 +33,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
-    NSLog(@"2222=%s", __FUNCTION__);
+    RXLog(@"2222=%s", __FUNCTION__);
     
     if(self) {
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];

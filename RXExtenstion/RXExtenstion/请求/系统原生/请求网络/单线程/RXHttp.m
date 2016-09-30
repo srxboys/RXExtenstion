@@ -20,7 +20,7 @@
     
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     if(request == nil) {
-        NSLog(@"Post invalid request");
+        RXLog(@"Post invalid request");
         completion (nil, @"Post invalid request");
         return;
     }

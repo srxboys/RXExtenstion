@@ -87,13 +87,13 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     NSInteger section = _sourceArray.count;
-    NSLog(@"section=%zd", section);
+    RXLog(@"section=%zd", section);
     return section;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     NSInteger count = ((NSArray *)_sourceArray[section]).count;
-    NSLog(@"section=%zd--里的元素有=%zd", section, count);
+    RXLog(@"section=%zd--里的元素有=%zd", section, count);
     return count;
 }
 
@@ -148,7 +148,7 @@
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
     
-    NSLog(@"\n\n----selected----\nsection=%zd,,row=%zd,,,str=%@",section, row ,_sourceArray[section][row]);
+    RXLog(@"\n\n----selected----\nsection=%zd,,row=%zd,,,str=%@",section, row ,_sourceArray[section][row]);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {

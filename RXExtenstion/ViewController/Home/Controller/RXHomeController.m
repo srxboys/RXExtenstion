@@ -34,9 +34,9 @@
     
     
 //    NSDictionary * dit = @{@1:@""};
-//    NSLog(@"dict%@", dit);
-//    NSLog(@"dict_value=%@", [dit objectForKey:[NSNumber numberWithUnsignedInteger:1]]);
-//    NSLog(@"dict_2222=%@", dit[@"1"]);
+//    RXLog(@"dict%@", dit);
+//    RXLog(@"dict_value=%@", [dit objectForKey:[NSNumber numberWithUnsignedInteger:1]]);
+//    RXLog(@"dict_2222=%@", dit[@"1"]);
     
     
     [self configUI];

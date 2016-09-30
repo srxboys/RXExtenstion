@@ -66,7 +66,7 @@
     
 //    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
 //    for (NSHTTPCookie *cookie in [cookieJar cookies]) {
-//        NSLog(@"cookie=%@", cookie);
+//        RXLog(@"cookie=%@", cookie);
 //    }
 //    
 //    //清楚cookie
@@ -78,7 +78,7 @@
 //    
 //    NSHTTPCookieStorage *cookieJar3 = [NSHTTPCookieStorage sharedHTTPCookieStorage];
 //    for (NSHTTPCookie *cookie in [cookieJar3 cookies]) {
-//        NSLog(@"cookie=%@", cookie);
+//        RXLog(@"cookie=%@", cookie);
 //    }
     
 }

@@ -192,6 +192,10 @@
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/AFNS.png)
 
 ###更新日志
+2016-9-5
+增加:
+* 添加 横滚动菜单(UICollectionView实现) 中样式，菜单标签 总宽度小于屏幕，就平分铺满屏
+
 2016-8-31
 增加:
 * 添加 收货地址 3中样式

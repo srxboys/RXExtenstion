@@ -71,7 +71,7 @@
     NSInteger count = menuListArray.count;
     if(count > 0) {
         self.hidden = NO;
-        if(count < 5) {
+        if(_cellWidth < roundf(ScreenWidth / count * 1.0)) {
             _cellWidth = roundf(ScreenWidth / count * 1.0);
         }
         [_collectionView reloadData];

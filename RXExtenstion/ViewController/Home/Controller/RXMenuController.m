@@ -21,13 +21,13 @@
 @interface RXMenuController ()<RXTableViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 {
     RXMenu         * _menu;
-    
+    //------------------------------------
     RXTableView    * _tableView;
-    
+    //------------------------------------
     RXMenuView     * _menuView;
     UICollectionViewFlowLayout * _flowLayout;
     UICollectionView * _collectionView;
-    
+    //------------------------------------
     NSMutableArray * _menuArray;
     NSMutableArray * _listArray;
 }

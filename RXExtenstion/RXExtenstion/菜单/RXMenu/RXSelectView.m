@@ -1,10 +1,11 @@
 //
 //  RXSelectView.m
-//  Test_Menu
+//  RXExtenstion
 //
 //  Created by srx on 16/6/6.
-//  Copyright © 2016年 srxboys. All rights reserved.
+//  Copyright © 2016年 https://github.com/srxboys. All rights reserved.
 //
+
 
 #import "RXSelectView.h"
 #import "RXDataModel.h"

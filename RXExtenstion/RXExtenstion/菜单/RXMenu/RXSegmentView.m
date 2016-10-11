@@ -1,10 +1,11 @@
 //
 //  RXSegmentView.m
-//  Test_Menu
+//  RXExtenstion
 //
 //  Created by srx on 16/6/6.
-//  Copyright © 2016年 srxboys. All rights reserved.
+//  Copyright © 2016年 https://github.com/srxboys. All rights reserved.
 //
+
 
 #import "RXSegmentView.h"
 #import "RXSegmentButton.h"
@@ -54,13 +55,13 @@
         _tempButton = button;
         if(!_viewExpansion) {
             _viewExpansion = YES;
-//            NSLog(@"---展开2222---");
+//            RXLog(@"---展开2222---");
             [self segmentViewExpansion:_viewExpansion];
         }
     }
     else if(!_viewExpansion){
         //展开
-//        NSLog(@"---展开---");
+//        RXLog(@"---展开---");
         _tempButton = button;
         _viewExpansion = YES;
         [self segmentViewExpansion:YES];
@@ -68,20 +69,20 @@
     }
     else {
         //收缩
-//        NSLog(@"---收缩---");
+//        RXLog(@"---收缩---");
         _tempButton.selected = NO;
         _viewExpansion = NO;
         [self segmentViewExpansion:_viewExpansion];
     }
     
-//    NSLog(@"method=%s----button.tag=%zd", __FUNCTION__, button.rxTag);
+//    RXLog(@"method=%s----button.tag=%zd", __FUNCTION__, button.rxTag);
     if([self.delegate respondsToSelector:@selector(rxSegmentViewClickIndex:)]) {
         [self.delegate rxSegmentViewClickIndex:button.rxTag];
     }
 }
 
 - (void)segmentViewExpansion:(BOOL)expansion {
-//    NSLog(@"method=%s----", __FUNCTION__);
+//    RXLog(@"method=%s----", __FUNCTION__);
     if([self.delegate respondsToSelector:@selector(rxSegmentViewExpansion: index:)]) {
         [self.delegate rxSegmentViewExpansion:expansion index:_tempButton.rxTag];
     }

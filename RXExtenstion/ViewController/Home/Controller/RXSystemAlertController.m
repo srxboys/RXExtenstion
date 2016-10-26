@@ -100,6 +100,9 @@ NSString * const sds __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_7_0);
 // >= iOS8 可用
 - (void)dd NS_AVAILABLE_IOS(8_0);
 
+NS_DEPRECATED_IOS(2_0,3_0)
+//表示该函数只能在IOS2.0 和 IOS3.0之间使用
+
 @end
 
 

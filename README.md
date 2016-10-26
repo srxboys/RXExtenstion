@@ -1,8 +1,15 @@
 # RXExtenstion
+[![Platform](https://img.shields.io/badge/platform-iOS-red.svg)](https://developer.apple.com/iphone/index.action)
+[![Language](http://img.shields.io/badge/language-OC-yellow.svg?style=flat
+             )](https://en.wikipedia.org/wiki/Objective-C)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://mit-license.org)
+<br> `图片来源: http://shields.io`
+<br>
 ###iOS 项目基本框架
 ######1、简易的MVC框架;
 ######2、主要是`扩展方法`，方便开发;
 ######3、避免常见的bug。
+
 -
 ### 带有效果展示
 ### 1、`UILabel自适应高度的3种方法`

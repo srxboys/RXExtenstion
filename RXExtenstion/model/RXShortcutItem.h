@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, RXItemType) {
 @end
 
 #pragma mark --------------上面的还没用到-------------------------------
-@interface RXShortcutItem : NSObject
+@interface RXShortcutItem : NSObject<NSCoding>
 @property (nonatomic, assign) UIApplicationShortcutIconType rxIconType;
                                             //用户自定义图片
 @property (nonatomic, copy)   NSString        * rxIconImageName;
@@ -46,4 +46,9 @@ typedef NS_ENUM(NSInteger, RXItemType) {
 
 ///自定义图标的icon
 - (void)setShortcutItemWithIconImageName:(NSString *)iconImageName ItemTypeString:(NSString *)itemTypeString ItemTitle:(NSString *)itemTitle ItemSubTitle:(NSString *)itemSubTitle hidden:(BOOL)hidden;
+
++ (NSArray *)readerCanSettingAllReject:(NSArray *)array;
++ (BOOL)writeLocalDataWithArray:(NSArray *)array;
++ (NSArray *)readerLocalData;
++ (BOOL)removeLocalData;
 @end

@@ -99,7 +99,6 @@
 		6C5B547A1D76831E00A7577F /* RXDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B54791D76831E00A7577F /* RXDatePicker.m */; };
 		6C5B547E1D76942E00A7577F /* UIImageView_说明.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B547D1D76942E00A7577F /* UIImageView_说明.txt */; };
 		6C7B91471D0D809000496C4F /* RXMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B91461D0D809000496C4F /* RXMenuController.m */; };
-		6C816C1F1CF83D6F00823507 /* RXMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C816C1E1CF83D6F00823507 /* RXMineHeader.m */; };
 		6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */; };
 		6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */; };
 		6C84802C1CF6F9D10052C3BF /* NSDateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C84802B1CF6F9D10052C3BF /* NSDateUtilities.m */; };
@@ -182,6 +181,10 @@
 		6CE825F01D3CA7BA006EE76F /* UIImageView+OnlineImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825EB1D3CA7BA006EE76F /* UIImageView+OnlineImage.m */; };
 		6CEB36A71D5ABEA600283562 /* RXMineInfoMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB36A51D5ABEA600283562 /* RXMineInfoMessageCell.m */; };
 		6CEB36A81D5ABEA600283562 /* RXMineInfoMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB36A61D5ABEA600283562 /* RXMineInfoMessageCell.xib */; };
+		6CF1AC6E1DC18EBA00D411A2 /* RXMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AC6A1DC18EBA00D411A2 /* RXMineCell.m */; };
+		6CF1AC6F1DC18EBA00D411A2 /* RXMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1AC6B1DC18EBA00D411A2 /* RXMineCell.xib */; };
+		6CF1AC701DC18EBA00D411A2 /* RXMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AC6D1DC18EBA00D411A2 /* RXMineHeader.m */; };
+		6CF1AC771DC1F47A00D411A2 /* RX3DCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AC761DC1F47A00D411A2 /* RX3DCell.m */; };
 		6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322451CD71368009BD1B7 /* RXBaseViewController.m */; };
 		6CF3224F1CD86C67009BD1B7 /* RXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3224E1CD86C67009BD1B7 /* RXTabBarController.m */; };
 		6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF322511CD87077009BD1B7 /* RXNavBaseController.m */; };
@@ -191,8 +194,6 @@
 		6CF4AC9B1D01A89400CD17CB /* RXExpansionContractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4AC9A1D01A89400CD17CB /* RXExpansionContractionController.m */; };
 		6CF4AC9E1D01A91800CD17CB /* RXExpanCCellHeightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4AC9D1D01A91800CD17CB /* RXExpanCCellHeightModel.m */; };
 		6CF4ACA21D01A9F100CD17CB /* RXExpansionContractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4ACA11D01A9F100CD17CB /* RXExpansionContractionCell.m */; };
-		6CF4ACA61D01BB1400CD17CB /* RXMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4ACA41D01BB1400CD17CB /* RXMineCell.m */; };
-		6CF4ACA71D01BB1400CD17CB /* RXMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF4ACA51D01BB1400CD17CB /* RXMineCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -399,8 +400,6 @@
 		6C5B547D1D76942E00A7577F /* UIImageView_说明.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIImageView_说明.txt"; sourceTree = "<group>"; };
 		6C7B91451D0D809000496C4F /* RXMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuController.h; sourceTree = "<group>"; };
 		6C7B91461D0D809000496C4F /* RXMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenuController.m; sourceTree = "<group>"; };
-		6C816C1D1CF83D6F00823507 /* RXMineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineHeader.h; sourceTree = "<group>"; };
-		6C816C1E1CF83D6F00823507 /* RXMineHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineHeader.m; sourceTree = "<group>"; };
 		6C8480241CF6F9310052C3BF /* NSArray+RXArrLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXArrLog.h"; sourceTree = "<group>"; };
 		6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RXArrLog.m"; sourceTree = "<group>"; };
 		6C8480271CF6F93F0052C3BF /* NSDictionary+RXDictLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RXDictLog.h"; sourceTree = "<group>"; };
@@ -556,6 +555,13 @@
 		6CEB36A41D5ABEA600283562 /* RXMineInfoMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineInfoMessageCell.h; sourceTree = "<group>"; };
 		6CEB36A51D5ABEA600283562 /* RXMineInfoMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineInfoMessageCell.m; sourceTree = "<group>"; };
 		6CEB36A61D5ABEA600283562 /* RXMineInfoMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXMineInfoMessageCell.xib; sourceTree = "<group>"; };
+		6CF1AC691DC18EBA00D411A2 /* RXMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineCell.h; sourceTree = "<group>"; };
+		6CF1AC6A1DC18EBA00D411A2 /* RXMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineCell.m; sourceTree = "<group>"; };
+		6CF1AC6B1DC18EBA00D411A2 /* RXMineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXMineCell.xib; sourceTree = "<group>"; };
+		6CF1AC6C1DC18EBA00D411A2 /* RXMineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineHeader.h; sourceTree = "<group>"; };
+		6CF1AC6D1DC18EBA00D411A2 /* RXMineHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineHeader.m; sourceTree = "<group>"; };
+		6CF1AC751DC1F47A00D411A2 /* RX3DCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RX3DCell.h; sourceTree = "<group>"; };
+		6CF1AC761DC1F47A00D411A2 /* RX3DCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RX3DCell.m; sourceTree = "<group>"; };
 		6CF322441CD71368009BD1B7 /* RXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXBaseViewController.h; sourceTree = "<group>"; };
 		6CF322451CD71368009BD1B7 /* RXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXBaseViewController.m; sourceTree = "<group>"; };
 		6CF322471CD7153E009BD1B7 /* RXMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMessage.h; sourceTree = "<group>"; };
@@ -574,9 +580,6 @@
 		6CF4AC9D1D01A91800CD17CB /* RXExpanCCellHeightModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXExpanCCellHeightModel.m; sourceTree = "<group>"; };
 		6CF4ACA01D01A9F100CD17CB /* RXExpansionContractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXExpansionContractionCell.h; sourceTree = "<group>"; };
 		6CF4ACA11D01A9F100CD17CB /* RXExpansionContractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXExpansionContractionCell.m; sourceTree = "<group>"; };
-		6CF4ACA31D01BB1400CD17CB /* RXMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineCell.h; sourceTree = "<group>"; };
-		6CF4ACA41D01BB1400CD17CB /* RXMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineCell.m; sourceTree = "<group>"; };
-		6CF4ACA51D01BB1400CD17CB /* RXMineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXMineCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1503,6 +1506,27 @@
 			path = "1个xib里面多个cell";
 			sourceTree = "<group>";
 		};
+		6CF1AC681DC18EBA00D411A2 /* RXMineView */ = {
+			isa = PBXGroup;
+			children = (
+				6CF1AC691DC18EBA00D411A2 /* RXMineCell.h */,
+				6CF1AC6A1DC18EBA00D411A2 /* RXMineCell.m */,
+				6CF1AC6B1DC18EBA00D411A2 /* RXMineCell.xib */,
+				6CF1AC6C1DC18EBA00D411A2 /* RXMineHeader.h */,
+				6CF1AC6D1DC18EBA00D411A2 /* RXMineHeader.m */,
+			);
+			path = RXMineView;
+			sourceTree = "<group>";
+		};
+		6CF1AC741DC1F46000D411A2 /* RXMine3DTouch */ = {
+			isa = PBXGroup;
+			children = (
+				6CF1AC751DC1F47A00D411A2 /* RX3DCell.h */,
+				6CF1AC761DC1F47A00D411A2 /* RX3DCell.m */,
+			);
+			path = RXMine3DTouch;
+			sourceTree = "<group>";
+		};
 		6CF322391CD712F6009BD1B7 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
@@ -1638,11 +1662,8 @@
 		6CF3225A1CD879BF009BD1B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6C816C1D1CF83D6F00823507 /* RXMineHeader.h */,
-				6C816C1E1CF83D6F00823507 /* RXMineHeader.m */,
-				6CF4ACA31D01BB1400CD17CB /* RXMineCell.h */,
-				6CF4ACA41D01BB1400CD17CB /* RXMineCell.m */,
-				6CF4ACA51D01BB1400CD17CB /* RXMineCell.xib */,
+				6CF1AC741DC1F46000D411A2 /* RXMine3DTouch */,
+				6CF1AC681DC18EBA00D411A2 /* RXMineView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1759,10 +1780,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CF1AC6F1DC18EBA00D411A2 /* RXMineCell.xib in Resources */,
 				6C3A30121CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt in Resources */,
 				6C3A30A91CD3538A00533FFF /* MJRefresh.bundle in Resources */,
 				6C3E08721D6E9190006D4EB5 /* Assets.xcassets in Resources */,
-				6CF4ACA71D01BB1400CD17CB /* RXMineCell.xib in Resources */,
 				6CDB2CD21D9E0DA800B07530 /* CollectionReusableViewHistory.xib in Resources */,
 				6CEB36A81D5ABEA600283562 /* RXMineInfoMessageCell.xib in Resources */,
 				6C5B547E1D76942E00A7577F /* UIImageView_说明.txt in Resources */,
@@ -1811,6 +1832,7 @@
 				6C3A30A21CD3538A00533FFF /* MJRefreshAutoStateFooter.m in Sources */,
 				6C3A305F1CD352AA00533FFF /* AFSecurityPolicy.m in Sources */,
 				6C3A309D1CD3538A00533FFF /* MJRefreshComponent.m in Sources */,
+				6CF1AC6E1DC18EBA00D411A2 /* RXMineCell.m in Sources */,
 				6C3B8C8A1D0FC4DA0033F691 /* RXPrisonBreak.m in Sources */,
 				6C862FC21D5876C500EEB818 /* RXThreeLinkageAddress.m in Sources */,
 				6CDB2CCD1D9E0DA800B07530 /* CollectionViewCell.m in Sources */,
@@ -1841,12 +1863,10 @@
 				6C84802C1CF6F9D10052C3BF /* NSDateUtilities.m in Sources */,
 				6CF4AC9B1D01A89400CD17CB /* RXExpansionContractionController.m in Sources */,
 				6CBE24631D5DD984006AAB11 /* RXWebKitViewController.m in Sources */,
-				6C816C1F1CF83D6F00823507 /* RXMineHeader.m in Sources */,
 				6C5B54741D76814E00A7577F /* RXDateTimePicker.m in Sources */,
 				6C5B54771D76825700A7577F /* RXMineCreateDateController.m in Sources */,
 				6CDB2CD11D9E0DA800B07530 /* CollectionReusableViewHistory.m in Sources */,
 				6C25DA641CFED20200E65A38 /* RXLoLInfoViewController.m in Sources */,
-				6CF4ACA61D01BB1400CD17CB /* RXMineCell.m in Sources */,
 				6C862FBC1D5876C500EEB818 /* RXGetArea.m in Sources */,
 				6CA4345D1CD9E5AF00641785 /* UIImage+GIF.m in Sources */,
 				6CF4ACA21D01A9F100CD17CB /* RXExpansionContractionCell.m in Sources */,
@@ -1874,6 +1894,7 @@
 				6C5B547A1D76831E00A7577F /* RXDatePicker.m in Sources */,
 				6CA4345C1CD9E5AF00641785 /* UIButton+WebCache.m in Sources */,
 				6C3A30601CD352AA00533FFF /* AFURLRequestSerialization.m in Sources */,
+				6CF1AC771DC1F47A00D411A2 /* RX3DCell.m in Sources */,
 				6C9D125D1D7D5C5B00694C52 /* RXMenuControllerCell.m in Sources */,
 				6C00B0071D4057E100EA7221 /* NSDictionary+NSStringUTF8.m in Sources */,
 				6CA434611CD9E5AF00641785 /* UIImageView+WebCache.m in Sources */,
@@ -1919,6 +1940,7 @@
 				6CA434621CD9E5AF00641785 /* UIView+WebCacheOperation.m in Sources */,
 				6C3A306A1CD352AA00533FFF /* UIRefreshControl+AFNetworking.m in Sources */,
 				6CF4AC9E1D01A91800CD17CB /* RXExpanCCellHeightModel.m in Sources */,
+				6CF1AC701DC18EBA00D411A2 /* RXMineHeader.m in Sources */,
 				6C9D12581D7D40AF00694C52 /* RXMenuModel.m in Sources */,
 				6C25DA5D1CFEBDA900E65A38 /* RXMineWebViewController.m in Sources */,
 				6C00AFF61D4054FD00EA7221 /* RXAFNS.m in Sources */,

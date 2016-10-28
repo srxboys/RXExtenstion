@@ -189,6 +189,8 @@
 ```
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/datePicker/datePicker.gif)
 
+### 8、`3D Touch 自定制`
+![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/3DTouch/srxboys_3DTouch.gif)
 
 
 ### [我的demo 百度网盘](http://pan.baidu.com/s/1hqH9ZNI) 

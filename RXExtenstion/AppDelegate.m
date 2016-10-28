@@ -86,9 +86,14 @@
 //        return;//这个判断设备是不是支持3D Touch
         //由于我的设备不多，就没 较真
 //    }
+    //删除
+//    [RXShortcutItem removeLocalData];
     
-    NSArray * array = [TTCacheUtil objectFromFile:RXShortcutItemLocalArray];
-    if(array.count > 0) {
+    //获取
+    NSArray * array = [RXShortcutItem readerLocalData];
+    
+    
+    if(array.count > 0 && array != nil) {
         //有数据，就不做判断,,在设置页面就有
         //在没有改变 3D-touch选项时，就不用第二次赋值
         return;
@@ -96,7 +101,6 @@
     
     // 3D-Touch 默认值
     NSMutableArray * mutableArray = [[NSMutableArray alloc] init];
-    NSMutableArray * cacheArray   = [[NSMutableArray alloc] init];
     
     for(NSInteger i = 0; i < 4; i++) {
         //最好用自定义图片的，不然还需要判断版本
@@ -116,7 +120,7 @@
             //iOS > 9.0
             rxIconType = UIApplicationShortcutIconTypeSearch;
             rxItemTitle = @"搜索";
-            rxItemSubTitle = @" ";
+            rxItemSubTitle = @"";
         }
         else if(i == 2) {
             //iOS > 9.0
@@ -131,12 +135,6 @@
             rxItemSubTitle = @"我的-3D touch 定制";
         }
         
-        
-        [cacheArray addObject:@{@"rxIconType"    : @(rxIconType),
-                               @"rxItemTitle"    : rxItemTitle,
-                               @"rxItemSubTitle" : rxItemSubTitle}];
-        //注意，字典不能有空值，哪怕空格代替
-        
         model.rxIconType = rxIconType;
         model.rxItemTitle = rxItemTitle;
         model.rxItemSubTitle = rxItemSubTitle;
@@ -145,14 +143,14 @@
     }
     
     [self setShortcutItem:mutableArray];
-    [TTCacheUtil writeObject:cacheArray toFile:RXShortcutItemLocalArray];
     
 }
 
 //用数据模型 给3D touch
 - (void)setShortcutItem:(NSArray *)array {
+    [RXShortcutItem writeLocalDataWithArray:array];
     
-    if(array.count <= 0) return;
+    if(array.count <= 0 || array == nil) return;
     
     NSMutableArray * mutableArray = [[NSMutableArray alloc] init];
 

@@ -14,5 +14,6 @@
 
 #pragma mark - ~~~~~~~~~~~ 3D-Touch ~~~~~~~~~~~~~~~
 - (void)checkShortcutItem;
+- (void)setShortcutItem:(NSArray *)array;
 @end
 

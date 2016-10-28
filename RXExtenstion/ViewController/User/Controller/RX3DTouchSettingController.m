@@ -124,6 +124,7 @@
             [_souceArray removeObjectAtIndex:i];
             [_tableView reloadData];
         }
+        _isNeedReload = NO;//已经刷新过了，就不要在刷新了
     }
     
     [SharedAppDelegate setShortcutItem:_souceArray];

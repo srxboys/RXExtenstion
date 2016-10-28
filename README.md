@@ -32,9 +32,9 @@
     //第三种 对于特殊文字、字符，计算的结果并不满人意
     CGFloat width = 200;//当宽度是已知的。
     _textHeight = [label boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) 
-                  options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:
-                    @{NSFontAttributeName: label.font} 
-                    context:nil].size.height;
+                  options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading
+                  attributes: @{NSFontAttributeName: label.font} 
+                  context:nil].size.height;
 ```
 ### 1、看看效果
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/label/srxboys_UILabel1.gif)

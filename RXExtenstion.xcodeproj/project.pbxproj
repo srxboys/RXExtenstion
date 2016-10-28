@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4B66841DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B66831DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m */; };
+		3B4B66881DC32F1F003DF3B3 /* ZZDragCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B66871DC32F1F003DF3B3 /* ZZDragCollectionView.m */; };
+		3B4B668C1DC337E7003DF3B3 /* RXDragCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B668A1DC337E7003DF3B3 /* RXDragCell.m */; };
+		3B4B668D1DC337E7003DF3B3 /* RXDragCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B4B668B1DC337E7003DF3B3 /* RXDragCell.xib */; };
 		6C0047E71D2FA5B100EBE004 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0047E61D2FA5B100EBE004 /* NotificationCenter.framework */; };
 		6C0047EB1D2FA5B100EBE004 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0047EA1D2FA5B100EBE004 /* TodayViewController.m */; };
 		6C0047EE1D2FA5B100EBE004 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0047EC1D2FA5B100EBE004 /* MainInterface.storyboard */; };
@@ -221,6 +225,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B4B66821DC32B7C003DF3B3 /* RXNew3DTouchSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNew3DTouchSettingController.h; sourceTree = "<group>"; };
+		3B4B66831DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNew3DTouchSettingController.m; sourceTree = "<group>"; };
+		3B4B66861DC32F1F003DF3B3 /* ZZDragCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZDragCollectionView.h; sourceTree = "<group>"; };
+		3B4B66871DC32F1F003DF3B3 /* ZZDragCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZDragCollectionView.m; sourceTree = "<group>"; };
+		3B4B66891DC337E7003DF3B3 /* RXDragCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RXDragCell.h; path = ../RXMineView/RXDragCell.h; sourceTree = "<group>"; };
+		3B4B668A1DC337E7003DF3B3 /* RXDragCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RXDragCell.m; path = ../RXMineView/RXDragCell.m; sourceTree = "<group>"; };
+		3B4B668B1DC337E7003DF3B3 /* RXDragCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RXDragCell.xib; path = ../RXMineView/RXDragCell.xib; sourceTree = "<group>"; };
 		6C0047E51D2FA5B100EBE004 /* RXToDay.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RXToDay.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C0047E61D2FA5B100EBE004 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		6C0047E91D2FA5B100EBE004 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -607,6 +618,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B4B66851DC32F1F003DF3B3 /* ZZDragCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B4B66861DC32F1F003DF3B3 /* ZZDragCollectionView.h */,
+				3B4B66871DC32F1F003DF3B3 /* ZZDragCollectionView.m */,
+			);
+			path = ZZDragCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		6C0017201D66A466002654F2 /* C */ = {
 			isa = PBXGroup;
 			children = (
@@ -869,6 +889,7 @@
 		6C3A2FE61CD3477E00533FFF /* RXExtenstion */ = {
 			isa = PBXGroup;
 			children = (
+				3B4B66851DC32F1F003DF3B3 /* ZZDragCollectionViewCell */,
 				6CA608471D37991F00A6C088 /* RXUIImageView */,
 				6C2A72671D2CF6B9000F1550 /* RXToast */,
 				6C3B8C871D0FC4C90033F691 /* RXPrisonBreak */,
@@ -1523,6 +1544,9 @@
 			children = (
 				6CF1AC751DC1F47A00D411A2 /* RX3DCell.h */,
 				6CF1AC761DC1F47A00D411A2 /* RX3DCell.m */,
+				3B4B66891DC337E7003DF3B3 /* RXDragCell.h */,
+				3B4B668A1DC337E7003DF3B3 /* RXDragCell.m */,
+				3B4B668B1DC337E7003DF3B3 /* RXDragCell.xib */,
 			);
 			path = RXMine3DTouch;
 			sourceTree = "<group>";
@@ -1646,6 +1670,8 @@
 				6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */,
 				6C9A9AC21D12A3EE004C02B0 /* RX3DTouchSettingController.h */,
 				6C9A9AC31D12A3EE004C02B0 /* RX3DTouchSettingController.m */,
+				3B4B66821DC32B7C003DF3B3 /* RXNew3DTouchSettingController.h */,
+				3B4B66831DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m */,
 				6CBE24611D5DD984006AAB11 /* RXWebKitViewController.h */,
 				6CBE24621D5DD984006AAB11 /* RXWebKitViewController.m */,
 			);
@@ -1787,6 +1813,7 @@
 				6CDB2CD21D9E0DA800B07530 /* CollectionReusableViewHistory.xib in Resources */,
 				6CEB36A81D5ABEA600283562 /* RXMineInfoMessageCell.xib in Resources */,
 				6C5B547E1D76942E00A7577F /* UIImageView_说明.txt in Resources */,
+				3B4B668D1DC337E7003DF3B3 /* RXDragCell.xib in Resources */,
 				6C3F7BAE1D07DFF10046C29C /* Location.storyboard in Resources */,
 				6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */,
 				6CDB2CD01D9E0DA800B07530 /* CollectionReusableViewClass.xib in Resources */,
@@ -1901,6 +1928,7 @@
 				6C3A30DD1CD36EC800533FFF /* RXMJHeaderGif.m in Sources */,
 				6C3A30201CD34E2B00533FFF /* RXBundle.m in Sources */,
 				6CA434581CD9E5AF00641785 /* SDWebImageDownloader.m in Sources */,
+				3B4B668C1DC337E7003DF3B3 /* RXDragCell.m in Sources */,
 				6CA15FEE1CF339B5009DCE60 /* SMPageControl.m in Sources */,
 				6CA008801D112DBE00D7B04E /* RXShortcutItem.m in Sources */,
 				6C862FBE1D5876C500EEB818 /* RXJDAddressPickerView.m in Sources */,
@@ -1946,9 +1974,11 @@
 				6C00AFF61D4054FD00EA7221 /* RXAFNS.m in Sources */,
 				6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */,
 				6CD0EB9C1D21159900692886 /* OpenUDID.m in Sources */,
+				3B4B66841DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m in Sources */,
 				6CDB2CCF1D9E0DA800B07530 /* CollectionReusableViewClass.m in Sources */,
 				6C3A309B1CD3538A00533FFF /* MJRefreshAutoFooter.m in Sources */,
 				6C11FD181CF6B7CB00BE323D /* RXNetworkCheck.m in Sources */,
+				3B4B66881DC32F1F003DF3B3 /* ZZDragCollectionView.m in Sources */,
 				6CA434281CD9C42400641785 /* RXUploadImageController.m in Sources */,
 				6C862FBF1D5876C500EEB818 /* RXJDButton.m in Sources */,
 				6C3A30681CD352AA00533FFF /* UIImageView+AFNetworking.m in Sources */,

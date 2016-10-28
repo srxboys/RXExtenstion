@@ -11,6 +11,7 @@
 #import "RXMineCreateDateController.h"
 #import "RX3DTouchSettingController.h"
 #import "RXWebKitViewController.h"
+#import "RXNew3DTouchSettingController.h"
 
 @interface RXMineInfoViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -32,7 +33,7 @@
 - (void)configUI {
     _tableView.tableFooterView = [[UIView alloc] init];
     
-    _dataSouceArray = @[@"新建地址时 选择地区 样式", @"日期、时间 选择 样式",@"3D Touch定制",@"WKWebKit"];
+    _dataSouceArray = @[@"新建地址时 选择地区 样式", @"日期、时间 选择 样式",@"3D Touch定制",@"WKWebKit",@"自定义可拖拽cell"];
     
 }
 
@@ -69,7 +70,11 @@
     else if (row == 3) {
         RXWebKitViewController * wxWebKit = [[RXWebKitViewController alloc] init];
         [self.navigationController pushViewController:wxWebKit animated:YES];
+    }else if (row == 4) {
+        RXNew3DTouchSettingController *rxNew3DTouchVC = [[RXNew3DTouchSettingController alloc] init];
+        [self.navigationController pushViewController:rxNew3DTouchVC animated:YES];
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {

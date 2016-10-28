@@ -31,7 +31,9 @@
 
     //第三种 对于特殊文字、字符，计算的结果并不满人意
     CGFloat width = 200;//当宽度是已知的。
-    _textHeight = [label boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: label.font} context:nil].size.height;
+    _textHeight = [label boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) 
+                  options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:
+                @{NSFontAttributeName: label.font} context:nil].size.height;
 ```
 ### 1、看看效果
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/label/srxboys_UILabel1.gif)
@@ -117,27 +119,39 @@
     weak(weakSelf);
 
     _onePicker = [[RXOneLinkageTreeAddress alloc] init];
-    _onePicker.isShow = ^ (BOOL isShow, NSString *address, NSString * addressCode){
-    RXLog(@"_onePicker\nisShow=%@, address=%@, addressCode=%@\n\n", isShow ? @"是" : @"否`", address, addressCode);
+    _onePicker.isShow = ^ (BOOL isShow, NSString *address, 
+                        NSString * addressCode){
+            RXLog(@"_onePicker\nisShow=%@, address=%@, 
+                        addressCode=%@\n\n", isShow ? @"是" : @"否`", 
+                        address, addressCode);
 
-    weakSelf.addressLabel.text = [NSString stringWithFormat:@"_onePicker isShow=%@, address=%@, addressCode=%@", isShow ? @"是" : @"否`", address, addressCode];
+            weakSelf.addressLabel.text = [NSString stringWithFormat:
+                        @"_onePicker isShow=%@, address=%@, addressCode=%@", 
+                        isShow ? @"是" : @"否`", address, addressCode];
     };
 
 
     _twoPicker = [[RXThreeLinkageAddress alloc] init];
-    _twoPicker.isShow = ^ (BOOL isShow, NSString *address, NSString * addressCode){
-    RXLog(@"_twoPicker\nisShow=%@, address=%@, addressCode=%@\n\n", isShow ? @"是" : @"否", address, addressCode);
+    _twoPicker.isShow = ^ (BOOL isShow, NSString *address, 
+                            NSString * addressCode){
+            RXLog(@"_twoPicker\nisShow=%@, address=%@, 
+                        addressCode=%@\n\n", isShow ? @"是" : @"否",
+                        address, addressCode);
 
-    weakSelf.addressLabel.text = [NSString stringWithFormat:@"_twoPicker  isShow=%@, address=%@, addressCode=%@", isShow ? @"是" : @"否", address, addressCode];
+            weakSelf.addressLabel.text = [NSString stringWithFormat:
+                        @"_twoPicker  isShow=%@, address=%@, addressCode=%@",
+                        isShow ? @"是" : @"否", address, addressCode];
 
     };
 
 
     _threePicker = [[RXJDAddressPickerView alloc] init];
-    _threePicker.completion = ^(NSString *address, NSString * addressCode){
-    RXLog(@"_threePicker\n, address=%@, addressCode=%@\n\n", address, addressCode);
+    _threePicker.completion = ^(NSString *address,
+                                NSString * addressCode){
+            RXLog(@"_threePicker\n, address=%@, addressCode=%@\n\n", address, addressCode);
 
-    weakSelf.addressLabel.text = [NSString stringWithFormat:@"_threePicker , address=%@, addressCode=%@", address, addressCode];
+            weakSelf.addressLabel.text = [NSString stringWithFormat:@"_threePicker , address=%@, addressCode=%@",
+                        address, addressCode];
     };
 
     // -- 我的项目 是把 这些 添加 appDelegate.window 上 --

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4B66841DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B66831DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m */; };
 		6C0047E71D2FA5B100EBE004 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0047E61D2FA5B100EBE004 /* NotificationCenter.framework */; };
 		6C0047EB1D2FA5B100EBE004 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0047EA1D2FA5B100EBE004 /* TodayViewController.m */; };
 		6C0047EE1D2FA5B100EBE004 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0047EC1D2FA5B100EBE004 /* MainInterface.storyboard */; };
@@ -221,6 +222,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B4B66821DC32B7C003DF3B3 /* RXNew3DTouchSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNew3DTouchSettingController.h; sourceTree = "<group>"; };
+		3B4B66831DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNew3DTouchSettingController.m; sourceTree = "<group>"; };
 		6C0047E51D2FA5B100EBE004 /* RXToDay.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RXToDay.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C0047E61D2FA5B100EBE004 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		6C0047E91D2FA5B100EBE004 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -1646,6 +1649,8 @@
 				6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */,
 				6C9A9AC21D12A3EE004C02B0 /* RX3DTouchSettingController.h */,
 				6C9A9AC31D12A3EE004C02B0 /* RX3DTouchSettingController.m */,
+				3B4B66821DC32B7C003DF3B3 /* RXNew3DTouchSettingController.h */,
+				3B4B66831DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m */,
 				6CBE24611D5DD984006AAB11 /* RXWebKitViewController.h */,
 				6CBE24621D5DD984006AAB11 /* RXWebKitViewController.m */,
 			);
@@ -1946,6 +1951,7 @@
 				6C00AFF61D4054FD00EA7221 /* RXAFNS.m in Sources */,
 				6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */,
 				6CD0EB9C1D21159900692886 /* OpenUDID.m in Sources */,
+				3B4B66841DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m in Sources */,
 				6CDB2CCF1D9E0DA800B07530 /* CollectionReusableViewClass.m in Sources */,
 				6C3A309B1CD3538A00533FFF /* MJRefreshAutoFooter.m in Sources */,
 				6C11FD181CF6B7CB00BE323D /* RXNetworkCheck.m in Sources */,

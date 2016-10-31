@@ -11,6 +11,7 @@
 ######3、避免常见的bug。
 
 -
+
 ### 带有效果展示
 ### 1、`UILabel自适应高度的3种方法`
 ```objc
@@ -41,13 +42,17 @@
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/label/srxboys_UILabel2.gif)
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/label/srxboys_UILabel3.gif)
 
-### [2、](http://weibo.com/1759864273/Dxsiixb4M?from=page_1005051759864273_profile&wvr=6&mod=weibotime&type=comment#_rnd1465802552136)[封装AFNetworking](http://blog.csdn.net/srxboys/article/details/50774553)
+-
 
+### [2、](http://weibo.com/1759864273/Dxsiixb4M?from=page_1005051759864273_profile&wvr=6&mod=weibotime&type=comment#_rnd1465802552136)[封装AFNetworking](http://blog.csdn.net/srxboys/article/details/50774553)
+-
 ### 3、`自定义点餐的菜单功能`
 ###只是简简单单的框架
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/Menu/srxboys_Menu.gif)
 
 这里我只是做了个框架，具体的界面美化和数据等等根据需求自己完善。而这个框架主要提供思路。
+
+-
 
 ### 4、`封装假数据`
 上面的不知道你观察了没有，很多文字、日期 + 时间、数字、图片等等 都是来自于 自动生成假数据 的类。下面介绍下:
@@ -80,6 +85,8 @@
 ```
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/falseData/srxboys_falseData.gif)
 
+-
+
 ### 5、`字符处理 、数组、 字典 -> 空处理`
 ```objc
     #import "RXCharacter.h"
@@ -108,6 +115,8 @@
     }
     @end
 ```
+
+-
 
 ### 6、`收货地址 地区 选择样式`
 ```objc
@@ -171,6 +180,8 @@
 ```
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/address/address.gif)
 
+-
+
 ### 7、`日期、时间 选择样式`
 ```objc
     _nomalDatePicker  = [[RXNomalDatePicker alloc] init];
@@ -204,14 +215,19 @@
 ```
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/datePicker/datePicker.gif)
 
+-
+
 ### 8、`3D Touch 自定制`
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/3DTouch/srxboys_3DTouch.gif)
 
+-
 
 ### [我的demo 百度网盘](http://pan.baidu.com/s/1hqH9ZNI) 
 
 ### [不是技术的技术博客](http://weibo.com/srxboys)
+
 -
+
 ### 接口必传字段处理
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/AFNS.png)
 

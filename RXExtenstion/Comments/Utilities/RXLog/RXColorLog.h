@@ -25,8 +25,8 @@
 
 /*
  //使用
-     TTLog(@"...");
-     TTLogError(@"...");
+     RXLog(@"...");
+     RXLogError(@"...");
  
  //安装Xcode插件
      1、下载安装 XcodeColors 插件。下载地址:https://github.com/robbiehanson/XcodeColors

@@ -16,6 +16,7 @@
 
 //------------
 //对于汉字打印处理
+#import "RXColorLog.h"
 #import "NSArray+RXArrLog.h"
 #import "NSDictionary+RXDictLog.h"
 //------------
@@ -28,14 +29,6 @@
 #define RXNetworksStatusWifi  @"RXNetworksStatusWifi"
 #define RXNetworksStatusPhone @"RXNetworksStatusPhone"
 
-
-#define ALog(format, ...) NSLog((@"\n  **srxboys**-->> %s [L%d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-
-#ifdef DEBUG
-#define RXLog(format, ...) ALog(format, ##__VA_ARGS__)
-#else
-#define RXLog(...)
-#endif
 
 #define SharedAppDelegate ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 

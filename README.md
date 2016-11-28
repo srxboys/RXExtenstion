@@ -231,6 +231,8 @@
 ### 接口必传字段处理
 ![srxboys](https://github.com/srxboys/RXExtenstion/blob/master/AFNS.png)
 
+### RXLog
+![srxboys_rxlog](https://github.com/srxboys/RXExtenstion/blob/master/srxboys/RXLog/RXLog.png)
 
 ~ ~ ~  coding ~ ~ ~ 
 

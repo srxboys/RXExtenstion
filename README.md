@@ -6,13 +6,13 @@
 <br> `图片来源: http://shields.io`
 <br>
 
-----
+-
 
 ### Wiki
 - [中文文档](https://github.com/srxboys/RXExtenstion/wiki/中文文档)
 - [English Home](https://github.com/srxboys/RXExtenstion/wiki/English-Home-pagee)
 
-----
+-
 
 ###iOS 项目基本框架
 ######1、简易的MVC框架;

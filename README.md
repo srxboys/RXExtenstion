@@ -10,7 +10,7 @@
 
 ### Wiki
 - [中文文档](https://github.com/srxboys/RXExtenstion/wiki/中文文档)
-- [English Home](https://github.com/srxboys/RXExtenstion/wiki/English-Home-pagee)
+- [English Home](https://github.com/srxboys/RXExtenstion/wiki/English-Home-page)
 
 -
 

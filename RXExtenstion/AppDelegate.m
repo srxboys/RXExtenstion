@@ -19,7 +19,10 @@
 #import "RXUUID.h"
 
 @interface AppDelegate ()
-
+{
+    UIWindow     * _messageWindow;
+    UILabel      * _messageLabel;
+}
 @end
 
 @implementation AppDelegate
@@ -245,21 +248,123 @@
     }
     
     //判断先前我们设置的快捷选项标签唯一标识，根据不同标识执行不同操作
-//    if([shortcutItem.type isEqualToString:@"com.mycompany.myapp.one"]){
-//        NSArray *arr = @[@"hello 3D Touch"];
-//        UIActivityViewController *vc = [[UIActivityViewController alloc]initWithActivityItems:arr applicationActivities:nil];
-//        [self.window.rootViewController presentViewController:vc animated:YES completion:^{
-//        }];
-//    } else if ([shortcutItem.type isEqualToString:@"com.mycompany.myapp.search"]) {//进入搜索界面
+    if([shortcutItem.type isEqualToString:@"com.mycompany.myapp.one"]){
+        NSArray *arr = @[@"hello 3D Touch"];
+        UIActivityViewController *vc = [[UIActivityViewController alloc]initWithActivityItems:arr applicationActivities:nil];
+        [self.window.rootViewController presentViewController:vc animated:YES completion:^{
+        }];
+    } else if ([shortcutItem.type isEqualToString:@"com.mycompany.myapp.search"]) {//进入搜索界面
 //        SearchViewController *childVC = [storyboard instantiateViewControllerWithIdentifier:@"searchController"];
 //        [mainNav pushViewController:childVC animated:NO];
-//    } else if ([shortcutItem.type isEqualToString:@"com.mycompany.myapp.share"]) {//进入分享界面
+    } else if ([shortcutItem.type isEqualToString:@"com.mycompany.myapp.share"]) {//进入分享界面
 //        SharedViewController *childVC = [storyboard instantiateViewControllerWithIdentifier:@"sharedController"];
 //        [mainNav pushViewController:childVC animated:NO];
-//    }
+    }
     
     if (completionHandler) {
         completionHandler(YES);
     }
 }
+
+
+
+
+
+/// 在键盘上的 window 显示 message
+- (void)configMessageWindow {
+    _messageWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _messageWindow.backgroundColor = [UIColor clearColor];
+    _messageLabel = [[UILabel alloc] init];
+    _messageLabel.font = [UIFont systemFontOfSize:16];
+    _messageLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.0];
+    _messageLabel.textColor = [UIColor whiteColor];
+    _messageLabel.textAlignment = NSTextAlignmentCenter;
+    [_messageWindow addSubview:_messageLabel];
+}
+
+- (void)showOnWindowMessage:(NSString *)message {
+    UIWindow *view = [[[UIApplication sharedApplication] delegate] window];
+    CGFloat level = view.windowLevel;
+    NSArray *windows = [UIApplication sharedApplication].windows;
+    for (UIWindow * windowView in windows) {
+        if(windowView.windowLevel > view.windowLevel) {
+            level = windowView.windowLevel;
+        }
+    }
+    _messageWindow.windowLevel = level + 1;
+    
+    _messageLabel.text = message;
+    CGFloat height = [_messageLabel textRectForBounds:CGRectMake(0, 0, 300, CGFLOAT_MAX) limitedToNumberOfLines:0].size.height;
+    
+    if(height < 50) {
+        height = 50;
+    }
+    else {
+        height += 10;
+    }
+    
+    CGFloat top = round((ScreenHeight - height)/2);
+    _messageLabel.frame = CGRectMake((ScreenWidth - 300)/2, top, 300, height);
+    _messageWindow.hidden = NO;
+    [_messageWindow makeKeyAndVisible];
+    
+    __weak typeof(self)weakSelf = self;
+    [UIView animateWithDuration:0.2 animations:^{
+        _messageLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
+    } completion:^(BOOL finished) {
+        [weakSelf performSelector:@selector(hiddenOnWindowMessage) withObject:nil afterDelay:2];
+    }];
+    
+}
+
+- (void)hiddenOnWindowMessage {
+    _messageWindow.hidden = YES;
+    _messageLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.0];
+    [self.window makeKeyAndVisible];
+}
+
+- (void) cleanCache {
+    //清除UIWebView的缓存//准确的说 是清除请求缓存
+    NSURLCache * cache = [NSURLCache sharedURLCache];
+    [cache removeAllCachedResponses];
+    [cache setDiskCapacity:0];
+    [cache setMemoryCapacity:0];
+}
+
+- (void)cleanCookies {
+    //清除 cookies
+    NSHTTPCookie * cookie;
+    NSHTTPCookieStorage * storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies]) {
+        [storage deleteCookie:cookie];
+    }
+}
+
+- (void)closeAllKeyboard {
+    for (UIWindow* window in [UIApplication sharedApplication].windows)
+    {
+        for (UIView* view in window.subviews)
+        {
+            [self dismissAllKeyBoardInView:view];
+        }
+    }
+}
+
+- (BOOL)dismissAllKeyBoardInView:(UIView *)view {
+    if([view isFirstResponder])
+    {
+        [view resignFirstResponder];
+        return YES;
+    }
+    for(UIView *subView in view.subviews)
+    {
+        if([self dismissAllKeyBoardInView:subView])
+        {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+
 @end

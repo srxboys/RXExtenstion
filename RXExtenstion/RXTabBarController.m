@@ -20,6 +20,8 @@
     RXHomeController     * _home;
     RXMineViewController * _mine;
     RXLocationController * _location;
+    
+    __weak RXBaseViewController * _currentController;
 }
 
 //当前 页面 0 ~
@@ -59,6 +61,8 @@
     
     _home = RXStroyBoard(@"Home", @"RXHomeController");
     [self setNavRootViewControll:_home titleStr:@"srxboys -> RX" imagePath:@"tab_0" selectedImagePath:@"tab_0_h"];
+    
+    _currentController = _home;
     
     _location = RXStroyBoard(@"Location", @"RXLocationController");
     [self setNavRootViewControll:_location titleStr:@"定位" imagePath:@"tab_0" selectedImagePath:@"tab_0_h"];
@@ -129,6 +133,8 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     RXNavBaseController * navVC = (RXNavBaseController *)viewController;
     
+    _currentController = [navVC.viewControllers firstObject];
+    
     RXLog(@"tabBar didSelect class=%@", NSStringFromClass([navVC.viewControllers[0] class]));
 }
 
@@ -142,5 +148,18 @@
     
     return YES;
 }
+
+- (void)tabBarControllSelectedIndex:(NSInteger)index {
+    if(self.viewControllers.count <= index) return;
+    
+    RXBaseViewController * baseCurrentController = _currentController;
+    
+    RXNavBaseController * navigation =((RXNavBaseController *)(self.viewControllers[index]));
+    navigation.viewControllers = @[[navigation.viewControllers firstObject]];
+    self.selectedIndex = index;
+    
+    [baseCurrentController.navigationController popToRootViewControllerAnimated:NO];
+}
+
 
 @end

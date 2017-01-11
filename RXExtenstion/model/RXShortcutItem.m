@@ -78,33 +78,33 @@
         
         if(i == 0) {
             //iOS > 9.1
-            rxIconType = UIApplicationShortcutIconTypeHome;
+            rxIconType = 0;
             rxItemTitle = @"首页";
             rxItemSubTitle = @"0";
         }
         else if(i == 1) {
             //iOS > 9.0
-            rxIconType = UIApplicationShortcutIconTypeSearch;
+            rxIconType = 1;
             rxItemTitle = @"搜索";
             rxItemSubTitle = @"1";
         }
         else if(i == 2) {
             //iOS > 9.0
-            rxIconType = UIApplicationShortcutIconTypeProhibit;
+            rxIconType = 2;
             rxItemTitle = @"什么";
             rxItemSubTitle = @"2";
         }
         else if (i == 3) {
             //iOS > 9.1
-            rxIconType = UIApplicationShortcutIconTypeContact;
+            rxIconType = 3;
             rxItemTitle = @"3D-Touch定制";
             rxItemSubTitle = @"我的-3D touch 定制";
         }
         else if (i == 4) {
             //iOS > 9.1
-            rxIconType = UIApplicationShortcutIconTypeAlarm;
-            rxItemTitle = @"警告";
-            rxItemSubTitle = @"安装警报器";
+            rxIconType = 4;
+            rxItemTitle = @"分享";
+            rxItemSubTitle = @"分 分 分";
         }
         else if (i == 5) {
             //iOS > 9.1

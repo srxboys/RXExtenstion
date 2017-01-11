@@ -82,6 +82,28 @@
 
 @end
 
+@implementation NSObject (dictBOOL)
+
+- (BOOL)dictBOOL {
+    if([self isKindOfClass:[NSNull class]]) {
+        return NO;
+    }
+    else if([self isKindOfClass:[NSString class]]) {
+        return NO;
+    }
+    else if([self isKindOfClass:[NSArray class]]) {
+        return NO;
+    }
+    else if([self isKindOfClass:[NSNumber class]]) {
+        return NO;
+    }
+    else {
+        return YES;
+    }
+}
+
+@end
+
 
 @implementation NSObject (urlBOOL)
 - (BOOL)urlBOOL {

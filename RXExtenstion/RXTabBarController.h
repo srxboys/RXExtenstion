@@ -10,6 +10,12 @@
 
 @interface RXTabBarController : UITabBarController
 
+/**
+ 切换tabBarItem 并是 seletedIndex的第一viewController
+ 内部不调用，供外部调用
+ */
+- (void)tabBarControllSelectedIndex:(NSInteger)index;
+
 @end
 
 

@@ -37,6 +37,11 @@
 - (NSArray *)arrValue;
 @end
 
+///是否是 字典
+@interface NSObject (dictBOOL)
+- (BOOL)dictBOOL;
+@end
+
 ///判断字符串是否 为 Url
 @interface NSObject (urlBOOL)
 - (BOOL)urlBOOL;

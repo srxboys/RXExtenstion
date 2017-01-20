@@ -68,6 +68,10 @@
         [self.navigationController pushViewController:DTouchController animated:YES];
     }
     else if (row == 3) {
+        if(!iOS8OrLater) {
+            [self showToast:@"当前系统不支持WebKit.frameworks"];
+            return;
+        }
         RXWebKitViewController * wxWebKit = [[RXWebKitViewController alloc] init];
         [self.navigationController pushViewController:wxWebKit animated:YES];
     }else if (row == 4) {

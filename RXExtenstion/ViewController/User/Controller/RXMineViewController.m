@@ -16,6 +16,7 @@
 
 #import "RXMineWebViewController.h"
 #import "RXMineInfoViewController.h"
+#import "RXWebKitViewController.h"
 
 @interface RXMineViewController ()<UITableViewDelegate, UITableViewDataSource, RXMineHeaderDelegate>
 {

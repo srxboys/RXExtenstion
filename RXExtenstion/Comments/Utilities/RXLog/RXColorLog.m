@@ -7,6 +7,7 @@
 //
 
 #import "RXColorLog.h"
+#import "RXConstant.h"
 
 #define XCODE_COLORS_ESCAPE @"\033["
 
@@ -16,7 +17,7 @@
 
 @implementation RXColorLog
 + (void)printLog:(BOOL)isError file:(char *)file line:(int)line method:(NSString *)method content:(NSString *)format {
-    
+#ifdef DEBUG
     NSString *filePath = [[NSString stringWithUTF8String:file] lastPathComponent];
     NSString *LogHeader = [NSString stringWithFormat:@"<%@:%d> ",filePath, line];
     
@@ -26,7 +27,9 @@
             NSLog((@"%@ %@ " XCODE_COLORS_ESCAPE @"fg0,0,255;" XCODE_COLORS_ESCAPE @"bg220,0,0;" @"%@" XCODE_COLORS_RESET @"\n\n"),LogHeader, method, format);
         }
         else {
-            NSLog((@"%@ %@ " XCODE_COLORS_ESCAPE @"fg209,57,168;" @"%@" XCODE_COLORS_RESET @"\n\n"),LogHeader, method, format);
+            if(LOG_ENABLE) {
+                NSLog((@"%@ %@ " XCODE_COLORS_ESCAPE @"fg209,57,168;" @"%@" XCODE_COLORS_RESET @"\n\n"),LogHeader, method, format);
+            }
         }
     }
     else {
@@ -34,10 +37,13 @@
             NSLog(@"%@ %@ [ERROR❌] %@\n\n", method, method,format);
         }
         else {
-            NSLog(@"%@ %@ %@\n\n", method, method,format);
+            if(LOG_ENABLE) {
+                NSLog(@"%@ %@ %@\n\n", method, method,format);
+            }
         }
         
     }
+#endif
 }
 
 

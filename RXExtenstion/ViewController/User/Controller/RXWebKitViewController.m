@@ -9,6 +9,13 @@
 #import "RXWebKitViewController.h"
 
 #import <WebKit/WebKit.h>
+#import <JavaScriptCore/JavaScriptCore.h>
+/*
+    如果你的项目基于 >=iOS7 同时适配webKit，那么:
+    Build Settings -> Link Binary With Libraries ->
+    WebKit/WebKit (status : Optional) 否在<iOS8的设备 一运行和此程序有关的 就崩溃
+ */
+
 //还未整理 ing
 typedef void(^JSCompletion)(id object, NSError * error);
 
@@ -38,6 +45,7 @@ typedef void(^JSCompletion)(id object, NSError * error);
 {
     WKWebView * _webView;
     JSCompletion _jsCompletion;
+    JSContext * _jsContext;
 }
 @end
 
@@ -53,8 +61,9 @@ typedef void(^JSCompletion)(id object, NSError * error);
     
 //    self.view.backgroundColor = [UIColorredColor];
     
-    [self configUI];
-
+//    [self configUI];
+    
+    [self configUIWithJS];
 }
 
 /*
@@ -93,34 +102,61 @@ JS调用App注册过的方法 一、加载网页
 
 // 页面开始加载时调用
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
-    
+    RXLog(@"didStartProvisionalNavigation");
 }
 // 当内容开始返回时调用
 - (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
-    
+    RXLog(@"didCommitNavigation");
 }
 // 页面加载完成之后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    RXLog(@"didFinishNavigation");
     
+    [self printWebSouceCode];
+    
+    _jsContext = [_webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    //定义好JS要调用的方法, share就是调用的share方法名
+    [self interceptJSFunction];
+
 }
+
+//拦截js方法
+- (void)interceptJSFunction {
+    //获取 app变量的share方法
+//    weak(weakSelf);
+    JSValue * app = [_jsContext objectForKeyedSubscript:@"app"];
+    app[@"share"] = ^(id obj){
+        RXLog(@"share %@", obj);
+    };
+    app[@"jumpPage"] = ^(id className, id jsonString) {
+        RXLog(@"jumpPage %@=%@", className, jsonString);
+    };
+    app[@"sendSession"] = ^(id sessionId) {
+        NSString *string = [NSString stringWithFormat:@"%@",sessionId];
+        RXLog(@"sendSession %@", sessionId);
+    };
+}
+
 // 页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation {
-    
+    RXLog(@"didFailProvisionalNavigation");
 }
 
 
 //页面跳转的代理方法：
 // 接收到服务器跳转请求之后调用
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation {
-    
+    RXLog(@"didReceiveServerRedirectForProvisionalNavigation=");
 }
 // 在收到响应后，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
-    
+    RXLog(@"decidePolicyForNavigationResponse=");
+    decisionHandler(WKNavigationResponsePolicyAllow);
 }
 // 在发送请求之前，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
+    RXLog(@"decidePolicyForNavigationAction");
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 #pragma mark - ~~~~~~~~~~~ 三、新的WKUIDelegate协议 ~~~~~~~~~~~~~~~
@@ -138,26 +174,53 @@ JS调用App注册过的方法 一、加载网页
  *@param completionHandler 警告框消失调用
  */
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(void (^)())completionHandler {
+    RXLog(@"runJavaScriptAlertPanelWithMessage message=%@", message);
+}
+
+
+- (void)printWebSouceCode {
+    //获取header源码1
+    NSString *JsToGetHTMLSource = @"document.getElementsByTagName('html')[0].innerHTML";
     
+    
+    [_webView evaluateJavaScript:JsToGetHTMLSource completionHandler:^(id _Nullable obj, NSError * _Nullable error) {
+        if(!error) {
+            RXLog(@"\n%@\n\n",obj);
+        }
+        else {
+            RXLog(@"printWebSouceCode error=%@", error.description);
+        }
+    }];
 }
 
 
 #pragma mark - ~~~~~~~~~~~ 四、动态加载并运行JS代码 ~~~~~~~~~~~~~~~
 //用于在客户端内部加入JS代码，并执行，示例如下：
-- (void)js {
-    // 图片缩放的js代码
-    NSString *js = @"var count = document.images.length;for (var i = 0; i < count; i++) {var image = document.images[i];image.style.width=320;};window.alert('找到' + count + '张图');";
+- (void)configUIWithJS {
+    NSString * htmlURL = @"http://11.1.0.140:13080/index.php/wap/act-1.html?uid=56874&ts=1484286933&sign=621F83DA0920579E0FAABE0276507E79&device_id=d41d8cd98f00b204e9800998ecf8427ee6451bb3&app_key=6b44ac452e7dcd81971283f54e116f0a&res_session_id=0091C8ABE93DC31D367F6B9B2A200681&nick_name=18811425575&avatar=http://testec.ghs.net/public/images/bb/33/74/d3291fb81e0410aaed2b62bce7fb85f29b52e29b.jpg&mobile=18811425575&version=2.4.0";
+    
+    //js代码
+    NSString *js = @"var script = document.createElement('script');"
+    "%@"
+    "script.text = \" var app = {}; app.%@ = function() {};\";"
+    //定义myFunction方法
+    "document.getElementsByTagName('head')[0].appendChild(script);";
     // 根据JS字符串初始化WKUserScript对象
     WKUserScript *script = [[WKUserScript alloc] initWithSource:js injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
     // 根据生成的WKUserScript对象，初始化WKWebViewConfiguration
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     [config.userContentController addUserScript:script];
-    _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, NavHeight, ScreenWidth, ScreenHeight - NavHeight) configuration:config];
+    _webView.opaque = NO;
+    _webView.backgroundColor = UIColorRGB(227, 227, 227);
+    _webView.scrollView.bounces = NO;
+    _webView.UIDelegate = self;
+    _webView.navigationDelegate = self;
     //本地
-    [_webView loadHTMLString:@""baseURL:nil];
+//    [_webView loadHTMLString:@""baseURL:nil];
 //    [_webView loadFileURL:nil allowingReadAccessToURL:nil];
     //网络
-//    [_webView loadRequest:nil];
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:htmlURL]]];
     [self.view addSubview:_webView];
 }
 
@@ -175,7 +238,7 @@ JS调用App注册过的方法 一、加载网页
 #pragma mark - ~~~~~~~~~~~  六、JS调用App注册过的方法 ~~~~~~~~~~~~~~~
 //再WKWebView里面注册供JS调用的方法，是通过WKUserContentController类下面的方法：
 - (void)addScriptMessageHandler:(id )scriptMessageHandler name:(NSString *)name {
-    
+    RXLog(@"addScriptMessageHandler=%@--name=%@",scriptMessageHandler, name);
 }
 //scriptMessageHandler是代理回调，JS调用name方法后，OC会调用scriptMessageHandler指定的对象。
 //JS在调用OC注册方法的时候要用下面的方式：
@@ -190,7 +253,7 @@ JS调用App注册过的方法 一、加载网页
 //OC在JS调用方法做的处理
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
 {
-    NSLog(@"JS 调用了 %@ 方法，传回参数 %@",message.name,message.body);
+    RXLog(@"JS 调用了 %@ 方法，传回参数 %@",message.name,message.body);
 }
 //JS调用
    // window.webkit.messageHandlers.closeMe.postMessage(null);

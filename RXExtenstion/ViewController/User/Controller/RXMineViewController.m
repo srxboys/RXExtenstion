@@ -188,11 +188,8 @@
     NSInteger row = indexPath.row;
     
     RXMineModel * model = _dataSouceArr[row];
-    RXMineWebViewController * webController= [[RXMineWebViewController alloc] init];
-    webController.model = model;
-    //隐藏 tabBar
-    webController.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:webController animated:YES];
+    
+    [self pushToWebWithMineModel:model];
 }
 
 - (void)mineHeaderClick {    
@@ -200,12 +197,27 @@
     RXMineModel * model = [[RXMineModel alloc] init];
     model.webUrl = @"http://blog.csdn.net/srxboys/article/details/50586827";
     model.title = @"我的个人说明";
-    RXMineWebViewController * webController= [[RXMineWebViewController alloc] init];
-    webController.model = model;
-    //隐藏 tabBar
-    webController.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:webController animated:YES];
+    
+    [self pushToWebWithMineModel:model];
 }
+
+- (void)pushToWebWithMineModel:(RXMineModel *)model {
+    if(!iOS8OrLater) {
+        RXMineWebViewController * webController= [[RXMineWebViewController alloc] init];
+        webController.model = model;
+        //隐藏 tabBar
+        webController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:webController animated:YES];
+    }else {
+        RXWebKitViewController * webController = [[RXWebKitViewController alloc] init];
+        webController.model = model;
+        //隐藏 tabBar
+        webController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:webController animated:YES];
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -14,6 +14,9 @@
 
 - (id)objectForKeyNotNull:(NSString *)key
 {
+    //如果没有key 就返回nil//防止崩溃
+    if (![[self allKeys] containsObject:key]) return nil;
+    
     id object = [self objectForKey:key];
     if ([object isKindOfClass:[NSString class]] ||
         [object isKindOfClass:[NSArray class]] ||

@@ -136,7 +136,7 @@
     if(_post == nil) {
         NSLog(@"completionHandler post=nil");
         if (completionHandler) {
-            completionHandler(NCUpdateResultFailed);
+            completionHandler(NCUpdateResultNoData);
         }
         return;
     }
@@ -152,7 +152,7 @@
         else {
 //            self.preferredContentSize = CGSizeMake(0, 0);
             if (completionHandler) {
-                completionHandler(NCUpdateResultFailed);
+                completionHandler(NCUpdateResultNoData);
             }
         }
         

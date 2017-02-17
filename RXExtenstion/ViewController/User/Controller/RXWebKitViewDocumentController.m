@@ -6,7 +6,7 @@
 //  Copyright © 2016年 https://github.com/srxboys. All rights reserved.
 //
 
-#import "RXWebKitViewController.h"
+#import "RXWebKitViewDocumentController.h"
 
 #import <WebKit/WebKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
@@ -41,7 +41,7 @@ typedef void(^JSCompletion)(id object, NSError * error);
 ////////--------------------------
 
 
-@interface RXWebKitViewController ()<WKNavigationDelegate, WKUIDelegate>
+@interface RXWebKitViewDocumentController ()<WKNavigationDelegate, WKUIDelegate>
 {
     WKWebView * _webView;
     JSCompletion _jsCompletion;
@@ -49,7 +49,7 @@ typedef void(^JSCompletion)(id object, NSError * error);
 }
 @end
 
-@implementation RXWebKitViewController
+@implementation RXWebKitViewDocumentController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

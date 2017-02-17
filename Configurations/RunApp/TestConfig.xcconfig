@@ -1,0 +1,21 @@
+//
+//  TestConfig.xcconfig
+//  GHS
+//
+//  Created by srx on 2017/2/14.
+//  Copyright © 2017年  https://github.com/srxboys.  All rights reserved.
+// 测试环境
+
+///Packaging->Product Name
+    //:configuration = Debug
+    PRODUCT_NAME = $(TARGET_NAME)
+
+    //:configuration = Release
+    PRODUCT_NAME = $(TARGET_NAME)
+
+    //:completeSettings = some
+    PRODUCT_NAME
+
+
+
+RELEASE_iOS = 1

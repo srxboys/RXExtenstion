@@ -1,0 +1,44 @@
+//
+//  DevelopConfig.xcconfig
+//  GHS
+//
+//  Created by srx on 2017/2/14.
+//  Copyright © 2017年  https://github.com/srxboys.  All rights reserved.
+// 开发环境
+
+///Packaging->Product Name
+    //:configuration = Debug
+    PRODUCT_NAME = $(TARGET_NAME)
+
+    //:configuration = Release
+    PRODUCT_NAME = $(TARGET_NAME)
+
+    //:completeSettings = some
+    PRODUCT_NAME
+
+//还在探索中
+////DEBUG模式
+//DEBUG = @"1"
+
+////-------------------- 是否打印日志 --------------------/
+//// 0:不打印   1:打印 (和发布没有关系)
+//LOG_ENABLE = 1
+//
+////********************** 是否需要对接口进行二次加密**********/
+////0:不需要二次加密  1:需要二次加密 (发布市场前请改为1)
+//SEC_ENCRYPT = 1
+////********************** 统计、客服、推送配置 ************/
+////0:面向开发人员  1:面向用户 (发布市场前请改为1) 个推、客服、
+//SEC_UM_GeTui = 0
+//
+////********************** 服务器 *************************/
+//// 0: 正式环境Dis  1: 测试环境Test 2:开发Dev  (发布市场前请改为0)
+//VERSION   =  2
+
+
+RELEASE_iOS = 2
+
+srxboy = "jsfis_125367483845yjiodjsf"
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) DEBUG=1 RELEASE_iOS=2 srxboy='$(srxboy)'
+

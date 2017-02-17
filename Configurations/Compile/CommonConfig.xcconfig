@@ -1,0 +1,39 @@
+
+//
+//  CommonConfig.xcconfig
+//  GHS
+//
+//  Created by srx on 2017/2/14.
+//  Copyright © 2017年  https://github.com/srxboys.  All rights reserved.
+//
+// 通用
+//framework pch
+    //:configuration = Debug
+    FRAMEWORK_SEARCH_PATHS = $(PROJECT_DIR) $(PROJECT_DIR)/ThirdParty/Alipay $(PROJECT_DIR)/ThirdParty/UMSDK/UMSocialSDK $(PROJECT_DIR)/ThirdParty/UMSDK/umsdk_IOS_analyics_no-idfa
+
+    //:configuration = Release
+    FRAMEWORK_SEARCH_PATHS = $(PROJECT_DIR) $(PROJECT_DIR)/ThirdParty/Alipay $(PROJECT_DIR)/ThirdParty/UMSDK/UMSocialSDK $(PROJECT_DIR)/ThirdParty/UMSDK/umsdk_IOS_analyics_no-idfa
+
+    //:completeSettings = some
+    FRAMEWORK_SEARCH_PATHS
+
+
+
+//header pch
+    //:configuration = Debug
+    HEADER_SEARCH_PATHS = "$(SRCROOT)/ThirdParty/Alipay/openssl" "$(SRCROOT)/ThirdParty/Alipay" "$(SRCROOT)/ThirdParty/UMSDK/UMSocialSDK" "$(SRCROOT)/../GHSAgent"/**
+
+    //:configuration = Release
+    HEADER_SEARCH_PATHS = "$(SRCROOT)/ThirdParty/Alipay/openssl" "$(SRCROOT)/ThirdParty/Alipay" "$(SRCROOT)/ThirdParty/UMSDK/UMSocialSDK" "$(SRCROOT)/../GHSAgent"/**
+
+    //:completeSettings = some
+    HEADER_SEARCH_PATHS
+
+
+//search pach
+    $(inherited) $(PROJECT_DIR)/ThirdParty/GeTui $(PROJECT_DIR)/ThirdParty/YinLian/libs $(PROJECT_DIR)/ThirdParty/Alipay $(PROJECT_DIR)/ThirdParty/GeTui/include $(PROJECT_DIR)/ThirdParty/UMSDK/SocialLibraries/Sina $(PROJECT_DIR)/ThirdParty/UMSDK/SocialLibraries/WeChat $(PROJECT_DIR)/ThirdParty/QIYU_iOS_SDK_v3.3.0
+
+
+
+//把所有的警告当作错误--不起作用
+//GCC_TREAT_WARNINGS_AS_ERRORS = YES

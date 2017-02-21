@@ -16,14 +16,19 @@
 
 @interface TodayViewController () <NCWidgetProviding, UITableViewDelegate, UITableViewDataSource>
 {
-    UITableView * _tableView;
     CGFloat _tableHeight;
     CGFloat _buttonHeight;
     RXPost * _post;
+    
+    NSInteger _showRow;
 }
 
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, copy) NSArray * sourceArr;
+
+- (IBAction)lookForAppButtonClick:(id)sender;
+- (IBAction)lookForNextButtonClick:(id)sender;
+
 @end
 
 @implementation TodayViewController
@@ -31,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    NSLog(@"%s", __FUNCTION__);
     [self configUI];
 }
 
@@ -41,19 +46,22 @@
     self.preferredContentSize = CGSizeMake(0, 0);
     
     _post = [[RXPost alloc] init];
+    [_post removeLocalPost];
+    _showRow = 1;
     
     _tableHeight  = 200;
     _buttonHeight = 40;
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, width, _tableHeight) style:UITableViewStylePlain];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    [self.view addSubview:_tableView];
-    
-    
     _tableView.tableFooterView = [[UIView alloc] init];
+    
     self.sourceArr = [_post getDataFromeLocalPost];
+    __weak typeof(self)weakSelf = self;
+    [_post postReqeustCompletion:^(NSArray *array, BOOL isError) {
+        if(!isError) {
+            weakSelf.sourceArr = array;
+        }
+    }];
 }
 
 - (void)setSourceArr:(NSArray *)sourceArr {
@@ -83,10 +91,12 @@
     return cell;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 94;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 //    [self.extensionContext openURL:[NSURL URLWithString:@"iOSWidgetApp://action=GotoOrderPage"] completionHandler:^(BOOL success) {
 //        NSLog(@"open url result:%d",success);
@@ -132,6 +142,7 @@
     //如果遇到错误，使用NCUpdateresultfailed
     //如果有不需要更新，使用NCUpdateresultnodata
     //如果有更新，使用NCUpdateresultnewdata
+    NSLog(@"%s", __FUNCTION__);
     
     if(_post == nil) {
         NSLog(@"completionHandler post=nil");
@@ -167,36 +178,56 @@
   
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    NSLog(@"Today viewDidAppear数据");
+//- (void)viewDidAppear:(BOOL)animated {
+//    [super viewDidAppear:animated];
+//    NSLog(@"Today viewDidAppear数据");
+//}
+//
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    NSLog(@"Today viewWillwilllllAppear");
+//    
+//    
+//    if(_post == nil) {
+//        NSLog(@"viewWillwilllllAppear post=nil");
+//        return;
+//    }
+//    NSLog(@"开始请求数据");
+//    
+//    [_post postReqeustCompletion:^(NSArray *array, BOOL isError) {
+//        
+//        NSLog(@"进入请求 部分");
+//        
+//        if(!isError) {
+//            self.sourceArr = array;
+//            NSLog(@"Today 刷新数据");
+//        }
+//        else {
+//            NSLog(@"Today 没有数据");
+//        }
+//        
+//    }];
+//}
+
+
+- (IBAction)lookForAppButtonClick:(id)sender {
+    [self.extensionContext openURL:[NSURL URLWithString:@"iOSWidgetApp://action=GotoOrderPage"] completionHandler:^(BOOL success) {
+                NSLog(@"open url result:%d",success);
+            }];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    NSLog(@"Today viewWillwilllllAppear");
+
+- (IBAction)lookForNextButtonClick:(id)sender {
     
-    
-    if(_post == nil) {
-        NSLog(@"viewWillwilllllAppear post=nil");
+    if(_sourceArr.count == 0) {
         return;
     }
-    NSLog(@"开始请求数据");
     
-    [_post postReqeustCompletion:^(NSArray *array, BOOL isError) {
-        
-        NSLog(@"进入请求 部分");
-        
-        if(!isError) {
-            self.sourceArr = array;
-            NSLog(@"Today 刷新数据");
-        }
-        else {
-            NSLog(@"Today 没有数据");
-        }
-        
-    }];
+    _showRow += 2;
+    if(_showRow > _sourceArr.count) {
+        _showRow = 1;
+    }
+    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:_showRow inSection:0];
+    [_tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
 }
-
-
 @end

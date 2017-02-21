@@ -12,4 +12,5 @@
 @interface RXPost : NSObject
 - (void)postReqeustCompletion:(void (^)(NSArray * array, BOOL isError))completion;
 - (NSArray *)getDataFromeLocalPost;
+- (void)removeLocalPost;
 @end

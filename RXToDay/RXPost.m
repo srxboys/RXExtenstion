@@ -23,7 +23,7 @@
 //  沙盒
 #define UserDefaults  [NSUserDefaults standardUserDefaults]
 // 接口
-#define Method        @"talent.talent2.get_coup_list"
+#define Method        @"b2c.member2.hot_sales_amount"
 //操作系统版本
 #define SYSTEMVERSION [UIDevice currentDevice].systemVersion
 
@@ -43,6 +43,12 @@ typedef void(^httpCompletion)(NSArray * array, BOOL isError);
 @implementation RXPost
 
 #pragma mark - ~~~~~~~~~~~ 请求网络数据 ~~~~~~~~~~~~~~~
+- (void)removeLocalPost {
+    [UserDefaults removeObjectForKey:Today_userdefault];
+    [UserDefaults synchronize];
+}
+
+
 //系统原生请求
 - (void)postReqeustCompletion:(void (^)(NSArray *, BOOL))completion {
     
@@ -118,9 +124,9 @@ typedef void(^httpCompletion)(NSArray * array, BOOL isError);
             if([responseObject.returndata arrBOOL]) {
                 
                 //获取数据
-                NSArray * childrenArr = [responseObject.returndata[0] objectForKeyNotNull:@"children"];
+                NSArray * childrenArr = [responseObject.returndata[0] objectForKeyNotNull:@"week_sales"];
                 //总分页
-                NSInteger totalePage = [[responseObject.returndata[0] objectForKeyNotNull:@"total_page"] integerValue];
+                NSInteger totalePage = [[responseObject.returndata[0] objectForKeyNotNull:@"total_pages"] integerValue];
                 
                 if([childrenArr arrBOOL]) {
                     NSMutableArray * array = [[NSMutableArray alloc] init];
@@ -144,7 +150,7 @@ typedef void(^httpCompletion)(NSArray * array, BOOL isError);
         
         
     }];
-    
+
     [_dataTask resume];
     _httpCompletion = completion;
 }
@@ -154,8 +160,7 @@ typedef void(^httpCompletion)(NSArray * array, BOOL isError);
     @autoreleasepool {
         if (tempArray == nil)
         {
-            [UserDefaults removeObjectForKey:Today_userdefault];
-            [UserDefaults synchronize];
+            [self removeLocalPost];
             return;
         }
         
@@ -183,25 +188,28 @@ typedef void(^httpCompletion)(NSArray * array, BOOL isError);
     NSMutableArray *errorLogArray = [[NSMutableArray alloc] init];
     if ([array count]>0)
     {
-        NSInteger i = 0;
         //确保字典 key 一定是存在，否则崩溃
         for(RXTodayModel * todayModel in array)
         {
             NSMutableDictionary * paramsDict = [[NSMutableDictionary alloc] init];
-            [paramsDict setObject:todayModel.talent_id     forKey:@"talent_id"    ];
-            [paramsDict setObject:todayModel.coup_id       forKey:@"coup_id"      ];
-            [paramsDict setObject:todayModel.talent_image  forKey:@"talent_image" ];
-            [paramsDict setObject:todayModel.image         forKey:@"image"        ];
-            [paramsDict setObject:todayModel.time          forKey:@"time"         ];
-            [paramsDict setObject:todayModel.comment_count forKey:@"comment_count"];
-            [paramsDict setObject:todayModel.view_count    forKey:@"view_count"   ];
-            if(i == 3) {
-                break;
-            }
-            i++;
+            [paramsDict setObject:todayModel.goods_id     forKey:@"goods_id"];
+            [paramsDict setObject:[self valueWithNIL:todayModel.name] forKey:@"name"];
+            [paramsDict setObject:todayModel.sku forKey:@"sku"      ];
+            [paramsDict setObject:todayModel.sub_title forKey:@"sub_title" ];
+            [paramsDict setObject:todayModel.image forKey:@"image"        ];
+            [paramsDict setObject:todayModel.count_comment forKey:@"count_comment"         ];
+            [paramsDict setObject:todayModel.comment_detail forKey:@"comment_detail"];
+            [paramsDict setObject:todayModel.price forKey:@"price"   ];
         }
     }
     return errorLogArray;
+}
+
+- (NSString *)valueWithNIL:(NSString *)string {
+    if(string == nil || [string rangeOfString:@"null"].location != NSNotFound) {
+        return @"";
+    }
+    return string;
 }
 
 - (NSDictionary *)network {
@@ -209,27 +217,27 @@ typedef void(^httpCompletion)(NSArray * array, BOOL isError);
     
     //分页 0-7 //确保每次 定格到当前位置刷新得到新数据
     NSInteger page = arc4random() % 8;
-    
-    
+ 
     NSDictionary * paramsDict = @{@"method"   : Method,
-                                  @"page_no"  : @1};
+                                  @"page_num" : @(1)};
     
     
     
     NSMutableDictionary* newParams = [NSMutableDictionary  dictionaryWithDictionary:paramsDict];
-    
-    [newParams setObject:@"56874" forKey:@"member_id"];
+ 
+    [newParams setObject:@"1" forKey:@"member_id"];
     
     //APP 机型 iOS
-    [newParams setObject:@"827384" forKey:@"device_type"];
+    [newParams setObject:@"iOS" forKey:@"device_type"];
     
     // APP版本号
-    [newParams setObject:@"2.0.2" forKey:@"version"];
-    
-    [newParams setValue:@"226993C3C541A89BB72B2D312022A9AE" forKey:@"sign"];
+    [newParams setObject:@"1.1.0" forKey:@"version"];
+    //...
+    //...
+    //...
+    //...
     
     //用系统请求方法
-    
     NSLog(@"请求参数=%@", newParams);
     return newParams;
     

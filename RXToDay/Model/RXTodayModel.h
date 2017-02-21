@@ -19,13 +19,24 @@
 
 #pragma mark ----------- [ RXToday ] ---------
 @interface RXTodayModel : NSObject<NSCoding>
-@property (nonatomic, copy) NSString * talent_id;//达人id
-@property (nonatomic, copy) NSString * coup_id;  //妙招id
-@property (nonatomic, copy) NSString * talent_image; //达人头像
-@property (nonatomic, copy) NSString * image; //背景图
-@property (nonatomic, copy) NSString * time; //时间戳
-@property (nonatomic, copy) NSString * comment_count; //评论数
-@property (nonatomic, copy) NSString * view_count; //浏览数
+///商品id
+@property (nonatomic, copy) NSString *goods_id;
+///sku商品编号
+@property (nonatomic, copy) NSString *sku;
+///商品标题
+@property (nonatomic, copy) NSString *name;
+///副标题
+@property (nonatomic, copy) NSString *sub_title;
+///总评论数
+@property (nonatomic, copy) NSString *count_comment;
+///原价
+@property (nonatomic, copy) NSArray *comment_detail;
+///名称
+@property (nonatomic, copy) NSString *price;
+///价格标签
+@property (nonatomic, copy) NSString *market_price;
+@property (nonatomic, copy) NSString *image;
+
 
 + (instancetype)todayModelWithDictionary:(NSDictionary *)dict;
 @end

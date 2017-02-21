@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hRy-qH-oWz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="508"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="543"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RXTodayCell" rowHeight="94" id="23e-gb-Mf7" customClass="RXTodayCell">
@@ -74,26 +75,44 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="Htc-nE-1rS"/>
-                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="npi-YZ-Doi"/>
+                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="1t9-Xw-TKK"/>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="aDa-MM-dml"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g87-rS-Bej">
-                                <rect key="frame" x="60" y="518" width="200" height="40"/>
+                                <rect key="frame" x="21" y="548" width="100" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="EEO-IR-IIE"/>
-                                    <constraint firstAttribute="height" constant="40" id="bm9-la-Iew"/>
+                                    <constraint firstAttribute="width" constant="100" id="EEO-IR-IIE"/>
+                                    <constraint firstAttribute="height" constant="20" id="bm9-la-Iew"/>
                                 </constraints>
                                 <state key="normal" title="去看看">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="lookForAppButtonClick:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Ucg-gn-1Ei"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxU-tj-sll">
+                                <rect key="frame" x="126" y="548" width="100" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DGH-3k-kkT"/>
+                                    <constraint firstAttribute="height" constant="20" id="hwo-Rm-Hhc"/>
+                                </constraints>
+                                <state key="normal" title="下一个">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lookForNextButtonClick:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="mxN-v5-brN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="g87-rS-Bej" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="3RP-h8-aMD"/>
                             <constraint firstAttribute="trailing" secondItem="hRy-qH-oWz" secondAttribute="trailing" id="7Lu-bm-4DM"/>
-                            <constraint firstAttribute="bottom" secondItem="g87-rS-Bej" secondAttribute="bottom" constant="10" id="ALK-pP-gJn"/>
-                            <constraint firstItem="g87-rS-Bej" firstAttribute="top" secondItem="hRy-qH-oWz" secondAttribute="bottom" constant="10" id="Sjd-PX-R2B"/>
+                            <constraint firstAttribute="bottom" secondItem="g87-rS-Bej" secondAttribute="bottom" id="ALK-pP-gJn"/>
+                            <constraint firstItem="FxU-tj-sll" firstAttribute="leading" secondItem="g87-rS-Bej" secondAttribute="trailing" constant="5" id="GE9-Vu-GZC"/>
+                            <constraint firstItem="g87-rS-Bej" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="5" id="PKA-0Z-cTe"/>
+                            <constraint firstItem="g87-rS-Bej" firstAttribute="top" secondItem="hRy-qH-oWz" secondAttribute="bottom" constant="5" id="Sjd-PX-R2B"/>
+                            <constraint firstItem="FxU-tj-sll" firstAttribute="top" secondItem="hRy-qH-oWz" secondAttribute="bottom" constant="5" id="doI-16-yQI"/>
                             <constraint firstItem="hRy-qH-oWz" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="eun-8I-VmN"/>
                             <constraint firstItem="hRy-qH-oWz" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="gLy-MF-fcN"/>
                         </constraints>
@@ -105,7 +124,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="tableView" destination="hRy-qH-oWz" id="kBo-n1-pNU"/>
+                        <outlet property="tableView" destination="hRy-qH-oWz" id="A5F-tN-1Ud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>

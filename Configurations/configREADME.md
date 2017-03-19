@@ -9,6 +9,8 @@
 
 原文来自facebook：https://github.com/facebook/facebook-ios-sdk
 
+//可以参考:  http://www.jianshu.com/p/83b6e781eb51
+
 //----------------------------------------------------------
 
 # 说明:

@@ -19,16 +19,15 @@
 + (void)printLog:(BOOL)isError file:(char *)file line:(int)line method:(NSString *)method content:(NSString *)format {
 #ifdef DEBUG
     NSString *filePath = [[NSString stringWithUTF8String:file] lastPathComponent];
-    NSString *LogHeader = [NSString stringWithFormat:@"<%@:%d> ",filePath, line];
-    
+    NSString *LogHeader = [NSString stringWithFormat:@": \n   FILE->%@\n   LINE->%d\n   FUNCTION->",filePath, line];
     
     if([self isEnableXcodeColors]) {
         if(isError) {
-            NSLog((@"%@ %@ " XCODE_COLORS_ESCAPE @"fg0,0,255;" XCODE_COLORS_ESCAPE @"bg220,0,0;" @"%@" XCODE_COLORS_RESET @"\n\n"),LogHeader, method, format);
+            NSLog((@"%@   %@\n" XCODE_COLORS_ESCAPE @"fg255,253,56;" XCODE_COLORS_ESCAPE @"bg0,139,0;" @"%@" XCODE_COLORS_RESET @"\n\n"),LogHeader, method, format);
         }
         else {
             if(LOG_ENABLE) {
-                NSLog((@"%@ %@ " XCODE_COLORS_ESCAPE @"fg209,57,168;" @"%@" XCODE_COLORS_RESET @"\n\n"),LogHeader, method, format);
+                NSLog((@"%@   %@\n" XCODE_COLORS_ESCAPE @"fg209,57,168;" @"%@" XCODE_COLORS_RESET @"\n\n"),LogHeader, method, format);
             }
         }
     }

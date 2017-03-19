@@ -225,9 +225,10 @@
     
     _showRow += 2;
     if(_showRow > _sourceArr.count) {
-        _showRow = 1;
+        _showRow = 0;
     }
     NSIndexPath * indexPath = [NSIndexPath indexPathForRow:_showRow inSection:0];
-    [_tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+//    [_tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+    [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 @end

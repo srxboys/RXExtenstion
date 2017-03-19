@@ -45,7 +45,15 @@ arc4random_uniform(256))
     return self;
 }
 
+- (void)clearAllText {
+    _imgView.image = [[UIImage alloc] init];
+    _titleLabel.text = @"";
+    _priceLabel.text = @"";
+}
+
+
 - (void)setCellData:(RXTodayModel *)model {
+    [self clearAllText];
     
     if(model == nil) return;
 //    NSURL * url = [NSURL URLWithString:model.image];

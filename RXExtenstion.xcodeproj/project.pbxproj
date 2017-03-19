@@ -29,6 +29,7 @@
 		6C25DA5D1CFEBDA900E65A38 /* RXMineWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */; };
 		6C25DA611CFEBF8300E65A38 /* RXDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA601CFEBF8300E65A38 /* RXDate.m */; };
 		6C25DA641CFED20200E65A38 /* RXLoLInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA631CFED20200E65A38 /* RXLoLInfoViewController.m */; };
+		6C29D4F61E5D2CAA005E8871 /* RXAccumulation.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C29D4F51E5D2CAA005E8871 /* RXAccumulation.c */; };
 		6C2A726A1D2CF6DA000F1550 /* RXLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A72691D2CF6DA000F1550 /* RXLoadingHUD.m */; };
 		6C2A726D1D2CF765000F1550 /* UIView+RXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A726C1D2CF765000F1550 /* UIView+RXToast.m */; };
 		6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */; };
@@ -100,7 +101,6 @@
 		6C59F2FA1E53017D00D15063 /* CommonConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6C59F2F11E53017D00D15063 /* CommonConfig.xcconfig */; };
 		6C59F2FB1E53017D00D15063 /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6C59F2F21E53017D00D15063 /* DebugConfig.xcconfig */; };
 		6C59F2FC1E53017D00D15063 /* ReleaseConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6C59F2F31E53017D00D15063 /* ReleaseConfig.xcconfig */; };
-		6C59F2FD1E53017D00D15063 /* configREADME.md in Sources */ = {isa = PBXBuildFile; fileRef = 6C59F2F41E53017D00D15063 /* configREADME.md */; };
 		6C59F2FE1E53017D00D15063 /* DevelopConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6C59F2F61E53017D00D15063 /* DevelopConfig.xcconfig */; };
 		6C59F2FF1E53017D00D15063 /* FormalConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6C59F2F71E53017D00D15063 /* FormalConfig.xcconfig */; };
 		6C59F3001E53017D00D15063 /* SendVersionConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6C59F2F81E53017D00D15063 /* SendVersionConfig.xcconfig */; };
@@ -193,7 +193,6 @@
 		6CE825EC1D3CA7BA006EE76F /* AsyncImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825E41D3CA7BA006EE76F /* AsyncImageDownloader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6CE825ED1D3CA7BA006EE76F /* ImageCacheQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825E61D3CA7BA006EE76F /* ImageCacheQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6CE825EE1D3CA7BA006EE76F /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825E81D3CA7BA006EE76F /* NSString+MD5.m */; };
-		6CE825EF1D3CA7BA006EE76F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825E91D3CA7BA006EE76F /* README.md */; };
 		6CE825F01D3CA7BA006EE76F /* UIImageView+OnlineImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE825EB1D3CA7BA006EE76F /* UIImageView+OnlineImage.m */; };
 		6CEB36A71D5ABEA600283562 /* RXMineInfoMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB36A51D5ABEA600283562 /* RXMineInfoMessageCell.m */; };
 		6CEB36A81D5ABEA600283562 /* RXMineInfoMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB36A61D5ABEA600283562 /* RXMineInfoMessageCell.xib */; };
@@ -272,6 +271,7 @@
 		6C11FD131CF6B7CB00BE323D /* RXGetNetStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXGetNetStatus.m; sourceTree = "<group>"; };
 		6C11FD141CF6B7CB00BE323D /* RXNetworkCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNetworkCheck.h; sourceTree = "<group>"; };
 		6C11FD151CF6B7CB00BE323D /* RXNetworkCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNetworkCheck.m; sourceTree = "<group>"; };
+		6C19A3891E693D8000D6F355 /* MyProperty.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyProperty.playground; sourceTree = "<group>"; };
 		6C25DA581CFEBDA900E65A38 /* RXMineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineInfoViewController.h; sourceTree = "<group>"; };
 		6C25DA591CFEBDA900E65A38 /* RXMineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineInfoViewController.m; sourceTree = "<group>"; };
 		6C25DA5A1CFEBDA900E65A38 /* RXMineWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineWebViewController.h; sourceTree = "<group>"; };
@@ -280,6 +280,8 @@
 		6C25DA601CFEBF8300E65A38 /* RXDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDate.m; sourceTree = "<group>"; };
 		6C25DA621CFED20200E65A38 /* RXLoLInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLoLInfoViewController.h; sourceTree = "<group>"; };
 		6C25DA631CFED20200E65A38 /* RXLoLInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLoLInfoViewController.m; sourceTree = "<group>"; };
+		6C29D4F41E5D2CAA005E8871 /* RXAccumulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAccumulation.h; sourceTree = "<group>"; };
+		6C29D4F51E5D2CAA005E8871 /* RXAccumulation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RXAccumulation.c; sourceTree = "<group>"; };
 		6C2A72681D2CF6DA000F1550 /* RXLoadingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLoadingHUD.h; sourceTree = "<group>"; };
 		6C2A72691D2CF6DA000F1550 /* RXLoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLoadingHUD.m; sourceTree = "<group>"; };
 		6C2A726B1D2CF765000F1550 /* UIView+RXToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RXToast.h"; sourceTree = "<group>"; };
@@ -658,6 +660,8 @@
 		6C0017201D66A466002654F2 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				6C29D4F41E5D2CAA005E8871 /* RXAccumulation.h */,
+				6C29D4F51E5D2CAA005E8871 /* RXAccumulation.c */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1292,6 +1296,7 @@
 		6C7BA6EF1D741E8A0097AB01 /* Swift3x */ = {
 			isa = PBXGroup;
 			children = (
+				6C19A3891E693D8000D6F355 /* MyProperty.playground */,
 			);
 			path = Swift3x;
 			sourceTree = "<group>";
@@ -1920,7 +1925,6 @@
 				6CE825F01D3CA7BA006EE76F /* UIImageView+OnlineImage.m in Sources */,
 				6CE825EE1D3CA7BA006EE76F /* NSString+MD5.m in Sources */,
 				6CE825ED1D3CA7BA006EE76F /* ImageCacheQueue.m in Sources */,
-				6CE825EF1D3CA7BA006EE76F /* README.md in Sources */,
 				6CE825EC1D3CA7BA006EE76F /* AsyncImageDownloader.m in Sources */,
 				6C40E11D1D388220002A451E /* RXTodayModel.m in Sources */,
 				6CA608431D3782DE00A6C088 /* RXPost.m in Sources */,
@@ -1950,7 +1954,6 @@
 				6CA608581D37991F00A6C088 /* UIImageView+fadeInFadeOut.m in Sources */,
 				6C3A309E1CD3538A00533FFF /* MJRefreshFooter.m in Sources */,
 				6CA1600A1CF3432D009DCE60 /* RXNewHomeCollectionViewCell.m in Sources */,
-				6C59F2FD1E53017D00D15063 /* configREADME.md in Sources */,
 				6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */,
 				6CDB2CD71D9E0E3400B07530 /* RXSearchButtonWidthModel.m in Sources */,
 				6CA4345E1CD9E5AF00641785 /* UIImage+MultiFormat.m in Sources */,
@@ -2070,6 +2073,7 @@
 				6C862FBF1D5876C500EEB818 /* RXJDButton.m in Sources */,
 				6C3A30681CD352AA00533FFF /* UIImageView+AFNetworking.m in Sources */,
 				6C3A30A51CD3538A00533FFF /* MJRefreshBackStateFooter.m in Sources */,
+				6C29D4F61E5D2CAA005E8871 /* RXAccumulation.c in Sources */,
 				6C3A305E1CD352AA00533FFF /* AFNetworkReachabilityManager.m in Sources */,
 				6C9A9AC41D12A3EE004C02B0 /* RX3DTouchSettingController.m in Sources */,
 				6C3A309F1CD3538A00533FFF /* MJRefreshHeader.m in Sources */,
@@ -2144,7 +2148,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ghs.app.RXExtentstion.RXToDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4c225b17-29b0-45f9-813d-b69e43b6be78";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;

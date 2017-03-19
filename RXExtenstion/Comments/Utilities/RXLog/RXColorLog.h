@@ -37,7 +37,10 @@
          Name 填写 XcodeColors，Value 填写 YES
          经过上面设置后，RXLog 会为不同级别的 Log 自动着色。
  
- //根据https://github.com/pljhonglu/LewLogger改写的
+ //根据
+ https://github.com/pljhonglu/LewLogger
+ http://blog.csdn.net/wang631106979/article/details/52404094
+ 改写的
  
  //------------------------
  //------------------------

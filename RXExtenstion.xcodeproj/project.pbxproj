@@ -29,7 +29,6 @@
 		6C25DA5D1CFEBDA900E65A38 /* RXMineWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA5B1CFEBDA900E65A38 /* RXMineWebViewController.m */; };
 		6C25DA611CFEBF8300E65A38 /* RXDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA601CFEBF8300E65A38 /* RXDate.m */; };
 		6C25DA641CFED20200E65A38 /* RXLoLInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25DA631CFED20200E65A38 /* RXLoLInfoViewController.m */; };
-		6C29D4F61E5D2CAA005E8871 /* RXAccumulation.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C29D4F51E5D2CAA005E8871 /* RXAccumulation.c */; };
 		6C2A726A1D2CF6DA000F1550 /* RXLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A72691D2CF6DA000F1550 /* RXLoadingHUD.m */; };
 		6C2A726D1D2CF765000F1550 /* UIView+RXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A726C1D2CF765000F1550 /* UIView+RXToast.m */; };
 		6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */; };
@@ -96,6 +95,8 @@
 		6C40E11D1D388220002A451E /* RXTodayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40E11C1D388220002A451E /* RXTodayModel.m */; };
 		6C40E1251D38AA9E002A451E /* RXResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40E1241D38AA9E002A451E /* RXResponse.m */; };
 		6C483D291D58860C00A3A202 /* RXMineCreateAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */; };
+		6C4B5DEE1E80B2B900869D70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4B5DED1E80B2B900869D70 /* UIKit.framework */; };
+		6C4B5DF01E80B2C500869D70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4B5DEF1E80B2C500869D70 /* Foundation.framework */; };
 		6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BFCD61CDC9F94006476FB /* RXDataModel.m */; };
 		6C52B18D1D77CE86004D8BCA /* RXTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C52B18C1D77CE86004D8BCA /* RXTableView.m */; };
 		6C59F2FA1E53017D00D15063 /* CommonConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6C59F2F11E53017D00D15063 /* CommonConfig.xcconfig */; };
@@ -280,8 +281,6 @@
 		6C25DA601CFEBF8300E65A38 /* RXDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDate.m; sourceTree = "<group>"; };
 		6C25DA621CFED20200E65A38 /* RXLoLInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLoLInfoViewController.h; sourceTree = "<group>"; };
 		6C25DA631CFED20200E65A38 /* RXLoLInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLoLInfoViewController.m; sourceTree = "<group>"; };
-		6C29D4F41E5D2CAA005E8871 /* RXAccumulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAccumulation.h; sourceTree = "<group>"; };
-		6C29D4F51E5D2CAA005E8871 /* RXAccumulation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RXAccumulation.c; sourceTree = "<group>"; };
 		6C2A72681D2CF6DA000F1550 /* RXLoadingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLoadingHUD.h; sourceTree = "<group>"; };
 		6C2A72691D2CF6DA000F1550 /* RXLoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLoadingHUD.m; sourceTree = "<group>"; };
 		6C2A726B1D2CF765000F1550 /* UIView+RXToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RXToast.h"; sourceTree = "<group>"; };
@@ -410,6 +409,8 @@
 		6C40E1241D38AA9E002A451E /* RXResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXResponse.m; sourceTree = "<group>"; };
 		6C483D271D58860C00A3A202 /* RXMineCreateAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMineCreateAddressController.h; sourceTree = "<group>"; };
 		6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineCreateAddressController.m; sourceTree = "<group>"; };
+		6C4B5DED1E80B2B900869D70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6C4B5DEF1E80B2C500869D70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6C4BFCD51CDC9F94006476FB /* RXDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDataModel.h; sourceTree = "<group>"; };
 		6C4BFCD61CDC9F94006476FB /* RXDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDataModel.m; sourceTree = "<group>"; };
 		6C52B18B1D77CE86004D8BCA /* RXTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTableView.h; sourceTree = "<group>"; };
@@ -636,6 +637,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C4B5DF01E80B2C500869D70 /* Foundation.framework in Frameworks */,
+				6C4B5DEE1E80B2B900869D70 /* UIKit.framework in Frameworks */,
 				6CBE24601D5DD93E006AAB11 /* WebKit.framework in Frameworks */,
 				6CD0EBBB1D211F4F00692886 /* Security.framework in Frameworks */,
 				6C3F7BB31D07E1360046C29C /* CoreLocation.framework in Frameworks */,
@@ -655,15 +658,6 @@
 				3B4B66871DC32F1F003DF3B3 /* ZZDragCollectionView.m */,
 			);
 			path = ZZDragCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		6C0017201D66A466002654F2 /* C */ = {
-			isa = PBXGroup;
-			children = (
-				6C29D4F41E5D2CAA005E8871 /* RXAccumulation.h */,
-				6C29D4F51E5D2CAA005E8871 /* RXAccumulation.c */,
-			);
-			path = C;
 			sourceTree = "<group>";
 		};
 		6C0047E81D2FA5B100EBE004 /* RXToDay */ = {
@@ -896,7 +890,6 @@
 				6CF3224C1CD86BFF009BD1B7 /* ViewController */,
 				6C3A30181CD347A700533FFF /* model */,
 				6C3A30191CD347A700533FFF /* view */,
-				6C0017201D66A466002654F2 /* C */,
 				6C7BA6EF1D741E8A0097AB01 /* Swift3x */,
 				6C3A2FD21CD3477000533FFF /* AppDelegate.h */,
 				6C3A2FD31CD3477000533FFF /* AppDelegate.m */,
@@ -1212,6 +1205,8 @@
 		6C3A30BB1CD35A5E00533FFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C4B5DEF1E80B2C500869D70 /* Foundation.framework */,
+				6C4B5DED1E80B2B900869D70 /* UIKit.framework */,
 				6CBE245F1D5DD93E006AAB11 /* WebKit.framework */,
 				6CD0EBBA1D211F4F00692886 /* Security.framework */,
 				6C3F7BB21D07E1360046C29C /* CoreLocation.framework */,
@@ -1836,6 +1831,7 @@
 					6C0047E41D2FA5B100EBE004 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = MLKY76PU29;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -1844,6 +1840,8 @@
 					};
 					6C3A2FCB1CD3477000533FFF = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = MLKY76PU29;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -2073,7 +2071,6 @@
 				6C862FBF1D5876C500EEB818 /* RXJDButton.m in Sources */,
 				6C3A30681CD352AA00533FFF /* UIImageView+AFNetworking.m in Sources */,
 				6C3A30A51CD3538A00533FFF /* MJRefreshBackStateFooter.m in Sources */,
-				6C29D4F61E5D2CAA005E8871 /* RXAccumulation.c in Sources */,
 				6C3A305E1CD352AA00533FFF /* AFNetworkReachabilityManager.m in Sources */,
 				6C9A9AC41D12A3EE004C02B0 /* RX3DTouchSettingController.m in Sources */,
 				6C3A309F1CD3538A00533FFF /* MJRefreshHeader.m in Sources */,
@@ -2142,7 +2139,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yaojin Dou (HK9KZR5X5Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yaojin Dou (HK9KZR5X5Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RXToDay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -2258,7 +2255,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yaojin Dou (HK9KZR5X5Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MLKY76PU29;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RXExtenstion/model/PrefixHeader.h";
 				INFOPLIST_FILE = RXExtenstion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -2267,7 +2265,7 @@
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ghs.app.RXExtentstion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4c225b17-29b0-45f9-813d-b69e43b6be78";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2279,6 +2277,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MLKY76PU29;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RXExtenstion/model/PrefixHeader.h";
 				INFOPLIST_FILE = RXExtenstion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

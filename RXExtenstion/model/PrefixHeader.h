@@ -11,16 +11,21 @@
 #ifndef PrefixHeader_h
 #define PrefixHeader_h
 
-#import <UIKit/UIKit.h>
 #import "RXMessage.h"
 
-//------------
-//对于汉字打印处理
-#import "RXColorLog.h"
-#import "NSArray+RXArrLog.h"
-#import "NSDictionary+RXDictLog.h"
-//------------
+#ifdef __OBJC__
+//此方法隔离 OC库的导入，防止工程中添加C/C++ 文件时 这里报错
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
 
+
+    //------------
+    //对于汉字打印处理
+    #import "RXColorLog.h"
+    #import "NSArray+RXArrLog.h"
+    #import "NSDictionary+RXDictLog.h"
+//------------
+#endif
 
 /// 实时监听网络 带参数的通知--- 只有baseController和自定义的View会用
 #define rxGetNetworkStatusNotification @"rxGetNetworkStatusNotification"
@@ -274,8 +279,11 @@ _Pragma("clang diagnostic pop") \
 //清除背景色
 #define CLEARCOLOR [UIColor clearColor]
 
-#pragma mark ---- 颜色定义 --------
-#import "RXHexColor.h"
+#ifdef __OBJC__
+//此方法隔离 OC库的导入，防止工程中添加C/C++ 文件时 这里报错
+    #pragma mark ---- 颜色定义 --------
+    #import "RXHexColor.h"
+#endif
 
 #define UIColorHexStr(_color) [RXHexColor colorWithHexString:_color]
 #define UIColorHexStrAlpha(_color,__alpha) [RXHexColor colorWithHexString:_color alpha:__alpha]

@@ -97,6 +97,7 @@
 		6C483D291D58860C00A3A202 /* RXMineCreateAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */; };
 		6C4B5DEE1E80B2B900869D70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4B5DED1E80B2B900869D70 /* UIKit.framework */; };
 		6C4B5DF01E80B2C500869D70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4B5DEF1E80B2C500869D70 /* Foundation.framework */; };
+		6C4B5DF41E80B7F100869D70 /* RXAccumulation.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C4B5DF21E80B7F100869D70 /* RXAccumulation.c */; };
 		6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4BFCD61CDC9F94006476FB /* RXDataModel.m */; };
 		6C52B18D1D77CE86004D8BCA /* RXTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C52B18C1D77CE86004D8BCA /* RXTableView.m */; };
 		6C59F2FA1E53017D00D15063 /* CommonConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6C59F2F11E53017D00D15063 /* CommonConfig.xcconfig */; };
@@ -411,6 +412,8 @@
 		6C483D281D58860C00A3A202 /* RXMineCreateAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMineCreateAddressController.m; sourceTree = "<group>"; };
 		6C4B5DED1E80B2B900869D70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6C4B5DEF1E80B2C500869D70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6C4B5DF21E80B7F100869D70 /* RXAccumulation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RXAccumulation.c; sourceTree = "<group>"; };
+		6C4B5DF31E80B7F100869D70 /* RXAccumulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAccumulation.h; sourceTree = "<group>"; };
 		6C4BFCD51CDC9F94006476FB /* RXDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXDataModel.h; sourceTree = "<group>"; };
 		6C4BFCD61CDC9F94006476FB /* RXDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXDataModel.m; sourceTree = "<group>"; };
 		6C52B18B1D77CE86004D8BCA /* RXTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTableView.h; sourceTree = "<group>"; };
@@ -885,6 +888,7 @@
 		6C3A2FCE1CD3477000533FFF /* RXExtenstion */ = {
 			isa = PBXGroup;
 			children = (
+				6C4B5DF11E80B7F100869D70 /* C */,
 				6C3A302D1CD352AA00533FFF /* 3rd */,
 				6C3A2FE61CD3477E00533FFF /* RXExtenstion */,
 				6CF3224C1CD86BFF009BD1B7 /* ViewController */,
@@ -1235,6 +1239,15 @@
 				6C3F7BB01D07E02B0046C29C /* RXLocationController.m */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		6C4B5DF11E80B7F100869D70 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				6C4B5DF21E80B7F100869D70 /* RXAccumulation.c */,
+				6C4B5DF31E80B7F100869D70 /* RXAccumulation.h */,
+			);
+			path = C;
 			sourceTree = "<group>";
 		};
 		6C52B18A1D77CE86004D8BCA /* 横竖TableView */ = {
@@ -2061,6 +2074,7 @@
 				6C00AFF61D4054FD00EA7221 /* RXAFNS.m in Sources */,
 				6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */,
 				6CD0EB9C1D21159900692886 /* OpenUDID.m in Sources */,
+				6C4B5DF41E80B7F100869D70 /* RXAccumulation.c in Sources */,
 				3B4B66841DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m in Sources */,
 				6CDB2CCF1D9E0DA800B07530 /* CollectionReusableViewClass.m in Sources */,
 				6C3A309B1CD3538A00533FFF /* MJRefreshAutoFooter.m in Sources */,

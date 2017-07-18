@@ -16,6 +16,7 @@
 #import "RXSystemServerController.h"
 #import "RXMenuController.h"
 #import "RXSearchViewController.h"
+#import "RXLoLInfoViewController.h"
 
 @interface RXHomeController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -57,7 +58,8 @@
             @"系统中的功能",
             @"自定义点餐菜单框架",
             @"搜索",
-            @"一个完整的界面demo-coding"];
+            @"一个完整的界面demo-coding",
+            @"LOL"];
     [_tableView reloadData];
 }
 
@@ -128,6 +130,10 @@
         RXNewHomeController * homeControll = [[RXNewHomeController alloc] init];
         homeControll.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:homeControll animated:YES];
+    }
+    else if(row == 11) {
+        RXLoLInfoViewController * lolInfo = [[RXLoLInfoViewController alloc] init];
+        [self.navigationController pushViewController:lolInfo animated:YES];
     }
 }
 

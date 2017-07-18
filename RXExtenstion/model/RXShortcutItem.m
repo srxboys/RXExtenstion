@@ -24,7 +24,7 @@
         self.rxItemType = [aDecoder decodeObjectForKey:@"rxItemType"];
         self.rxItemTitle = [aDecoder decodeObjectForKey:@"rxItemTitle"];
         self.rxItemSubTitle = [aDecoder decodeObjectForKey:@"rxItemSubTitle"];
-        self.rxHidden = [aDecoder decodeObjectForKey:@"rxHidden"];
+        self.rxHidden = [[aDecoder decodeObjectForKey:@"rxHidden"] boolValue];
     }
     return self;
 }

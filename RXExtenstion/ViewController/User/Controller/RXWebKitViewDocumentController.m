@@ -248,7 +248,7 @@ JS调用App注册过的方法 一、加载网页
 
 //OC注册供JS调用的方法
 - (void)regiterJS {
-    [[_webView configuration].userContentController addScriptMessageHandler:self name:@"closeMe"];
+//    [[_webView configuration].userContentController addScriptMessageHandler:self name:@"closeMe"];
 }
 //OC在JS调用方法做的处理
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message

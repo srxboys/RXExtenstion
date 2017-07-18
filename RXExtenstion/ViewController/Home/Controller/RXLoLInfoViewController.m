@@ -14,12 +14,13 @@
 
 
 #import "RXLoLInfoViewController.h"
+#import "RXLOLCollectionViewCell.h"
+#import "MJRefresh.h"
 
 @interface RXLoLInfoViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 {
     UICollectionViewFlowLayout * _flowLayout;
     UICollectionView * _collectionView;
-    CGFloat top;
 }
 @end
 
@@ -32,27 +33,56 @@
 }
 
 - (void)configUI {
+    
+    CGFloat height = ScreenHeight - NavHeight;
+    
     _flowLayout = [[UICollectionViewFlowLayout alloc] init];
     _flowLayout.sectionInset = UIEdgeInsetsZero;
     _flowLayout.minimumLineSpacing = 0;
     _flowLayout.minimumInteritemSpacing = 0;
+    _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    _flowLayout.itemSize = CGSizeMake(ScreenWidth, height);
     
-    _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:_flowLayout];
+    //如果你单前的页面是 cell ，(反正就是滚动屏幕的一块)
+    BOOL currentPageIsCell = NO; /** 很重要 */
+    
+    UIScrollView * scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, NavHeight, ScreenWidth, height)];
+    scrollView.pagingEnabled = YES;
+    if(currentPageIsCell) {
+        [self.view addSubview:scrollView];
+        scrollView.contentSize = CGSizeMake(ScreenWidth * 4, height);
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, height) collectionViewLayout:_flowLayout];
+    }
+    else {
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, NavHeight, ScreenWidth, height) collectionViewLayout:_flowLayout];
+    }
+    
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
-    [self.view addSubview:_collectionView];
+    _collectionView.showsVerticalScrollIndicator = NO;
+    _collectionView.showsHorizontalScrollIndicator = NO;
+    _collectionView.backgroundColor = [UIColor whiteColor];
+    _collectionView.pagingEnabled = YES;
+    if(currentPageIsCell) {
+        [scrollView addSubview:_collectionView];
+    }
+    else {
+        [self.view addSubview:_collectionView];
+    }
+    
     
     //注册cell
-    
-    
+    [_collectionView registerClass:[RXLOLCollectionViewCell class] forCellWithReuseIdentifier:RXLOLCellIdentifier];
+
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1;
+    return 3;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"" forIndexPath:indexPath];
+    RXLOLCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:RXLOLCellIdentifier forIndexPath:indexPath];
+    cell.cellType = indexPath.item;
     return cell;
 }
 

@@ -18,6 +18,9 @@
 @implementation RXColorLog
 + (void)printLog:(BOOL)isError file:(char *)file line:(int)line method:(NSString *)method content:(NSString *)format {
 #ifdef DEBUG
+    /*
+     // Xcode < 8 
+     
     NSString *filePath = [[NSString stringWithUTF8String:file] lastPathComponent];
     NSString *LogHeader = [NSString stringWithFormat:@": \n   FILE->%@\n   LINE->%d\n   FUNCTION->",filePath, line];
     
@@ -43,6 +46,32 @@
             }
         }
         
+    }
+     */
+    
+    
+    // Xcode >= 8 
+    NSString *filePath = [[NSString stringWithUTF8String:file] lastPathComponent];
+    
+    NSString * headerIdentification = @"👇👇👇👇👇👇👇";
+    NSString * footerIdentification = @"👉👉👉👉👉👉👉👉👉👉👉👉👉👉";
+    if(isError) {
+        headerIdentification = @"❌❌❌❌❌❌❌";
+        footerIdentification = @"🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺";
+    }
+    
+    NSString *LogHeader = [NSString stringWithFormat:@": %@ \n   Ⓕⓘⓛⓔ ⏩ %@\n   Ⓛⓘⓝⓔ ⏩ %d\n   Ⓕⓤⓝⓒⓣⓘⓞⓝ ⏩",headerIdentification, filePath, line];
+    
+    format = [NSString stringWithFormat:@"\n%@", format];
+    format = [format stringByAppendingString:@"\n\n"];
+    format = [format stringByAppendingString:footerIdentification];
+    if(isError) {
+        NSLog(@"%@ %@ %@\n\n", LogHeader, method,format);
+    }
+    else {
+        if(LOG_ENABLE) {
+            NSLog(@"%@ %@ %@\n\n", LogHeader, method,format);
+        }
     }
 #endif
 }

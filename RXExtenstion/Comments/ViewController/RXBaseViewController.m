@@ -167,7 +167,7 @@
 
 -(BOOL)shouldAutorotate
 {
-    return NO; //是否旋转屏幕
+    return YES;
 }
 
 -(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
@@ -175,9 +175,8 @@
     return UIInterfaceOrientationPortrait;
 }
 
--(NSUInteger)supportedInterfaceOrientations
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskPortrait;
 }
-
 @end

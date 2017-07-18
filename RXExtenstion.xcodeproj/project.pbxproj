@@ -11,6 +11,11 @@
 		3B4B66881DC32F1F003DF3B3 /* ZZDragCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B66871DC32F1F003DF3B3 /* ZZDragCollectionView.m */; };
 		3B4B668C1DC337E7003DF3B3 /* RXDragCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B668A1DC337E7003DF3B3 /* RXDragCell.m */; };
 		3B4B668D1DC337E7003DF3B3 /* RXDragCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B4B668B1DC337E7003DF3B3 /* RXDragCell.xib */; };
+		6C00478F1F1DB37600410E65 /* RXLOLMenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C00478E1F1DB37600410E65 /* RXLOLMenuBar.m */; };
+		6C0047921F1DB38F00410E65 /* RXLOLCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0047911F1DB38F00410E65 /* RXLOLCollectionViewCell.m */; };
+		6C0047B41F1DB67C00410E65 /* RXLOLRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0047AA1F1DB67C00410E65 /* RXLOLRecordTableViewCell.m */; };
+		6C0047B51F1DB67C00410E65 /* RXLOLAssetsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0047AE1F1DB67C00410E65 /* RXLOLAssetsTableViewCell.m */; };
+		6C0047B61F1DB67C00410E65 /* RXLOLAbilityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0047B21F1DB67C00410E65 /* RXLOLAbilityTableViewCell.m */; };
 		6C0047E71D2FA5B100EBE004 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0047E61D2FA5B100EBE004 /* NotificationCenter.framework */; };
 		6C0047EB1D2FA5B100EBE004 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0047EA1D2FA5B100EBE004 /* TodayViewController.m */; };
 		6C0047EE1D2FA5B100EBE004 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0047EC1D2FA5B100EBE004 /* MainInterface.storyboard */; };
@@ -114,7 +119,6 @@
 		6C5B547E1D76942E00A7577F /* UIImageView_说明.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B547D1D76942E00A7577F /* UIImageView_说明.txt */; };
 		6C673D5E1E56F8000054C3F4 /* RXWebKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C673D5D1E56F8000054C3F4 /* RXWebKitViewController.m */; };
 		6C6D602E1DC832C30069573E /* RXNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D602D1DC832C30069573E /* RXNavigationView.m */; };
-		6C6D60311DC832F00069573E /* RXInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D60301DC832F00069573E /* RXInfoCell.m */; };
 		6C7B91471D0D809000496C4F /* RXMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B91461D0D809000496C4F /* RXMenuController.m */; };
 		6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480251CF6F9310052C3BF /* NSArray+RXArrLog.m */; };
 		6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8480281CF6F93F0052C3BF /* NSDictionary+RXDictLog.m */; };
@@ -245,6 +249,16 @@
 		3B4B66891DC337E7003DF3B3 /* RXDragCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RXDragCell.h; path = ../RXMineView/RXDragCell.h; sourceTree = "<group>"; };
 		3B4B668A1DC337E7003DF3B3 /* RXDragCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RXDragCell.m; path = ../RXMineView/RXDragCell.m; sourceTree = "<group>"; };
 		3B4B668B1DC337E7003DF3B3 /* RXDragCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RXDragCell.xib; path = ../RXMineView/RXDragCell.xib; sourceTree = "<group>"; };
+		6C00478D1F1DB37600410E65 /* RXLOLMenuBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLOLMenuBar.h; sourceTree = "<group>"; };
+		6C00478E1F1DB37600410E65 /* RXLOLMenuBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLOLMenuBar.m; sourceTree = "<group>"; };
+		6C0047901F1DB38F00410E65 /* RXLOLCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLOLCollectionViewCell.h; sourceTree = "<group>"; };
+		6C0047911F1DB38F00410E65 /* RXLOLCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLOLCollectionViewCell.m; sourceTree = "<group>"; };
+		6C0047A91F1DB67C00410E65 /* RXLOLRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLOLRecordTableViewCell.h; sourceTree = "<group>"; };
+		6C0047AA1F1DB67C00410E65 /* RXLOLRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLOLRecordTableViewCell.m; sourceTree = "<group>"; };
+		6C0047AD1F1DB67C00410E65 /* RXLOLAssetsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLOLAssetsTableViewCell.h; sourceTree = "<group>"; };
+		6C0047AE1F1DB67C00410E65 /* RXLOLAssetsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLOLAssetsTableViewCell.m; sourceTree = "<group>"; };
+		6C0047B11F1DB67C00410E65 /* RXLOLAbilityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLOLAbilityTableViewCell.h; sourceTree = "<group>"; };
+		6C0047B21F1DB67C00410E65 /* RXLOLAbilityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLOLAbilityTableViewCell.m; sourceTree = "<group>"; };
 		6C0047E51D2FA5B100EBE004 /* RXToDay.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RXToDay.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C0047E61D2FA5B100EBE004 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		6C0047E91D2FA5B100EBE004 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
@@ -439,8 +453,6 @@
 		6C673D5D1E56F8000054C3F4 /* RXWebKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXWebKitViewController.m; sourceTree = "<group>"; };
 		6C6D602C1DC832C30069573E /* RXNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNavigationView.h; sourceTree = "<group>"; };
 		6C6D602D1DC832C30069573E /* RXNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNavigationView.m; sourceTree = "<group>"; };
-		6C6D602F1DC832F00069573E /* RXInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXInfoCell.h; sourceTree = "<group>"; };
-		6C6D60301DC832F00069573E /* RXInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXInfoCell.m; sourceTree = "<group>"; };
 		6C7B91451D0D809000496C4F /* RXMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuController.h; sourceTree = "<group>"; };
 		6C7B91461D0D809000496C4F /* RXMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenuController.m; sourceTree = "<group>"; };
 		6C8480241CF6F9310052C3BF /* NSArray+RXArrLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXArrLog.h"; sourceTree = "<group>"; };
@@ -661,6 +673,57 @@
 				3B4B66871DC32F1F003DF3B3 /* ZZDragCollectionView.m */,
 			);
 			path = ZZDragCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		6C0047A81F1DB67C00410E65 /* RXLOLRecord */ = {
+			isa = PBXGroup;
+			children = (
+				6C0047A91F1DB67C00410E65 /* RXLOLRecordTableViewCell.h */,
+				6C0047AA1F1DB67C00410E65 /* RXLOLRecordTableViewCell.m */,
+				6C0047AB1F1DB67C00410E65 /* Views */,
+			);
+			path = RXLOLRecord;
+			sourceTree = "<group>";
+		};
+		6C0047AB1F1DB67C00410E65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C0047AC1F1DB67C00410E65 /* RXLOLOAssets */ = {
+			isa = PBXGroup;
+			children = (
+				6C0047AD1F1DB67C00410E65 /* RXLOLAssetsTableViewCell.h */,
+				6C0047AE1F1DB67C00410E65 /* RXLOLAssetsTableViewCell.m */,
+				6C0047AF1F1DB67C00410E65 /* Views */,
+			);
+			path = RXLOLOAssets;
+			sourceTree = "<group>";
+		};
+		6C0047AF1F1DB67C00410E65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C0047B01F1DB67C00410E65 /* RXLOLAbility */ = {
+			isa = PBXGroup;
+			children = (
+				6C0047B11F1DB67C00410E65 /* RXLOLAbilityTableViewCell.h */,
+				6C0047B21F1DB67C00410E65 /* RXLOLAbilityTableViewCell.m */,
+				6C0047B31F1DB67C00410E65 /* Views */,
+			);
+			path = RXLOLAbility;
+			sourceTree = "<group>";
+		};
+		6C0047B31F1DB67C00410E65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6C0047E81D2FA5B100EBE004 /* RXToDay */ = {
@@ -1295,8 +1358,13 @@
 			children = (
 				6C6D602C1DC832C30069573E /* RXNavigationView.h */,
 				6C6D602D1DC832C30069573E /* RXNavigationView.m */,
-				6C6D602F1DC832F00069573E /* RXInfoCell.h */,
-				6C6D60301DC832F00069573E /* RXInfoCell.m */,
+				6C00478D1F1DB37600410E65 /* RXLOLMenuBar.h */,
+				6C00478E1F1DB37600410E65 /* RXLOLMenuBar.m */,
+				6C0047901F1DB38F00410E65 /* RXLOLCollectionViewCell.h */,
+				6C0047911F1DB38F00410E65 /* RXLOLCollectionViewCell.m */,
+				6C0047A81F1DB67C00410E65 /* RXLOLRecord */,
+				6C0047B01F1DB67C00410E65 /* RXLOLAbility */,
+				6C0047AC1F1DB67C00410E65 /* RXLOLOAssets */,
 			);
 			path = RXLOLView;
 			sourceTree = "<group>";
@@ -1981,6 +2049,7 @@
 				6C3A30651CD352AA00533FFF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				6C2A726A1D2CF6DA000F1550 /* RXLoadingHUD.m in Sources */,
 				6C381A1E1D01195000D4F68D /* RXSystemServer.m in Sources */,
+				6C0047921F1DB38F00410E65 /* RXLOLCollectionViewCell.m in Sources */,
 				6CD828B81CF831BB00AF575E /* RXMineViewController.m in Sources */,
 				6C3A30131CD3477E00533FFF /* UIViewController+MJPopupViewController.m in Sources */,
 				6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */,
@@ -2011,6 +2080,7 @@
 				6C3A30111CD3477E00533FFF /* MJPopupBackgroundView.m in Sources */,
 				6C7B91471D0D809000496C4F /* RXMenuController.m in Sources */,
 				6C25DA5C1CFEBDA900E65A38 /* RXMineInfoViewController.m in Sources */,
+				6C0047B51F1DB67C00410E65 /* RXLOLAssetsTableViewCell.m in Sources */,
 				6C3A30A41CD3538A00533FFF /* MJRefreshBackNormalFooter.m in Sources */,
 				6C3A30641CD352AA00533FFF /* AFImageDownloader.m in Sources */,
 				6C11FD171CF6B7CB00BE323D /* RXGetNetStatus.m in Sources */,
@@ -2076,9 +2146,9 @@
 				6CD0EB9C1D21159900692886 /* OpenUDID.m in Sources */,
 				6C4B5DF41E80B7F100869D70 /* RXAccumulation.c in Sources */,
 				3B4B66841DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m in Sources */,
+				6C0047B61F1DB67C00410E65 /* RXLOLAbilityTableViewCell.m in Sources */,
 				6CDB2CCF1D9E0DA800B07530 /* CollectionReusableViewClass.m in Sources */,
 				6C3A309B1CD3538A00533FFF /* MJRefreshAutoFooter.m in Sources */,
-				6C6D60311DC832F00069573E /* RXInfoCell.m in Sources */,
 				6C11FD181CF6B7CB00BE323D /* RXNetworkCheck.m in Sources */,
 				3B4B66881DC32F1F003DF3B3 /* ZZDragCollectionView.m in Sources */,
 				6CA434281CD9C42400641785 /* RXUploadImageController.m in Sources */,
@@ -2095,6 +2165,7 @@
 				6CA434551CD9E5AF00641785 /* SDImageCache.m in Sources */,
 				6CF3225F1CD87A27009BD1B7 /* RXHomeController.m in Sources */,
 				6CA434531CD9E5AF00641785 /* MKAnnotationView+WebCache.m in Sources */,
+				6C00478F1F1DB37600410E65 /* RXLOLMenuBar.m in Sources */,
 				6C3A2FD11CD3477000533FFF /* main.m in Sources */,
 				6C3A305D1CD352AA00533FFF /* AFHTTPSessionManager.m in Sources */,
 				6C673D5E1E56F8000054C3F4 /* RXWebKitViewController.m in Sources */,
@@ -2102,6 +2173,7 @@
 				6C381A211D01203300D4F68D /* RXSystemServerController.m in Sources */,
 				6CA15FED1CF339B5009DCE60 /* GBInfiniteScrollView.m in Sources */,
 				6C00B0081D4057E100EA7221 /* NSError+RXString.m in Sources */,
+				6C0047B41F1DB67C00410E65 /* RXLOLRecordTableViewCell.m in Sources */,
 				6C00B00E1D4063BE00EA7221 /* RXSessionDownload.m in Sources */,
 				6CA434541CD9E5AF00641785 /* NSData+ImageContentType.m in Sources */,
 				6CA434601CD9E5AF00641785 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -2267,6 +2339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2288,6 +2361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

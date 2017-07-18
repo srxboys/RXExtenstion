@@ -13,6 +13,8 @@
 
 - (id)objectForKeyNotNull:(NSString *)key
 {
+    if (![[self allKeys] containsObject:key]) return nil;
+    
     id object = [self objectForKey:key];
     if (([object isKindOfClass:[NSString class]] && (![object isEqualToString:@"<null>"])) ||
         [object isKindOfClass:[NSArray class]] ||

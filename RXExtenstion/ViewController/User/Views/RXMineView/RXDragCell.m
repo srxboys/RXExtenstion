@@ -11,7 +11,9 @@
 @implementation RXDragCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    if(iOS8OrLater) {
+        [super awakeFromNib];
+    }
 }
 
 @end

@@ -43,8 +43,8 @@
     _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     _flowLayout.itemSize = CGSizeMake(ScreenWidth, height);
     
-    //如果你单前的页面是 cell ，(反正就是滚动屏幕的一块)
-    BOOL currentPageIsCell = NO; /** 很重要 */
+    //如果你当前的页面是 cell ，(YES = 是菜单里面的页面)
+    BOOL currentPageIsCell = NO; /** 很重要 开关控制 */
     
     UIScrollView * scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, NavHeight, ScreenWidth, height)];
     scrollView.pagingEnabled = YES;

@@ -52,25 +52,21 @@
 
 - (void)configUI {
 
-    
     CGFloat totalHeigth = 0;
     //轮番图
     CGFloat scrollViewHeight = ActureHeight(210);
     _fouceView = [[RXScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, scrollViewHeight)];
     _fouceView.backgroundColor = [UIColor redColor];
     
-    
     totalHeigth += scrollViewHeight;
     //用户信息
     _userInforView = [[RXNewHomeUserInfoView alloc] initWithFrame:CGRectMake(0, totalHeigth, ScreenWidth, 100)];
     _userInforView.backgroundColor = [RXRandom randomColor];
     
-    
     totalHeigth += 100;
     //分段控制器
     _segmentView = [[RXNewHomeSegmentView alloc] initWithFrame:CGRectMake(0, totalHeigth, ScreenWidth, 50)];
     _segmentView.backgroundColor = [RXRandom randomColor];
-    
     
     totalHeigth += 50;
     _collectionViewTop = totalHeigth;

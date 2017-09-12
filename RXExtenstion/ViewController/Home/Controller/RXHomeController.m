@@ -18,6 +18,8 @@
 #import "RXSearchViewController.h"
 #import "RXLoLInfoViewController.h"
 
+#import "RXUseSwiftViewController.h"
+
 @interface RXHomeController ()<UITableViewDataSource, UITableViewDelegate>
 {
     NSArray * arr;
@@ -59,7 +61,9 @@
             @"自定义点餐菜单框架",
             @"搜索",
             @"一个完整的界面demo-coding",
-            @"LOL"];
+            @"LOL",
+            @"OC中使用Swift方法"
+            ];
     [_tableView reloadData];
 }
 
@@ -134,6 +138,10 @@
     else if(row == 11) {
         RXLoLInfoViewController * lolInfo = [[RXLoLInfoViewController alloc] init];
         [self.navigationController pushViewController:lolInfo animated:YES];
+    }
+    else if(row == 12) {
+        RXUseSwiftViewController * useSwiftVC = [[RXUseSwiftViewController alloc] init];
+        [self.navigationController pushViewController:useSwiftVC animated:YES];
     }
 }
 

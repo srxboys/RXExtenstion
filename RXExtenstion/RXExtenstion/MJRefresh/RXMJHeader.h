@@ -6,7 +6,7 @@
 //  Copyright © 2016年 srxboys. All rights reserved.
 //
 /*
- https://github.com/srxboys
+https://github.com/iOSBrothers/MJRefreshExtension
  
  项目基本框架
  */

@@ -56,6 +56,22 @@
     return platform;
 }
 
+/*
+ 这个不建议使用。就用[self getDeviceVersionInfo]给服务器，
+ 你只要给出对应的列表。
+     这样以后 apple 出新设备，客户端就不需要打包去适配。后台也是保存这个。
+    
+     好处>
+        1、减少 app 的适配，和丢失率。
+        2、后台也不用适配。防止适配出错。
+     使用>
+        如果iPhone1,1 看不懂，就看你的对照表。这样就好
+    
+ 
+     如果你总结麻烦。我写好了 https://github.com/srxboys/iphone-device-name-list
+     如果你有更多 新设备的标识。记得pull request 或者 issues告诉我。
+ 
+ */
 + (NSString *)correspondVersion {
     
     NSString *correspondVersion = [self getDeviceVersionInfo];

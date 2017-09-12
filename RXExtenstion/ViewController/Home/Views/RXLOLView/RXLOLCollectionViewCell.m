@@ -15,10 +15,23 @@ NSString * const RXLOLCellIdentifier = @"RXLOLCollectionViewCell";
 #import "RXLOLAbilityTableViewCell.h"
 #import "RXLOLAssetsTableViewCell.h"
 
-@interface RXLOLCollectionViewCell ()<UITableViewDelegate, UITableViewDataSource>
+typedef NS_ENUM(NSInteger, MenuLocation) {
+    menuLocation_bottom = 0,
+    menuLocation_top = 1,
+    menuLocation_mind = 2,
+    menuLocation_other = 3
+};
+
+@interface RXLOLCollectionViewCell ()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 {
     UITableView * _tableView;
     CGFloat _insetTop;
+   
+    //以下用于扩展
+    MenuLocation _outsideLocation;
+    MenuLocation _insideLocation;
+    
+    CGFloat _lastOffsetY;
 }
 @end
 
@@ -37,6 +50,7 @@ NSString * const RXLOLCellIdentifier = @"RXLOLCollectionViewCell";
         [self.contentView addSubview:_tableView];
         _tableView.contentInset = UIEdgeInsetsMake(_insetTop, 0, 0, 0);
         [self registerCell];
+    
     }
     return self;
 }
@@ -48,7 +62,8 @@ NSString * const RXLOLCellIdentifier = @"RXLOLCollectionViewCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 50;
+//    return arc4random() % 20 + 5;
+    return arc4random() % 20 + 6;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
@@ -67,6 +82,104 @@ NSString * const RXLOLCellIdentifier = @"RXLOLCollectionViewCell";
         cell.row = row;
         return cell;
     }
+}
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat offsetY = scrollView.contentOffset.y;
+
+    /*
+     //扩展项
+     
+     BOOL NoReturnOffset = NO;
+     
+    if(offsetY == -100) {
+        //置低
+        _insideLocation = menuLocation_bottom;
+    }
+    else if(offsetY== -40) {
+        //置顶
+        _insideLocation = menuLocation_top;
+    }
+    else if(offsetY> -100 && offsetY < -40){
+        //也是置顶
+        _insideLocation = menuLocation_mind;
+    }
+    else  {
+        _insideLocation = menuLocation_other;
+    }
+    
+    RXLog(@"_outsideLocation=%zd   _insideLocation=%zd" , _outsideLocation, _insideLocation);
+    
+    if(_outsideLocation == menuLocation_bottom) {
+        if(_insideLocation != menuLocation_other) {
+            NoReturnOffset = YES;
+        }
+    }
+    else if(_outsideLocation == menuLocation_top){
+        if(_insideLocation != menuLocation_other) {
+            NoReturnOffset = YES;
+        }
+    }
+    else if(_outsideLocation == menuLocation_mind) {
+        if(_insideLocation == menuLocation_mind) {
+            if(_lastOffsetY > offsetY) {
+                if(_contentOffsetY>=offsetY) {
+                    NoReturnOffset = YES;
+                }
+            }
+            else {
+                if(_contentOffsetY<=offsetY) {
+                    NoReturnOffset = YES;
+                }
+            }
+        }
+    }
+    _lastOffsetY = offsetY;
+     */
+    
+    if(_cellGround == Cellbackground) return;
+    
+    //扩展项
+//    if(!NoReturnOffset) return;
+    
+    if([_delegate respondsToSelector:@selector(RXLOLScrollY:)]) {
+        [_delegate RXLOLScrollY:offsetY];
+    }
+    //取消 延迟执行方法
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(letSuperCollectionViewReload) object:nil];
+    
+    //定义 延迟执行方法
+    [self performSelector:@selector(letSuperCollectionViewReload) withObject:nil afterDelay:0.1];
+}
+
+- (void)letSuperCollectionViewReload {
+    if([_delegate respondsToSelector:@selector(RXLOLScrollReload)]) {
+        [_delegate RXLOLScrollReload];
+    }
+}
+
+- (void)setContentOffsetY:(CGFloat)contentOffsetY {
+    _contentOffsetY = contentOffsetY;
+    RXLog(@"cell contentOffsetY=%.2f ----_contentOffsetY=%.2f cellground=%@", contentOffsetY, _contentOffsetY, _cellGround == 0? @"背景":@"前景");
+    CGPoint point =  _tableView.contentOffset;
+
+    _outsideLocation = menuLocation_other;
+    if(contentOffsetY <= -100) {
+        //置低
+        _outsideLocation = menuLocation_bottom;
+        point.y = -100;
+    }
+    else if(contentOffsetY >= -40) {
+        //置顶
+        point.y = -40;
+        _outsideLocation = menuLocation_top;
+    }
+    else {
+        //跟随
+    }
+
+    _tableView.contentOffset = point;
 }
 
 @end

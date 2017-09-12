@@ -7,7 +7,11 @@
 //
 
 #import "UIView+RXToast.h"
+#import <objc/runtime.h>
+
+static const NSString * RXToastSubViewKey = @"RXToastSubViewKey";
 
 @implementation UIView (RXToast)
+
 
 @end

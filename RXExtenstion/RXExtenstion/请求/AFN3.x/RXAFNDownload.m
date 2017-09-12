@@ -71,4 +71,41 @@
     
     [_downloadTask resume];
 }
+
+
+//以下，看你是否需要
+
+
+// 文件目录是否存在，不存在就创建
++ (BOOL)isFileExistesAtPath:(NSString *)filePath {
+    NSFileManager * fileManger = [NSFileManager defaultManager];
+    if(![fileManger fileExistsAtPath:filePath]) {
+        NSError *error = nil;
+        [fileManger createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:&error];
+        if(error) {
+            RXLog(@"创建目录失败=%@", filePath);
+            return NO;
+        }
+        return YES;
+    }
+    else {
+        RXLog(@"目录 已存在");
+        return NO;
+    }
+}
+
+//删除某个目录
++ (BOOL)deleteFileOfPath:(NSString *)filePath {
+    NSFileManager * fileManger = [NSFileManager defaultManager];
+    if([fileManger fileExistsAtPath:filePath]) {
+        NSError * error = nil;
+        [fileManger removeItemAtPath:filePath error:&error];
+        if(error) {
+            RXLog(@"删除目录失败 =%@", filePath);
+            return NO;
+        }
+    }
+    return YES;
+}
+
 @end

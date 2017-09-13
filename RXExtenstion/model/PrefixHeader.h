@@ -112,6 +112,7 @@
 #define iOS7OrLater ([SYSTEMVERSION floatValue] >= 7.0)
 #define iOS8OrLater ([SYSTEMVERSION floatValue] >= 8.0)
 #define iOS9OrLater ([SYSTEMVERSION floatValue] >= 9.0)
+#define iOS10OrLater ([SYSTEMVERSION floatValue] >= 10.0)
 
 //和上面一样
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([SYSTEMVERSION compare:v options:NSNumericSearch] == NSOrderedSame)

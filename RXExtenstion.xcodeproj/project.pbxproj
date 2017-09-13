@@ -37,6 +37,10 @@
 		6C2A726A1D2CF6DA000F1550 /* RXLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A72691D2CF6DA000F1550 /* RXLoadingHUD.m */; };
 		6C2A726D1D2CF765000F1550 /* UIView+RXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A726C1D2CF765000F1550 /* UIView+RXToast.m */; };
 		6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */; };
+		6C33D36B1F68D3AE000F876C /* RXTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C33D36A1F68D3AE000F876C /* RXTouchID.m */; };
+		6C33D36D1F68D481000F876C /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C33D36C1F68D481000F876C /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6C33D3701F68D6A9000F876C /* RXTouchIDOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C33D36F1F68D6A9000F876C /* RXTouchIDOption.m */; };
+		6C33D3731F68DCA3000F876C /* RXTouchIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C33D3721F68DCA3000F876C /* RXTouchIDViewController.m */; };
 		6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */; };
 		6C381A1E1D01195000D4F68D /* RXSystemServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C381A1D1D01195000D4F68D /* RXSystemServer.m */; };
 		6C381A211D01203300D4F68D /* RXSystemServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C381A201D01203300D4F68D /* RXSystemServerController.m */; };
@@ -306,6 +310,13 @@
 		6C2A726C1D2CF765000F1550 /* UIView+RXToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RXToast.m"; sourceTree = "<group>"; };
 		6C32D6A91CF3E7C7003EE112 /* RXNewHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNewHomeTableViewCell.h; sourceTree = "<group>"; };
 		6C32D6AA1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNewHomeTableViewCell.m; sourceTree = "<group>"; };
+		6C33D3691F68D3AE000F876C /* RXTouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTouchID.h; sourceTree = "<group>"; };
+		6C33D36A1F68D3AE000F876C /* RXTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTouchID.m; sourceTree = "<group>"; };
+		6C33D36C1F68D481000F876C /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		6C33D36E1F68D6A9000F876C /* RXTouchIDOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTouchIDOption.h; sourceTree = "<group>"; };
+		6C33D36F1F68D6A9000F876C /* RXTouchIDOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTouchIDOption.m; sourceTree = "<group>"; };
+		6C33D3711F68DCA3000F876C /* RXTouchIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTouchIDViewController.h; sourceTree = "<group>"; };
+		6C33D3721F68DCA3000F876C /* RXTouchIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTouchIDViewController.m; sourceTree = "<group>"; };
 		6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSystemAlertController.h; sourceTree = "<group>"; };
 		6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSystemAlertController.m; sourceTree = "<group>"; };
 		6C381A1C1D01195000D4F68D /* RXSystemServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSystemServer.h; sourceTree = "<group>"; };
@@ -662,6 +673,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C33D36D1F68D481000F876C /* LocalAuthentication.framework in Frameworks */,
 				6C4B5DF01E80B2C500869D70 /* Foundation.framework in Frameworks */,
 				6C4B5DEE1E80B2B900869D70 /* UIKit.framework in Frameworks */,
 				6CBE24601D5DD93E006AAB11 /* WebKit.framework in Frameworks */,
@@ -926,6 +938,17 @@
 				6C2A726C1D2CF765000F1550 /* UIView+RXToast.m */,
 			);
 			path = RXToast;
+			sourceTree = "<group>";
+		};
+		6C33D3681F68D397000F876C /* RXTouchIDView */ = {
+			isa = PBXGroup;
+			children = (
+				6C33D3691F68D3AE000F876C /* RXTouchID.h */,
+				6C33D36A1F68D3AE000F876C /* RXTouchID.m */,
+				6C33D36E1F68D6A9000F876C /* RXTouchIDOption.h */,
+				6C33D36F1F68D6A9000F876C /* RXTouchIDOption.m */,
+			);
+			path = RXTouchIDView;
 			sourceTree = "<group>";
 		};
 		6C381A1B1D01192200D4F68D /* SystemServer */ = {
@@ -1282,6 +1305,7 @@
 		6C3A30BB1CD35A5E00533FFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C33D36C1F68D481000F876C /* LocalAuthentication.framework */,
 				6C4B5DEF1E80B2C500869D70 /* Foundation.framework */,
 				6C4B5DED1E80B2B900869D70 /* UIKit.framework */,
 				6CBE245F1D5DD93E006AAB11 /* WebKit.framework */,
@@ -1788,6 +1812,8 @@
 				6C25DA631CFED20200E65A38 /* RXLoLInfoViewController.m */,
 				6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */,
 				6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */,
+				6C33D3711F68DCA3000F876C /* RXTouchIDViewController.h */,
+				6C33D3721F68DCA3000F876C /* RXTouchIDViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1806,6 +1832,7 @@
 		6CF322561CD879BF009BD1B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6C33D3681F68D397000F876C /* RXTouchIDView */,
 				6C6D602B1DC82D2C0069573E /* RXLOLView */,
 				6CDB2CBD1D9E0DA800B07530 /* RXSearch */,
 				6C9D125A1D7D5C1F00694C52 /* RXMenuController */,
@@ -2081,6 +2108,7 @@
 				6C862FBC1D5876C500EEB818 /* RXGetArea.m in Sources */,
 				6CA4345D1CD9E5AF00641785 /* UIImage+GIF.m in Sources */,
 				6CF4ACA21D01A9F100CD17CB /* RXExpansionContractionCell.m in Sources */,
+				6C33D3731F68DCA3000F876C /* RXTouchIDViewController.m in Sources */,
 				6C3A30AC1CD3538A00533FFF /* UIScrollView+MJRefresh.m in Sources */,
 				6C3A30AB1CD3538A00533FFF /* UIScrollView+MJExtension.m in Sources */,
 				6C25DA611CFEBF8300E65A38 /* RXDate.m in Sources */,
@@ -2144,6 +2172,7 @@
 				6C00B00B1D40639A00EA7221 /* RXHttp.m in Sources */,
 				6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */,
 				6C3A30611CD352AA00533FFF /* AFURLResponseSerialization.m in Sources */,
+				6C33D3701F68D6A9000F876C /* RXTouchIDOption.m in Sources */,
 				6CA608571D37991F00A6C088 /* UIImageView+CornerRadius.m in Sources */,
 				6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */,
 				6C862FC01D5876C500EEB818 /* RXJDTableCell.m in Sources */,
@@ -2198,6 +2227,7 @@
 				6C00B00E1D4063BE00EA7221 /* RXSessionDownload.m in Sources */,
 				6CA434541CD9E5AF00641785 /* NSData+ImageContentType.m in Sources */,
 				6CA434601CD9E5AF00641785 /* UIImageView+HighlightedWebCache.m in Sources */,
+				6C33D36B1F68D3AE000F876C /* RXTouchID.m in Sources */,
 				6C3A309C1CD3538A00533FFF /* MJRefreshBackFooter.m in Sources */,
 				6C11FD161CF6B7CB00BE323D /* Reachability.m in Sources */,
 				6C2A726D1D2CF765000F1550 /* UIView+RXToast.m in Sources */,

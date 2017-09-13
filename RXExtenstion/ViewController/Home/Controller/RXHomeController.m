@@ -17,6 +17,7 @@
 #import "RXMenuController.h"
 #import "RXSearchViewController.h"
 #import "RXLoLInfoViewController.h"
+#import "RXTouchIDViewController.h"
 
 #import "RXUseSwiftViewController.h"
 
@@ -62,7 +63,8 @@
             @"搜索",
             @"一个完整的界面demo-coding",
             @"LOL",
-            @"OC中使用Swift方法"
+            @"OC中使用Swift方法",
+            @"Touch ID"
             ];
     [_tableView reloadData];
 }
@@ -142,6 +144,10 @@
     else if(row == 12) {
         RXUseSwiftViewController * useSwiftVC = [[RXUseSwiftViewController alloc] init];
         [self.navigationController pushViewController:useSwiftVC animated:YES];
+    }
+    else if(row == 13) {
+        RXTouchIDViewController * touchIDVC = [[RXTouchIDViewController alloc] init];
+        [self.navigationController pushViewController:touchIDVC animated:YES];
     }
 }
 

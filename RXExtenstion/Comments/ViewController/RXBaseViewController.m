@@ -27,7 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
     //网络状态
     [self AddCheckNetworkEnable];
     

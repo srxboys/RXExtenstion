@@ -10,14 +10,18 @@
 #import "RXTouchID.h"
 
 @interface RXTouchIDViewController ()
-
+{
+    BOOL _isEnableTouchID;
+}
 @end
 
 @implementation RXTouchIDViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    self.nomalShowLabel.hidden = NO;
+    
     [self configUI];
 }
 

@@ -23,7 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.nomalShowLabel.hidden = NO;
+    
     [self configUI];
 }
 

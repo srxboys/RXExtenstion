@@ -8,7 +8,7 @@
 
 #import "RXHomeController.h"
 
-#import "RXFalseDataController.h" //假数据
+#import "RXFalseDataController.h" //假数据 
 #import "RXUploadImageController.h" //上传请求 例子
 #import "RXNewHomeController.h"
 #import "RXCaCheController.h"
@@ -17,9 +17,8 @@
 #import "RXMenuController.h"
 #import "RXSearchViewController.h"
 #import "RXLoLInfoViewController.h"
-#import "RXTouchIDViewController.h"
-
 #import "RXUseSwiftViewController.h"
+#import "RXTouchIDViewController.h"
 
 @interface RXHomeController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -60,11 +59,11 @@
             @"tableViewCell 展开收缩",
             @"系统中的功能",
             @"自定义点餐菜单框架",
-            @"搜索",
+            @"分类模块--搜索",
             @"一个完整的界面demo-coding",
-            @"LOL",
+            @"LOL--【我的】顶部效果",
             @"OC中使用Swift方法",
-            @"Touch ID"
+            @"真机 Touch ID"
             ];
     [_tableView reloadData];
 }
@@ -92,60 +91,68 @@
     RXLog(@"%ld", (long)indexPath.row);
     NSInteger row = indexPath.row;
     if(row == 0) {
+        /// 假数据无需手动
         RXFalseDataController * vc = RXStroyBoard(@"Home", @"RXFalseDataController");
         //当前页面 隐藏 TabBar
-        vc.hidesBottomBarWhenPushed = YES;
+        vc.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if(row == 1) {
+        /// 缓存操作
         RXCaCheController * upController = RXStroyBoard(@"Home", @"RXCaCheController");
-        upController.hidesBottomBarWhenPushed = YES;
+        upController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:upController animated:YES];
     }
     else if(row == 4) {
+        /// 上传图片/头像
         RXUploadImageController * upController = RXStroyBoard(@"Home", @"RXUploadImageController");
         //两种方法都行
 //        RXUploadImageController * upController = RXMeStroBoard(@"RXUploadImageController");
-        upController.hidesBottomBarWhenPushed = YES;
+        upController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:upController animated:YES];
     }
     else if(row == 6) {
-        //存代码
+        /// tableViewCell 展开收缩 【存代码】
         RXExpansionContractionController * ecController = [[RXExpansionContractionController alloc] init];
-        ecController.hidesBottomBarWhenPushed = YES;
+        ecController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:ecController animated:YES];
     }
     else if(row == 7) {
-        //storyboard 写的
+        /// 系统中的功能【storyboard 写的】
         RXSystemServerController * systemSeverController = RXStroyBoard(@"Home", @"RXSystemServerController");
-        systemSeverController.hidesBottomBarWhenPushed = YES;
+        systemSeverController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:systemSeverController animated:YES];
     }
     else if(row == 8) {
+        /// 自定义点餐菜单框架
         RXMenuController * menuController = [[RXMenuController alloc] init];
-        menuController.hidesBottomBarWhenPushed = YES;
+        menuController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:menuController animated:YES];
     }
     else if(row == 9) {
+        /// 分类模块--搜索
         RXSearchViewController * searchController = [[RXSearchViewController alloc] init];
-        searchController.hidesBottomBarWhenPushed = YES;
+        searchController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:searchController animated:YES];
     }
     else if(row == 10) {
         //完整的界面demo
         RXNewHomeController * homeControll = [[RXNewHomeController alloc] init];
-        homeControll.hidesBottomBarWhenPushed = YES;
+        homeControll.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:homeControll animated:YES];
     }
     else if(row == 11) {
+        /// LOL--【我的】顶部效果
         RXLoLInfoViewController * lolInfo = [[RXLoLInfoViewController alloc] init];
         [self.navigationController pushViewController:lolInfo animated:YES];
     }
     else if(row == 12) {
+        /// OC中使用Swift方法
         RXUseSwiftViewController * useSwiftVC = [[RXUseSwiftViewController alloc] init];
         [self.navigationController pushViewController:useSwiftVC animated:YES];
     }
     else if(row == 13) {
+        /// Touch ID
         RXTouchIDViewController * touchIDVC = [[RXTouchIDViewController alloc] init];
         [self.navigationController pushViewController:touchIDVC animated:YES];
     }

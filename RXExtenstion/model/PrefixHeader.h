@@ -237,6 +237,8 @@ _Pragma("clang diagnostic pop") \
 //  沙盒
 #define UserDefaults      [NSUserDefaults standardUserDefaults]
 
+#define LibraryCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+#define RXCacheFile(_fileName) [NSString stringWithFormat:@"%@/%@",LibraryCache,_fileName]
 
 /**
  ----------------------【view设置 定义】------------------------------------------

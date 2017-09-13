@@ -26,6 +26,7 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
     NSURL *url = [NSURL URLWithString:urlString];
     if([[UIApplication sharedApplication] canOpenURL:url])
     {
+        [self closeAllKeyboard];
         [[UIApplication sharedApplication] openURL:url];
     }
 }
@@ -48,6 +49,7 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
 
 - (void)sendEmailTo:(NSArray*)emailAddresses withSubject:(NSString*)subject andMessageBody:(NSString*)emailBody
 {
+    [self closeAllKeyboard];
     if ([MFMailComposeViewController canSendMail])
     {
         MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
@@ -109,6 +111,8 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
 
 - (void)sendMessageTo:(NSArray*)phoneNumbers withMessageBody:(NSString*)messageBody
 {
+    [self closeAllKeyboard];
+    
     MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
     picker.messageComposeDelegate = self;
     picker.recipients = phoneNumbers;
@@ -120,6 +124,7 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller
                  didFinishWithResult:(MessageComposeResult)result
 {
+    [self closeAllKeyboard];
     switch (result)
     {
         case MessageComposeResultCancelled:
@@ -141,5 +146,9 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
     [SharedAppDelegate.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+- (void)closeAllKeyboard {
+    [SharedAppDelegate closeAllKeyboard];
+}
 
 @end

@@ -110,7 +110,8 @@
         }
         else if(i == 2) {
             model.title = @"我的百度网盘";
-            model.webUrl = @"http://pan.baidu.com/s/1hqH9ZNI";
+            //密码=vg6m
+            model.webUrl = @"https://pan.baidu.com/s/1bS4Rl8";
             model.image = @"Mine_BaiduYun";
         }
         else if(i == 3) {

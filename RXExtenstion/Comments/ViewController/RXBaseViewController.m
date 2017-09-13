@@ -26,6 +26,7 @@
 @implementation RXBaseViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -35,9 +36,25 @@
     
     //无网络、请求接口失败
     [self networkStatusEqualNoneCreateButton];
+    
+    [self.view addSubview:self.nomalShowLabel];
 }
 
 #pragma mark - ~~~~~~~~~~~ 实时检测网络状态 ~~~~~~~~~~~~~~~
+
+- (UILabel *)nomalShowLabel {
+    if(!_nomalShowLabel) {
+        CGRect frame = self.view.bounds;
+        frame.size.width -= 40;
+        frame.origin.x = 20;
+        _nomalShowLabel = [[UILabel alloc] initWithFrame:frame];
+        _nomalShowLabel.text = @"请使用Xcode，断点调试+打印控制台,欣赏该页面";
+        _nomalShowLabel.numberOfLines = 0;
+        _nomalShowLabel.hidden = YES;
+    }
+    return _nomalShowLabel;
+}
+
 //网络状态
 - (void)AddCheckNetworkEnable {
     _netStatusObject = [[RXGetNetStatus alloc] initRXGetNetStatusTarget:self action:@selector(setNetStatus)];

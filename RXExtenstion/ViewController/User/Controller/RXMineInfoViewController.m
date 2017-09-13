@@ -33,7 +33,7 @@
 - (void)configUI {
     _tableView.tableFooterView = [[UIView alloc] init];
     
-    _dataSouceArray = @[@"新建地址时 选择地区 样式", @"日期、时间 选择 样式",@"3D Touch定制",@"WKWebKit",@"自定义可拖拽cell"];
+    _dataSouceArray = @[@"新建地址时 选择地区 样式", @"日期、时间 选择 样式",@"3D Touch定制",@"WKWebKit",@"真机 自定义可拖拽cell"];
     
 }
 

@@ -31,6 +31,8 @@ typedef NS_ENUM(NSInteger, ToastPosit){
 
 @interface RXBaseViewController : UIViewController
 
+@property (nonatomic, copy) UILabel * nomalShowLabel;
+
 /// 显示没有网络状态  默认从顶部64开始
 - (void)showNullNetworkView;
 /// 显示没有网络状态  自定义 顶部位置显示

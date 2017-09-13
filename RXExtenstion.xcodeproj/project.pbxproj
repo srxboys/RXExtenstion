@@ -41,6 +41,7 @@
 		6C33D36D1F68D481000F876C /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C33D36C1F68D481000F876C /* LocalAuthentication.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6C33D3701F68D6A9000F876C /* RXTouchIDOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C33D36F1F68D6A9000F876C /* RXTouchIDOption.m */; };
 		6C33D3731F68DCA3000F876C /* RXTouchIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C33D3721F68DCA3000F876C /* RXTouchIDViewController.m */; };
+		6C33D3771F691EBD000F876C /* RXCacheC.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C33D3751F691EBD000F876C /* RXCacheC.c */; };
 		6C35E8BF1CF53B680072A8EC /* RXSystemAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */; };
 		6C381A1E1D01195000D4F68D /* RXSystemServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C381A1D1D01195000D4F68D /* RXSystemServer.m */; };
 		6C381A211D01203300D4F68D /* RXSystemServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C381A201D01203300D4F68D /* RXSystemServerController.m */; };
@@ -317,6 +318,8 @@
 		6C33D36F1F68D6A9000F876C /* RXTouchIDOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTouchIDOption.m; sourceTree = "<group>"; };
 		6C33D3711F68DCA3000F876C /* RXTouchIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTouchIDViewController.h; sourceTree = "<group>"; };
 		6C33D3721F68DCA3000F876C /* RXTouchIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTouchIDViewController.m; sourceTree = "<group>"; };
+		6C33D3751F691EBD000F876C /* RXCacheC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RXCacheC.c; sourceTree = "<group>"; };
+		6C33D3761F691EBD000F876C /* RXCacheC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCacheC.h; sourceTree = "<group>"; };
 		6C35E8BD1CF53B680072A8EC /* RXSystemAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSystemAlertController.h; sourceTree = "<group>"; };
 		6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSystemAlertController.m; sourceTree = "<group>"; };
 		6C381A1C1D01195000D4F68D /* RXSystemServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSystemServer.h; sourceTree = "<group>"; };
@@ -1341,8 +1344,10 @@
 		6C4B5DF11E80B7F100869D70 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				6C4B5DF21E80B7F100869D70 /* RXAccumulation.c */,
 				6C4B5DF31E80B7F100869D70 /* RXAccumulation.h */,
+				6C4B5DF21E80B7F100869D70 /* RXAccumulation.c */,
+				6C33D3761F691EBD000F876C /* RXCacheC.h */,
+				6C33D3751F691EBD000F876C /* RXCacheC.c */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -2090,6 +2095,7 @@
 				6C483D291D58860C00A3A202 /* RXMineCreateAddressController.m in Sources */,
 				6C3A30691CD352AA00533FFF /* UIProgressView+AFNetworking.m in Sources */,
 				6CBF822A1CDAEDCC009AD4FC /* RXCaCheController.m in Sources */,
+				6C33D3771F691EBD000F876C /* RXCacheC.c in Sources */,
 				6C3A30651CD352AA00533FFF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				6C2A726A1D2CF6DA000F1550 /* RXLoadingHUD.m in Sources */,
 				6C381A1E1D01195000D4F68D /* RXSystemServer.m in Sources */,

@@ -14,6 +14,9 @@
 ///字符处理 、数组、 字典 -> 空处理
 #import "RXCharacter.h"
 
+
+#include "RXCacheC.h"
+
 @implementation RXCaCheController
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,7 +45,36 @@
     //我很懒，我没有写页面
     // 数据安全(就是多线程问题)
     // 通过下面各种途径，封装个适合自己的【安全缓存】吧！！
+    
+    [self oc_Use_C_save_Option];
+    [self oc_Use_C_get_Option];
 }
+
+#pragma mark ---- 用 C 去操作-----
+- (void)oc_Use_C_save_Option {
+    NSString * filePath = RXCacheFile(@"c.txt");
+    
+    NSString * dataString = @"srxboys";
+    NSData * data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //NSString转char * /const char *
+    const char * filePathChar = [filePath UTF8String];
+    BOOL result = saveToFileUseC(filePathChar, [data bytes]);
+    RXLog(@"C option result = %@", result?@"成功":@"失败");
+}
+
+- (void)oc_Use_C_get_Option {
+    NSString * filePath = RXCacheFile(@"c.txt");
+    //NSString转char * /const char *
+    const char * filePathChar = [filePath UTF8String];
+    
+    char * resultChar = getInFileUseC(filePathChar);
+    //不能直接使用，否则乱码。需要转OC的 NSString才正常
+    
+    NSString * resultString = [NSString stringWithUTF8String:resultChar];
+    RXLog(@"C option result = %@\ndata=%s\nstring=%@", strlen(resultChar)>0?@"成功":@"失败", resultChar,resultString);
+}
+
 
 #pragma mark ------我没有去封装，因为看过YYCache的封装，我服了-----
 #pragma mark ------【TTCacheUtil操作】使用第三方(很多啦)------

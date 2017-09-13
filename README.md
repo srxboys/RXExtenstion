@@ -1,7 +1,8 @@
 # RXExtenstion
 [![Platform](https://img.shields.io/badge/platform-iOS-red.svg)](https://developer.apple.com/iphone/index.action)
-[![Language](http://img.shields.io/badge/language-OC-yellow.svg?style=flat
-             )](https://en.wikipedia.org/wiki/Objective-C)
+[![Language](http://img.shields.io/badge/language-OC-yellow.svg?style=flat)](https://en.wikipedia.org/wiki/Objective-C)
+[![Language_swift](https://img.shields.io/badge/language-Swift-orange.svg)](https://en.wikipedia.org/wiki/Swift)
+[![Language_C](https://img.shields.io/badge/language-C-orange.svg)](https://en.wikipedia.org/wiki/C)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://mit-license.org)
 <br> `图片来源: http://shields.io`
 <br>

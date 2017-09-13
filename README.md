@@ -6,7 +6,7 @@
 <br> `图片来源: http://shields.io`
 <br>
 
-- 基于 \>=Xcode7 
+- 基于 \>= iOS7 
 
 ### Wiki
 - [中文文档](https://github.com/srxboys/RXExtenstion/wiki/中文文档)

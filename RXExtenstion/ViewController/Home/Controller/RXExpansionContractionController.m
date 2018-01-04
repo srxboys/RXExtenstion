@@ -38,6 +38,14 @@
     [_tableView registerClass:[RXExpansionContractionCell class] forCellReuseIdentifier:@"customCell"];
     [self.view addSubview:_tableView];
     
+    _tableView.estimatedRowHeight = 0;
+    _tableView.estimatedSectionFooterHeight = 0;
+    _tableView.estimatedSectionHeaderHeight = 0;
+    
+    if (@available(iOS 11.0, *)) {
+        _tableView.contentInsetAdjustmentBehavior = NO;
+    }
+    
     _dataSourceArr = [[NSMutableArray alloc] init];
     
     [self configFalseLocalData];

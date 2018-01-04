@@ -25,7 +25,7 @@
     _cellHeight     = labelHeight;
     _cellHighHeight = labelHeight;
     
-    if(![model.text strBOOL]) {
+    if(!StrBool(model.text)) {
         //不是字符串、字符串为空  防止崩溃
         return;
     }

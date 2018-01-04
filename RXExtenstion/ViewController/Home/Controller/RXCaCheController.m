@@ -25,20 +25,20 @@
     
     NSString * string = @"https://github.com/srxboys";
     
-    if([string strBOOL]) {
+    if(StrBool(string)) {
         //是否为字符串
     }
     
-    if([string urlBOOL]) {
+    if(UrlBool(string)) {
         //是否为 网址
     }
     
-    if([string arrBOOL]) {
+    if(ArrBool(string)) {
         //是否为 数组
     }
     
     string = @"0"; // or --> string = @"<null>"
-    NSString * dictValue = [string strNotEmptyValue];
+    NSString * dictValue = NonEmptyString(string);
     RXLog(@"dictValue=%@", dictValue);
     
     

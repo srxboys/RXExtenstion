@@ -61,7 +61,7 @@
 - (void)setModel:(RXSeckillListModel *)model {
     _model = model;
     
-    if(model != nil && [model.name strBOOL]) {
+    if(model != nil && StrBool(model.name)) {
         NSURL * url = [NSURL URLWithString:model.image];
         [_imgView sd_setImageFIFOWithURL:url placeholderImage:[UIImage imageNamed:@"Image750_750_gray"]];
     }

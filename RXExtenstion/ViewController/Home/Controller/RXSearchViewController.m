@@ -52,6 +52,10 @@
     _collectionView.delegate = self;
     [self.view addSubview:_collectionView];
     
+    if (@available(iOS 11.0, *)) {
+        _collectionView.contentInsetAdjustmentBehavior = NO;
+    }
+    
     //cell
     [_collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"CollectionViewCell"];
     //热搜 header

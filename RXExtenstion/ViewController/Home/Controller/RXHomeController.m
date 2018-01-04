@@ -52,7 +52,7 @@
     
     arr = @[@"假数据无需手动",
             @"缓存操作",
-            @"获取info.plist信息",
+            @"获取info.plist信息 使用【RXBundle】",
             @"MJ header foother",
             @"上传图片/头像",
             @"AFN 请求接口",
@@ -61,9 +61,10 @@
             @"自定义点餐菜单框架",
             @"分类模块--搜索",
             @"一个完整的界面demo-coding",
-            @"LOL--【我的】顶部效果",
+            @"LOL--【我的】顶部效果-coding",
             @"OC中使用Swift方法",
-            @"真机 Touch ID"
+            @"真机 Touch ID",
+            @"真机 Face ID-coding"
             ];
     [_tableView reloadData];
 }

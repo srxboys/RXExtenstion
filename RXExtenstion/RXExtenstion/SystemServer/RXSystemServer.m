@@ -27,7 +27,14 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
     if([[UIApplication sharedApplication] canOpenURL:url])
     {
         [self closeAllKeyboard];
+        
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+            
+        }];
+#else
         [[UIApplication sharedApplication] openURL:url];
+#endif
     }
 }
 
@@ -35,8 +42,21 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
     NSString *deviceType = [UIDevice currentDevice].model;
     if([deviceType  isEqualToString:@"iPod touch"]||[deviceType  isEqualToString:@"iPad"]||[deviceType  isEqualToString:@"iPhone Simulator"])
     {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"您的设备不能打电话" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_9_0
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您的设备不能打电话"
+                                                        message:nil
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil];
         [alert show];
+#else
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"您的设备不能打电话" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction * closeAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //点击了确定按钮
+        }];
+        [alert addAction:closeAction];
+        [SharedAppDelegate.window.rootViewController presentViewController:alert animated:YES completion:nil];
+#endif
         return;
     }
     if (number.length == 0) return;
@@ -64,17 +84,27 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
         //        [picker addAttachmentData:myData mimeType:@"image/jpeg" fileName:@"rainy"];
         
         [picker setMessageBody:emailBody isHTML:NO];//设置邮件正文内容
-        
+        if(!picker) return;
         [SharedAppDelegate.window.rootViewController presentViewController:picker animated:YES completion:NULL];
     }
     else
     {
+       
+#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_9_0
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您的设备没有配置邮箱帐号"
                                                         message:nil
                                                        delegate:nil
                                               cancelButtonTitle:@"确定"
                                               otherButtonTitles:nil];
         [alert show];
+#else
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"您的设备没有配置邮箱帐号" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction * closeAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //点击了确定按钮
+        }];
+        [alert addAction:closeAction];
+        [SharedAppDelegate.window.rootViewController presentViewController:alert animated:YES completion:nil];
+#endif
     }
 }
 
@@ -112,12 +142,19 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
 - (void)sendMessageTo:(NSArray*)phoneNumbers withMessageBody:(NSString*)messageBody
 {
     [self closeAllKeyboard];
-    
+    /*
+    if(![MFMessageComposeViewController canSendText]) {
+     //检测是否可用，然后自己设置弹框
+        return;
+    }
+    */
     MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
     picker.messageComposeDelegate = self;
     picker.recipients = phoneNumbers;
     picker.body = messageBody;
-    
+    if(!picker) {
+        return;
+    }
     [SharedAppDelegate.window.rootViewController presentViewController:picker animated:YES completion:NULL];
 }
 

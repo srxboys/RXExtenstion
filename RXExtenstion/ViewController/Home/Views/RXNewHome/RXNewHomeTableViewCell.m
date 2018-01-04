@@ -42,7 +42,7 @@
     
     _tempSection = section;
     
-    if(_dataSourceArr == array || ![array arrBOOL]) {
+    if(_dataSourceArr == array || !ArrBool(array)) {
         return;
     }
 

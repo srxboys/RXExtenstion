@@ -55,7 +55,7 @@
         self.name = [dict objectForKeyNotNull:@"name"];
         self.image = [dict objectForKeyNotNull:@"image"];
         self.sku = [dict objectForKeyNotNull:@"sku"];
-        self.price = [[dict objectForKeyNotNull:@"price"] formatMonery];
+        self.price = StrFormatValue([dict objectForKeyNotNull:@"price"]);
         self.store = [[dict objectForKeyNotNull:@"store"] boolValue];
     }
     return self;

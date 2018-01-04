@@ -15,7 +15,7 @@
 @implementation RXGetArea
 + (NSArray *)getAreaArray {
     NSArray * networkArray = [self getNetWorkAreaArray];
-    if([networkArray arrBOOL]) {
+    if(ArrBool(networkArray)) {
         return networkArray;
     }
     else {
@@ -41,7 +41,7 @@
 //获取网络地址
 + (NSArray *)getNetWorkAreaArray {
     NSArray * areaArray = [TTCacheUtil objectFromFile: AddressLocalJson];
-    if(![areaArray arrBOOL]) {
+    if(!ArrBool(areaArray)) {
         [RXGetNetAddressJSON getNetWorkAddress];
        return nil;
     }

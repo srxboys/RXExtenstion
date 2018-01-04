@@ -17,3 +17,7 @@ int saveToFileUseC(const char* fileName,const  char* data);
 char* getInFileUseC(const char* fileName);
 
 #endif /* RXCacheC_h */
+/*
+ 被使用:
+ home 下 RXCaCheController
+ */

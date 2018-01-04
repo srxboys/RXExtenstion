@@ -19,10 +19,16 @@ let USER_PASS = "rx_login_pass"
 
 public class RXLogin : NSObject {
     class func Login(_ userName: String, _ password:String)  {
-        guard userName.characters.count > 0 else {
+        var count = 0
+#if OS_OBJECT_SWIFT3
+    count = userName.characters.count
+#else
+    count = userName.count
+#endif
+        guard  count > 0 else {
             return
         }
-        guard password.characters.count > 0 else {
+        guard count > 0 else {
             return
         }
         baseEn64(USER_NAME, userName)

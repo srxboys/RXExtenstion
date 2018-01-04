@@ -90,6 +90,13 @@
          */
     }
     
+    if (@available(iOS 11.0, *)) {
+        _locationManager.showsBackgroundLocationIndicator = YES;
+    } else {
+        // Fallback on earlier versions
+    }
+
+    
     //启动位置更新
     //就是启动定位管理了，一般来说，在不需要更新定位时最好关闭它，用stopUpdatingLocation，可以节省电量。
     [_locationManager startUpdatingLocation];

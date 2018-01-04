@@ -16,38 +16,27 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-///对请求参数做处理
-@interface NSObject (strNotEmptyValue)
-- (NSString *)strNotEmptyValue;
-@end
+/// 对请求参数做处理
+NSString* NonEmptyString(id obj);
 
-///判断字符串是否为空
-@interface NSObject (strBOOL)
-- (BOOL)strBOOL;
-@end
+/// 判断字符串是否为空
+BOOL StrBool(id obj);
 
-///是否是数组
-@interface NSObject (arrBOOL)
-- (BOOL)arrBOOL;
-@end
+/// 去掉字符串中前后空格
+NSString * StrFormatWhiteSpace(id obj);
+
+/// 把字符串 变成 金钱字符串 0.00样式
+NSString * StrFormatValue(id obj);
+
+/// 是否是数组
+BOOL ArrBool(id obj);
 
 
-///返回【判断后的数组】-- 如果是字典以数组形式返回
-@interface NSObject (arrValue)
-- (NSArray *)arrValue;
-@end
+/// 返回【判断后的数组】-- 如果是字典以数组形式返回
+NSArray * ArrValue(id obj);
 
-///是否是 字典
-@interface NSObject (dictBOOL)
-- (BOOL)dictBOOL;
-@end
+/// 是否是 字典
+BOOL DictBool(id obj);
 
-///判断字符串是否 为 Url
-@interface NSObject (urlBOOL)
-- (BOOL)urlBOOL;
-@end
-
-@interface NSObject (fromatValue)
-- (NSString *)formatMonery;
-@end
-
+/// 判断字符串是否 为 Url
+BOOL UrlBool(id obj);

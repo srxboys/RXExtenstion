@@ -29,7 +29,7 @@
         
         NSString * vode = @"0";
         NSString * tempVode = [UserDefaults objectForKey:AddressVodeDefaults];
-        if([tempVode strBOOL]) {
+        if(StrBool(tempVode)) {
             vode = tempVode;
         }
         
@@ -55,7 +55,7 @@
         }
         
         NSArray * arr = responseObject.returndata;
-        if(![arr arrBOOL]) {
+        if(!ArrBool(arr)) {
             //没有返回地址
             return;
         }
@@ -63,12 +63,12 @@
         //缓存地址
         NSDictionary * addressDict = arr[0];
         NSArray * array = addressDict[@"regions"];
-        if([array arrBOOL]) {
+        if(ArrBool(array)) {
         [TTCacheUtil writeObject:array toFile:AddressLocalJson];
             
             //缓存验证码
             NSString * vode = addressDict[@"vode"];
-            if([vode strBOOL]) {
+            if(StrBool(vode)) {
                 [UserDefaults setObject:vode forKey:AddressVodeDefaults];
                 [UserDefaults synchronize];
             }

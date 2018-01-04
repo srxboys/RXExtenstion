@@ -14,137 +14,65 @@
 
 #import "RXCharacter.h"
 
-@implementation NSObject (strNotEmptyValue)
-- (NSString *)strNotEmptyValue {
-    if ([self isKindOfClass:[NSString class]] && ((NSString *)self).length >0 && [((NSString *)self) isEqualToString:@"<null>"]) {
+#pragma mark - ~~~~~~~~~~~ 对请求参数做处理 ~~~~~~~~~~~~~~~
+NSString* NonEmptyString(id obj){
+    if ([obj isKindOfClass:[NSString class]] && [obj length]>0 && [obj isEqualToString:@"<null>"]) {
         return @"";
-    }else if (self == nil || self == [NSNull null] || ([self isKindOfClass:[NSString class]] && ((NSString *)self).length == 0)) {
+    }else if (obj == nil || obj == [NSNull null] || ([obj isKindOfClass:[NSString class]] && [obj length] == 0)) {
         return @"";
-    }else if ([self isKindOfClass:[NSNumber class]] && [((NSString *)self) integerValue]>0)
+    }else if ([obj isKindOfClass:[NSNumber class]] && [obj integerValue]>0)
     {
-        return [NSString stringWithFormat:@"%@", (id)self];
+        return NonEmptyString([obj stringValue]);
     }
-    return ((NSString *)self);
+    return obj;
 }
-@end
 
-@implementation NSObject (strBOOL)
-- (BOOL)strBOOL {
-    if([self isKindOfClass:[NSString class]] && [((NSString *)self) isEqualToString:@"<null>"]) {
+#pragma mark - ~~~~~~~~~~~ 判断字符串是否为空 ~~~~~~~~~~~~~~~
+BOOL StrBool(id obj) {
+    if(obj == nil) {
         return NO;
     }
-    else if([self isKindOfClass:[NSString class]] && ((NSString *)self).length <= 0) {
+    else if(![obj isKindOfClass:[NSString class]]) {
         return NO;
     }
-    else if(![self isKindOfClass:[NSString class]]) {
+    else if([obj isKindOfClass:[NSString class]] && [((NSString *)obj) isEqualToString:@"<null>"]) {
+        return NO;
+    }
+    else if([obj isKindOfClass:[NSString class]] && ((NSString *)obj).length == 0) {
         return NO;
     }
     return YES;
 }
 
-@end
 
 
-@implementation NSObject (arrBOOL)
-- (BOOL)arrBOOL {
-    if(![self isKindOfClass:[NSArray class]]) {
-        return NO;
-    }
-    else if(((NSArray *)self).count <= 0) {
-        return NO;
-    }
-    else {
-        return YES;
-    }
-}
-@end
-
-
-@implementation NSObject (arrValue)
-
-- (NSArray *)arrValue {
-    if([self isKindOfClass:[NSNull class]]) {
-        return @[];
-    }
-    else if([self isKindOfClass:[NSString class]] && ![self isEqual:@""]) {
-        return @[self];
-    }
-    else if([self isEqual:@""]) {
-        return @[];
-    }
-    else if([self isKindOfClass:[NSDictionary class]]) {
-        return @[self];
-    }
-    else {
-        return (NSArray *)self;
-    }
+#pragma mark - ~~~~~~~~~~~ 去掉字符串中前后空格 ~~~~~~~~~~~~~~~
+NSString * StrFormatWhiteSpace(id obj) {
+    NSString * object = NonEmptyString(obj);
+    return [object stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
-@end
-
-@implementation NSObject (dictBOOL)
-
-- (BOOL)dictBOOL {
-    if([self isKindOfClass:[NSNull class]]) {
-        return NO;
-    }
-    else if([self isKindOfClass:[NSString class]]) {
-        return NO;
-    }
-    else if([self isKindOfClass:[NSArray class]]) {
-        return NO;
-    }
-    else if([self isKindOfClass:[NSNumber class]]) {
-        return NO;
-    }
-    else {
-        return YES;
-    }
-}
-
-@end
 
 
-@implementation NSObject (urlBOOL)
-- (BOOL)urlBOOL {
-    if([self isKindOfClass:[NSNull class]]) {
-        return NO;
-    }
-    else if([self isKindOfClass:[NSString class]] && [(NSString *)self isEqualToString:@""]){
-        return NO;
-    }
-    else if(![self isKindOfClass:[NSString class]]) {
-        return NO;
-    }
-    else if ([(NSString *)self rangeOfString:@"http://"].location != NSNotFound ) {
-        return YES;
-    }
-    else if ([(NSString *)self rangeOfString:@"https://"].location != NSNotFound ) {
-        return YES;
-    }
-    else {
-        return NO;
-    }
-}
-@end
 
 
-@implementation NSObject (fromatValue)
-
-- (NSString *)formatMonery {
+#pragma mark - ~~~~~~~~~~~ 把字符串 变成 金钱字符串 0.00样式 ~~~~~~~~~~~~~~~
+NSString * StrFormatValue(id obj) {
+    NSString * object = NonEmptyString(obj);
+    if(object.length == 0) return @"0.00";
     
-    NSRange range = [((NSString *)self) rangeOfString:@"-"];
+    NSRange range = [object rangeOfString:@"-"];
     if (range.location != NSNotFound) {
         return @"0.00";
     }
     
-    if ([((NSString *)self) isEqualToString:@"0"]) {
+    if ([object isEqualToString:@"0"]) {
         return @"0.00";
     }
     NSString * value = [NSString stringWithFormat:@"%f",
-                        [((NSString *)self) doubleValue]];
+                        [object doubleValue]];
     
-    if ([((NSString *)self) doubleValue]>0) {
+    if ([object doubleValue]>0) {
         
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
         [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
@@ -154,10 +82,109 @@
         NSMutableString *string = [NSMutableString stringWithString:[value componentsSeparatedByString:@"."][1]];
         return [NSString stringWithFormat:@"%@.%@",[value componentsSeparatedByString:@"."][0],[string substringToIndex:2]];
     }
-    return ((NSString *)self);
+    else {
+        return @"0.00";
+    }
 }
 
-@end
+
+#pragma mark - ~~~~~~~~~~~ 是否是数组 ~~~~~~~~~~~~~~~
+BOOL ArrBool(id obj) {
+    if(obj == nil) return NO;
+    if(![obj isKindOfClass:[NSArray class]]) {
+        return NO;
+    }
+    else if(((NSArray *)obj).count <= 0) {
+        return NO;
+    }
+    else {
+        return YES;
+    }
+}
+
+#pragma mark - ~~~~~~~~~~~ 返回【判断后的数组】-- 如果是字典以数组形式返回 ~~~~~~~~~~~~~~~
+NSArray * ArrValue(id obj) {
+    if(obj == nil) return @[];
+    if([obj isKindOfClass:[NSNull class]]) {
+        return @[];
+    }
+    else if([obj isKindOfClass:[NSString class]] && ![obj isEqual:@""]) {
+        return @[obj];
+    }
+    else if([obj isEqual:@""]) {
+        return @[];
+    }
+    else if([obj isKindOfClass:[NSDictionary class]]) {
+        return @[obj];
+    }
+    else if([obj isKindOfClass:[NSNumber class]]) {
+        return @[[((NSNumber *)obj) stringValue]];
+    }
+    else {
+        return (NSArray *)obj;
+    }
+}
+
+
+
+#pragma mark - ~~~~~~~~~~~ 是否是 字典 ~~~~~~~~~~~~~~~
+BOOL DictBool(id obj) {
+    if(obj == nil) return NO;
+    if([obj isKindOfClass:[NSNull class]]) {
+        return NO;
+    }
+    else if([obj isKindOfClass:[NSString class]]) {
+        return NO;
+    }
+    else if([obj isKindOfClass:[NSArray class]]) {
+        return NO;
+    }
+    else if([obj isKindOfClass:[NSNumber class]]) {
+        return NO;
+    }
+    else if(![obj isKindOfClass:[NSDictionary class]]) {
+        return NO;
+    }
+    else {
+        if(((NSDictionary *)obj).allKeys <= 0) return NO;
+        return YES;
+    }
+}
+
+
+
+
+#pragma mark - ~~~~~~~~~~~ 判断字符串是否 为 Url ~~~~~~~~~~~~~~~
+BOOL UrlBool(id obj) {
+    if([obj isKindOfClass:[NSNull class]]) {
+        return NO;
+    }
+    else if([obj isKindOfClass:[NSString class]] && [(NSString *)obj isEqualToString:@""]){
+        return NO;
+    }
+    else if([obj isKindOfClass:[NSURL class]]) {
+        NSURL * objUrl = obj;
+        if(objUrl == nil) {
+            return NO;
+        }
+        else {
+            if(!StrBool(objUrl.absoluteString)) return NO;
+            return UrlBool(objUrl.absoluteString);
+        }
+    }
+    else if(![obj isKindOfClass:[NSString class]]) {
+        return NO;
+    }
+    else if ([(NSString *)obj rangeOfString:@"http://"].location != NSNotFound ) {
+        return YES;
+    }
+    else if ([(NSString *)obj rangeOfString:@"https://"].location != NSNotFound ) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
+}
 
 
 

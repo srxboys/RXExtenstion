@@ -14,3 +14,8 @@
 #include <stdlib.h>
 
 #endif /* RXAccumulation_h */
+
+/*
+ 被使用:
+     home 下 RXCaCheController
+ */

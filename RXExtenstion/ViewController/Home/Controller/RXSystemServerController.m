@@ -11,6 +11,7 @@
 #import "RXSystemServerController.h"
 
 #import "RXSystemServer.h"
+#import "RXCharacter.h"
 
 @interface RXSystemServerController ()
 - (IBAction)goToSinaButtonClick:(id)sender;
@@ -57,18 +58,42 @@
 }
 
 - (IBAction)sendMessageButtonClick:(id)sender {
-    
-//   [RXSystemServer sharedRXSystemServer] sendMessageTo:<#(NSArray *)#> withMessageBody:<#(NSString *)#>
+    NSString * message = _messageTextView.text;
+    message = StrFormatWhiteSpace(message);
+    if(!StrBool(message)) {
+        // alert [没有内容 /  haven't content]
+        return;
+    }
+    NSArray * phoneNums = @[@"18811425575"];
+    [[RXSystemServer sharedRXSystemServer] sendMessageTo:phoneNums withMessageBody:message];
 }
 
 
 
 - (IBAction)sendEmailButtonClick:(id)sender {
-//    [[RXSystemServer sharedRXSystemServer] sendEmailTo:<#(NSArray *)#> withSubject:<#(NSString *)#> andMessageBody:<#(NSString *)#>];
+    NSString * message = _emailTextView.text;
+    message = StrFormatWhiteSpace(message);
+    if(!StrBool(message)) {
+        // alert [没有内容 /  haven't content]
+        return;
+    }
+    NSArray * emails = @[@"srxboys@126.com"];
+    
+    NSString * subject = @"RX_主题";
+    
+    [[RXSystemServer sharedRXSystemServer] sendEmailTo:emails withSubject:subject andMessageBody:message];
 }
 
 
+- (void)closeKeyboard {
+    [_phoneNumTextField resignFirstResponder];
+    [_emailTextView resignFirstResponder];
+    [_messageTextView resignFirstResponder];
+}
 
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self closeKeyboard];
+}
 
 
 

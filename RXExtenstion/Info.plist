@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>【RX 扩展】需要获取您的位置信息，以便您正常获取库存更新信息、精准推荐等内容</string>
+	<key>NSLocationUsageDescription</key>
+	<string>【RX 扩展】需要获取您的位置信息，以便您正常获取库存更新信息、精准推荐等内容</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>【RX 扩展】需要获取您的位置信息，以便您正常获取库存更新信息、精准推荐等内容</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>【RX 扩展】需要获取您的位置信息，以便您正常获取库存更新信息、精准推荐等内容</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -53,10 +61,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>srxboys</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>srxboys</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>external-accessory</string>

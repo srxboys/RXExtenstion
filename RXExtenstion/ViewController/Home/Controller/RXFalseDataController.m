@@ -68,7 +68,7 @@
     NSString * string = arr[indexPath.row];
     cell.textLabel.text = string;
     cell.textLabel.adjustsFontSizeToFitWidth = YES;
-    if([string urlBOOL]) {
+    if(UrlBool(string)) {
         string = [string substringFromIndex:3];
         UIProgressView * progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
 //        weak(weakSelf);

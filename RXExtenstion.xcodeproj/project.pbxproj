@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BF081E61FFDEA39007E54AA /* RXFaceIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF081E51FFDEA39007E54AA /* RXFaceIDViewController.m */; };
+		0BF081EA1FFDEADB007E54AA /* RXFaceID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF081E91FFDEADB007E54AA /* RXFaceID.m */; };
 		3B4B66841DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B66831DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m */; };
 		3B4B66881DC32F1F003DF3B3 /* ZZDragCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B66871DC32F1F003DF3B3 /* ZZDragCollectionView.m */; };
 		3B4B668C1DC337E7003DF3B3 /* RXDragCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B668A1DC337E7003DF3B3 /* RXDragCell.m */; };
@@ -251,6 +253,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0BF081E41FFDEA39007E54AA /* RXFaceIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXFaceIDViewController.h; sourceTree = "<group>"; };
+		0BF081E51FFDEA39007E54AA /* RXFaceIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXFaceIDViewController.m; sourceTree = "<group>"; };
+		0BF081E81FFDEADB007E54AA /* RXFaceID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXFaceID.h; sourceTree = "<group>"; };
+		0BF081E91FFDEADB007E54AA /* RXFaceID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXFaceID.m; sourceTree = "<group>"; };
 		3B4B66821DC32B7C003DF3B3 /* RXNew3DTouchSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNew3DTouchSettingController.h; sourceTree = "<group>"; };
 		3B4B66831DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXNew3DTouchSettingController.m; sourceTree = "<group>"; };
 		3B4B66861DC32F1F003DF3B3 /* ZZDragCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZDragCollectionView.h; sourceTree = "<group>"; };
@@ -691,6 +697,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BF081E71FFDEAC8007E54AA /* RXFaceIDView */ = {
+			isa = PBXGroup;
+			children = (
+				0BF081E81FFDEADB007E54AA /* RXFaceID.h */,
+				0BF081E91FFDEADB007E54AA /* RXFaceID.m */,
+			);
+			path = RXFaceIDView;
+			sourceTree = "<group>";
+		};
 		3B4B66851DC32F1F003DF3B3 /* ZZDragCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1819,6 +1834,8 @@
 				6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */,
 				6C33D3711F68DCA3000F876C /* RXTouchIDViewController.h */,
 				6C33D3721F68DCA3000F876C /* RXTouchIDViewController.m */,
+				0BF081E41FFDEA39007E54AA /* RXFaceIDViewController.h */,
+				0BF081E51FFDEA39007E54AA /* RXFaceIDViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1837,6 +1854,7 @@
 		6CF322561CD879BF009BD1B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0BF081E71FFDEAC8007E54AA /* RXFaceIDView */,
 				6C33D3681F68D397000F876C /* RXTouchIDView */,
 				6C6D602B1DC82D2C0069573E /* RXLOLView */,
 				6CDB2CBD1D9E0DA800B07530 /* RXSearch */,
@@ -2070,6 +2088,7 @@
 				6C9D124B1D7D3E7600694C52 /* RXMenu.m in Sources */,
 				6C3A30A01CD3538A00533FFF /* MJRefreshAutoGifFooter.m in Sources */,
 				6CA15FFE1CF34042009DCE60 /* RXScrollView.m in Sources */,
+				0BF081E61FFDEA39007E54AA /* RXFaceIDViewController.m in Sources */,
 				6CBF822E1CDAEE98009AD4FC /* UIView+Toast.m in Sources */,
 				6C3A30A21CD3538A00533FFF /* MJRefreshAutoStateFooter.m in Sources */,
 				6C3A305F1CD352AA00533FFF /* AFSecurityPolicy.m in Sources */,
@@ -2101,6 +2120,7 @@
 				6C381A1E1D01195000D4F68D /* RXSystemServer.m in Sources */,
 				6C0047921F1DB38F00410E65 /* RXLOLCollectionViewCell.m in Sources */,
 				6CD828B81CF831BB00AF575E /* RXMineViewController.m in Sources */,
+				0BF081EA1FFDEADB007E54AA /* RXFaceID.m in Sources */,
 				6C3A30131CD3477E00533FFF /* UIViewController+MJPopupViewController.m in Sources */,
 				6C8480291CF6F93F0052C3BF /* NSDictionary+RXDictLog.m in Sources */,
 				6C9D12521D7D401000694C52 /* RXMenuView.m in Sources */,
@@ -2283,12 +2303,15 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yaojin Dou (HK9KZR5X5Z)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLKY76PU29;
 				INFOPLIST_FILE = RXToDay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ghs.app.RXExtentstion.RXToDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -2298,12 +2321,15 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MLKY76PU29;
 				INFOPLIST_FILE = RXToDay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ghs.app.RXExtentstion.RXToDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

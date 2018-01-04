@@ -328,7 +328,7 @@
         //会把字典变数组
         response.message = [dataDic objectForKeyNotNullAFNS:@"message"];
         response.status = [[dataDic objectForKeyNotNullAFNS:@"status"] boolValue];
-        response.returndata = [[dataDic objectForKeyNotNullAFNS:@"returndata"] arrValue];
+        response.returndata = ArrValue([dataDic objectForKeyNotNullAFNS:@"returndata"]);
         return response;
     }else
     {

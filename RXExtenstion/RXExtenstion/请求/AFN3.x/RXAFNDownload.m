@@ -26,12 +26,12 @@
 @implementation RXAFNDownload
 - (void)downloadWithURL:(NSString *)urlString params:(NSDictionary *)params progressValue:(void (^)(CGFloat))downloadProgressBlock saveFileAndNameInPath:(NSString *)path completionHandler:(void (^)(NSURLResponse *, NSURL *, NSError *))completionHandler {
     
-    if(![urlString strBOOL]) {
+    if(!StrBool(urlString)) {
         completionHandler(_downloadTask.response, _url, [NSError errorObjec:self Desc:@"url错误"]);
     }
     _url = [NSURL URLWithString:urlString];
     
-    if(![path strBOOL]) {
+    if(!StrBool(path)) {
         completionHandler(_downloadTask.response, _url, [NSError errorObjec:self Desc:@"path错误"]);
     }
     _savePath = path;

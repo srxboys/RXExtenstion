@@ -41,7 +41,15 @@ class RXModel: NSObject {
         }
         let value = valueStatus.object
         if value is String {
-            if((value as! String).characters.count > 0 && (value as! String) != "<null>") {
+            
+        var count : Int = 0
+#if OS_OBJECT_SWIFT3
+    count = (value as! String).characters.count
+#else
+    count = (value as! String).count
+#endif
+            
+            if( count > 0 && (value as! String) != "<null>") {
                 return value as! String
             }
             else {
@@ -50,8 +58,18 @@ class RXModel: NSObject {
         }
         else if(value is [String:Any]) { return "" }
         else if(value is [Any]) { return "" }
-        else if "\(value)".characters.count <= 0 { return "" }
+        else {
         
+            let valueString = "\(value)"
+            var valueStringCount = 0
+            
+    #if OS_OBJECT_SWIFT3
+        valueStringCount = valueString.characters.count;
+    #else
+        valueStringCount = valueString.count;
+    #endif
+           if valueStringCount <= 0 { return "" }
+        }
         return "\(value)"
     }
 
@@ -72,6 +90,8 @@ class RXModel: NSObject {
         return false
     }
 
+    // MARK: --- CGFloat -----
+    /// 根据字典key获取内容为 CGFloat
     public class func dictForKeyCGFloat(_ dict:[String:Any], key : String) ->CGFloat {
         let value = dictForKeyString(dict, key: key)
         if(!value.isEmpty) {
@@ -80,6 +100,8 @@ class RXModel: NSObject {
         return 0
     }
 
+    // MARK: --- Float -----
+    /// 根据字典key获取内容为 Float
     public class func dictForKeyFloat(_ dict:[String:Any], key : String) ->Float {
         let value = dictForKeyString(dict, key: key)
         if(!value.isEmpty) {

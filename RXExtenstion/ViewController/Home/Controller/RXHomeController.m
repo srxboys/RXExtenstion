@@ -24,6 +24,8 @@
 {
     NSArray * arr;
 }
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeaderHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableFooterHeight;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -51,7 +53,7 @@
     
     
     arr = @[@"假数据无需手动",
-            @"缓存操作",
+            @"缓存操作 - 有C代码",
             @"获取info.plist信息 使用【RXBundle】",
             @"MJ header foother",
             @"上传图片/头像",

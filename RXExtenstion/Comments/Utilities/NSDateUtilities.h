@@ -2,6 +2,8 @@
  Erica Sadun, http://ericasadun.com
  iPhone Developer's Cookbook 3.x and beyond
  BSD License, Use at your own risk
+ 
+ 2017-10-18 srxboys进行 >=iOS8的适配。加入了中国时区等等操作。
  */
 
 #import <Foundation/Foundation.h>
@@ -13,6 +15,7 @@
 #define D_YEAR		31556926
 
 #define D_BII_DATE_Format @"yyyy-MM-dd"
+#define D_BIY_DATE_Format @"yyyy/MM/dd"
 #define D_BII_TIME_Format @"HH:mm:ss"
 
 
@@ -64,14 +67,24 @@ typedef NS_ENUM(NSInteger, MBExecuteType) {
 //字符串转NSDate
 + (NSDate *)dateWithString:(NSString *)dateString;
 
-//返回格式： yyyy/MM/dd HH:mm:ss
+//返回格式： yyyy-MM-dd HH:mm:ss
 - (NSString *)dateTimeString;
 
-//返回格式：yyyy/MM/dd
+//返回格式：yyyy-MM-dd
 - (NSString *)dateString;
 
 //返回格式：HH:mm:ss
 - (NSString *)timeString;
+
+
+/*
+ *    formatString ??
+ *
+ *  D_BII_DATE_Format  或者   @"yyyy-MM-dd"
+    D_BIY_DATE_Format  或者   @"yyyy/MM/dd"
+    D_BII_TIME_Format  或者   @"HH:mm:ss"
+ */
+- (NSString *)dateStringWithFormat:(NSString *)formatString;
 
 
 //执行次数计算
@@ -79,21 +92,20 @@ typedef NS_ENUM(NSInteger, MBExecuteType) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Comparing dates
-- (BOOL) isEqualToDateIgnoringTime: (NSDate *) aDate;
-- (BOOL) isSameWeekAsDate: (NSDate *) aDate;
-- (BOOL) isSameMonthAsDate: (NSDate *) aDate;
+- (BOOL) isEqualToDateIgnoringTime: (NSDate *) aDate; //是否是今天
+- (BOOL) isSameWeekAsDate: (NSDate *) aDate; //是否是这周
+- (BOOL) isSameMonthAsDate: (NSDate *) aDate;//是否是这月
+- (BOOL) isLaterMonthAsDate: (NSDate *) aDate;
 - (BOOL) isSameYearAsDate: (NSDate *) aDate;
-- (BOOL) isEarlierThanDate: (NSDate *) aDate;
-- (BOOL) isLaterThanDate: (NSDate *) aDate;
-- (BOOL) isLeapYear;
+- (BOOL) isEarlierThanDate: (NSDate *) aDate; //当前日期小于这个日期
+- (BOOL) isLaterThanDate: (NSDate *) aDate; //当前日期大于这个日期
+- (BOOL) isLeapYear; //是否是闰年
 
 + (NSDate *) tomorrow;
 + (NSDate *) yesterday;
 
-+ (NSDate *) dateWithDaysFromNow: (NSInteger) days;
-
 //Roles
-- (BOOL) isTypicallyWeekend;
-- (BOOL) isTypicallyWorkday;
+- (BOOL) isTypicallyWeekend; //是否是 周末
+- (BOOL) isTypicallyWorkday; //是否是 工作日
 
 @end

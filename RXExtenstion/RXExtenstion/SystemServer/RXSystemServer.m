@@ -11,6 +11,8 @@
 #import "AppDelegate.h"
 
 
+#define RXSystemServer_share [RXSystemServer shareRXSystemServer]
+
 @interface RXSystemServer ()<MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
 
 @end

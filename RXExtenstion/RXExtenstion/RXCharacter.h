@@ -16,6 +16,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// 对请求参数做处理
 NSString* NonEmptyString(id obj);
 
@@ -40,3 +42,5 @@ BOOL DictBool(id obj);
 
 /// 判断字符串是否 为 Url
 BOOL UrlBool(id obj);
+
+NS_ASSUME_NONNULL_END

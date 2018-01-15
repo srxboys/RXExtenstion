@@ -41,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="4nd-cf-tGS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="4nd-cf-tGS">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4nd-cf-tGS" id="Kn9-A3-8ce">
@@ -58,14 +58,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XZo-ts-7PB" secondAttribute="bottom" constant="49" id="3Dt-Hq-9dC"/>
                             <constraint firstItem="XZo-ts-7PB" firstAttribute="leading" secondItem="IoM-5V-CbB" secondAttribute="leading" id="HG4-hX-vrI"/>
                             <constraint firstAttribute="trailing" secondItem="XZo-ts-7PB" secondAttribute="trailing" id="g2u-K5-deV"/>
-                            <constraint firstItem="XZo-ts-7PB" firstAttribute="top" secondItem="IoM-5V-CbB" secondAttribute="top" constant="64" id="pdD-5w-2WR"/>
-                            <constraint firstAttribute="bottom" secondItem="XZo-ts-7PB" secondAttribute="bottom" constant="49" id="udO-qD-nxm"/>
+                            <constraint firstItem="XZo-ts-7PB" firstAttribute="top" secondItem="IoM-5V-CbB" secondAttribute="top" constant="64" id="lSy-0S-5BS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EKy-wK-5GC"/>
                     <connections>
+                        <outlet property="tableFooterHeight" destination="3Dt-Hq-9dC" id="fCi-Wx-HmD"/>
+                        <outlet property="tableHeaderHeight" destination="lSy-0S-5BS" id="iem-9s-jxg"/>
                         <outlet property="tableView" destination="XZo-ts-7PB" id="6bB-g8-zaV"/>
                     </connections>
                 </viewController>
@@ -89,7 +91,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="I3z-B0-OHf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="I3z-B0-OHf">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I3z-B0-OHf" id="fRS-LO-6ml">
@@ -158,7 +160,7 @@
                                     <constraint firstAttribute="height" constant="116" id="dnA-pM-XJN"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" id="H8v-Qy-8iE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="H8v-Qy-8iE">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H8v-Qy-8iE" id="pCH-yT-afM">
@@ -166,7 +168,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" id="k48-ma-Cyd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="k48-ma-Cyd">
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k48-ma-Cyd" id="Zzv-jw-IlV">
@@ -187,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOQ-m0-ptV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-620.5" y="-1564.5"/>
+            <point key="canvasLocation" x="-556" y="-1589"/>
         </scene>
         <!--System Server Controller-->
         <scene sceneID="YUs-h1-LQL">

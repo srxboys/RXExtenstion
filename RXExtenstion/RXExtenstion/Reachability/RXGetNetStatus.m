@@ -59,7 +59,7 @@
 }
 
 - (void)getNetworkStatus {
-    _netStatus = [RXNetworkCheck shareNetworkCheck].statusString;
+    _netStatus = RXNetworkCheck_share.statusString;
 }
 
 

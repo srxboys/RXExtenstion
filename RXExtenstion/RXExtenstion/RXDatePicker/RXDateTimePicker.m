@@ -110,7 +110,7 @@
     
     [_dateArray addObject:nowDate];
     for(NSInteger i = 1; i < LLPICKER_MONTH * 30; i ++) {
-        [_dateArray addObject:[NSDate dateWithDaysFromNow:i]];
+        [_dateArray addObject:[nowDate daysLater:i]];
     }
     
     
@@ -233,7 +233,7 @@
     //9月4日 周三 14:12                [2016年]
     //    NSLog(@"星期=%@", weekArray[date.week]);
     
-    NSString * component0 = [NSString stringWithFormat:@"%zd月%zd日 %@", date.month, date.day, weekArray[date.week]];
+    NSString * component0 = [NSString stringWithFormat:@"%zd月%zd日 %@", date.month, date.day, weekArray[date.weekday]];
     
     if([self compareDate:date]) {
         component0 = @"今天";

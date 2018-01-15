@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define RXNetworkCheck_share [RXNetworkCheck shareNetworkCheck]
+
 @interface RXNetworkCheck : NSObject
 
 + (RXNetworkCheck *)shareNetworkCheck;

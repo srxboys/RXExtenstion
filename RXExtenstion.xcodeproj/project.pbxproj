@@ -226,6 +226,9 @@
 		6CF4AC9B1D01A89400CD17CB /* RXExpansionContractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4AC9A1D01A89400CD17CB /* RXExpansionContractionController.m */; };
 		6CF4AC9E1D01A91800CD17CB /* RXExpanCCellHeightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4AC9D1D01A91800CD17CB /* RXExpanCCellHeightModel.m */; };
 		6CF4ACA21D01A9F100CD17CB /* RXExpansionContractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4ACA11D01A9F100CD17CB /* RXExpansionContractionCell.m */; };
+		B8900FE5200C8F4800174A67 /* UIViewController+RXExclusiveTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = B8900FE4200C8F4800174A67 /* UIViewController+RXExclusiveTouch.m */; };
+		B8900FE8200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = B8900FE7200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.m */; };
+		B8900FEE200C99DB00174A67 /* RXMineViewController+RXHook.m in Sources */ = {isa = PBXBuildFile; fileRef = B8900FED200C99DB00174A67 /* RXMineViewController+RXHook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -667,6 +670,12 @@
 		6CF4AC9D1D01A91800CD17CB /* RXExpanCCellHeightModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXExpanCCellHeightModel.m; sourceTree = "<group>"; };
 		6CF4ACA01D01A9F100CD17CB /* RXExpansionContractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXExpansionContractionCell.h; sourceTree = "<group>"; };
 		6CF4ACA11D01A9F100CD17CB /* RXExpansionContractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXExpansionContractionCell.m; sourceTree = "<group>"; };
+		B8900FE3200C8F4800174A67 /* UIViewController+RXExclusiveTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RXExclusiveTouch.h"; sourceTree = "<group>"; };
+		B8900FE4200C8F4800174A67 /* UIViewController+RXExclusiveTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RXExclusiveTouch.m"; sourceTree = "<group>"; };
+		B8900FE6200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+RXContentInsetAdjust.h"; sourceTree = "<group>"; };
+		B8900FE7200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+RXContentInsetAdjust.m"; sourceTree = "<group>"; };
+		B8900FEC200C99DB00174A67 /* RXMineViewController+RXHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RXMineViewController+RXHook.h"; sourceTree = "<group>"; };
+		B8900FED200C99DB00174A67 /* RXMineViewController+RXHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RXMineViewController+RXHook.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1033,6 +1042,7 @@
 		6C3A2FE61CD3477E00533FFF /* RXExtenstion */ = {
 			isa = PBXGroup;
 			children = (
+				B8900FE2200C8F3100174A67 /* runtime */,
 				3B4B66851DC32F1F003DF3B3 /* ZZDragCollectionViewCell */,
 				6CA608471D37991F00A6C088 /* RXUIImageView */,
 				6C2A72671D2CF6B9000F1550 /* RXToast */,
@@ -1926,6 +1936,19 @@
 			path = RXExpansionContraction;
 			sourceTree = "<group>";
 		};
+		B8900FE2200C8F3100174A67 /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				B8900FE3200C8F4800174A67 /* UIViewController+RXExclusiveTouch.h */,
+				B8900FE4200C8F4800174A67 /* UIViewController+RXExclusiveTouch.m */,
+				B8900FE6200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.h */,
+				B8900FE7200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.m */,
+				B8900FEC200C99DB00174A67 /* RXMineViewController+RXHook.h */,
+				B8900FED200C99DB00174A67 /* RXMineViewController+RXHook.m */,
+			);
+			path = runtime;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2130,6 +2153,7 @@
 				6C5B54741D76814E00A7577F /* RXDateTimePicker.m in Sources */,
 				6C5B54771D76825700A7577F /* RXMineCreateDateController.m in Sources */,
 				6CDB2CD11D9E0DA800B07530 /* CollectionReusableViewHistory.m in Sources */,
+				B8900FEE200C99DB00174A67 /* RXMineViewController+RXHook.m in Sources */,
 				6C25DA641CFED20200E65A38 /* RXLoLInfoViewController.m in Sources */,
 				6C862FBC1D5876C500EEB818 /* RXGetArea.m in Sources */,
 				6CA4345D1CD9E5AF00641785 /* UIImage+GIF.m in Sources */,
@@ -2165,6 +2189,7 @@
 				6C00B0071D4057E100EA7221 /* NSDictionary+NSStringUTF8.m in Sources */,
 				6CA434611CD9E5AF00641785 /* UIImageView+WebCache.m in Sources */,
 				6C3A30DD1CD36EC800533FFF /* RXMJHeaderGif.m in Sources */,
+				B8900FE5200C8F4800174A67 /* UIViewController+RXExclusiveTouch.m in Sources */,
 				6C3A30201CD34E2B00533FFF /* RXBundle.m in Sources */,
 				6CA434581CD9E5AF00641785 /* SDWebImageDownloader.m in Sources */,
 				3B4B668C1DC337E7003DF3B3 /* RXDragCell.m in Sources */,
@@ -2197,6 +2222,7 @@
 				6C3A30AD1CD3538A00533FFF /* UIView+MJExtension.m in Sources */,
 				6C00B00B1D40639A00EA7221 /* RXHttp.m in Sources */,
 				6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */,
+				B8900FE8200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.m in Sources */,
 				6C3A30611CD352AA00533FFF /* AFURLResponseSerialization.m in Sources */,
 				6C33D3701F68D6A9000F876C /* RXTouchIDOption.m in Sources */,
 				6CA608571D37991F00A6C088 /* UIImageView+CornerRadius.m in Sources */,

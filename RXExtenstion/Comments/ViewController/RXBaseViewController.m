@@ -20,6 +20,8 @@
     UIControl      * _noneNetworkView;
     UIButton       * _networkButton;
     RXGetNetStatus * _netStatusObject;
+    
+    NSString * _runtime_get_string;
 }
 @end
 
@@ -38,6 +40,8 @@
     [self networkStatusEqualNoneCreateButton];
     
     [self.view addSubview:self.nomalShowLabel];
+    
+    _runtime_get_string = @"srxboys";
 }
 
 #pragma mark - ~~~~~~~~~~~ 实时检测网络状态 ~~~~~~~~~~~~~~~

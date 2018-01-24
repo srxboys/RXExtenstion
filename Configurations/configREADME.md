@@ -28,3 +28,6 @@
 1、copy...need
 2、...group
 3、Add to Target 这四个 都要选中
+
+
+最新 配置 请看 https://github.com/srxboys/RXInternationalConfig

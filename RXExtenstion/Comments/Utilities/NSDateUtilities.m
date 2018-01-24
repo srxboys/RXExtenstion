@@ -12,7 +12,7 @@
 
 #import "NSDateUtilities.h"
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_10
 static const unsigned DATE_COMPONENTS = (NSCalendarUnitYear| NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekOfYear| NSCalendarUnitWeekOfYear |  NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal);
 #else
 static const unsigned  DATE_COMPONENTS = (NSYearCalendarUnit| NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekCalendarUnit |  NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit);
@@ -224,7 +224,7 @@ static const unsigned  DATE_COMPONENTS = (NSYearCalendarUnit| NSMonthCalendarUni
                    second:(NSInteger)second{
     
     
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_10
     NSString * identifier = NSCalendarIdentifierGregorian;
 #else
     NSString * identifier = NSGregorianCalendar;
@@ -324,7 +324,7 @@ static const unsigned  DATE_COMPONENTS = (NSYearCalendarUnit| NSMonthCalendarUni
 	NSDateComponents *components2 = [[NSDate currentCalendar] components:DATE_COMPONENTS fromDate:aDate];
 	
 	// Must be same week. 12/31 and 1/1 will both be week "1" if they are in the same week
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_10
     if(components1.weekOfMonth != components2.weekOfMonth) return NO;
 #else
 	if (components1.week != components2.week) return NO;
@@ -357,7 +357,7 @@ static const unsigned  DATE_COMPONENTS = (NSYearCalendarUnit| NSMonthCalendarUni
 - (BOOL) isSameMonthAsDate: (NSDate *) aDate
 {
     
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_10
     NSCalendarUnit calendarYearMonthUnit = NSCalendarUnitYear | NSCalendarUnitMonth;
 #else
     NSCalendarUnit calendarYearMonthUnit = NSYearCalendarUnit | NSMonthCalendarUnit;
@@ -373,7 +373,7 @@ static const unsigned  DATE_COMPONENTS = (NSYearCalendarUnit| NSMonthCalendarUni
 - (BOOL) isLaterMonthAsDate: (NSDate *) aDate;
 {
     
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_10
     NSCalendarUnit calendarYearMonthUnit = NSCalendarUnitYear | NSCalendarUnitMonth;
 #else
     NSCalendarUnit calendarYearMonthUnit = NSYearCalendarUnit | NSMonthCalendarUnit;
@@ -399,7 +399,7 @@ static const unsigned  DATE_COMPONENTS = (NSYearCalendarUnit| NSMonthCalendarUni
 
 - (BOOL) isSameYearAsDate: (NSDate *) aDate
 {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_10
     NSCalendarUnit calendarYearUnit = NSCalendarUnitYear;
 #else
     NSCalendarUnit calendarYearUnit = NSYearCalendarUnit;
@@ -418,7 +418,7 @@ static const unsigned  DATE_COMPONENTS = (NSYearCalendarUnit| NSMonthCalendarUni
 
 - (BOOL) isNextYear
 {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_10
     NSCalendarUnit calendarYearUnit = NSCalendarUnitYear;
 #else
     NSCalendarUnit calendarYearUnit = NSYearCalendarUnit;
@@ -432,7 +432,7 @@ static const unsigned  DATE_COMPONENTS = (NSYearCalendarUnit| NSMonthCalendarUni
 
 - (BOOL) isLastYear
 {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_10
     NSCalendarUnit calendarYearUnit = NSCalendarUnitYear;
 #else
     NSCalendarUnit calendarYearUnit = NSYearCalendarUnit;
@@ -476,7 +476,7 @@ static const unsigned  DATE_COMPONENTS = (NSYearCalendarUnit| NSMonthCalendarUni
 #pragma mark Roles
 - (BOOL) isTypicallyWeekend
 {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_10
     NSCalendarUnit calendarWeekDayUnit = NSCalendarUnitWeekday;
 #else
     NSCalendarUnit calendarWeekDayUnit = NSWeekdayCalendarUnit;
@@ -590,7 +590,7 @@ static const unsigned  DATE_COMPONENTS = (NSYearCalendarUnit| NSMonthCalendarUni
 - (NSInteger)distanceInDaysToDate:(NSDate *)anotherDate
 {
     
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_10
     NSString * identifier = NSCalendarIdentifierGregorian;
     NSCalendarUnit calendarDayUnit = NSCalendarUnitDay;
 #else

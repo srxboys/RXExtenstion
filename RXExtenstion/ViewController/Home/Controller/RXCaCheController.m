@@ -17,6 +17,8 @@
 
 #include "RXCacheC.h"
 
+#import "RXEncrypt.h"
+
 @implementation RXCaCheController
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +43,31 @@
     NSString * dictValue = NonEmptyString(string);
     RXLog(@"dictValue=%@", dictValue);
     
+    NSString * joinString = [RXCharacter stringTranWithObject:
+                             @1.0023,@"srx", @4.00f, @[@5,@"6"],@{@"7":@{@8:@"9"}}, nil];
+    RXLog(@"111-joinString=%@", joinString);
+    
+    short a = 6;
+    unsigned int b= 7;
+    unsigned long c = 8;
+    unsigned long long d = 9;
+    
+    joinString = [RXCharacter stringTranWithObject:
+                  @[@{@"srxboys":@0}, @{@"boy":@"男"}, @1, @"2", @0.345], @(a), @(b), @(c), @(d), nil];
+    RXLog(@"222-joinString=%@", joinString);
+    
+    /*加密后，一定要给一个变量，然后清空加密算法类， 这样是为了安全考虑
+     
+    MD5 验证网站      http://tool.chinaz.com/Tools/MD5.aspx
+    这个全部都能验证的网站 http://encode.chahuo.com
+     */
+    NSString * base64_en = RXEncrypt->BASE64_encodeData(joinString);
+    RXEncrypt_destory;
+    RXLog(@"base64_en=%@", base64_en);
+    
+    NSString * base64_de = RXEncrypt->BASE64_decodeData(base64_en);
+    RXEncrypt_destory;
+    RXLog(@"base_de=%@", base64_de);
     
     //我很懒，我没有写页面
     // 数据安全(就是多线程问题)

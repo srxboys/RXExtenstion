@@ -189,4 +189,113 @@ BOOL UrlBool(id obj) {
 
 
 
+@implementation RXCharacter
++ (NSString *)stringTranWithObject:(id)object, ... {
+    @autoreleasepool {
+        NSString * string = [NSString new];
+        string = [string stringByAppendingString:@""];
+        
+        va_list args;
+        va_start(args, object);
+        NSUInteger count = 0;
+        
+        for (id currentObject = object; currentObject != nil; currentObject = va_arg(args, id)) {
+            ++count;
+            if(StrBool(currentObject)) {
+                string = [string stringByAppendingString:currentObject];
+            }
+            else if(ArrBool(currentObject)) {
+                string = [string stringByAppendingString:[self arrayToString:currentObject]];
+            }
+            else if(DictBool(currentObject)) {
+                string = [string stringByAppendingString:[self dictionaryToString:currentObject]];
+            }
+            else if([currentObject isKindOfClass:[NSNumber class]]) {
+                string = [string stringByAppendingString:[self numberToString:currentObject]];
+            }
+        }
+        va_end(args);
+        
+        if (count == 0)
+            string = @"";
+        
+        //首尾空格不做处理了，如果需要，谁调用 谁处理。(因为有的文案需要空格)
+        
+        return string;
+    }
+}
+
+
++ (NSString *)arrayToString:(NSArray *)array {
+    NSString * string = @"";
+    for(NSInteger i = 0; i < array.count; i++) {
+        id currentObject = array[i];
+        if(StrBool(currentObject)) {
+            string = [string stringByAppendingString:currentObject];
+        }
+        else if(ArrBool(currentObject)) {
+            string = [string stringByAppendingString:[self arrayToString:currentObject]];
+        }
+        else if(DictBool(currentObject)) {
+            string = [string stringByAppendingString:[self dictionaryToString:currentObject]];
+        }
+        else if([currentObject isKindOfClass:[NSNumber class]]) {
+            string = [string stringByAppendingString:[self numberToString:currentObject]];
+        }
+    }
+    return string;
+}
+
++ (NSString *)dictionaryToString:(NSDictionary *)dict {
+    NSString * string = @"";
+    for(NSString * key in dict) {
+        if(!key) continue;
+        id currentObject = dict[key];
+        string = [string stringByAppendingString:[NSString stringWithFormat:@"%@", key]];
+        if(StrBool(currentObject)) {
+            string = [string stringByAppendingString:currentObject];
+        }
+        else if(ArrBool(currentObject)) {
+            string = [string stringByAppendingString:[self arrayToString:currentObject]];
+        }
+        else if(DictBool(currentObject)) {
+            string = [string stringByAppendingString:[self dictionaryToString:currentObject]];
+        }
+        else if([currentObject isKindOfClass:[NSNumber class]]) {
+            string = [string stringByAppendingString:[self numberToString:currentObject]];
+        }
+        else {
+            // dic[key , nil]
+         }
+    }
+    return string;
+}
+                    
++ (NSString *)numberToString:(NSNumber *)number {
+    if([self numberPointZero:number]) {
+        return [NSString stringWithFormat:@"%.2f", [number doubleValue]];
+    }
+    return [number stringValue];
+}
+
++ (BOOL)numberPointZero:(NSNumber *)number {
+    const char * objcType = number.objCType;
+    if(objcType == NULL) return NO;
+    if(objcType[0] == 'd' || objcType[0] =='f') {
+        return YES;
+    }
+    return NO;
+ 
+    /*
+     objCType 基本数据类型
+         f = float
+         d = double
+         s = short
+         i = int
+         q = long
+     */
+}
+@end
+
+
 

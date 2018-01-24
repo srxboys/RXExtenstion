@@ -35,6 +35,11 @@
 #define RXNetworksStatusPhone @"RXNetworksStatusPhone"
 
 
+/*
+ * 控制器 类名
+ */
+#define SELF_CLASS_NAME  NSStringFromClass([self class])
+
 #define SharedAppDelegate ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 
 ///storybaord
@@ -47,7 +52,9 @@
 #define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
-#define NavHeight     64
+#define StatusHeight           ([UIApplication sharedApplication].statusBarFrame.size.height)
+
+#define NavHeight     44+StatusHeight
 #define TabbarHeight  49
 
 //宽高比定义  roundf 四舍五入函数

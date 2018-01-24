@@ -7,6 +7,8 @@
 //
 // > iOS8
 
+// 完整项目 demo https://github.com/srxboys/RXTodayDemo
+
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 

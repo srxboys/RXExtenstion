@@ -12,7 +12,7 @@
 #import "RXSelectView.h" //地址table
 
 #define animalDuration 0.5
-#define SegmentHeight 40 /// 自定义分段控制器的高度
+
 
 @interface RXMenu ()<UITableViewDelegate, UITableViewDataSource, RXSegmentViewDelegate>
 {

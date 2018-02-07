@@ -26,6 +26,17 @@
 @end
 
 @implementation RXBaseViewController
+@synthesize showSegmentToNavHidden = _showSegmentToNavHidden;
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self setShowSegmentToNavHidden:NO];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -44,6 +55,16 @@
     _runtime_get_string = @"srxboys";
 }
 
+- (void)setShowSegmentToNavHidden:(BOOL)showSegmentToNavHidden {
+    _showSegmentToNavHidden = showSegmentToNavHidden;
+    if(showSegmentToNavHidden) {
+        _navigationHeight = 0;
+    }
+    else {
+        _navigationHeight = NavHeight;
+    }
+}
+
 #pragma mark - ~~~~~~~~~~~ 实时检测网络状态 ~~~~~~~~~~~~~~~
 
 - (UILabel *)nomalShowLabel {
@@ -52,7 +73,8 @@
         frame.size.width -= 40;
         frame.origin.x = 20;
         _nomalShowLabel = [[UILabel alloc] initWithFrame:frame];
-        _nomalShowLabel.text = @"请使用Xcode，断点调试+打印控制台,欣赏该页面";
+        _nomalShowLabel.textAlignment = NSTextAlignmentCenter;
+        _nomalShowLabel.text = @"请使用Xcode, 断点调试+打印控制台, 欣赏该页面";
         _nomalShowLabel.numberOfLines = 0;
         _nomalShowLabel.hidden = YES;
     }
@@ -82,7 +104,7 @@
 #pragma mark - ~~~~~~~~~~~ 无网络状态页面 ~~~~~~~~~~~~~~~
 - (void)networkStatusEqualNoneCreateButton {
     
-    _noneNetworkView = [[UIControl alloc] initWithFrame:CGRectMake(0, NavHeight, ScreenWidth, ScreenHeight - NavHeight)];
+    _noneNetworkView = [[UIControl alloc] initWithFrame:CGRectMake(0, self.navigationHeight, ScreenWidth, ScreenHeight - NavHeight)];
     _noneNetworkView.backgroundColor = GHS_231_231_231_COLOR;
     //    _noneNetworkView.backgroundColor = [UIColor redColor];
     _noneNetworkView.hidden = YES;
@@ -93,7 +115,7 @@
     
     CGFloat width = 100;
     CGFloat height = 100;
-    CGFloat top = (ScreenHeight - 203)/2.0 - NavHeight;
+    CGFloat top = (ScreenHeight - 203)/2.0 - self.navigationHeight;
     _networkButton.frame = CGRectMake((ScreenWidth - width)/2.0, top, width, height);
     [_networkButton setImage:[UIImage imageNamed:@"pic_lostNetwork"] forState:UIControlStateNormal];
     [_networkButton addTarget:self action:@selector(checkButtonClick) forControlEvents:UIControlEventTouchUpInside];
@@ -134,7 +156,7 @@
 
 /// 默认从顶部64开始
 - (void)showNullNetworkView {
-    [self showNullNetworkViewOriginY:NavHeight];
+    [self showNullNetworkViewOriginY:self.navigationHeight];
 }
 
 /// 自定义 顶部位置显示

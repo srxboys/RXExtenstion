@@ -8,7 +8,8 @@
 
 #import "RXFalseDataController.h"
 #import "RXRandom.h"
-#import "MJRefresh.h"
+//#import "MJRefresh.h"
+#import <MJRefresh.h>
 #import "RXMJHeaderGif.h"
 #import "RXCharacter.h"
 #import "UIImageView+ProgressView.h"

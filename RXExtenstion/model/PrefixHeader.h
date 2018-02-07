@@ -22,6 +22,7 @@
     //------------
     //对于汉字打印处理
     #import "RXColorLog.h"
+    #import "RXCharacter.h"
     #import "NSArray+RXArrLog.h"
     #import "NSDictionary+RXDictLog.h"
 //------------
@@ -33,6 +34,14 @@
 #define RXNetworksStatusNone  @"RXNetworksStatusNone"
 #define RXNetworksStatusWifi  @"RXNetworksStatusWifi"
 #define RXNetworksStatusPhone @"RXNetworksStatusPhone"
+
+
+/*
+ * ------ 状态栏 旋转小菊花 ----
+ */
+#define STATUS_BAR_START() [UIApplication sharedApplication].networkActivityIndicatorVisible = YES
+#define STATUS_BAR_STOP() [UIApplication sharedApplication].networkActivityIndicatorVisible = NO
+
 
 
 /*
@@ -68,6 +77,9 @@
 #define ViewHeight(v)                       v.frame.size.height
 #define ViewX(v)                            v.frame.origin.x
 #define ViewY(v)                            v.frame.origin.y
+#define ViewBottom(v)                       ViewY(v)+ViewHeight(v)
+#define ViewRight(v)                        ViewX(v)+ViewWidth(v)
+
 
 #define SelfViewWidth                       self.view.bounds.size.width
 #define SelfVi
@@ -86,6 +98,48 @@
 #define RectSetOrigin(rect, x, y)              CGRectMake(x, y, RectWidth(rect), RectHeight(rect))
 
 
+#define SET_VIEW_LEFT(__view, __x) \
+do{ \
+    CGRect frame = __view.frame; \
+    frame.origin.x = __x; \
+    __view.frame = frame; \
+}while(0)
+
+
+#define SET_VIEW_TOP(__view, __y) \
+do{ \
+    CGRect frame = __view.frame; \
+    frame.origin.y = __y; \
+    __view.frame = frame; \
+}while(0)
+
+#define SET_VIEW_WIDTH(__view, __w) \
+do{ \
+    CGRect frame = __view.frame; \
+    frame.size.width = __w; \
+    __view.frame = frame; \
+}while(0)
+
+#define SET_VIEW_HEIGHT(__view, __h) \
+do{ \
+    CGRect frame = __view.frame; \
+    frame.size.height = __h; \
+    __view.frame = frame; \
+}while(0)
+
+#define SET_VIEW_RIGHT(__view, __right) \
+do{ \
+    CGRect frame = __view.frame; \
+    frame.origin.x = __right - frame.size.width; \
+    __view.frame = frame; \
+}while(0)
+
+#define SET_VIEW_BOTTOM(__view, __bottom) \
+do{ \
+    CGRect frame = __view.frame; \
+    frame.origin.y = __bottom - frame.size.height; \
+    __view.frame = frame; \
+}while(0)
 
 /**
  ----------------------【iOS 版本 定义】------------------------------------------
@@ -151,6 +205,10 @@
 #else
     #define GHSFont(_fontSize) _fontSize
 #endif
+
+//系统字体
+#define FontBase(size) [UIFont systemFontOfSize:size]
+#define FontBold(size) [UIFont boldSystemFontOfSize:size]
 
 
 #pragma mark ---- 内存 --------
@@ -243,6 +301,19 @@ _Pragma("clang diagnostic pop") \
 #pragma mark ---- 沙盒 --------
 //  沙盒
 #define UserDefaults      [NSUserDefaults standardUserDefaults]
+
+#define UserSaveSetting(key, value)\
+NSUserDefaults *def =[NSUserDefaults standardUserDefaults];\
+[def setObject:value forKey:key];\
+[def synchronize];
+
+
+#define UserGetSetting(key)   [[NSUserDefaults standardUserDefaults] objectForKey:key]
+
+#define UserRemoveSetting(key) \
+NSUserDefaults *def =[NSUserDefaults standardUserDefaults];\
+[def removeObjectForKey:key];\
+[def synchronize];
 
 #define LibraryCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 #define RXCacheFile(_fileName) [NSString stringWithFormat:@"%@/%@",LibraryCache,_fileName]

@@ -8,7 +8,8 @@
 //具体demo https://github.com/iOSBrothers/MJRefreshExtension
 // 一张 png图片 旋转
 
-#import "MJRefreshHeader.h"
+//#import "MJRefreshHeader.h"
+#import <MJRefreshHeader.h>
 
 @interface RXMJHeaderGif : MJRefreshHeader
 

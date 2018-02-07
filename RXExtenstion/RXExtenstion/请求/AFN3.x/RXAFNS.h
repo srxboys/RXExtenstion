@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
+//#import "AFNetworking.h"
+#import <AFURLRequestSerialization.h>
 
 @interface Response : NSObject
 @property (nonatomic, copy)   NSString * message;

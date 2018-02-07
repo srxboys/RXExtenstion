@@ -36,6 +36,8 @@
     RXTabBarController * tabBarController = RXStroyBoard(@"Main", @"RXTabBarController");
     _window.rootViewController = tabBarController;
     
+//    id pickerView = [[NSClassFromString(@"RXPickerView") alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    
     //监测手机版本——存储在沙盒
     [RXBundle bundlePhoneVersionCheck];
     

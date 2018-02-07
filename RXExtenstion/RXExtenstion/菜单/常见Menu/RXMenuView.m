@@ -146,6 +146,20 @@
 
 - (void)changeCollectionViewCellWithNum:(NSInteger)num {
     if(num < _menuListArray.count) {
+        
+        /*
+         //可以打开看看哦！
+        NSInteger currentPageNumber = _collectionView.contentOffset.x/_cellWidth;
+        if(currentPageNumber +1 < num) {
+            NSIndexPath * indexPath = [NSIndexPath indexPathForRow:(num-1) inSection:0];
+            [_collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+        }
+        else {
+            NSIndexPath * indexPath = [NSIndexPath indexPathForRow:(num+1) inSection:0];
+            [_collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+        }
+        */
+        
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:num inSection:0];
         [_collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         

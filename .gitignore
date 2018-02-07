@@ -17,4 +17,4 @@ xcuserdata
 profile
 *.moved-aside
 *.xcuserstate
-
+Pods/

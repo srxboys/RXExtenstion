@@ -34,6 +34,21 @@
 
 @implementation RXSearchViewController
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    _collectionView.frame = CGRectMake(0, self.navigationHeight+10, ScreenWidth, ViewHeight(self.view) - self.navigationHeight-10);
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        //给 分段控制器 能够获取 标题名的设置
+        self.title = @"搜索";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"搜索";
@@ -46,7 +61,7 @@
     _flowLayout.minimumLineSpacing = 10;
     _flowLayout.minimumInteritemSpacing = 10;
     
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 90, ScreenWidth, ScreenHeight - 90) collectionViewLayout:_flowLayout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, self.navigationHeight, ScreenWidth, ViewHeight(self.view) - self.navigationHeight) collectionViewLayout:_flowLayout];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.dataSource = self;
     _collectionView.delegate = self;

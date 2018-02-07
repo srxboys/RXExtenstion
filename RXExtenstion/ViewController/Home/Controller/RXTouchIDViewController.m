@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.nomalShowLabel.text = @"设备>iOS6s 真机哦😯";
     self.nomalShowLabel.hidden = NO;
     
     [self configUI];

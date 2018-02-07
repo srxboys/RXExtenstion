@@ -9,7 +9,8 @@
 #import "RXAFNDownload.h"
 #import "RXCharacter.h"
 #import "NSError+RXString.h"
-#import "AFNetworking.h"
+//#import "AFNetworking.h"
+#import <AFNetworking.h>
 
 @interface RXAFNDownload ()
 {

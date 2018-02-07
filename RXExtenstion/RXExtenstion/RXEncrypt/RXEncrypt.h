@@ -44,7 +44,7 @@ typedef struct Digest{
     NSString * (*Sha512_Digest)(NSString *string);
     NSString * (*Sha384_Digest)(NSString *string);
     
-    NSString * (*BASE64_encodeData)(NSString *string); //base64 编码
+    NSString * (*BASE64_encodeData)(NSString *string); //base64 编码(低版本用第三方、iOS>7.0用系统的)
     NSString * (*BASE64_decodeData)(NSString *string); //base64 解码
 } RXDigest_t;
 

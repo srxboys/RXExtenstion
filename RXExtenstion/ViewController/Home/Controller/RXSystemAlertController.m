@@ -46,10 +46,11 @@ NSString * const sds __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_7_0);
 }
 
 /*
-    //--用了，会导致崩溃---
+    _isSrxboys/_isBoys 用了，不会导致崩溃-只是起到标识作用--
     __dead;  //标识 属性
     __dead2; //标识 方法
  */
+
 
 //-------废弃标识--------------
 //属性
@@ -57,7 +58,7 @@ NSString * const sds __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_7_0);
 @property (nonatomic, assign) RXType type;
 
 //方法
-- (void)rxTest __deprecated_msg("废弃");
+- (void)rxTest __deprecated_msg("废弃"); //只是一个表示`废弃`, 如果没有实现会崩溃(就是不标识，不实现也崩溃)
 
 //类方法 废弃标识
 + (void)classRxTest __deprecated_msg("废弃");
@@ -114,7 +115,7 @@ NSString * const sds __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_7_0);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.nomalShowLabel.hidden = NO;
     
     //最好跟着每个字母 都手打一下，看下变化
     
@@ -125,10 +126,9 @@ NSString * const sds __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_7_0);
     self.type = RXTypeOne;
     _type = RXTypeOne;
     
-    
     [self rxTest];
     
-    _isBoys;
+    RXLog(@"__dead 定义的变量可以使用✅ 值为%@",_isBoys?@"YES":@"NO");
     
     [self rxTextThree];
     
@@ -139,6 +139,46 @@ NSString * const sds __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_7_0);
 }
 
 
+/*
+           我只说我常用的部分
+ 
+ 宏太多，一般Pod(第三方)里面、SDK(.framework/.a)里面比较常用 [想看苹果怎么定义的，单独copy宏字段 然后command+点击 查看 里面还有很多]
+ 
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+ 
+ 一、关于code:(定义方法上面 或者 代码下面 表示的宏)
+ 
+     一、让某段代码 可以在特定的一些版本执行:
+        __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_7_0  //RXEncrypt.m 191行
+        MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_9
+ 
+    UIKIT_AVAILABLE_IOS_WATCHOS_TVOS(_ios, _watchos, _tvos)
+ 
+    关于“#ifdef __cplusplus” 和 " extern "C" 的问题(下面解释的很详细)
+    http://blog.csdn.net/u012234115/article/details/43272441
+ 
+    -------------------------------------------------------------------------------
+ 
+ 二、关于api:(定义方法上面 或者 后面 表示的宏)
+ 
+ 
+ 
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+ */
+
+
+// 不实现，调用会失败(跟标识没关系)
+- (void)rxTest {}
+- (void)rxTextTwo {}
+- (void)rxTextThree {}
+- (void)rxSysTestFor{}
+- (void)rxSysTestFive {}
+- (void)rxSysTestSix {}
+- (void)rxSysTestSeven {}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

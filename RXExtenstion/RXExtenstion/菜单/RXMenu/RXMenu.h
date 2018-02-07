@@ -13,6 +13,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define SegmentHeight 40 /// 自定义分段控制器的高度
+
 @interface RXMenu : UIView
 //1、正常初始化
 

@@ -15,7 +15,8 @@
 
 #import "RXLoLInfoViewController.h"
 #import "RXLOLCollectionViewCell.h"
-#import "MJRefresh.h"
+//#import "MJRefresh.h"
+#import <MJRefresh.h>
 
 @interface RXLoLInfoViewController ()<
 UICollectionViewDataSource,

@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "RXConstant.h"
 #import "RXPrisonBreak.h"
+#import <AFNetworking.h>
 
 #define CharString(__iPhone) [NSString stringWithFormat:@"iPhone%@", __iPhone]
 

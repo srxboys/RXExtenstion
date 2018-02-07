@@ -46,6 +46,7 @@ class RXModel: NSObject {
 #if OS_OBJECT_SWIFT3
     count = (value as! String).characters.count
 #else
+    //swift4
     count = (value as! String).count
 #endif
             
@@ -66,6 +67,7 @@ class RXModel: NSObject {
     #if OS_OBJECT_SWIFT3
         valueStringCount = valueString.characters.count;
     #else
+        //swift4
         valueStringCount = valueString.count;
     #endif
            if valueStringCount <= 0 { return "" }

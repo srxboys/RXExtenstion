@@ -56,6 +56,7 @@
             @"缓存操作 - 有C代码",
             @"获取info.plist信息 使用【RXBundle】",
             @"MJ header foother",
+            @"系统宏定义",
             @"上传图片/头像",
             @"AFN 请求接口",
             @"tableViewCell 展开收缩",
@@ -66,7 +67,9 @@
             @"LOL--【我的】顶部效果-coding",
             @"OC中使用Swift方法",
             @"真机 Touch ID",
-            @"真机 Face ID-coding"
+            @"真机 Face ID-coding",
+            @"渐变",
+            @"分段控制器"
             ];
     [_tableView reloadData];
 }
@@ -106,7 +109,12 @@
         upController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:upController animated:YES];
     }
-    else if(row == 4) {
+    else if (row == 4) {
+        Class vcClass = NSClassFromString(@"RXSystemAlertController");
+        UIViewController * vc = (UIViewController *)[vcClass new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if(row == 5) {
         /// 上传图片/头像
         RXUploadImageController * upController = RXStroyBoard(@"Home", @"RXUploadImageController");
         //两种方法都行
@@ -114,50 +122,64 @@
         upController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:upController animated:YES];
     }
-    else if(row == 6) {
+    else if(row == 7) {
         /// tableViewCell 展开收缩 【存代码】
         RXExpansionContractionController * ecController = [[RXExpansionContractionController alloc] init];
         ecController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:ecController animated:YES];
     }
-    else if(row == 7) {
+    else if(row == 8) {
         /// 系统中的功能【storyboard 写的】
         RXSystemServerController * systemSeverController = RXStroyBoard(@"Home", @"RXSystemServerController");
         systemSeverController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:systemSeverController animated:YES];
     }
-    else if(row == 8) {
+    else if(row == 9) {
         /// 自定义点餐菜单框架
         RXMenuController * menuController = [[RXMenuController alloc] init];
         menuController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:menuController animated:YES];
     }
-    else if(row == 9) {
+    else if(row == 10) {
         /// 分类模块--搜索
         RXSearchViewController * searchController = [[RXSearchViewController alloc] init];
         searchController.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:searchController animated:YES];
     }
-    else if(row == 10) {
+    else if(row == 11) {
         //完整的界面demo
         RXNewHomeController * homeControll = [[RXNewHomeController alloc] init];
         homeControll.hidesBottomBarWhenPushed = YES;//可以不写，我在baseNav里有处理
         [self.navigationController pushViewController:homeControll animated:YES];
     }
-    else if(row == 11) {
+    else if(row == 12) {
         /// LOL--【我的】顶部效果
         RXLoLInfoViewController * lolInfo = [[RXLoLInfoViewController alloc] init];
         [self.navigationController pushViewController:lolInfo animated:YES];
     }
-    else if(row == 12) {
+    else if(row == 13) {
         /// OC中使用Swift方法
         RXUseSwiftViewController * useSwiftVC = [[RXUseSwiftViewController alloc] init];
         [self.navigationController pushViewController:useSwiftVC animated:YES];
     }
-    else if(row == 13) {
+    else if(row == 14) {
         /// Touch ID
         RXTouchIDViewController * touchIDVC = [[RXTouchIDViewController alloc] init];
         [self.navigationController pushViewController:touchIDVC animated:YES];
+    }
+    else if (row == 15) {
+        /// Face ID
+    }
+    else if (row == 16) {
+        //危险的写法
+        Class vcClass = NSClassFromString(@"RXGradientViewController");
+        UIViewController * vc = (UIViewController *)[vcClass new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if(row == 17) {
+        Class vcClass = NSClassFromString(@"RXSegmentController");
+        UIViewController * vc = (UIViewController *)[vcClass new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

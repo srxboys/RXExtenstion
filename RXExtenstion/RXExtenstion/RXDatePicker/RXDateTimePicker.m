@@ -83,8 +83,12 @@
 }
 
 - (void)configUI {
-    
-    _datePicker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, PickerHeight - PickerSureHeight)];
+    CGFloat buttonHeight = PickerSureHeight;
+    if(ScreenHeight > 800) {
+        //iPhoneX适配
+        buttonHeight += 20;
+    }
+    _datePicker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, PickerHeight - buttonHeight)];
     _datePicker.backgroundColor = [UIColor whiteColor];
     _datePicker.showsSelectionIndicator = YES;
     _datePicker.delegate = self;
@@ -92,7 +96,7 @@
     [_animalView addSubview:_datePicker];
     
     _sureButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _sureButton.frame = CGRectMake(0, PickerHeight - PickerSureHeight, ScreenWidth, PickerSureHeight);
+    _sureButton.frame = CGRectMake(0, PickerHeight - buttonHeight, ScreenWidth, buttonHeight);
     [_sureButton setTitle:@"确定" forState:UIControlStateNormal];
     [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_sureButton addTarget:self action:@selector(complePicker) forControlEvents:UIControlEventTouchUpInside];

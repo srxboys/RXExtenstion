@@ -1,0 +1,48 @@
+PODS:
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
+    - AFNetworking/NSURLSession
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - IBActionSheet (0.0.4)
+  - MJRefresh (3.1.15.3)
+  - RXGetAddressBook (1.0.0)
+  - RXLabel (1.0.0)
+  - SDWebImage (4.2.3):
+    - SDWebImage/Core (= 4.2.3)
+  - SDWebImage/Core (4.2.3)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.2.0)
+  - FMDB (~> 2.7.2)
+  - IBActionSheet (~> 0.0.4)
+  - MJRefresh (~> 3.1.15.3)
+  - RXGetAddressBook (~> 1.0.0)
+  - RXLabel (~> 1.0.0)
+  - SDWebImage (~> 4.2.3)
+
+SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  IBActionSheet: 14aac81ebfe94c98c9f072106200c2137453c070
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  RXGetAddressBook: 1a804120d221b7deaef33597d73eec161d8a350d
+  RXLabel: 2fe8c5e65a197da86f8c80a6120d8b63d305786b
+  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+
+PODFILE CHECKSUM: a79e7abd0114fdcb9cbba90cc38ebfb6ea6760ef
+
+COCOAPODS: 1.4.0

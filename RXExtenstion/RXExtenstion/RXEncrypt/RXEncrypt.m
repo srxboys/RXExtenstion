@@ -252,3 +252,23 @@ static NSString * _BASE64_decodeData(NSString * string) {
 }
 
 @end
+
+
+
+/*
+     为什么这么写？
+     Objective-C代码容易被hook，暴露信息太赤裸裸，为了安全，改用C来写吧
+     以前的OC方法，被class-dump出来后，利用Cycript很容易实现攻击，容易被hook，存在很大的安全隐患
+ 
+     好处:
+     把函数名隐藏在结构体里，以函数指针成员的形式存储。
+     这样做的好处是，编译后，只留了下地址，去掉了名字和参数表，提高了逆向成本和攻击门槛。
+ */
+
+
+
+
+
+
+
+

@@ -35,6 +35,27 @@
 
 @implementation RXMenuController
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    _menu.frame = CGRectMake(10, self.navigationHeight + 10, ScreenWidth - 20, 150);
+    _tableView.frame = CGRectMake(0, ViewY(_menu)+10 + 150, ScreenWidth, 50);
+    _menuView.frame = CGRectMake(0, ViewBottom(_tableView)+10, ScreenWidth, 45);
+    
+    CGFloat top = ViewBottom(_menuView);
+    CGFloat height = ViewHeight(self.view) - top;
+    _flowLayout.itemSize = CGSizeMake(ScreenWidth, height);
+    _collectionView.frame = CGRectMake(0, top, ScreenWidth, height);
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"菜单 选项";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -42,14 +63,14 @@
     
     [self configUI];
     [self configTable];
-    
+
     [self configView];
 }
 
 //所有控件初始化
 - (void)configUI {
     //菜单
-    _menu = [[RXMenu alloc] initWithFrame:CGRectMake(10, 80, ScreenWidth - 20, 200)];
+    _menu = [[RXMenu alloc] initWithFrame:CGRectMake(10, self.navigationHeight + 10, ScreenWidth - 20, 150)];
     _menu.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:_menu];
 
@@ -92,7 +113,7 @@
 
 #pragma mark - ~~~~~~~~~~~ 横向菜单 TableView ~~~~~~~~~~~~~~~
 - (void)configTable {
-    _tableView = [[RXTableView alloc] initWithFrame:CGRectMake(0, 300, ScreenWidth, 60) style:UITableViewStylePlain];
+    _tableView = [[RXTableView alloc] initWithFrame:CGRectMake(0, ViewY(_menu)+10 + 150, ScreenWidth, 50) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.scrollDirection = RXTableViewScrollDirectionHorizontal;
     [self.view addSubview:_tableView];
@@ -123,12 +144,12 @@
     //1
 //    _menuView = [[RXMenuView alloc] init];
     //2
-    _menuView = [[RXMenuView alloc] initWithFrame:CGRectMake(0, 370, ScreenWidth, 50)];
+    _menuView = [[RXMenuView alloc] initWithFrame:CGRectMake(0, ViewBottom(_tableView)+10, ScreenWidth, 45)];
     [_menuView addTarget:self action:@selector(menuAction:)];
     [self.view addSubview:_menuView];
     
-    CGFloat top = 370 + 50;
-    CGFloat height = ScreenHeight - top;
+    CGFloat top = ViewBottom(_menuView);
+    CGFloat height = ViewHeight(self.view) - top;
     
     
     _flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -203,6 +224,18 @@
 - (void)menuAction:(RXMenuView *)menu {
     //    menu.pageNumber
     RXLog(@"menu.pageNumber=%zd", menu.pageNumber);
+    
+    
+     //下面看需求吧！！ 个人觉得效果不错
+    NSInteger currentPageNumber = lroundf(_collectionView.contentOffset.x / ScreenWidth);
+    NSInteger nextPageNumber = _menuView.pageNumber;
+    if(currentPageNumber+1 < nextPageNumber) {
+        [_collectionView setContentOffset:CGPointMake((_menuView.pageNumber-1) * ScreenWidth, 0) animated:NO];
+    }
+    else if(currentPageNumber-1 > nextPageNumber){
+        [_collectionView setContentOffset:CGPointMake((_menuView.pageNumber+1) * ScreenWidth, 0) animated:NO];
+    }
+    
     
     [_collectionView setContentOffset:CGPointMake(_menuView.pageNumber * ScreenWidth, 0) animated:YES];
 }

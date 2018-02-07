@@ -23,6 +23,7 @@ public class RXLogin : NSObject {
 #if OS_OBJECT_SWIFT3
     count = userName.characters.count
 #else
+    //swift4
     count = userName.count
 #endif
         guard  count > 0 else {

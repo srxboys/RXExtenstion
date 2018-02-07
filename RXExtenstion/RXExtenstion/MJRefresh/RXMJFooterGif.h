@@ -9,6 +9,7 @@
 // 一张 png图片 旋转
 
 #import "MJRefreshBackFooter.h"
+//#import <MJRefreshBackFooter.h>
 
 @interface RXMJFooterGif : MJRefreshBackFooter
 

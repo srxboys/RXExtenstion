@@ -54,17 +54,22 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSInteger row = indexPath.row;
+    if(row >= _dataSouceArray.count) return;
+    NSString * title = _dataSouceArray[row];
     
     if(row == 0) {
         RXMineCreateAddressController * createAddressController = RXMeStroBoard(@"RXMineCreateAddressController");
+        createAddressController.title = title;
         [self.navigationController pushViewController:createAddressController animated:YES];
     }
     else if(row == 1) {
         RXMineCreateDateController * dateController = RXMeStroBoard(@"RXMineCreateDateController");
+        dateController.title = title;
         [self.navigationController pushViewController:dateController animated:YES];
     }
     else if(row == 2) {
         RX3DTouchSettingController * DTouchController = RXMeStroBoard(@"RX3DTouchSettingController");
+        DTouchController.title = title;
         [self.navigationController pushViewController:DTouchController animated:YES];
     }
     else if (row == 3) {
@@ -73,9 +78,11 @@
             return;
         }
         RXWebKitViewController * wxWebKit = [[RXWebKitViewController alloc] init];
+        wxWebKit.title = title;
         [self.navigationController pushViewController:wxWebKit animated:YES];
     }else if (row == 4) {
         RXNew3DTouchSettingController *rxNew3DTouchVC = [[RXNew3DTouchSettingController alloc] init];
+        rxNew3DTouchVC.title = title;
         [self.navigationController pushViewController:rxNew3DTouchVC animated:YES];
     }
     

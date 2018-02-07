@@ -84,11 +84,28 @@
     };
     
     
+    
+    UIButton * gotoDiyPickerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    gotoDiyPickerButton.frame = CGRectMake(20, ScreenHeight - 70, 300, 40);
+    gotoDiyPickerButton.backgroundColor = [UIColor purpleColor];
+    [gotoDiyPickerButton setTitle:@"Picker DIY 内容是UIView" forState:UIControlStateNormal];
+    [gotoDiyPickerButton addTarget:self action:@selector(gotoDiyPikerButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:gotoDiyPickerButton];
+    
+    
+    
+    
     [self.view addSubview:_nomalDatePicker];
     [self.view addSubview:_datePicker];
     [self.view addSubview:_dateTimePicker];
-    
-    
+}
+
+- (void)gotoDiyPikerButtonClick {
+    Class vcClass = NSClassFromString(@"RXMineDIYPickerViewController");
+    if(!vcClass) return;
+    id vc = [vcClass new];
+    if(!vc) return;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

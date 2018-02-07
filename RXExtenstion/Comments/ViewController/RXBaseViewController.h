@@ -33,6 +33,9 @@ typedef NS_ENUM(NSInteger, ToastPosit){
 
 @property (nonatomic, copy) UILabel * nomalShowLabel;
 
+@property (nonatomic, assign) BOOL showSegmentToNavHidden;
+@property (nonatomic, assign, readonly) CGFloat navigationHeight;
+
 /// 显示没有网络状态  默认从顶部64开始
 - (void)showNullNetworkView;
 /// 显示没有网络状态  自定义 顶部位置显示

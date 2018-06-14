@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BF081E61FFDEA39007E54AA /* RXFaceIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF081E51FFDEA39007E54AA /* RXFaceIDViewController.m */; };
 		0BF081EA1FFDEADB007E54AA /* RXFaceID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF081E91FFDEADB007E54AA /* RXFaceID.m */; };
 		107542EFB999A169902571C7 /* libPods-RXExtenstion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF49BEAF76E86D7E2A0AA879 /* libPods-RXExtenstion.a */; };
 		3B4B66841DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B66831DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m */; };
@@ -175,7 +174,6 @@
 		6CF4AC9B1D01A89400CD17CB /* RXExpansionContractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4AC9A1D01A89400CD17CB /* RXExpansionContractionController.m */; };
 		6CF4AC9E1D01A91800CD17CB /* RXExpanCCellHeightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4AC9D1D01A91800CD17CB /* RXExpanCCellHeightModel.m */; };
 		6CF4ACA21D01A9F100CD17CB /* RXExpansionContractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4ACA11D01A9F100CD17CB /* RXExpansionContractionCell.m */; };
-		B80E97C32010414200BF0090 /* RXTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = B80E97C22010414200BF0090 /* RXTranslation.m */; };
 		B821782E20298B330069D6A3 /* a.txt in Resources */ = {isa = PBXBuildFile; fileRef = B821782D20298B330069D6A3 /* a.txt */; };
 		B821783120298BE80069D6A3 /* a.txt in Resources */ = {isa = PBXBuildFile; fileRef = B821783020298BE80069D6A3 /* a.txt */; };
 		B821783420298D1E0069D6A3 /* RXPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B821783320298D1E0069D6A3 /* RXPickerView.m */; };
@@ -188,17 +186,28 @@
 		B8399E42202476130015A727 /* libMJRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8399E49202476130015A727 /* libMJRefresh.a */; };
 		B8399E43202476130015A727 /* libRXGetAddressBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8399E4A202476130015A727 /* libRXGetAddressBook.a */; };
 		B8399E44202476130015A727 /* libRXLabel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8399E4B202476130015A727 /* libRXLabel.a */; };
+		B83A62652040122300F07502 /* RXTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A62642040122200F07502 /* RXTransform.m */; };
 		B8441D92202AA166002EC957 /* RXSegment_View.m in Sources */ = {isa = PBXBuildFile; fileRef = B8441D90202AA166002EC957 /* RXSegment_View.m */; };
 		B8441D93202AA167002EC957 /* RXSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B8441D91202AA166002EC957 /* RXSegmentControl.m */; };
 		B8441D96202AA27E002EC957 /* RXSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8441D95202AA27E002EC957 /* RXSegmentView.m */; };
 		B8441D99202AA7AB002EC957 /* RXMineDIYPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8441D98202AA7AB002EC957 /* RXMineDIYPickerViewController.m */; };
 		B8441D9D202AA9AF002EC957 /* RXMineDIYItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8441D9C202AA9AF002EC957 /* RXMineDIYItemView.m */; };
+		B85B647C20635852005AD705 /* RXBlockTextField.md in Resources */ = {isa = PBXBuildFile; fileRef = B85B647B20635852005AD705 /* RXBlockTextField.md */; };
+		B85B647F206358FE005AD705 /* RXBlockTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B85B647E206358FE005AD705 /* RXBlockTextField.m */; };
+		B85B6482206364BE005AD705 /* RXCurrencyFormatTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B85B6481206364BE005AD705 /* RXCurrencyFormatTextField.m */; };
+		B85B6485206373D3005AD705 /* RXTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B85B6484206373D3005AD705 /* RXTextFieldViewController.m */; };
+		B85B6488206381C6005AD705 /* RXPhoneNumberFormatTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B85B6487206381C6005AD705 /* RXPhoneNumberFormatTextField.m */; };
+		B85B648B20638573005AD705 /* RXBankCardFormatTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B85B648A20638573005AD705 /* RXBankCardFormatTextField.m */; };
+		B85B64922063A492005AD705 /* RXScrollContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B85B64912063A492005AD705 /* RXScrollContainer.m */; };
 		B85ED95220200EB900D5FD95 /* RXGradient_Graphics.m in Sources */ = {isa = PBXBuildFile; fileRef = B85ED95120200EB900D5FD95 /* RXGradient_Graphics.m */; };
 		B85ED95520200EF100D5FD95 /* RXGradient_LayerColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B85ED95420200EF100D5FD95 /* RXGradient_LayerColor.m */; };
 		B85ED958202010BF00D5FD95 /* RXGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B85ED957202010BF00D5FD95 /* RXGradientViewController.m */; };
+		B87B21BB207A1FA1003C8245 /* RXAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = B87B21BA207A1FA1003C8245 /* RXAlert.m */; };
+		B87B21BE207A2CC8003C8245 /* RXBlockAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87B21BD207A2CC8003C8245 /* RXBlockAlertController.m */; };
 		B8900FE5200C8F4800174A67 /* UIViewController+RXExclusiveTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = B8900FE4200C8F4800174A67 /* UIViewController+RXExclusiveTouch.m */; };
 		B8900FE8200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = B8900FE7200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.m */; };
 		B8900FEE200C99DB00174A67 /* RXMineViewController+RXHook.m in Sources */ = {isa = PBXBuildFile; fileRef = B8900FED200C99DB00174A67 /* RXMineViewController+RXHook.m */; };
+		B8BC89EE2068A7A000115BDE /* 扩展.md in Resources */ = {isa = PBXBuildFile; fileRef = B8BC89ED2068A79F00115BDE /* 扩展.md */; };
 		B8C1439B2018755400C48456 /* RXEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C1439A2018755400C48456 /* RXEncrypt.m */; };
 		B8C143B02018783100C48456 /* RSACrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C1439E2018783100C48456 /* RSACrypt.m */; };
 		B8C143B12018783100C48456 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C143A22018783100C48456 /* NSString+Base64.m */; };
@@ -224,8 +233,6 @@
 
 /* Begin PBXFileReference section */
 		0B79782724137B985B565BAE /* Pods-RXExtenstion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXExtenstion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXExtenstion/Pods-RXExtenstion.debug.xcconfig"; sourceTree = "<group>"; };
-		0BF081E41FFDEA39007E54AA /* RXFaceIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXFaceIDViewController.h; sourceTree = "<group>"; };
-		0BF081E51FFDEA39007E54AA /* RXFaceIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXFaceIDViewController.m; sourceTree = "<group>"; };
 		0BF081E81FFDEADB007E54AA /* RXFaceID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXFaceID.h; sourceTree = "<group>"; };
 		0BF081E91FFDEADB007E54AA /* RXFaceID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXFaceID.m; sourceTree = "<group>"; };
 		3B4B66821DC32B7C003DF3B3 /* RXNew3DTouchSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXNew3DTouchSettingController.h; sourceTree = "<group>"; };
@@ -531,7 +538,6 @@
 		6CF4ACA01D01A9F100CD17CB /* RXExpansionContractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXExpansionContractionCell.h; sourceTree = "<group>"; };
 		6CF4ACA11D01A9F100CD17CB /* RXExpansionContractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXExpansionContractionCell.m; sourceTree = "<group>"; };
 		B80E97C12010414200BF0090 /* RXTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTransform.h; sourceTree = "<group>"; };
-		B80E97C22010414200BF0090 /* RXTranslation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTranslation.m; sourceTree = "<group>"; };
 		B8217829202960AD0069D6A3 /* RXSegmentBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXSegmentBaseViewController.h; sourceTree = "<group>"; };
 		B821782D20298B330069D6A3 /* a.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = a.txt; sourceTree = "<group>"; };
 		B821783020298BE80069D6A3 /* a.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = a.txt; sourceTree = "<group>"; };
@@ -548,6 +554,7 @@
 		B8399E4A202476130015A727 /* libRXGetAddressBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRXGetAddressBook.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8399E4B202476130015A727 /* libRXLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRXLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8399E4C202476130015A727 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83A62642040122200F07502 /* RXTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTransform.m; sourceTree = "<group>"; };
 		B8441D8E202AA166002EC957 /* RXSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSegmentControl.h; sourceTree = "<group>"; };
 		B8441D8F202AA166002EC957 /* RXSegment_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXSegment_View.h; sourceTree = "<group>"; };
 		B8441D90202AA166002EC957 /* RXSegment_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXSegment_View.m; sourceTree = "<group>"; };
@@ -558,18 +565,37 @@
 		B8441D98202AA7AB002EC957 /* RXMineDIYPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMineDIYPickerViewController.m; sourceTree = "<group>"; };
 		B8441D9B202AA9AF002EC957 /* RXMineDIYItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMineDIYItemView.h; sourceTree = "<group>"; };
 		B8441D9C202AA9AF002EC957 /* RXMineDIYItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMineDIYItemView.m; sourceTree = "<group>"; };
+		B85B647B20635852005AD705 /* RXBlockTextField.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = RXBlockTextField.md; sourceTree = "<group>"; };
+		B85B647D206358FE005AD705 /* RXBlockTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBlockTextField.h; sourceTree = "<group>"; };
+		B85B647E206358FE005AD705 /* RXBlockTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockTextField.m; sourceTree = "<group>"; };
+		B85B6480206364BE005AD705 /* RXCurrencyFormatTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCurrencyFormatTextField.h; sourceTree = "<group>"; };
+		B85B6481206364BE005AD705 /* RXCurrencyFormatTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCurrencyFormatTextField.m; sourceTree = "<group>"; };
+		B85B6483206373D3005AD705 /* RXTextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTextFieldViewController.h; sourceTree = "<group>"; };
+		B85B6484206373D3005AD705 /* RXTextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTextFieldViewController.m; sourceTree = "<group>"; };
+		B85B6486206381C6005AD705 /* RXPhoneNumberFormatTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPhoneNumberFormatTextField.h; sourceTree = "<group>"; };
+		B85B6487206381C6005AD705 /* RXPhoneNumberFormatTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPhoneNumberFormatTextField.m; sourceTree = "<group>"; };
+		B85B648920638573005AD705 /* RXBankCardFormatTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBankCardFormatTextField.h; sourceTree = "<group>"; };
+		B85B648A20638573005AD705 /* RXBankCardFormatTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBankCardFormatTextField.m; sourceTree = "<group>"; };
+		B85B648D2063A46D005AD705 /* RXScrollContainerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXScrollContainerProtocol.h; sourceTree = "<group>"; };
+		B85B64902063A492005AD705 /* RXScrollContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXScrollContainer.h; sourceTree = "<group>"; };
+		B85B64912063A492005AD705 /* RXScrollContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXScrollContainer.m; sourceTree = "<group>"; };
 		B85ED95020200EB900D5FD95 /* RXGradient_Graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXGradient_Graphics.h; sourceTree = "<group>"; };
 		B85ED95120200EB900D5FD95 /* RXGradient_Graphics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXGradient_Graphics.m; sourceTree = "<group>"; };
 		B85ED95320200EF100D5FD95 /* RXGradient_LayerColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXGradient_LayerColor.h; sourceTree = "<group>"; };
 		B85ED95420200EF100D5FD95 /* RXGradient_LayerColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXGradient_LayerColor.m; sourceTree = "<group>"; };
 		B85ED956202010BF00D5FD95 /* RXGradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXGradientViewController.h; sourceTree = "<group>"; };
 		B85ED957202010BF00D5FD95 /* RXGradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXGradientViewController.m; sourceTree = "<group>"; };
+		B87B21B9207A1FA1003C8245 /* RXAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAlert.h; sourceTree = "<group>"; };
+		B87B21BA207A1FA1003C8245 /* RXAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAlert.m; sourceTree = "<group>"; };
+		B87B21BC207A2CC8003C8245 /* RXBlockAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBlockAlertController.h; sourceTree = "<group>"; };
+		B87B21BD207A2CC8003C8245 /* RXBlockAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockAlertController.m; sourceTree = "<group>"; };
 		B8900FE3200C8F4800174A67 /* UIViewController+RXExclusiveTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RXExclusiveTouch.h"; sourceTree = "<group>"; };
 		B8900FE4200C8F4800174A67 /* UIViewController+RXExclusiveTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RXExclusiveTouch.m"; sourceTree = "<group>"; };
 		B8900FE6200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+RXContentInsetAdjust.h"; sourceTree = "<group>"; };
 		B8900FE7200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+RXContentInsetAdjust.m"; sourceTree = "<group>"; };
 		B8900FEC200C99DB00174A67 /* RXMineViewController+RXHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RXMineViewController+RXHook.h"; sourceTree = "<group>"; };
 		B8900FED200C99DB00174A67 /* RXMineViewController+RXHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RXMineViewController+RXHook.m"; sourceTree = "<group>"; };
+		B8BC89ED2068A79F00115BDE /* 扩展.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "扩展.md"; sourceTree = "<group>"; };
 		B8C143992018755400C48456 /* RXEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXEncrypt.h; sourceTree = "<group>"; };
 		B8C1439A2018755400C48456 /* RXEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXEncrypt.m; sourceTree = "<group>"; };
 		B8C1439E2018783100C48456 /* RSACrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSACrypt.m; sourceTree = "<group>"; };
@@ -974,6 +1000,9 @@
 		6C3A2FE61CD3477E00533FFF /* RXExtenstion */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC89ED2068A79F00115BDE /* 扩展.md */,
+				B87B21B8207A1F90003C8245 /* RXAlert */,
+				B85B647A2063580A005AD705 /* RXBlockTextField */,
 				B821782220295E380069D6A3 /* Segment */,
 				B85ED94F20200E5D00D5FD95 /* Gradient */,
 				B8C143982018754800C48456 /* RXEncrypt */,
@@ -1537,8 +1566,8 @@
 		6CF3224C1CD86BFF009BD1B7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6C3F7BAC1D07DFD80046C29C /* Location */,
 				6CF322531CD879BF009BD1B7 /* Home */,
+				6C3F7BAC1D07DFD80046C29C /* Location */,
 				6CF322571CD879BF009BD1B7 /* User */,
 			);
 			path = ViewController;
@@ -1582,12 +1611,12 @@
 				6C35E8BE1CF53B680072A8EC /* RXSystemAlertController.m */,
 				6C33D3711F68DCA3000F876C /* RXTouchIDViewController.h */,
 				6C33D3721F68DCA3000F876C /* RXTouchIDViewController.m */,
-				0BF081E41FFDEA39007E54AA /* RXFaceIDViewController.h */,
-				0BF081E51FFDEA39007E54AA /* RXFaceIDViewController.m */,
 				B85ED956202010BF00D5FD95 /* RXGradientViewController.h */,
 				B85ED957202010BF00D5FD95 /* RXGradientViewController.m */,
 				B821783A2029B3F80069D6A3 /* RXSegmentController.h */,
 				B821783B2029B3F80069D6A3 /* RXSegmentController.m */,
+				B85B6483206373D3005AD705 /* RXTextFieldViewController.h */,
+				B85B6484206373D3005AD705 /* RXTextFieldViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1685,7 +1714,7 @@
 			isa = PBXGroup;
 			children = (
 				B80E97C12010414200BF0090 /* RXTransform.h */,
-				B80E97C22010414200BF0090 /* RXTranslation.m */,
+				B83A62642040122200F07502 /* RXTransform.m */,
 			);
 			path = Translation;
 			sourceTree = "<group>";
@@ -1697,6 +1726,7 @@
 				B8441D90202AA166002EC957 /* RXSegment_View.m */,
 				B8441D8E202AA166002EC957 /* RXSegmentControl.h */,
 				B8441D91202AA166002EC957 /* RXSegmentControl.m */,
+				B85B648C2063A35E005AD705 /* 自定义分段控制器 */,
 			);
 			path = Segment;
 			sourceTree = "<group>";
@@ -1726,6 +1756,32 @@
 			path = RXMineDIYItemView;
 			sourceTree = "<group>";
 		};
+		B85B647A2063580A005AD705 /* RXBlockTextField */ = {
+			isa = PBXGroup;
+			children = (
+				B85B647B20635852005AD705 /* RXBlockTextField.md */,
+				B85B647D206358FE005AD705 /* RXBlockTextField.h */,
+				B85B647E206358FE005AD705 /* RXBlockTextField.m */,
+				B85B6480206364BE005AD705 /* RXCurrencyFormatTextField.h */,
+				B85B6481206364BE005AD705 /* RXCurrencyFormatTextField.m */,
+				B85B6486206381C6005AD705 /* RXPhoneNumberFormatTextField.h */,
+				B85B6487206381C6005AD705 /* RXPhoneNumberFormatTextField.m */,
+				B85B648920638573005AD705 /* RXBankCardFormatTextField.h */,
+				B85B648A20638573005AD705 /* RXBankCardFormatTextField.m */,
+			);
+			path = RXBlockTextField;
+			sourceTree = "<group>";
+		};
+		B85B648C2063A35E005AD705 /* 自定义分段控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				B85B648D2063A46D005AD705 /* RXScrollContainerProtocol.h */,
+				B85B64902063A492005AD705 /* RXScrollContainer.h */,
+				B85B64912063A492005AD705 /* RXScrollContainer.m */,
+			);
+			path = "自定义分段控制器";
+			sourceTree = "<group>";
+		};
 		B85ED94F20200E5D00D5FD95 /* Gradient */ = {
 			isa = PBXGroup;
 			children = (
@@ -1735,6 +1791,17 @@
 				B85ED95420200EF100D5FD95 /* RXGradient_LayerColor.m */,
 			);
 			path = Gradient;
+			sourceTree = "<group>";
+		};
+		B87B21B8207A1F90003C8245 /* RXAlert */ = {
+			isa = PBXGroup;
+			children = (
+				B87B21B9207A1FA1003C8245 /* RXAlert.h */,
+				B87B21BA207A1FA1003C8245 /* RXAlert.m */,
+				B87B21BC207A2CC8003C8245 /* RXBlockAlertController.h */,
+				B87B21BD207A2CC8003C8245 /* RXBlockAlertController.m */,
+			);
+			path = RXAlert;
 			sourceTree = "<group>";
 		};
 		B8900FE2200C8F3100174A67 /* runtime */ = {
@@ -1919,11 +1986,13 @@
 				6C5B547E1D76942E00A7577F /* UIImageView_说明.txt in Resources */,
 				B821783120298BE80069D6A3 /* a.txt in Resources */,
 				3B4B668D1DC337E7003DF3B3 /* RXDragCell.xib in Resources */,
+				B8BC89EE2068A7A000115BDE /* 扩展.md in Resources */,
 				6C3F7BAE1D07DFF10046C29C /* Location.storyboard in Resources */,
 				6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */,
 				6CDB2CD01D9E0DA800B07530 /* CollectionReusableViewClass.xib in Resources */,
 				6CF3225C1CD879EF009BD1B7 /* Home.storyboard in Resources */,
 				6C862FBA1D5876C500EEB818 /* city.json in Resources */,
+				B85B647C20635852005AD705 /* RXBlockTextField.md in Resources */,
 				6C59F2FA1E53017D00D15063 /* CommonConfig.xcconfig in Resources */,
 				6CD828B51CF831A500AF575E /* Mine.storyboard in Resources */,
 				6C59F2FF1E53017D00D15063 /* FormalConfig.xcconfig in Resources */,
@@ -2012,9 +2081,9 @@
 				6C00AFF91D40563000EA7221 /* RXAFNDownload.m in Sources */,
 				B821783C2029B3F80069D6A3 /* RXSegmentController.m in Sources */,
 				6CF3224F1CD86C67009BD1B7 /* RXTabBarController.m in Sources */,
+				B87B21BE207A2CC8003C8245 /* RXBlockAlertController.m in Sources */,
 				6C9D124B1D7D3E7600694C52 /* RXMenu.m in Sources */,
 				6CA15FFE1CF34042009DCE60 /* RXScrollView.m in Sources */,
-				0BF081E61FFDEA39007E54AA /* RXFaceIDViewController.m in Sources */,
 				6CBF822E1CDAEE98009AD4FC /* UIView+Toast.m in Sources */,
 				6CF1AC6E1DC18EBA00D411A2 /* RXMineCell.m in Sources */,
 				6C3B8C8A1D0FC4DA0033F691 /* RXPrisonBreak.m in Sources */,
@@ -2030,6 +2099,7 @@
 				6CA608561D37991F00A6C088 /* UIImage+ImageEffects.m in Sources */,
 				6CDB2CCE1D9E0DA800B07530 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				6C862FC11D5876C500EEB818 /* RXOneLinkageTreeAddress.m in Sources */,
+				B85B648B20638573005AD705 /* RXBankCardFormatTextField.m in Sources */,
 				6CDB2CBC1D9E0CAD00B07530 /* RXSearchViewController.m in Sources */,
 				6C3A30D41CD360DC00533FFF /* RXCharacter.m in Sources */,
 				6C9D12551D7D407000694C52 /* RXMenuViewCollectionCell.m in Sources */,
@@ -2091,6 +2161,7 @@
 				6CC10C001F67DC0F00D8B5D8 /* RXPrintInterface.swift in Sources */,
 				6CF322651CD89D65009BD1B7 /* RXFalseDataController.m in Sources */,
 				6CA160011CF3405C009DCE60 /* RXNewHomeUserInfoView.m in Sources */,
+				B83A62652040122300F07502 /* RXTransform.m in Sources */,
 				6C3A30231CD34E7D00533FFF /* RXRandom.m in Sources */,
 				6C999AFF1DEBBFEB0022F388 /* RXColorLog.m in Sources */,
 				6CC10BFF1F67DC0F00D8B5D8 /* RXLogin.swift in Sources */,
@@ -2098,27 +2169,33 @@
 				6CF322521CD87077009BD1B7 /* RXNavBaseController.m in Sources */,
 				B8C143B32018783100C48456 /* NSData+CommonCrypto.m in Sources */,
 				6C3A300A1CD3477E00533FFF /* TTCacheUtil.m in Sources */,
+				B85B64922063A492005AD705 /* RXScrollContainer.m in Sources */,
 				6CD0EB9D1D21159900692886 /* SFHFKeychainUtils.m in Sources */,
 				6C9D124E1D7D3E7600694C52 /* RXSelectView.m in Sources */,
 				6C3A30D71CD36DDC00533FFF /* RXMJHeader.m in Sources */,
+				B85B6485206373D3005AD705 /* RXTextFieldViewController.m in Sources */,
 				6C9D12601D7D5CA400694C52 /* RXCollectionDetailListCell.m in Sources */,
+				B85B647F206358FE005AD705 /* RXBlockTextField.m in Sources */,
 				6C00B00B1D40639A00EA7221 /* RXHttp.m in Sources */,
 				6CF322461CD71368009BD1B7 /* RXBaseViewController.m in Sources */,
 				B8900FE8200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.m in Sources */,
 				6C33D3701F68D6A9000F876C /* RXTouchIDOption.m in Sources */,
 				6CA608571D37991F00A6C088 /* UIImageView+CornerRadius.m in Sources */,
 				B82178392029B3E20069D6A3 /* RXSegmentBaseViewController.m in Sources */,
+				B85B6482206364BE005AD705 /* RXCurrencyFormatTextField.m in Sources */,
 				6C8480261CF6F9310052C3BF /* NSArray+RXArrLog.m in Sources */,
 				B8441D96202AA27E002EC957 /* RXSegmentView.m in Sources */,
 				6C862FC01D5876C500EEB818 /* RXJDTableCell.m in Sources */,
 				6CEB36A71D5ABEA600283562 /* RXMineInfoMessageCell.m in Sources */,
 				6C32D6AB1CF3E7C7003EE112 /* RXNewHomeTableViewCell.m in Sources */,
 				6C3A30DA1CD36E3700533FFF /* RXMJFooterGif.m in Sources */,
+				B87B21BB207A1FA1003C8245 /* RXAlert.m in Sources */,
 				6CA608591D37991F00A6C088 /* UIImageView+LBBlurredImage.m in Sources */,
 				6CA15FFA1CF33FEC009DCE60 /* RXNewHomeController.m in Sources */,
 				6CF4AC9E1D01A91800CD17CB /* RXExpanCCellHeightModel.m in Sources */,
 				B8C143B42018783100C48456 /* NSData+Base64.m in Sources */,
 				6CC10C031F67DC9200D8B5D8 /* RXUseSwiftViewController.m in Sources */,
+				B85B6488206381C6005AD705 /* RXPhoneNumberFormatTextField.m in Sources */,
 				6CF1AC701DC18EBA00D411A2 /* RXMineHeader.m in Sources */,
 				6C6D602E1DC832C30069573E /* RXNavigationView.m in Sources */,
 				6C9D12581D7D40AF00694C52 /* RXMenuModel.m in Sources */,
@@ -2128,7 +2205,6 @@
 				6C4BFCD71CDC9F94006476FB /* RXDataModel.m in Sources */,
 				6CD0EB9C1D21159900692886 /* OpenUDID.m in Sources */,
 				6C4B5DF41E80B7F100869D70 /* RXAccumulation.c in Sources */,
-				B80E97C32010414200BF0090 /* RXTranslation.m in Sources */,
 				3B4B66841DC32B7C003DF3B3 /* RXNew3DTouchSettingController.m in Sources */,
 				6C0047B61F1DB67C00410E65 /* RXLOLAbilityTableViewCell.m in Sources */,
 				6CDB2CCF1D9E0DA800B07530 /* CollectionReusableViewClass.m in Sources */,

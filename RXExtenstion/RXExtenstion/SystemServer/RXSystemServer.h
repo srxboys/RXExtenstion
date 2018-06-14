@@ -6,6 +6,7 @@
 //  Copyright © 2016年 https://github.com/srxboys. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 
 @interface RXSystemServer : NSObject
@@ -23,5 +24,11 @@
 
 //发短信
 - (void)sendMessageTo:(NSArray*)phoneNumbers withMessageBody:(NSString*)messageBody;
+
+// 在appStore打开app
+- (void)openAppleStoreProduct;
+
+// app 评论
+- (void)openAppleStoreComment;
 
 @end

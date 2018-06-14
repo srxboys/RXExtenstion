@@ -86,20 +86,34 @@ static const char * HACK_MIME_USER_KEY = "hook_user_KEY";
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        Class aClass = [self class];
-        
         //点击头像 跳转
         SEL oldSel = NSSelectorFromString(@"mineHeaderClick");
         SEL newSel = @selector(hook_Mine_jumpByProductURL);
-        Method oldMethod = class_getInstanceMethod(aClass, oldSel);
-        Method newMethod = class_getInstanceMethod(aClass, newSel);
-        // 交换实现
-        method_exchangeImplementations(oldMethod, newMethod);
-                
+        [self swizzleMethod:oldSel withMethod:newSel insertSel:newSel];
+        
+        
     });
-    
-    
 }
+
++ (void)swizzleMethod:(SEL)origSel withMethod:(SEL)aftSel insertSel:(SEL)insetSel{
+    Class aClass = [self class];
+    Method originMethod = class_getInstanceMethod(aClass, origSel);
+    BOOL didAddMethod = class_addMethod(aClass, origSel, method_getImplementation(originMethod), method_getTypeEncoding(originMethod));
+    if(didAddMethod) {
+        //添加后替换
+        Method createSelMethod = class_getInstanceMethod(aClass, insetSel);
+        class_replaceMethod(aClass,
+                            origSel,
+                            method_getImplementation(createSelMethod),
+                            method_getTypeEncoding(originMethod));
+    }
+    else {
+        // 交换实现
+        Method afterMethod = class_getInstanceMethod(aClass, aftSel);
+        method_exchangeImplementations(originMethod, afterMethod);
+    }
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     //如果你不需要私有属性的，可以直接写分类
@@ -115,8 +129,12 @@ static const char * HACK_MIME_USER_KEY = "hook_user_KEY";
         old_productInfo_ivar = class_getInstanceVariable(aClass, "dataSouceArr");
     }
     
-    id old_productInfo_object = object_getIvar(self, old_productInfo_ivar);
-    self.hook_dataSouceArr = old_productInfo_object;
+    if(old_productInfo_ivar) {
+        //这个ivar是不存在的
+        id old_productInfo_object = object_getIvar(self, old_productInfo_ivar);
+        self.hook_dataSouceArr = old_productInfo_object;
+    }
+    
     if(self.hook_dataSouceArr) {
         NSLog(@"%@\n", self.hook_dataSouceArr);
     }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -288,10 +288,35 @@
                                     <action selector="sendEmailButtonClick:" destination="IOe-fU-FeX" eventType="touchUpInside" id="93f-HA-406"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jl-tn-WiK">
+                                <rect key="frame" x="20" y="496" width="73" height="30"/>
+                                <color key="backgroundColor" red="0.32748857129999998" green="0.78532396670000004" blue="0.91492387819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="3t7-4s-zsU"/>
+                                    <constraint firstAttribute="height" constant="30" id="9Lq-Cd-F4t"/>
+                                </constraints>
+                                <state key="normal" title="去评论"/>
+                                <connections>
+                                    <action selector="gotoAppStoreComment:" destination="IOe-fU-FeX" eventType="touchUpInside" id="Bj6-z6-zIn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dV-XB-6jg">
+                                <rect key="frame" x="123" y="496" width="73" height="30"/>
+                                <color key="backgroundColor" red="0.32748857129999998" green="0.78532396670000004" blue="0.91492387819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="9Wj-ek-jff"/>
+                                    <constraint firstAttribute="height" constant="30" id="gjO-BT-J04"/>
+                                </constraints>
+                                <state key="normal" title="更新app"/>
+                                <connections>
+                                    <action selector="gotoAppStore:" destination="IOe-fU-FeX" eventType="touchUpInside" id="CQl-Oy-IlE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0DF-tq-Y03" firstAttribute="leading" secondItem="F2o-8K-N9b" secondAttribute="leading" constant="20" id="23l-B3-zi9"/>
+                            <constraint firstItem="2Jl-tn-WiK" firstAttribute="leading" secondItem="F2o-8K-N9b" secondAttribute="leading" constant="20" id="478-SM-EKj"/>
                             <constraint firstItem="04W-wk-WlV" firstAttribute="leading" secondItem="1C8-YS-apw" secondAttribute="trailing" constant="20" id="5bd-lH-0z5"/>
                             <constraint firstItem="Xfx-KS-wHA" firstAttribute="leading" secondItem="p4a-h0-MxS" secondAttribute="trailing" constant="20" id="63U-O8-Kax"/>
                             <constraint firstItem="3Dj-Yz-1xc" firstAttribute="top" secondItem="mTn-gc-HSu" secondAttribute="bottom" constant="70" id="9c7-Zx-QCa"/>
@@ -305,16 +330,19 @@
                             <constraint firstItem="1C8-YS-apw" firstAttribute="leading" secondItem="F2o-8K-N9b" secondAttribute="leading" constant="20" id="NRa-f7-dGO"/>
                             <constraint firstItem="Xfx-KS-wHA" firstAttribute="top" secondItem="Ak9-fR-KqS" secondAttribute="bottom" constant="20" id="OHP-Bi-48H"/>
                             <constraint firstItem="Ak9-fR-KqS" firstAttribute="top" secondItem="mTn-gc-HSu" secondAttribute="bottom" constant="70" id="PIK-9O-oOI"/>
+                            <constraint firstItem="1dV-XB-6jg" firstAttribute="top" secondItem="2Jl-tn-WiK" secondAttribute="top" id="VIA-f3-Ron"/>
                             <constraint firstAttribute="trailing" secondItem="1eU-y2-fwB" secondAttribute="trailing" constant="40" id="X5X-0a-5u8"/>
                             <constraint firstItem="1eU-y2-fwB" firstAttribute="top" secondItem="Xfx-KS-wHA" secondAttribute="bottom" constant="20" id="Yf3-xQ-tV6"/>
                             <constraint firstItem="04W-wk-WlV" firstAttribute="top" secondItem="1eU-y2-fwB" secondAttribute="bottom" constant="20" id="aH5-06-wwf"/>
                             <constraint firstAttribute="trailing" secondItem="Ak9-fR-KqS" secondAttribute="trailing" constant="40" id="aWV-vA-UyR"/>
                             <constraint firstItem="1C8-YS-apw" firstAttribute="top" secondItem="0DF-tq-Y03" secondAttribute="bottom" constant="20" id="afe-iY-AUV"/>
                             <constraint firstItem="04W-wk-WlV" firstAttribute="top" secondItem="0DF-tq-Y03" secondAttribute="bottom" constant="20" id="azN-hB-JLa"/>
+                            <constraint firstItem="2Jl-tn-WiK" firstAttribute="top" secondItem="1C8-YS-apw" secondAttribute="bottom" constant="30" id="bjO-P5-E0Q"/>
                             <constraint firstItem="Ak9-fR-KqS" firstAttribute="leading" secondItem="3Dj-Yz-1xc" secondAttribute="trailing" constant="20" id="cVI-F5-caZ"/>
                             <constraint firstItem="1eU-y2-fwB" firstAttribute="leading" secondItem="0DF-tq-Y03" secondAttribute="trailing" constant="20" id="ct9-gZ-8JK"/>
                             <constraint firstAttribute="trailing" secondItem="Xfx-KS-wHA" secondAttribute="trailing" constant="40" id="eDP-xr-xEK"/>
                             <constraint firstItem="04W-wk-WlV" firstAttribute="top" secondItem="Xfx-KS-wHA" secondAttribute="bottom" constant="20" id="iwp-5L-TQx"/>
+                            <constraint firstItem="1dV-XB-6jg" firstAttribute="leading" secondItem="2Jl-tn-WiK" secondAttribute="trailing" constant="30" id="kQu-3e-4sq"/>
                             <constraint firstItem="p4a-h0-MxS" firstAttribute="top" secondItem="3Dj-Yz-1xc" secondAttribute="bottom" constant="20" id="n4x-xK-DZy"/>
                             <constraint firstItem="Ak9-fR-KqS" firstAttribute="leading" secondItem="3Dj-Yz-1xc" secondAttribute="trailing" constant="20" id="t4E-vl-hkb"/>
                         </constraints>
@@ -337,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qJ-QU-W98" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-655.5" y="-779.5"/>
+            <point key="canvasLocation" x="-656.79999999999995" y="-780.35982008995506"/>
         </scene>
     </scenes>
 </document>

@@ -159,6 +159,9 @@ do{ \
 
 #if TARGET_IPHONE_SIMULATOR
 //iPhone Simulator
+    #define SIMULATOR_TEST 1
+#else
+    #define SIMULATOR_TEST 0
 #endif
 
 //获取当前语言
@@ -281,9 +284,9 @@ _Pragma("clang diagnostic pop") \
  */
 #pragma mark ---- num转NSString 定义 --------
 //number转String
-#define IntTranslateStr(int_str) [NSString stringWithFormat:@"%zd",int_str]
-#define FloatTranslateStr(float_str) [NSString stringWithFormat:@"%.2f",float_str]
-
+#define STRING_OF_FLOAT(num) [NSString stringWithFormat:@"%.2f", num]
+#define STRING_OF_INT(num) [NSString stringWithFormat:@"%zd", num]
+#define STRING_FORMAT(str, ...) [NSString stringWithFormat:str, __VA_ARGS__]
 
 #pragma mark ---- notifacation 通知定义 --------
 /**

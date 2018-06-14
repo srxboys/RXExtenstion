@@ -42,7 +42,7 @@ NSString * const RXTouchIDOptionErrorDomain = @"github.com.srxboys.TouchIDOption
         //默认3次。
         _context.maxBiometryFailures = [NSNumber numberWithInteger:2];
         
-        //readOnly 指纹数据(evaluatepolicy执行后，才有值) 不建议使用，用户可以更换指纹
+        //readOnly 指纹数据(evaluatepolicy执行后，才有值) 不建议使用，用户可以更换指纹( 但是我们可以用于第二次的非用户操作指纹解锁)
 //        if(iOS9OrLater) {
 //            NSData * data = _context.evaluatedPolicyDomainState;
 //        }
@@ -92,7 +92,7 @@ NSString * const RXTouchIDOptionErrorDomain = @"github.com.srxboys.TouchIDOption
      
      */
     
-    [_context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请按home键指纹解锁" reply:^(BOOL success, NSError * _Nullable error) {
+    [_context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请按home键 指纹(或者 识别脸部) 解锁" reply:^(BOOL success, NSError * _Nullable error) {
         NSString * descri = @"成功";
         if (success) {
             RXLog(@"验证成功 刷新主界面");
@@ -101,39 +101,26 @@ NSString * const RXTouchIDOptionErrorDomain = @"github.com.srxboys.TouchIDOption
             switch (error.code) {
                 case LAErrorSystemCancel:
                 {
-                
                     descri = @"系统取消授权，如其他APP切入";
-                    RXLog(@"%@", descri);
+                    
                     break;
                 }
                 case LAErrorUserCancel:
                 {
                     descri = @"用户取消验证Touch ID";
-                    RXLog(@"%@", descri);
+                    
                     break;
                 }
                 case LAErrorAuthenticationFailed:
                 {
                     descri = @"授权失败";
-                    RXLog(@"%@", descri);
+                    
                     break;
                 }
                 case LAErrorPasscodeNotSet:
                 {
                     descri = @"系统未设置密码";
-                    RXLog(@"%@", descri);
-                    break;
-                }
-                case LAErrorTouchIDNotAvailable:
-                {
-                    descri = @"设备Touch ID不可用，例如未打开";
-                    RXLog(@"%@", descri);
-                    break;
-                }
-                case LAErrorTouchIDNotEnrolled:
-                {
-                    descri = @"设备Touch ID不可用，用户未录入";
-                    RXLog(@"%@", descri);
+                    
                     break;
                 }
                 case LAErrorUserFallback:
@@ -147,16 +134,42 @@ NSString * const RXTouchIDOptionErrorDomain = @"github.com.srxboys.TouchIDOption
                 }
                 default:
                 {
-                    __block NSString *  weakDescri = descri;
-                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                        weakDescri = @"其他情况，切换主线程处理";
-                        RXLog(@"%@", weakDescri);
-                    }];
-                    break;
+                    #define RXAdjustLAErrorInIOS11(iOS11Error, olderError) ({   \
+                        LAError _$_error = 0;  \
+                        if (@available(iOS 11.0, *)) {  \
+                            _$_error = iOS11Error;     \
+                        }   \
+                        else {  \
+                            _$_error = olderError;    \
+                        }   \
+                        _$_error;    \
+                    })
+                    
+                    if(error.code == RXAdjustLAErrorInIOS11(LAErrorBiometryNotAvailable, LAErrorTouchIDNotAvailable)) {
+                        descri = @"设备Touch ID / FaceID 不可用，例如未打开";
+                        break;
+                    }
+                    else if(error.code == RXAdjustLAErrorInIOS11(LAErrorBiometryNotEnrolled, LAErrorTouchIDNotEnrolled)) {
+                        descri = @"设备Touch ID / FaceID 不可用，用户未录入";
+                        break;
+                    }
+                    else if(error.code == RXAdjustLAErrorInIOS11(LAErrorBiometryLockout, LAErrorTouchIDLockout)) {
+                        descri = @"设备Touch ID / FaceID 已被锁定，稍后再试";
+                        break;
+                    }
+                    else {
+                        __block NSString *  weakDescri = descri;
+                        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                            weakDescri = @"其他情况，切换主线程处理";
+                            RXLog(@"%@", weakDescri);
+                        }];
+                        break;
+                    }
                 }
             }
         }
         
+        RXLog(@"%@", descri);
         block(success, error, descri);
         
         //在次object 没有销毁的情况下，使用此方法管用。否则 设不设置都是销毁所有。

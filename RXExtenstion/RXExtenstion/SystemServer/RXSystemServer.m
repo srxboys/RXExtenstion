@@ -9,11 +9,20 @@
 #import "RXSystemServer.h"
 #import <MessageUI/MessageUI.h>
 #import "AppDelegate.h"
+#import "RXConstant.h"
+
+#import "RXAlert.h" //下面用了3种方式 实现(注意哦😯)
+
+#import <StoreKit/StoreKit.h>
 
 
 #define RXSystemServer_share [RXSystemServer shareRXSystemServer]
 
-@interface RXSystemServer ()<MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
+@interface RXSystemServer ()<
+MFMailComposeViewControllerDelegate,
+MFMessageComposeViewControllerDelegate,
+SKStoreProductViewControllerDelegate
+>
 
 @end
 
@@ -30,41 +39,43 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
     {
         [self closeAllKeyboard];
         
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
-        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
-            
-        }];
-#else
-        [[UIApplication sharedApplication] openURL:url];
-#endif
+        if(iOS10OrLater) {
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+                
+            }];
+        }
+        else{
+            [[UIApplication sharedApplication] openURL:url];
+        }
     }
 }
 
 - (void)callTelephone:(NSString*)number {
+    /*
     NSString *deviceType = [UIDevice currentDevice].model;
     if([deviceType  isEqualToString:@"iPod touch"]||[deviceType  isEqualToString:@"iPad"]||[deviceType  isEqualToString:@"iPhone Simulator"])
     {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_9_0
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您的设备不能打电话"
-                                                        message:nil
-                                                       delegate:nil
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil];
+        RXAlert *alert = [[RXAlert alloc] initWithTitle:@"您的设备不能打电话"
+                                                message:nil
+                                      cancelButtonTitle:@"确定"
+                                      otherButtonTitles:nil];
         [alert show];
-#else
-        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"您的设备不能打电话" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction * closeAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            //点击了确定按钮
-        }];
-        [alert addAction:closeAction];
-        [SharedAppDelegate.window.rootViewController presentViewController:alert animated:YES completion:nil];
-#endif
         return;
     }
-    if (number.length == 0) return;
-    
-    NSString *urlStr = [NSString stringWithFormat:@"tel://%@", number];
-    [self openURL:urlStr];
+    */
+    if(SIMULATOR_TEST) {
+        RXAlert *alert = [[RXAlert alloc] initWithTitle:@"您的设备不能打电话"
+                                                message:nil
+                                      cancelButtonTitle:@"确定"
+                                      otherButtonTitles:nil];
+        [alert show];
+    }
+    else {
+        if (number.length == 0) return;
+        
+        NSString *urlStr = [NSString stringWithFormat:@"tel://%@", number];
+        [self openURL:urlStr];
+    }
 }
 
 #pragma mark - Send Email
@@ -91,22 +102,10 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
     }
     else
     {
-       
-#if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_9_0
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"您的设备没有配置邮箱帐号"
-                                                        message:nil
-                                                       delegate:nil
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil];
+        RXAlert * alert = [RXAlert new];
+        alert.title = @"您的设备没有配置邮箱帐号";
+        alert.cancelButtonTitle = @"确定";
         [alert show];
-#else
-        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"您的设备没有配置邮箱帐号" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction * closeAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            //点击了确定按钮
-        }];
-        [alert addAction:closeAction];
-        [SharedAppDelegate.window.rootViewController presentViewController:alert animated:YES completion:nil];
-#endif
     }
 }
 
@@ -144,12 +143,15 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
 - (void)sendMessageTo:(NSArray*)phoneNumbers withMessageBody:(NSString*)messageBody
 {
     [self closeAllKeyboard];
-    /*
+
     if(![MFMessageComposeViewController canSendText]) {
      //检测是否可用，然后自己设置弹框
+        [RXAlert showAlertWithTitle:@"您的设备不能发短信"
+                            message:nil
+                  cancelButtonTitle:@"确定"
+                  otherButtonTitles:nil cancelHandler:nil dismissHandler:nil];
         return;
     }
-    */
     MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
     picker.messageComposeDelegate = self;
     picker.recipients = phoneNumbers;
@@ -187,7 +189,52 @@ DEFINE_SINGLETON_FOR_CLASS(RXSystemServer)
 
 
 - (void)closeAllKeyboard {
-    [SharedAppDelegate closeAllKeyboard];
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+}
+
+
+- (void)openAppleStoreProduct {
+    
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+    
+    SKStoreProductViewController * skStorePVC = [[SKStoreProductViewController alloc] init];
+    skStorePVC.delegate = self;
+    
+    void(^complete)(void) = ^(void) {
+        if ([[NSThread currentThread] isMainThread]) {
+            [SharedAppDelegate.window.rootViewController presentViewController:skStorePVC animated:YES completion:NULL];
+        }
+        else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SharedAppDelegate.window.rootViewController presentViewController:skStorePVC animated:YES completion:NULL];
+            });
+        }
+    };
+    
+    [skStorePVC loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier:APPSTORE_ID}
+                            completionBlock:^(BOOL result, NSError *error) {
+                                if(!error) {
+                                    complete();
+                                }
+     }];
+}
+
+- (void)openAppleStoreComment {
+    //仅支持iOS10.3+（需要做校验） 且每个APP内每年最多弹出3次评分start
+    if([SKStoreReviewController respondsToSelector:@selector(requestReview)]) {
+        //防止键盘遮挡
+        [[UIApplication sharedApplication].keyWindow endEditing:YES];
+        [SKStoreReviewController requestReview];
+        
+    } else {
+        //不论iOS 版本均可使用APP内部打开网页形式，跳转到App Store 直接编辑评论
+        NSString *nsStringToOpen = [NSString stringWithFormat: @"itms-apps://itunes.apple.com/app/id%@?action=write-review",APPSTORE_ID];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:nsStringToOpen]];
+    }
+}
+
+- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController {
+    [SharedAppDelegate.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

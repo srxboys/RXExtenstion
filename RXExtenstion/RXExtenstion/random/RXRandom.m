@@ -154,11 +154,23 @@
 /// 随机倒计时时间
 + (NSString *)randomTimeCountdown {
     double timeStamp = ceil([[NSDate date] timeIntervalSince1970]);
+//    time_t time2 = time(NULL); //上面的简写
+    
     // （60 * 24表示一天   * 30表示 一个月随机，【表示秒】）  * 60变成总时间【表示小时】
     double timeStamp2 = timeStamp + ((arc4random()% 60 + 1) * 24);
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     [formatter setGeneratesDecimalNumbers:false];
     NSNumber *timeNumber = [NSNumber numberWithDouble:timeStamp2];
+    /*
+    struct tm *p;
+    p = localtime(&time2);
+    p->tm_hour = arc4random() % (24 - p->tm_hour) + p->tm_hour;
+    p->tm_min = arc4random() % 60;
+    p->tm_sec = arc4random() % 60;
+    time2 = mktime(p);
+    NSString * timeString2 = [NSString stringWithFormat:@"%ld", time2];
+    //上面的简写
+    */
     NSString *timeString = [formatter stringFromNumber:timeNumber];
     // NSTimeInterval is defined as double
     //    return [NSNumber numberWithLongLong:[timeString longLongValue]];

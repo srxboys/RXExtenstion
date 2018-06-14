@@ -12,7 +12,7 @@
 #import <CommonCrypto/CommonCrypto.h>
 
 
-
+//这个定义 有点危险， Xcode默认兼容最低版本 在编译的时候判断， 就算你添加的 iOSDeveloperSuppler  也不行。
 #if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_7_0 || MAC_OS_X_VERSION_MAX_ALLOWED <  MAC_OS_X_VERSION_10_9
     #import "GTMBase64.h"
 #endif

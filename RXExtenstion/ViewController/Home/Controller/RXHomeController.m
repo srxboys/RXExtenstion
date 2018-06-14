@@ -66,10 +66,11 @@
             @"一个完整的界面demo-coding",
             @"LOL--【我的】顶部效果-coding",
             @"OC中使用Swift方法",
-            @"真机 Touch ID",
-            @"真机 Face ID-coding",
+            @"真机 Touch ID / Face ID",
             @"渐变",
-            @"分段控制器"
+            @"系统分段控制器",
+            @"自定义分段控制器",
+            @"TextField定制",
             ];
     [_tableView reloadData];
 }
@@ -163,24 +164,35 @@
         [self.navigationController pushViewController:useSwiftVC animated:YES];
     }
     else if(row == 14) {
-        /// Touch ID
+        /// Touch ID / Face ID
         RXTouchIDViewController * touchIDVC = [[RXTouchIDViewController alloc] init];
         [self.navigationController pushViewController:touchIDVC animated:YES];
     }
     else if (row == 15) {
-        /// Face ID
+        /// 渐变
+        [self pushViewControllWithVCName:@"RXGradientViewController"];
     }
-    else if (row == 16) {
-        //危险的写法
-        Class vcClass = NSClassFromString(@"RXGradientViewController");
-        UIViewController * vc = (UIViewController *)[vcClass new];
-        [self.navigationController pushViewController:vc animated:YES];
+    else if(row == 16) {
+        /// 系统分段控制器
+        [self pushViewControllWithVCName:@"RXSegmentController"];
     }
     else if(row == 17) {
-        Class vcClass = NSClassFromString(@"RXSegmentController");
-        UIViewController * vc = (UIViewController *)[vcClass new];
-        [self.navigationController pushViewController:vc animated:YES];
+        /// 自定义分段控制器
+        [self pushViewControllWithVCName:@"RXSegmentController"];
     }
+    else if(row == 18) {
+        /// TextField定制
+        [self pushViewControllWithVCName:@"RXTextFieldViewController"];
+    }
+}
+
+- (void)pushViewControllWithVCName:(NSString *)vcName {
+    //危险的写法(不推荐)
+    Class vcClass = NSClassFromString(vcName);
+    if(!vcClass) return;
+    UIViewController * vc = (UIViewController *)[vcClass new];
+    if(!vc) return;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
@@ -193,14 +205,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

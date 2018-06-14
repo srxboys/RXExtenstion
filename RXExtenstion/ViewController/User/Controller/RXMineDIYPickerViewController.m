@@ -50,7 +50,7 @@
     
     for(NSInteger i = 0; i < arc4random()%5+5; i++) {
         RXMineDIYItem * component = [RXMineDIYItem new];
-        component.key = IntTranslateStr(i);
+        component.key = STRING_OF_INT(i);
         component.value = [RXRandom randomChinasWithinCount:5];
         component.valueColor = UIColorRandom;
         component.subValue = [RXRandom randomChinasWithinCount:10];

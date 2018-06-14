@@ -86,7 +86,7 @@
 
     //header
     NSDictionary * userDic = @{
-                               @"user_id"      : IntTranslateStr(1881142),
+                               @"user_id"      : STRING_OF_INT(1881142),
                                @"user_avater"  : @"Mine_avaster",
                                @"user_backImg" : [RXRandom randomImageURL],
                                @"user_desc"    : @"懂得太少，表现太多；才华太少，锋芒太多"

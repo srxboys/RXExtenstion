@@ -26,6 +26,8 @@
 - (IBAction)sendEmailButtonClick:(id)sender;
 
 
+- (IBAction)gotoAppStoreComment:(id)sender;
+- (IBAction)gotoAppStore:(id)sender;
 
 @end
 
@@ -33,6 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"调用系统功能";
     
     [self configUI];
 }
@@ -82,6 +85,14 @@
     NSString * subject = @"RX_主题";
     
     [[RXSystemServer sharedRXSystemServer] sendEmailTo:emails withSubject:subject andMessageBody:message];
+}
+
+- (IBAction)gotoAppStoreComment:(id)sender {
+    [[RXSystemServer sharedRXSystemServer] openAppleStoreComment];
+}
+
+- (IBAction)gotoAppStore:(id)sender {
+    [[RXSystemServer sharedRXSystemServer] openAppleStoreProduct];
 }
 
 

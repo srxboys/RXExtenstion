@@ -94,6 +94,8 @@
 #endif
 
 
+#define APPSTORE_ID @"779509975"
+
 /********************** 沙盒 ******************************/
 #pragma mark ---沙盒定义---
 #define App_DeviceToken              @"app_deviceToken"

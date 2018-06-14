@@ -169,7 +169,7 @@
         UIApplicationShortcutIcon *icon = [UIApplicationShortcutIcon iconWithType:model.rxIconType];
         
         //创建快捷选项
-        UIApplicationShortcutItem * item = [[UIApplicationShortcutItem alloc]initWithType:IntTranslateStr(i) localizedTitle:model.rxItemTitle localizedSubtitle:model.rxItemSubTitle icon:icon userInfo:nil];
+        UIApplicationShortcutItem * item = [[UIApplicationShortcutItem alloc]initWithType:STRING_OF_INT(i) localizedTitle:model.rxItemTitle localizedSubtitle:model.rxItemSubTitle icon:icon userInfo:nil];
         
         [mutableArray addObject:item];
     }
@@ -224,8 +224,8 @@
         NSInteger i = [shortcutItem.type integerValue];
         NSDictionary * dict = array[i];
         NSInteger  rxIconType = [dict[@"rxIconType"] integerValue];
-        NSString * rxItemTitle = dict[@"rxItemTitle"];
-        NSString * rxItemSubTitle = dict[@"rxItemSubTitle"];
+//        NSString * rxItemTitle = dict[@"rxItemTitle"];
+//        NSString * rxItemSubTitle = dict[@"rxItemSubTitle"];
         
         ///这里主要是判断 入口 是首页、我的
         
@@ -343,6 +343,15 @@
 }
 
 - (void)closeAllKeyboard {
+    /*
+     关闭键盘的，简单写法
+     1、在控制器页面，想关闭键盘
+        [self.view endEditing:YES];
+     2、在view页面
+         [self endEditing:YES];
+     
+     3、在非view里面，关闭键盘，就使用下面的
+     */
     for (UIWindow* window in [UIApplication sharedApplication].windows)
     {
         for (UIView* view in window.subviews)

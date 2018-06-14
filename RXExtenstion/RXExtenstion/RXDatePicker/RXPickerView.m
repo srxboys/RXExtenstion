@@ -9,19 +9,17 @@
 #define PICK_CONTENT_HEIGHT 260
 #define PICK_TOOLBAR_HEIGHT 44
 #define PICK_HEIGHT PICK_CONTENT_HEIGHT-PICK_TOOLBAR_HEIGHT
+#define PICK_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 #import "RXPickerView.h"
 
 @interface RXPickerView()<UIPickerViewDelegate, UIPickerViewDataSource>
-{
-    UIPickerView * _pickerView;
-    
-    UIButton * _bgButton;
-    UIView * _contentView;
-    NSMutableArray * _selectedComponents;
-    
-    BOOL _isSET_itemWidth;
-}
+
+@property (nonatomic, strong) UIPickerView *pickerView;
+@property (nonatomic, strong) UIButton     *bgButton;
+@property (nonatomic, strong) UIView       *contentView;
+@property (nonatomic, strong) NSMutableArray *selectedComponents;
+@property (nonatomic, assign) BOOL isSET_itemWidth;
 @end
 
 
@@ -72,7 +70,7 @@
     _contentView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_contentView];
     
-    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, ViewWidth(_contentView), PICK_TOOLBAR_HEIGHT)];
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, _contentView.frame.size.width, PICK_TOOLBAR_HEIGHT)];
     UIBarButtonItem *spacerItemFixed = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     spacerItemFixed.width = 10;
     UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelItemClicked)];
@@ -81,7 +79,7 @@
     toolbar.items = @[spacerItemFixed, cancelItem, spacerItemCenter, okItem, spacerItemFixed];
     [_contentView addSubview:toolbar];
     
-    _pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, PICK_TOOLBAR_HEIGHT, ViewWidth(_contentView), PICK_HEIGHT)];
+    _pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, PICK_TOOLBAR_HEIGHT, _contentView.frame.size.width, PICK_HEIGHT)];
     _pickerView.showsSelectionIndicator = YES;
     _pickerView.dataSource = self;
     _pickerView.delegate = self;
@@ -105,20 +103,22 @@
         [window addSubview:self];
     }
     
-    if(self.selectionIndicatorColor) {
-        for(UIView * view in _pickerView.subviews) {
-            CGFloat height = ViewHeight(view);
-            if(height <2) {
-                SET_VIEW_HEIGHT(view, 0.2);
-                view.backgroundColor = self.selectionIndicatorColor;
-            }
-        }
-    }
-    
+//    if(self.selectionIndicatorColor) {
+//        for(UIView * view in _pickerView.subviews) {
+//            CGFloat height = view.frame.size.height;
+//            if(height <2) {
+//                CGRect frame = view.frame;
+//                frame.size.height = 0.2;
+//                view.frame = frame;
+//                view.backgroundColor = self.selectionIndicatorColor;
+//            }
+//        }
+//    }
+    __weak typeof(self)weakSelf = self;
     [UIView animateWithDuration:0.3 animations:^{
-        _contentView.frame = CGRectMake(0, ViewHeight(self)-PICK_CONTENT_HEIGHT, ViewWidth(self), PICK_CONTENT_HEIGHT);
+        weakSelf.contentView.frame = CGRectMake(0, self.frame.size.height-PICK_CONTENT_HEIGHT, self.frame.size.width, PICK_CONTENT_HEIGHT);
     } completion:^(BOOL finished) {
-        _bgButton.hidden = NO;
+        weakSelf.bgButton.hidden = NO;
     }];
 }
 
@@ -142,11 +142,12 @@
 }
 
 - (void)dismiss {
+    __weak typeof(self)weakSelf = self;
     [UIView animateWithDuration:0.3 animations:^{
-        _contentView.frame = CGRectMake(0, ViewHeight(self), ViewWidth(self), PICK_CONTENT_HEIGHT);
+        weakSelf.contentView.frame = CGRectMake(0, self.frame.size.height, self.frame.size.width, PICK_CONTENT_HEIGHT);
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
-        _bgButton.hidden = YES;
+        weakSelf.bgButton.hidden = YES;
     }];
 }
 
@@ -183,7 +184,7 @@
         _selectedComponents[i] = @(0);
     }
     if(!_isSET_itemWidth) {
-        _itemWith = ScreenWidth/numberOfComponents*1.0;
+        _itemWith = PICK_SCREEN_WIDTH/numberOfComponents*1.0;
     }
 }
 

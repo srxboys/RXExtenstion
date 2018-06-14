@@ -101,9 +101,24 @@
     //就是启动定位管理了，一般来说，在不需要更新定位时最好关闭它，用stopUpdatingLocation，可以节省电量。
     [_locationManager startUpdatingLocation];
     
+    NSUUID *estimoteUUID = [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"];
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:estimoteUUID
+                                                                identifier:@"Estimote Range"];
+    region.notifyEntryStateOnDisplay = YES;
     
+    if ([CLLocationManager isMonitoringAvailableForClass:[CLBeaconRegion class]]) {
+        [_locationManager startMonitoringForRegion:region];
+        
+        // get status update right away for UI
+        [_locationManager requestStateForRegion:region];
+    }
+    else
+    {
+        NSLog(@"This device does not support monitoring beacon regions");
+    }
 }
 
+//位置监控
 //这个方法即定位改变时委托会执行的方法。
 //可以得到新位置，旧位置，CLLocation里面有经度纬度的坐标值，
 //同时CLLocation还有个属性horizontalAccuracy，用来得到水平上的精确度，它的大小就是定位精度的半径，单位为米。 如果值为－1，则说明此定位不可信。
@@ -168,6 +183,17 @@
     //停止更新位置（如果定位服务不需要实时更新的话，那么应该停止位置的更新）
     //如果不需要实时更新地址，就关掉，节约电量
 //    [manager stopUpdatingLocation];
+}
+
+/* 区域监控 */
+//进入该区域
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    
+}
+
+//离开该区域
+-(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+    
 }
 
 - (void)didReceiveMemoryWarning {

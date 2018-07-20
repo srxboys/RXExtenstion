@@ -98,6 +98,7 @@ static const char * HACK_MIME_USER_KEY = "hook_user_KEY";
 + (void)swizzleMethod:(SEL)origSel withMethod:(SEL)aftSel insertSel:(SEL)insetSel{
     Class aClass = [self class];
     Method originMethod = class_getInstanceMethod(aClass, origSel);
+//    BOOL isResponds = class_respondsToSelector(aClass, origSel);
     BOOL didAddMethod = class_addMethod(aClass, origSel, method_getImplementation(originMethod), method_getTypeEncoding(originMethod));
     if(didAddMethod) {
         //添加后替换

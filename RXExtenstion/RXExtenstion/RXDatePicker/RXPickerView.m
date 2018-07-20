@@ -55,7 +55,7 @@
     self.numberOfComponents = 1;
     _selectedComponents = [NSMutableArray arrayWithCapacity:1];
     
-    self.selectionIndicatorColor = UIColorRandom;
+    self.selectionIndicatorColor = [UIColor lightGrayColor];
     
     CGSize size = self.bounds.size;
     _bgButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -103,17 +103,18 @@
         [window addSubview:self];
     }
     
-//    if(self.selectionIndicatorColor) {
-//        for(UIView * view in _pickerView.subviews) {
-//            CGFloat height = view.frame.size.height;
-//            if(height <2) {
-//                CGRect frame = view.frame;
-//                frame.size.height = 0.2;
-//                view.frame = frame;
-//                view.backgroundColor = self.selectionIndicatorColor;
-//            }
-//        }
-//    }
+    //中间分割线的颜色
+    if(self.selectionIndicatorColor) {
+        for(UIView * view in _pickerView.subviews) {
+            CGFloat height = view.frame.size.height;
+            if(height <2) {
+                CGRect frame = view.frame;
+                frame.size.height = 0.2;
+                view.frame = frame;
+                view.backgroundColor = self.selectionIndicatorColor;
+            }
+        }
+    }
     __weak typeof(self)weakSelf = self;
     [UIView animateWithDuration:0.3 animations:^{
         weakSelf.contentView.frame = CGRectMake(0, self.frame.size.height-PICK_CONTENT_HEIGHT, self.frame.size.width, PICK_CONTENT_HEIGHT);

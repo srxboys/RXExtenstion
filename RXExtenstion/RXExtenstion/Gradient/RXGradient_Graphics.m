@@ -33,8 +33,10 @@
     CGPathCloseSubpath(path);
     
     //绘制渐变
-    UIColor * startColor = UIColorHexStr(@"#D01D66");
-    UIColor * endColor = UIColorHexStr(@"#7F1084");
+//    UIColor * startColor = UIColorHexStr(@"#D01D66");
+//    UIColor * endColor = UIColorHexStr(@"#7F1084");
+    UIColor * startColor = [UIColor redColor];
+    UIColor * endColor = [UIColor yellowColor];
     [self drawLinearGradient:gc path:path startColor:startColor.CGColor endColor:endColor.CGColor isHorizontal:isHorizontal];
     
     //注意释放CGMutablePathRef

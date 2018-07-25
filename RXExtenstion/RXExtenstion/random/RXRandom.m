@@ -129,8 +129,10 @@
 + (NSString *) randomImageURL {    
     NSString * string = @"https://raw.githubusercontent.com/srxboys/RXExtenstion/master/RXExtenstion/images";
     NSInteger randomInt = arc4random() % 6;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wformat"
     NSString * imageUrl = [NSString stringWithFormat:@"%@/psb_%zd.jpeg", string,randomInt];
-    
+#pragma clang diagnostic pop
     return imageUrl;
 }
 

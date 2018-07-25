@@ -24,7 +24,7 @@
     }
     
     [string setString:[string substringToIndex:string.length - 1]];
-    RXLog(@"参数=%@", string);
+//    RXLog(@"参数=%@", string);
     return [string dataUsingEncoding:NSUTF8StringEncoding];
 }
 @end

@@ -4,11 +4,44 @@ Pod::Spec.new do |s|
 
   s.name              = "RXExtenstion"
   s.version           = "0.0.0.1"
-  s.summary           = "iOS 项目基本框架 of RXExtenstion."
+  s.summary           = "iOS 项目基本框架"
   s.description       = <<-DESC
-                          iOS 项目基本框架(label自适应高度、菜单功能、地址选择器、日期时间选择器、自动生成假数据......) 
-                          / iOS Project basic framework (Label adaptive height, menu function, address 
-                          selector, date time selector, automatic generation of false data, etc.) 
+                        iOS 项目基本框架(label自适应高度、菜单功能、地址选择器、日期时间选择器、自动生成假数据......)
+                        /
+                        iOS Project basic framework (Label adaptive height, menu function, 
+                                    address selector, date time selector, 
+                                    automatic generation of false data, etc.).
+
+                        -----------------------------------------------------------------------------
+
+                        - Subspecs:
+                           - RXExComment       (通用的)[包括:UIColor(颜色处理)、random(随机假数据)]
+                           - RXExRXUUID        (实现设备唯一标识) 
+                           - RXExTranslation   (简单转换 --- 还在构思中...) 
+                           - RXExGradient      (颜色渐变) 
+                           - RXExRXPickerView  (选择滚动器) 
+
+ 						-----------------------------------------------------------------------------
+                        Example 1:  
+
+                        pod 'RXExtenstion', :subspecs => [
+					         'RXExRXUUID',
+					         'RXExTranslation',
+					         'RXExGradient',
+					         'RXExRXBlockTextField',
+					         'RXExRXPickerView'
+					    ]
+
+					    -----------------------------------------------------------------------------
+                        Example 2:  (Notice the subspecs in each version number)
+
+                        pod 'RXExtenstion', '0.0.0.1', :subspecs => [
+					         'RXExRXUUID',             
+					         'RXExTranslation',        
+					         'RXExGradient',           
+					         'RXExRXBlockTextField',   
+					         'RXExRXPickerView'        
+					    ]
                          DESC
 
   s.homepage          = "https://github.com/srxboys/RXExtenstion.git"
@@ -16,15 +49,12 @@ Pod::Spec.new do |s|
   s.author            = { "srxboys" => "srxboys@126.com" }
   s.platform          = :ios, "8.0"
   s.source            = { :git => "https://github.com/srxboys/RXExtenstion.git", :tag => "#{s.version}" }
-  s.source_files      = "RXExtenstion/RXExtenstion/**/*.{h,m,c,cpp}"
   s.requires_arc      = true
   s.default_subspec   = "RXExComment"
 
 
   s.subspec "RXExComment" do |ss|
-    ss.source_files   = "RXExtenstion/RXExtenstion/UIColor/**/*.{h,m}"
-    ss.exclude_files  = "RXExtenstion/RXExtenstion/RXPrisonBreak/**/*.{h,m}",
-                        "RXExtenstion/RXExtenstion/random/**/*.{h,m}",
+    ss.source_files   = "RXExtenstion/RXExtenstion/{UIColor/*,random/*,*}.{h,m}"
     ss.header_dir     = "RXExComment"
   end
 
@@ -40,12 +70,6 @@ Pod::Spec.new do |s|
     ss.framework      = "QuartzCore"
   end
 
-  s.subspec "RXExRXEncrypt" do |ss|
-    ss.source_files   = "RXExtenstion/RXExtenstion/RXEncrypt/**/*.{h,m}"
-    ss.header_dir     = "RXExRXEncrypt"
-    ss.framework      = "CommonCrypto","Security"
-  end
-
   s.subspec "RXExGradient" do |ss|
     ss.source_files   = "RXExtenstion/RXExtenstion/Gradient/**/*.{h,m}"
     ss.header_dir     = "RXExGradient"
@@ -55,6 +79,15 @@ Pod::Spec.new do |s|
     ss.source_files   = "RXExtenstion/RXExtenstion/RXBlockTextField/**/*.{h,m}"
     ss.header_dir     = "RXExRXBlockTextField"
   end
+
+  s.subspec "RXExRXPickerView" do |ss|
+    ss.source_files   = "RXExtenstion/RXExtenstion/RXDatePicker/**/RXPickerView.{h,m}"
+    ss.header_dir     = "RXExRXPickerView"
+  end
+
+
+
+
   # s.public_header_files = "Classes/**/*.h"
 
 

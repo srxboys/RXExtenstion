@@ -186,7 +186,8 @@ static int const kOpenUDIDRedundancySlots = 100;
         CC_MD5( cStr, (int)strlen(cStr), result );
         CFRelease(uuid);
         CFRelease(cfstring);
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wformat"
         _openUDID = [NSString stringWithFormat:
                 @"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%08x",
                 result[0], result[1], result[2], result[3], 
@@ -194,6 +195,7 @@ static int const kOpenUDIDRedundancySlots = 100;
                 result[8], result[9], result[10], result[11],
                 result[12], result[13], result[14], result[15],
                      (NSUInteger)(arc4random() % NSUIntegerMax)];
+#pragma clang diagnostic pop
     }
     
     // Call to other developers in the Open Source community:

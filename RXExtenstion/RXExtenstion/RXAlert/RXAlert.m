@@ -7,7 +7,6 @@
 //
 
 #import "RXAlert.h"
-#import "AppDelegate.h"
 
 #pragma mark - UIAlertView
 @interface RXAlertView : UIAlertView
@@ -120,7 +119,11 @@
                 }]];
             }
         }
-        [SharedAppDelegate.window.rootViewController presentViewController:alert animated:YES completion:nil];
+        
+        UIWindow * window = [UIApplication sharedApplication].keyWindow;
+        if(window.rootViewController) {
+            [window.rootViewController presentViewController:alert animated:YES completion:nil];
+        }
     }
 }
 

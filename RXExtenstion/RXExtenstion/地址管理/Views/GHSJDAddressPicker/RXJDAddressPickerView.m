@@ -14,13 +14,13 @@
 #import "RXJDButton.h"
 
 
-#define Black_alpha_show 0.4 //背景黑 0.4透明
-#define Black_alpha_hidde 0  //背景黑 透明
-#define ViewAnimal 0.3   //动画执行时间
-#define AddressSpace 30 //选择后的地址 之间间隔
-#define SelectLabelHeight 15 //请选择label 高度
-#define SelectLabelTop 19 //请选择label y
-#define SelectLineWidth 42 //请选择label 下面紫色线 的 宽度
+#define Black_alpha_show 0.4 ///< 背景黑 0.4透明
+#define Black_alpha_hidde 0  ///< 背景黑 透明
+#define ViewAnimal 0.3       ///< 动画执行时间
+#define AddressSpace 30      ///< 选择后的地址 之间间隔
+#define SelectLabelHeight 15 ///< 请选择label 高度
+#define SelectLabelTop 19    ///< 请选择label y
+#define SelectLineWidth 42   ///< 请选择label 下面紫色线 的 宽度
 
 #define tableToTop 8
 
@@ -41,25 +41,25 @@
     
     UIButton       * _closeButton; //关闭
     
-    UIScrollView   * _selectScrollView; //请选择上的横滚动
-    CGFloat          _selectScrollViewHeight; //请选择上的横滚动 高度
-    UIScrollView   * _addressScrollView; //地址选择的横滚动
-    CGFloat          _addressHeight; //地址选择的横滚动 高度
+    UIScrollView   * _selectScrollView;       ///< 请选择上的横滚动
+    CGFloat          _selectScrollViewHeight; ///< 请选择上的横滚动 高度
+    UIScrollView   * _addressScrollView;      ///< 地址选择的横滚动
+    CGFloat          _addressHeight;          ///< 地址选择的横滚动 高度
     NSMutableArray * _buttonsArray;
     CGFloat          _buttonsLasterLeft;
     
     UITableView    * _provinceTableView; //省份 Table
     NSArray        * _provinceArray;
     
-    UITableView    * _cityTableView; //城市 Table
-    NSArray        * _cityArray; //城市 数据源
+    UITableView    * _cityTableView; ///< 城市 Table
+    NSArray        * _cityArray;     ///< 城市 数据源
     
-    UITableView    * _areaTableView;//地区 Table
+    UITableView    * _areaTableView; ///< 地区 Table
     NSArray        * _areaArray;
     
-    UIButton       * _selectButton; //请选择
-    UIView         * _selectLineView;//请选择 线
-    CGFloat          _selectLineViewLeft;//请选择 线 的  x坐标
+    UIButton       * _selectButton;       ///< 请选择
+    UIView         * _selectLineView;     ///< 请选择 线
+    CGFloat          _selectLineViewLeft; ///< 请选择 线 的  x坐标
     
     CGFloat          _selfHeight; //self 高度
     NSInteger        _selfLevel_isHidden;
@@ -193,7 +193,7 @@
     _provineceVisible = 0; _cityVisible = 0;  _areaVisible = 0;
     _selfSelectCount  = 0;
     
-    _buttonsLasterLeft = 21;
+    _buttonsLasterLeft  = 21;
     _selectLineViewLeft = 21;
     
     _provinceArray = [RXGetArea getAreaArray];

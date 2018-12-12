@@ -23,11 +23,11 @@
     NSMutableArray * _arrCityArr;
     
     // 省市区 的 坐标
-    NSInteger        _provinceIndex; //省
-    NSInteger        _cityIndex; //市
-    NSInteger        _areaIndex; //区
+    NSInteger        _provinceIndex; ///< 省
+    NSInteger        _cityIndex;     ///< 市
+    NSInteger        _areaIndex;     ///< 区
     
-    NSMutableArray * _tableTempArr; // 省/市/区 这三个中的地址【这个数组的内容不固定】
+    NSMutableArray * _tableTempArr;  ///< 省/市/区 这三个中的地址【这个数组的内容不固定】
     
     // 省市区 的 id
     NSString       * _provinceId;

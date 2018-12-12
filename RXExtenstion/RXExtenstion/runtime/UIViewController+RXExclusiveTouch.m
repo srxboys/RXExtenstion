@@ -8,9 +8,11 @@
 //当前页面 防止多次点击
 
 //切记，这个最好不要 用，如果是 视频类(直播、短视频) 点赞操作 会有影响
+//一定是准确的处理，再用
+
 
 #import "UIViewController+RXExclusiveTouch.h"
-#import <objc/runtime.h>
+#import "NSObject+RXSwizzle.h"
 
 
 @implementation UIViewController (RXExclusiveTouch)
@@ -39,33 +41,15 @@
     dispatch_once(&onceToken, ^{
         SEL oldSel = @selector(viewDidAppear:);
         SEL newSel = @selector(swizzle_viewDidAppear);
-        [self swizzleMethod:oldSel withMethod:newSel insertSel:newSel];
+        [self swizzleClass:[self class] origSel:oldSel withMethod:newSel];
     });
     
 }
 
-+ (void)swizzleMethod:(SEL)origSel withMethod:(SEL)aftSel insertSel:(SEL)insetSel{
-    Class aClass = [self class];
-    Method originMethod = class_getInstanceMethod(aClass, origSel);
-    BOOL didAddMethod = class_addMethod(aClass, origSel, method_getImplementation(originMethod), method_getTypeEncoding(originMethod));
-    if(didAddMethod) {
-        //添加后替换
-        Method createSelMethod = class_getInstanceMethod(aClass, insetSel);
-        class_replaceMethod(aClass,
-                            origSel,
-                            method_getImplementation(createSelMethod),
-                            method_getTypeEncoding(originMethod));
-    }
-    else {
-        // 交换实现
-        Method afterMethod = class_getInstanceMethod(aClass, aftSel);
-        method_exchangeImplementations(originMethod, afterMethod);
-    }
-}
-
-
 - (void)swizzle_viewDidAppear {
-    [self swizzle_viewDidAppear];
+    if(ENABLE_CLASS_METHOD([self class], @selector(viewDidAppear:), @selector(swizzle_viewDidAppear))) {
+        [self swizzle_viewDidAppear];
+    }
     [self setExclusiveTouchForButtons:self.view];
 }
 

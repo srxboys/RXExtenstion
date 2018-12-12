@@ -14,8 +14,8 @@
 
 #define RXLogger(__isError,__format,  ...) [RXColorLog printLog:__isError file:__FILE__ line:__LINE__ method:[NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__] content:[NSString stringWithFormat:(__format), ##__VA_ARGS__]]
 #else
-#define TTLog(...)
-#define TTLogError(...)
+#define RXLog(...)
+#define RXLogError(...)
 #endif
 
 @interface RXColorLog : NSObject

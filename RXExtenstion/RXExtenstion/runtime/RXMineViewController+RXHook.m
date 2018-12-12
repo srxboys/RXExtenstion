@@ -15,6 +15,7 @@
 
 //1
 #import <objc/runtime.h>
+#import "NSObject+RXSwizzle.h"
 
 //2
 #import "RXDataModel.h"
@@ -23,7 +24,7 @@
 #import "RXWebKitViewController.h"
 
 
-
+//如果这个被 很多子类继承，需要特殊处理，而不应该在 `+(void)load`里面处理。
 
 
 // 因category不能添加属性，只能通过关联对象的方式。
@@ -89,30 +90,8 @@ static const char * HACK_MIME_USER_KEY = "hook_user_KEY";
         //点击头像 跳转
         SEL oldSel = NSSelectorFromString(@"mineHeaderClick");
         SEL newSel = @selector(hook_Mine_jumpByProductURL);
-        [self swizzleMethod:oldSel withMethod:newSel insertSel:newSel];
-        
-        
+        [self swizzleClass:[self class] origSel:oldSel withMethod:newSel];
     });
-}
-
-+ (void)swizzleMethod:(SEL)origSel withMethod:(SEL)aftSel insertSel:(SEL)insetSel{
-    Class aClass = [self class];
-    Method originMethod = class_getInstanceMethod(aClass, origSel);
-//    BOOL isResponds = class_respondsToSelector(aClass, origSel);
-    BOOL didAddMethod = class_addMethod(aClass, origSel, method_getImplementation(originMethod), method_getTypeEncoding(originMethod));
-    if(didAddMethod) {
-        //添加后替换
-        Method createSelMethod = class_getInstanceMethod(aClass, insetSel);
-        class_replaceMethod(aClass,
-                            origSel,
-                            method_getImplementation(createSelMethod),
-                            method_getTypeEncoding(originMethod));
-    }
-    else {
-        // 交换实现
-        Method afterMethod = class_getInstanceMethod(aClass, aftSel);
-        method_exchangeImplementations(originMethod, afterMethod);
-    }
 }
 
 
@@ -137,7 +116,7 @@ static const char * HACK_MIME_USER_KEY = "hook_user_KEY";
     }
     
     if(self.hook_dataSouceArr) {
-        NSLog(@"%@\n", self.hook_dataSouceArr);
+        NSLog(@"hook_Mine_jumpByProductURL().hook_dataSouceArr= %@\n", self.hook_dataSouceArr);
     }
     
     //自定义 跳转
@@ -146,7 +125,9 @@ static const char * HACK_MIME_USER_KEY = "hook_user_KEY";
 //    return;
     
     //还想使用以前的跳转，上面只想获取变量的操作而已 ?
-    [self hook_Mine_jumpByProductURL];
+    if(ENABLE_CLASS_METHOD([self class], NSSelectorFromString(@"mineHeaderClick"), @selector(hook_Mine_jumpByProductURL))) {
+        [self hook_Mine_jumpByProductURL];
+    }
 }
 
 

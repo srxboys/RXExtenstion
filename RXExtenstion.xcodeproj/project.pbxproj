@@ -53,7 +53,6 @@
 		6C3A2FDF1CD3477000533FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3A2FDD1CD3477000533FFF /* LaunchScreen.storyboard */; };
 		6C3A300A1CD3477E00533FFF /* TTCacheUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FE91CD3477E00533FFF /* TTCacheUtil.m */; };
 		6C3A30111CD3477E00533FFF /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FFB1CD3477E00533FFF /* MJPopupBackgroundView.m */; };
-		6C3A30121CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C3A2FFC1CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt */; };
 		6C3A30131CD3477E00533FFF /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2FFE1CD3477E00533FFF /* UIViewController+MJPopupViewController.m */; };
 		6C3A30201CD34E2B00533FFF /* RXBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A301F1CD34E2B00533FFF /* RXBundle.m */; };
 		6C3A30231CD34E7D00533FFF /* RXRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A30221CD34E7D00533FFF /* RXRandom.m */; };
@@ -89,7 +88,6 @@
 		6C5B54741D76814E00A7577F /* RXDateTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B54731D76814E00A7577F /* RXDateTimePicker.m */; };
 		6C5B54771D76825700A7577F /* RXMineCreateDateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B54761D76825700A7577F /* RXMineCreateDateController.m */; };
 		6C5B547A1D76831E00A7577F /* RXDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B54791D76831E00A7577F /* RXDatePicker.m */; };
-		6C5B547E1D76942E00A7577F /* UIImageView_说明.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B547D1D76942E00A7577F /* UIImageView_说明.txt */; };
 		6C673D5E1E56F8000054C3F4 /* RXWebKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C673D5D1E56F8000054C3F4 /* RXWebKitViewController.m */; };
 		6C6D602E1DC832C30069573E /* RXNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D602D1DC832C30069573E /* RXNavigationView.m */; };
 		6C7B91471D0D809000496C4F /* RXMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B91461D0D809000496C4F /* RXMenuController.m */; };
@@ -174,12 +172,11 @@
 		6CF4AC9B1D01A89400CD17CB /* RXExpansionContractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4AC9A1D01A89400CD17CB /* RXExpansionContractionController.m */; };
 		6CF4AC9E1D01A91800CD17CB /* RXExpanCCellHeightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4AC9D1D01A91800CD17CB /* RXExpanCCellHeightModel.m */; };
 		6CF4ACA21D01A9F100CD17CB /* RXExpansionContractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF4ACA11D01A9F100CD17CB /* RXExpansionContractionCell.m */; };
-		B821782E20298B330069D6A3 /* a.txt in Resources */ = {isa = PBXBuildFile; fileRef = B821782D20298B330069D6A3 /* a.txt */; };
-		B821783120298BE80069D6A3 /* a.txt in Resources */ = {isa = PBXBuildFile; fileRef = B821783020298BE80069D6A3 /* a.txt */; };
 		B821783420298D1E0069D6A3 /* RXPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B821783320298D1E0069D6A3 /* RXPickerView.m */; };
 		B82178392029B3E20069D6A3 /* RXSegmentBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82178382029B3E20069D6A3 /* RXSegmentBaseViewController.m */; };
 		B821783C2029B3F80069D6A3 /* RXSegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = B821783B2029B3F80069D6A3 /* RXSegmentController.m */; };
 		B821783D2029BA330069D6A3 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B821783E2029BA330069D6A3 /* libSDWebImage.a */; };
+		B824157321C0A91E00970A47 /* NSObject+RXSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = B824157221C0A91E00970A47 /* NSObject+RXSwizzle.m */; };
 		B8399E3F202476130015A727 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8399E46202476130015A727 /* libAFNetworking.a */; };
 		B8399E40202476130015A727 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8399E47202476130015A727 /* libFMDB.a */; };
 		B8399E41202476130015A727 /* libIBActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8399E48202476130015A727 /* libIBActionSheet.a */; };
@@ -547,6 +544,8 @@
 		B821783A2029B3F80069D6A3 /* RXSegmentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXSegmentController.h; sourceTree = "<group>"; };
 		B821783B2029B3F80069D6A3 /* RXSegmentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSegmentController.m; sourceTree = "<group>"; };
 		B821783E2029BA330069D6A3 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B824157121C0A91E00970A47 /* NSObject+RXSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+RXSwizzle.h"; sourceTree = "<group>"; };
+		B824157221C0A91E00970A47 /* NSObject+RXSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RXSwizzle.m"; sourceTree = "<group>"; };
 		B8399E46202476130015A727 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8399E47202476130015A727 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8399E48202476130015A727 /* libIBActionSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libIBActionSheet.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1813,6 +1812,8 @@
 				B8900FE7200C8FB700174A67 /* UIScrollView+RXContentInsetAdjust.m */,
 				B8900FEC200C99DB00174A67 /* RXMineViewController+RXHook.h */,
 				B8900FED200C99DB00174A67 /* RXMineViewController+RXHook.m */,
+				B824157121C0A91E00970A47 /* NSObject+RXSwizzle.h */,
+				B824157221C0A91E00970A47 /* NSObject+RXSwizzle.m */,
 			);
 			path = runtime;
 			sourceTree = "<group>";
@@ -1973,18 +1974,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CF1AC6F1DC18EBA00D411A2 /* RXMineCell.xib in Resources */,
-				6C3A30121CD3477E00533FFF /* MJPopupBackgroundView.ReadME.txt in Resources */,
 				6C59F3011E53017D00D15063 /* TestConfig.xcconfig in Resources */,
 				6C59F2FB1E53017D00D15063 /* DebugConfig.xcconfig in Resources */,
 				6C3E08721D6E9190006D4EB5 /* Assets.xcassets in Resources */,
 				6CDB2CD21D9E0DA800B07530 /* CollectionReusableViewHistory.xib in Resources */,
 				6C59F2FE1E53017D00D15063 /* DevelopConfig.xcconfig in Resources */,
 				6C59F3001E53017D00D15063 /* SendVersionConfig.xcconfig in Resources */,
-				B821782E20298B330069D6A3 /* a.txt in Resources */,
 				6C59F2FC1E53017D00D15063 /* ReleaseConfig.xcconfig in Resources */,
 				6CEB36A81D5ABEA600283562 /* RXMineInfoMessageCell.xib in Resources */,
-				6C5B547E1D76942E00A7577F /* UIImageView_说明.txt in Resources */,
-				B821783120298BE80069D6A3 /* a.txt in Resources */,
 				3B4B668D1DC337E7003DF3B3 /* RXDragCell.xib in Resources */,
 				B8BC89EE2068A7A000115BDE /* 扩展.md in Resources */,
 				6C3F7BAE1D07DFF10046C29C /* Location.storyboard in Resources */,
@@ -2170,6 +2167,7 @@
 				B8C143B32018783100C48456 /* NSData+CommonCrypto.m in Sources */,
 				6C3A300A1CD3477E00533FFF /* TTCacheUtil.m in Sources */,
 				B85B64922063A492005AD705 /* RXScrollContainer.m in Sources */,
+				B824157321C0A91E00970A47 /* NSObject+RXSwizzle.m in Sources */,
 				6CD0EB9D1D21159900692886 /* SFHFKeychainUtils.m in Sources */,
 				6C9D124E1D7D3E7600694C52 /* RXSelectView.m in Sources */,
 				6C3A30D71CD36DDC00533FFF /* RXMJHeader.m in Sources */,

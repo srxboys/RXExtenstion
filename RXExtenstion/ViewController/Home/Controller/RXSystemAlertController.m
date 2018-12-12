@@ -139,6 +139,57 @@ NSString * const sds __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_7_0);
 }
 
 
+- (void)setTextA:(NSString *)a {
+    
+}
+- (void)setTextAa:(NSString *)a {
+    
+}
+
+- (void)setTextB:(NSString *)b {
+    
+}
+- (void)setTextBb:(NSString *)b {
+    
+}
+
+- (void)configTextField {
+    //参考 React-Native里面的写法
+#define SetValue(_property, _value) [self set##_property:_value]
+    SetValue(TextA,  @"0");
+    SetValue(TextAa, @"01");
+    SetValue(TextB,  @"02");
+    SetValue(TextBb, @"03");
+    
+#define SetTextValue(_property, _value) [self setText##_property:_value]
+    SetTextValue(A, @"10");
+    SetTextValue(Aa, @"11");
+    SetTextValue(B, @"12");
+    SetTextValue(Bb, @"13");
+    
+    /*
+     name = @"123a"
+     
+     ##name  -宏转译->  123a
+     @name  -宏转译->  @"123a"
+     */
+    
+    
+    //下面 是 web 页 JavaScript语句包装，宏转译写法
+#define JS_STR(str) @#str
+    NSString * js = JS_STR(
+                           var a = 1;
+                           let b = 1;
+                           alert(a+b);
+                           
+                           let c = "a1";
+                           alert(c);
+            );
+//    webView run js code  <--- js
+    NSLog(@"js=%@", js);
+}
+
+
 /*
            我只说我常用的部分
  
@@ -158,6 +209,12 @@ NSString * const sds __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_7_0);
  
     关于“#ifdef __cplusplus” 和 " extern "C" 的问题(下面解释的很详细)
     http://blog.csdn.net/u012234115/article/details/43272441
+ 
+ 
+    关于 __attribute__ (实例可看React-Native源码里面很多)
+    https://www.jianshu.com/p/abeee47e82d8
+    https://www.jianshu.com/p/6153eccdbe62
+ 
  
     -------------------------------------------------------------------------------
  

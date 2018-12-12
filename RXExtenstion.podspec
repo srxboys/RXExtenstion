@@ -1,10 +1,15 @@
+# 
+# iOS Project basic framework
+#
+# Notice: different subspec can be imported as needed
+#
 
 
 Pod::Spec.new do |s|
 
   s.name              = "RXExtenstion"
   s.version           = "0.0.0.2"
-  s.summary           = "iOS 项目基本框架"
+  s.summary           = "iOS Project basic framework"
   s.description       = <<-DESC
                         iOS 项目基本框架(label自适应高度、菜单功能、地址选择器、日期时间选择器、自动生成假数据......)
                         /
@@ -25,28 +30,29 @@ Pod::Spec.new do |s|
                            - RXSwizzle        (runtime Swizzle)
 
  						-----------------------------------------------------------------------------
-                        Example 1:  
+                        Example 1:  ( Notice : import all subspecs )
 
                         pod 'RXExtenstion', :subspecs => [
-					         'RXUUID',
-					         'RXTranslation',
-					         'RXGradient',
-					         'RXBlockTextField',
-					         'RXPickerView',
-                             'RXAlertView',
-                             'RXSwizzle'
-					    ]
+                                'RXUUID',
+                                'RXTranslation',
+                                'RXGradient',
+                                'RXBlockTextField',
+                                'RXPickerView',
+                                'RXAlertView',
+                                'RXSwizzle'
+                            ]
 
 					    -----------------------------------------------------------------------------
-                        Example 2:  (Notice the subspecs in each version number)
+                        Example 2:  ( Notice : different subspec can be imported as needed )
 
                         pod 'RXExtenstion', '0.0.0.2', :subspecs => [
-					         'RXUUID',
-					         'RXGradient',
-					         'RXBlockTextField',
-					         'RXPickerView'
-					    ]
-                         DESC
+                                'RXUUID',
+                                'RXGradient',
+                                'RXBlockTextField',
+                                'RXPickerView'
+                            ]
+
+                        DESC
 
   s.homepage          = "https://github.com/srxboys/RXExtenstion.git"
   s.license           = "MIT"
@@ -99,10 +105,6 @@ Pod::Spec.new do |s|
     ss.header_dir     = "RXSwizzle"
   end
 
-
-
-
-  # s.public_header_files = "Classes/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

@@ -180,6 +180,7 @@
         _currencyHandler.enablePoint = YES;
         self.delegate = _currencyHandler;
         [self addTarget:_currencyHandler action:@selector(reformatAsCurrency:) forControlEvents:UIControlEventEditingChanged];
+        _placeholderFont = [UIFont systemFontOfSize:15];
     }
     
     return self;

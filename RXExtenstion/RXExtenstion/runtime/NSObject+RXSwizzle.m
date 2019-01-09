@@ -34,6 +34,29 @@
     }
 }
 
+void swizzleClass(Class aClass, SEL origSel, SEL insertSel) {
+    if(!aClass) return;
+    Method originMethod = class_getInstanceMethod(aClass, origSel);
+    Method insertMethod = class_getInstanceMethod(aClass, insertSel);
+    
+    if(!originMethod) return;
+    if(!insertMethod) return;
+    
+    BOOL didAddMethod = class_addMethod(aClass, insertSel, method_getImplementation(insertMethod), method_getTypeEncoding(insertMethod));
+    if(didAddMethod) {
+        //添加后替换
+        class_replaceMethod(aClass,
+                            insertSel,
+                            method_getImplementation(originMethod),
+                            method_getTypeEncoding(originMethod));
+        //效果是  以前的方法执行地址是 insertSel方法地址 ， insertSel方法的执行地址 是 nil
+    }
+    else {
+        // 交换实现
+        method_exchangeImplementations(originMethod, insertMethod);
+    }
+}
+
 // 是否支持
 BOOL ENABLE_CLASS_METHOD(Class aClass, SEL origSel, SEL insertSel) {
     if(!aClass) return NO;

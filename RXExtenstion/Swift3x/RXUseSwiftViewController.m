@@ -26,7 +26,7 @@
     // Do any additional setup after loading the view.
     
     self.nomalShowLabel.hidden = NO;
-    
+/*
     
 //---------------------------------------
     //下面使用 RXLogin.swift
@@ -57,6 +57,7 @@
     
     //这里有个小小的问题，下次再说吧！
     [printtJson printJSON:userDict];
+ */
 }
 
 - (void)didReceiveMemoryWarning {

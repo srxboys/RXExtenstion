@@ -68,7 +68,7 @@
     previousTextFieldContent = textField.text;
     previousSelection = textField.selectedTextRange;
     
-    return YES;
+    return [super textField:textField shouldChangeCharactersInRange:range replacementString:string];
 }
 
 /*
